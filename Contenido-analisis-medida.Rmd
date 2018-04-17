@@ -19,7 +19,7 @@ fontsize: 12pt
   - Valor absoluto.
   - La recta real.
   - Propiedad de Completitud.
-  - Intervalos.
+  - Intervalos....
   
 2) Topología básica
 
