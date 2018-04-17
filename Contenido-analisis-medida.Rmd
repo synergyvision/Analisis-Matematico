@@ -1,0 +1,153 @@
+---
+title: "Análisis Matemático"
+subtitle: "Contenido"
+author: "http://synergy.vision/"
+output:
+  pdf_document:
+      toc: no
+      toc_depth: 4
+  html_document: default
+fontsize: 12pt
+---
+
+# Análisis Matemático
+
+1) Números Reales
+
+  - Propiedades de orden.
+  - Desigualdades.
+  - Valor absoluto.
+  - La recta real.
+  - Propiedad de Completitud.
+  - Intervalos....
+  
+2) Topología básica
+
+  - Conjuntos finitos.
+  - Conjuntos numerables.
+  - Conjuntos no numerables.
+  - Conjuntos abiertos, entornos y puntos de acumulación.
+  - Conjuntos Cerrados, fronteras y bordes.
+  - Conjuntos densos, fronterizos y nada densos.
+  - Conjuntos compactos.
+  - Conjuntos perfectos.
+  - Conjuntos conexos.
+  - Subespacio y producto.
+  
+3) Sucesiones 
+  
+  - Definición 
+  - Sucesiones acotadas.
+  - Sucesiones Monótonas.
+  
+4) Limites
+  
+  - Definiciones y teoremas generales.
+  
+  - Límites de sucesiones.
+  
+    - Operaciones con sucesiones.
+    - Convergencia.
+    - Sucesiones que tienden a infinito.
+    - Completitud.
+    - Teorema de Bolzano - Weierstrass.
+    - Suceciones de Cauchy.
+    - Suceciones divergentes.
+    
+  - Límites de funciones
+    -  Definición.
+    - Funciones continuas, funciones continuas en conjuntos conexos y compactos.
+    - Funciones monótonas.
+    - Límites infinitos.
+    
+5) Derivadas y continuidad
+
+  - Definición
+  - Teoremas de diferenciabilidad.
+  - Teorema del valor medio.
+  - Teorema de Funciones inversas y funciones monótonas.
+  - Regla de L' Hopital.
+  - Teorema de Taylor.
+  - Continuidad en un punto.
+  - Continuidad en un conjunto.
+  - Continuidad en un conjunto compacto.
+  - Continuidad en un conjunto conexo.
+  - Continuidad uniforme.
+  
+6) Series
+
+  - Definición
+  - Series convergentes.
+  - Series con términos positivos.
+  - Series con signo variado.
+  - Aproximación de series.
+  - Serie Geométrica.
+  - Series de funciones, serie de Potencia.
+  - Serie de Taylor.
+  - Serie de Dirichlet.
+
+# Teoría de la Medida
+
+1) Integral de Riemann
+
+  - Integral doble.
+  - Integral múltiple.
+  - Integrabilidad de Riemann.
+  - Propiedades
+  - Teorema fundamental del cálculo
+  - Integral como límite de sumas.
+  - Cálculo de primitivas
+    - Métodos de integración:
+      - Inmediata.
+      - Por partes.
+      - Cambio de Variables.
+      - De funciones racionales.
+      - De funciones Irracionales.
+      - De funciones trigonométricas.
+      - De funciones exponenciales.
+  - Integrales Impropias.
+  
+  - Integración en $\mathbb{R}^n$
+  
+2) Clases de Conjuntos y Medidas
+
+  - Álgebras
+  - Sigma- Álgebras.
+  - Sigma- Álgrebra de Borel.
+  - Medida definición y propiedades.
+  - Medida de Lebesgue.
+  - Medida de Lebesgue- Stieltjes.  
+
+3) Funciones medibles
+
+  - Teoremas de convergencia monotóna.
+  - Integral de funciones medibles
+  - Integral de Lebesgue, propiedades.
+  - Probabilidades
+    - Integración con respecto a la distribución de probabilidad.
+    - Medidas adsolutamente continuas.
+    - Valor esperado de una variable aleatoria.
+    - Función característica.
+    - Aplicaciones a las matemáticas financieras.
+  
+4) Medida producto.
+
+  - Construcción de la medida producto
+  - Teorema de Fubini.
+  - Probabilidades
+    - Distribución conjunta.
+    - Independencia.
+    - Probabilidad condicional.
+    - Aplicaciones a las matemáticas financieras.
+    
+5) Teorema de Radon- Nikodym
+  
+6) Espacios de funciones Medibles
+  
+  - Espacios de Hilbert.
+  - Espacios de Banach.
+  
+  - Transformada de Fourier.
+  
+  - Lema de Fatou.
+  
