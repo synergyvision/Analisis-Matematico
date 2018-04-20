@@ -1,0 +1,23 @@
+# Espacios de Banach
+
+## Espacios normados
+
+## Separación de conjuntos convexos
+
+## Teorema de prolongamiento
+
+## Duales de los espacios $\ell^p$
+
+## Convergencia débil
+
+## Teorema de Banach-Steinhaus
+
+## Espacios reflexivos
+
+## Operadores contínuos y compactos
+
+## Teorema de Fredholm-Riesz
+
+## Aplicaciones abiertos y grafos cerrados
+
+## Caso complejo

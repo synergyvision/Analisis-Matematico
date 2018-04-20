@@ -151,3 +151,70 @@ fontsize: 12pt
   
   - Lema de Fatou.
   
+  
+  
+  
+  
+-----
+
+
+Análisis
+
+Capítulo 1: Los números reales y complejos
+- Introducción
+- Conjuntos totalmente ordenados
+- Cuerpos
+- La recta real
+- Espacios euclídeos
+
+Capítulo 2: Topología básica
+- Numerabilidad
+- Espacios métricos
+- Conjuntos compactos
+- Conjuntos perfectos
+- Conjunto conexos
+
+Capítulo 3: Sucesiones y series
+- Sucesiones convergentes
+- Subsucesiones
+- Sucesiones de Cauchy
+- Límite inferior y superior
+- Series
+- Series de términos non negativos
+- El número e
+- Tests de convergencia
+- Series de potencias
+- Suma por partes
+- Convergencia absoluta
+- Anillo de series
+- Reordenamiento
+
+Capítulo 4: Continuidad
+- Límite de funciones
+- Funciones contínuas 
+- Compacidad
+- Conexidad
+- Dicontinuidades
+- Funciones monótonas
+- Límites infinitos y límites al infinito
+
+Capítulo 5: Diferenciación
+- Derivada de funciones reales
+- Teoremas del valor medio
+- Continuidad de derivadas
+- Regla de L'Hospital
+- Derivadas de orden superior
+- Teorema de Taylor
+- Diferenciación de funciones a valores vectoriales
+
+Capítulo 6: Integral de Riemann- Stieltjes
+- Definición y existencia de la integral
+- Propiedades de la integral
+- Integración y diferenciación
+- Integración de funciones a valores vectoriales
+- Curvas rectificables
+
+Capítulo 7: Sucesiones y series de funciones
+- Convergencia uniforme
+- Convergencia uniforme y continuidad
+- Convergencia uniforme e integración
