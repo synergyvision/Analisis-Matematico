@@ -1,0 +1,27 @@
+# Sucesiones y series
+
+## Sucesiones convergentes
+
+## Subsucesiones
+
+## Sucesiones de Cauchy
+
+## Límite inferior y superior
+
+## Series
+
+## Series de términos non negativos
+
+## El número e
+
+## Tests de convergencia
+
+## Series de potencias
+
+## Suma por partes
+
+## Convergencia absoluta
+
+## Anillo de series
+
+## Reordenamiento

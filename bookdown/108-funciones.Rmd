@@ -1,0 +1,12 @@
+# Funciones especiales
+
+## Series de potencia
+
+## Funciones exponenciales y logarítmicas
+
+## Funciones trigonométricas
+
+## Completitud algebraica del cuerpo de los complejos
+
+## Series de Fourier
+
