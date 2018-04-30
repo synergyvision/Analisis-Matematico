@@ -1,0 +1,595 @@
+# Teoría de Conjuntos {#conjuntos}
+
+A continuación presentaremos una breve introducción a la teoria de conjuntos, introduciendo definiciones y algunas demostraciones de propiedades de los mismos.
+
+## Conjuntos 
+
+```{definition label=conjunto-elementos}
+Los __conjuntos__ generamente se definen como una colección de objetos, no tienen dimensión ni orden, los objetos que pertenecen al mismo, son llamados **elementos** del conjunto.
+```
+
+La forma matemática que usaremos para representarlos es la siguiente:
+
+- A los conjuntos los denotaremos con letras mayúsculas, por ejemplo: $A, B, \Omega$.
+
+- Los elementos del conjunto los denotaremos con letras minusculas, ejemplo : $a, \omega, x$.
+
+- Los elementos se colocaran entre llaves $\{ \}$ y se separaran con comas $,$.
+
+- Los elementos de un conjunto se pueden representar de dos maneras:
+
+   - Colocando todos los elementos de la colección.
+      
+   - Mediante una regla o propiedad que cumplan los elementos. La estructura en esta parte es colocar el nombre de los elementos seguido de $:$ o $|$ (simbolos que significan tal que) y luego la propiedad que cumplen dichos elementos, esto se leen como los elementos tales que cumplen cierta propiedad.
+
+```{example label=ejem-num-menor-6}
+Los números naturales menores que 6, está colección de números son 1, 2, 3, 4, 5. Llamemos a este conjunto $X$ y a sus elementos $x$, así la manera de representarlos será
+
+$$X=\{ 1, 2, 3, 4, 5\}=\{ x\in \mathbb N : x<6 \}$$
+```
+
+- Cuando un elemento $x$ está en un conjunto $X$ se denota mediante el simbolo $\in$, es decir $x\in X$ y se lee como "$x$ pertenece a el conjunto $X$".
+
+- Para indicar que un elemento no está en un conjunto, se usa el simbolo $\notin$, es decir $x \notin X$ y se lee como "$x$ no pertenece al conjunto $X$".
+
+```{definition label=subconjunto}
+Los **subconjuntos** son conjuntos de elementos tomados de algún conjunto, se denotan con el simbolo $\subseteq$.
+```
+
+- $B\subseteq A$ se cumple si los elementos del conjunto $B$ están en el conjunto $A$.
+
+- Si $B\subseteq A$ y $A\subseteq B$ entonces $A=B$.
+
+```{definition label=conjunto-vacio}
+El conjunto que no tiene elementos lo definiremos como el **conjunto vacío**, lo denotaremos por $\emptyset$.
+```
+
+```{definition label=conjunto-universal}
+Definiremos el conjunto universal como el que contiene todos los posibles elementos de algún fenómeno particular, éste se denotará por $\Omega$. 
+```
+
+- Para todo elemento $x$ entonces $x\notin \emptyset$.
+
+- Para todo elemento $x$ entonces $x\in \Omega$.
+
+- $\emptyset \subseteq X\subseteq \Omega$.
+
+TODO: Existe una forma de representar elementos y es mediante los **diagramas de Veen**
+
+### Unión de Conjuntos
+
+```{definition label=conjunto-union}
+Supongamos que tenemos dos conjuntos $A$ y $B$, la __unión__ de estos dos conjuntos es un nuevo conjuntos que tiene todos los elementos de $A$ y de $B$, es el equivalente a la suma de números. La representación de este operador es $\cup$ y se coloca $A\cup B$. 
+
+$$
+\begin{equation}
+A\cup B = \{ x\in \Omega\ :\ x\in A \quad o \quad x\in B\}
+(\#eq:union)
+\end{equation}
+$$
+```
+
+Entonces podemos decir que un elemento $x$ está en $A\cup B$ si y solo si $x\in A$ ó $x\in B$. Mediante esta definición tenemos:
+
+- $A\cup \emptyset=A$, la unión de un conjunto cualquiera $A$ con el conjunto vacío $\emptyset$ siempre dará el conjunto $A$.
+
+- $A\cup A= A$
+
+- $A\cup \Omega= \Omega$, la unión de un conjunto cualquiera $A$ con el conjunto universal $\Omega$ dará el conjunto universal ya que $A \subseteq \Omega$.
+
+__Propiedades de la unión de conjuntos__
+
+1. $A\subseteq A\cup B$ y $B\subseteq A\cup B$
+
+Para demostrarlo tomemos un elemento $x\in A$, por \@ref(eq:union) $x$ este elemento pertenece a la unión ya que pertenece a uno de los dos conjuntos que lo conforman, así $x\in A\cup B$, como esto se cumple para cualquier elemento de $A$ entonces $A\subseteq A\cup B$. 
+
+En el segundo caso utilicemos un elemento $x\in B$, igualmente por \@ref(eq:union) $x\in A\cup B$, y como tomamos cualquier elemento del conjunto $B$ tenemos que $B\subseteq A\cup B$.
+
+2. $A\cup B= B\cup A$, llamada __propiedad conmutativa__ de la unión de conjuntos.
+
+Recordemos que no importa el orden como se colocan los elementos de un conjunto.
+
+Ahora por \@ref(eq:union) tenemos que:
+
+$$
+\begin{array}{rl}
+A\cup B & = \{ x\in \Omega : x\in A \ o \ x\in B\}\\
+& = \{ x\in \Omega : x\in B \ o \ x\in A\}\\ 
+A\cup B  & = B\cup A
+\end{array}
+$$
+
+3. $(A\cup B)\cup C= A\cup (B\cup C)$, llamada __propiedad asociativa de la unión__ de conjuntos.
+
+Esta igualdad la demostraremos basandonos en la doble contención. 
+
+Veamos primero que $(A\cup B)\cup C \subseteq A\cup (B\cup C)$
+
+Tomemos un elementos $x \in (A\cup B)\cup C$ por \@ref(eq:union) tenemos
+
+$$
+\begin{array}{rl}
+x\in (A\cup B)\cup C &\Rightarrow x\in (A\cup B)\ o \ x \in C \\
+& \Rightarrow x\in A\ o \ x\in B\ o \ x \in C\\
+& \Rightarrow x\in A\ o \ x\in (B\cup C)\\
+& \Rightarrow x\in A\cup (B\cup C)
+\end{array}
+$$
+
+Así $(A\cup B)\cup C \subseteq A\cup (B\cup C)$.
+
+Ahora veamos que $A\cup (B\cup C) \subseteq (A\cup B)\cup C$
+
+Tomemos un elementos $x \in A\cup (B\cup C)$ por \@ref(eq:union) tenemos
+
+$$
+\begin{array}{rl}
+x\in A\cup (B\cup C) &\Rightarrow x\in A\ o \ x \in (B\cup C) \\
+& \Rightarrow x\in A\ o \ x\in B\ o \ x \in C\\
+& \Rightarrow x\in (A\cup B) \ o \ x\in C\\
+& \Rightarrow x\in (A\cup B)\cup C
+\end{array}
+$$
+
+Como esto se cumple para cualquier elemento entonces $A\cup (B\cup C) \subseteq (A\cup B)\cup C$.
+
+Para concluir
+
+$$
+\begin{array}{rl}
+(A\cup B)\cup C \subseteq A\cup (B\cup C) \ & \text{y}\quad A\cup (B\cup C) \subseteq (A\cup B)\cup C\\
+\Rightarrow (A\cup B)\cup C &= A\cup (B\cup C)
+\end{array}
+$$
+
+----
+
+### Intersección de Conjuntos
+
+```{definition label=conjunto-intersec}
+Supongamos que tenemos los conjuntos $A$ y $B$, la __intersección__ de estos dos conjuntos es un nuevo conjunto que unicamente contiene los elementos que hay en común entre ambos conjuntos. El operador que representa está operación es $\cap$ y se coloca como $A\cap B$.
+
+$$
+\begin{equation}
+A\cap B=\{x\in \omega\ :\  x\in A\quad y \quad x\in B \}
+(\#eq:intersec)
+\end{equation}
+$$
+```
+
+Asi un elemento $x$ está en $A\cap B$ si y solo si $x\in A$ y $x\in B$, y consecuencia de esto tenemos:
+
+- $A\cap \emptyset=\emptyset$, cualquier conjunto $A$ intersectado con el conjunto vacío $\emptyset$ es el conjunto vacío, no hay elementos comunes entre ellos.
+
+- $A\cap A=A$
+
+- $A\cap \Omega=A$, ya que cualquier conjunto es subconjunto del conjunto universal $A\subseteq \Omega$.
+
+```{definition label=conjuntos-disjuntos}
+Supongamos que tenemos dos conjuntos distintos del conjunto vacío,$A$ y $B$ si la intersección de estos es vacia, $A\cap B=\emptyset$, se dice que son __conjuntos disjuntos__, ajenos o mutuamente excluyentes, es decir, entre ellos no hay ningún elemento en común. 
+```
+
+En cambio si entre ellos hay elementos comunes entonces decimos que los conjuntos se intersectan.
+
+__Propiedades de la intersección de conjuntos__
+
+1. $A\cap B\subseteq A$ y $A\cap B\subseteq B$
+
+Tomemos un elemento $x\in A\cap B$, por \@ref(eq:intersec) tenemos que ese elemento tiene que pertenecer a ambos conjuntos, así $x\in A$ y como se cumple para cualquier elemento que pertenece a la intersección se tiene que $A\cap B\subseteq A$. Para la otra contención igualmente por \@ref(eq:intersec) tenemos que ese elemento $x\in B$ y así $A\cap B\subseteq B$.
+
+2. $A\cap B= B\cap A$, llamada __propiedad conmutativa de la intersección__ de conjuntos.
+
+Aplicando la propiedad de que el orden en los elementos del conjunto no importa y \@ref(eq:intersec) tenemos:
+
+$$
+\begin{array}{rl}
+A\cap B & = \{ x\in \Omega : x\in A\ y\ x\in B\}\\
+& = \{ x\in \Omega : x\in B\ y\ x\in A\}\\
+A\cap B & = B\cap A
+\end{array}
+$$
+
+3) $(A\cap B)\cap C=A\cap (B\cap C)$, llamada __propiedad asociativa en la intersección__ de conjuntos.
+
+Igualmente probaremos esto utilizando la doble contención.
+
+Primero veamos que $(A\cap B)\cap C\subseteq A\cap (B\cap C)$.
+
+Tomemos un elemento $x\in (A\cap B)\cap C$, por \@ref(eq:intersec) tenemos
+
+$$
+\begin{array}{rl}
+x\in (A\cap B)\cap C &\Rightarrow x\in (A\cap B)\ y \ x\in C\\
+& \Rightarrow x\in A\ y \ x\in B\ y\ x\in C\\
+& \Rightarrow x\in A\ y \ x\in (B\cap C)\\
+&\Rightarrow x\in A\cap (B\cap C)
+\end{array}
+$$
+
+Así $(A\cap B)\cap C\subseteq A\cap (B\cap C)$.
+
+Para la otra contención, $A\cap (B\cap C) \subseteq(A\cap B)\cap C$, tomemos un elemento $x\in A\cap (B\cap C)$, y realizando operaciones similares que en el caso anterior tenemos:
+
+$$
+\begin{array}{rl}
+x\in A\cap (B\cap C) &\Rightarrow x\in A\ \text{y}\ x\in (B\cap C)\\
+& \Rightarrow x\in A\ \text{y}\ x\in B\ \text{y}\ x\in C\\
+& \Rightarrow x\in (A\cap B)\ \text{y}\ x C\\
+&\Rightarrow x\in (A\cap B)\cap C
+\end{array}
+$$
+
+Por lo tanto $A\cap (B\cap C) \subseteq (A\cap B)\cap C$.
+
+----
+
+### Diferencia de Conjuntos
+
+```{definition label=diferencia-conjunto}
+La __diferencia__ de dos conjuntos $A$ y $B$, la denotaremos con el simbolo $\setminus$ ó con $-$, $A\setminus B$ se define como los elementos del conjunto $A$ sacando los elementos comunes al conjunto $B$.
+
+$$
+\begin{equation}
+A\setminus B= A-B =\{x\in \Omega\ :\ x\in A \ y\ x\notin B\}
+(\#eq:diferencia)
+\end{equation}
+$$
+```
+
+Así un elemento $x\in A\setminus B$ si y solo si $x\in A$ y $x\notin B$. Consecuentemente tenemos:
+
+- $A\setminus\emptyset = A$
+
+- $A\setminus A=\emptyset$
+
+- $A\setminus \Omega=\emptyset$
+
+- Si $A\subseteq B$ entonces $A\setminus B=\emptyset$
+
+Probaremos esto por reducción al adsurdo. 
+
+Supongamos que el conjunto $A\setminus B$ es distinto del vacío, tomemos $x\in A\setminus B$ por definición $x\in A$ y $x\in B$ pero esto es una contradicción ya que por hipótesis $A$ es un subconjunto de $B$, por lo tanto no existe nigún elemento dentro de la diferencia, así $A\setminus B=\emptyset$.
+
+- $A\setminus B \ne B\setminus A$
+
+```{example label=ejem-dife-conj}
+Supongamos $A=\{1,2\}$ y $B=\{3,2\}$, entonces $A\setminus B=\{ 1\}$ y $B\setminus A=\{ 3\}$
+```
+
+### Complemento de un conjunto
+
+```{definition label=conjunto-complemento}
+El __complemento__ de un conjunto $A$ lo denotaremos como $A^c$, consta de los elementos del espacio muestral que no pertenecen al conjunto $A$.
+
+$$
+\begin{equation}
+A^c=\{x\in \Omega\ :\ x\notin A\}
+(\#eq:complemento)
+\end{equation}
+$$
+```
+
+Un elemento $x\in A^c$ si y solo si $x\notin A$, consecuentemente:
+
+- $A^c=\Omega \setminus A$, el complemento de un conjunto es igual a la diferencia entre el universo y el conjunto.
+
+- $\Omega^c= \emptyset$, el complemento del conjunto universal es el vacío.
+
+- $\emptyset^c=\Omega$, el complemento del vacío es el conjunto universal.
+
+- Para todo conjunto $A$ tenemos que $(A^c)^c= A$.
+
+### Propiedades de Conjuntos
+
+1. Si $A\subseteq C$ y $B\subseteq C$ entonces $A\cup B \subseteq C$
+
+Tomemos un elemento cualquier $x\in A\cup B$, por definición de la unión de conjuntos tenemos
+
+$$
+\begin{array}{rl}
+x\in A\cup B &\Rightarrow x\in A \ \text{ó}\ x\in B\\
+& \Rightarrow x\in C \ \text{ó}\ x\in C\ \text{ya que}\ A\subseteq C\ \text{y}\ B\subseteq C\\
+& \Rightarrow x\in C
+\end{array}
+$$
+
+Así $A\cup B \subseteq C$.
+
+----
+
+2. Si $A\subseteq B$ y $A\subseteq C$ entonces $A\subseteq B\cap C$
+
+Tomemos un elemento $x$ cualquiera del conjunto $A$, entonces como $x\in A$ y por hipótesis se tiene que
+
+$$
+\begin{array}{rl}
+A\subseteq B &\Rightarrow x\in B\\
+A\subseteq C &\Rightarrow x\in C
+\end{array}
+$$
+
+Entonces $x\in (B\cap C)$.
+
+----
+
+3. $A\setminus B= A\cap B^c$ restar un conjunto es igual a intersectarlo con su complemento.
+
+Se demostrará con la doble contención. 
+
+Primero veamos que $A\setminus B\subseteq A\cap B^c$
+
+Tomemos un elemento cualquiera $x\in A\setminus B$, por definición de la diferencia tenemos:
+
+$$
+\begin{array}{rl}
+x\in A\setminus B &\Rightarrow x\in A\ \text{y}\ x\notin B\\
+& \Rightarrow x\in A\ \text{y}\ x\in B^c\\
+& \Rightarrow x\in (A\cap B^c)
+\end{array}
+$$
+
+Así probamos que $A\setminus B\subseteq A\cap B^c$.
+
+Ahora hagamos el camino inverso, probemos que $A\cap B^c\subseteq A\setminus B$.
+
+Tomemos $x\in A\cap B^c$, por \@ref(eq:intersec) tenemos:
+
+$$
+\begin{array}{rl}
+x\in (A\cap B^c) &\Rightarrow x\in A\ \text{y}\ x\in B^c\\
+& \Rightarrow x\in A\ \text{y}\ x\notin B\\
+& \Rightarrow x\in A\setminus B
+\end{array}
+$$
+
+Por lo tanto $A\cap B^c\subseteq A\setminus B$.
+
+Como se cumplen ambas contenciones, se tiene que $A\setminus B = A\cap B^c$.
+
+----
+
+4. $A\subseteq B$ si y solo si $B^c \subseteq A^c$.
+
+$(\Rightarrow)$
+
+Por hipótesis tenemos que $A\subseteq B$. Tomemos un elemento cualquiera $x\in B^c$, por \@ref(eq:complemento) y usando la hipótesis tenemos:
+
+$$x\in B^c \Rightarrow x\notin B\Rightarrow x\notin A\Rightarrow x\in A^c$$
+
+Como esto se cumple para cualquier elemento de $B^c$, se tiene que $B^c \subseteq A^c$.
+
+$(\Leftarrow)$
+
+En este sentido tenemos por hipótesis que $B^c \subseteq A^c$. Tomemos un elemento cualquiera $x\in A$, por propiedades del complemento y usando la hipótesis comprobemos que este elemento también pertenece a $B$.
+
+$$x\in A \Rightarrow x\notin A^c \Rightarrow x\notin B^c \Rightarrow x\in B$$
+
+Por lo tanto $A\subseteq B$.
+
+----
+
+#### Leyes Distributivas
+
+1. $A\cap(B\cup C)= (A\cap B)\cup (A\cap C)$
+
+Esta demostración se hará por doble contención, para probar así la igualdad.
+
+$(\subseteq)$
+
+Tomemos un elemento $x \in A\cap(B\cup C)$ por \@ref(eq:intersec) tenemos:
+
+$$
+\begin{array}{rl}
+x \in A\cap(B\cup C) &\Rightarrow x \in A\ \text{y}\ x\in (B\cup C)\\
+& \Rightarrow x \in A\ \text{y}\ x\in B \ \text{ó}\ x\in C\\
+& \Rightarrow x \in A\ \text{y}\ (x\in B \ \text{ó}\ x\in C)
+\end{array}
+$$
+
+De aquí se desprenden dos casos 
+
+- $x \in A\ \text{y}\ x\in B \Rightarrow x\in (A\cap B)$
+
+- $x \in A\ \text{y}\ x\in C \Rightarrow x\in (A\cap C)$
+
+Entonces $x\in (A\cap B)\ \text{ó} x \in (A\cap C)\Rightarrow x\in (A\cap B)\cup (A\cap C)$.
+
+Así probamos que $A\cap(B\cup C)\subseteq (A\cap B)\cup (A\cap C)$
+
+$(\supseteq)$
+
+Por  \@ref(eq:intersec) y  \@ref(eq:union) tenemos
+
+- $A\cap B \subseteq A$ y $A\cap C \subseteq A$
+
+- $A\cap B \subseteq B\subseteq B \cup C\Rightarrow A\cap B \subseteq B \cup C$
+
+- $A\cap C \subseteq C\subseteq B \cup C\Rightarrow A\cap C \subseteq B \cup C$
+
+Por lo tanto
+
+- $A\cap B \subseteq A\cap (B \cup C)$
+
+- $A\cap C \subseteq A\cap (B \cup C)$
+
+De aquí 
+
+$$(A\cap B)\cup (A\cap C)\subseteq A\cap (B \cup C)$$
+
+Como las dos contenciones se cumplen tenemos $A\cap(B\cup C)= (A\cap B)\cup (A\cap C)$.
+
+2. $A\cup(B\cap C)= (A\cup B)\cap (A\cup C)$
+
+Igualmente se demostrará por la doble contención.
+
+$(\subseteq)$
+
+Sabemos que $B\cap C\subseteq B$ y $B\cap C \subseteq C$ por lo tanto
+
+$A\cup (B\cap C)\subseteq A\cup B$ y $A\cup (B\cap C)\subseteq A\cup C$, así
+
+$$A\cup (B\cap C)\subseteq (A\cup B)\cap  (A\cup C)$$
+
+$(\supseteq)$
+
+Para demostrar esta contención tomemos un elemento cualquiera $x\in (A\cup B)\cap (A\cup C)$, es decir, $x\in (A\cup B)$ y $x\in (A\cup C)$, de aquí se desprenden dos casos:
+
+- Si $x\in A$
+
+Como el elemento está en el conjunto $A$ también estará en $A\cup(B\cap C)$.
+
+- Si $x\notin A$
+
+Como el elemento no está en $A$ pero pertenece a $(A\cup B)$ y $(A\cup C)$, entonces $x\in B$ y $x\in C$ por lo tanto $x\in (B\cap C)$, entonces $x\in A\cup (B\cap C)$
+
+En ambos casos $x\in A\cup (B\cap C)$. Como esto se cumple para cualquier elemento, entonces tenemos finalmente que
+
+$$(A\cup B)\cap  (A\cup C)\subseteq A\cup (B\cap C)$$
+
+Podemos concluir entonces que
+
+$$A\cup (B\cap C) = (A\cup B)\cap  (A\cup C)$$
+
+#### Leyes de Morgan
+
+1. $(A\cup B)^c= A^c \cap B^c$
+
+$(\subseteq)$
+
+Supongamos que tenemos un elemento cualquiera $x\in (A\cup B)^c$, por  \@ref(eq:complemento) tenemos:
+
+$$
+\begin{array}{rl}
+x\in (A\cup B)^c & \Rightarrow x\notin A\cup B\\
+& \Rightarrow x\notin A\ \text{y}\ x\notin B\\
+& \Rightarrow x\in A^c\ \text{y}\ x \in B^c\\
+& \Rightarrow x\in A^c\ \text{y}\ x \in B^c\\
+& \Rightarrow x\in A^c\cap B^c
+\end{array}
+$$
+
+Como se cumple para cualquier elemento, entonces $(A\cup B)^c \subseteq A^c\cap B^c$.
+
+$(\supseteq)$
+
+Para esta contención tomemos un elemento cualquiera $x\in A^c\cap B^c$, por \@ref(eq:intersec) de conjuntos tenemos
+
+$$
+\begin{array}{rl}
+x\in A^c\cap B^c &\Rightarrow x\in A^c\ \text{y}\ x\in B^c\\
+&\Rightarrow x\notin A\ \text{y}\ x\notin B\\
+&\Rightarrow x\notin (A\cup B)\\
+&\Rightarrow x\in (A\cup B)^c
+\end{array}
+$$
+
+Por lo tanto tenemos que $A^c\cap B^c \subseteq (A\cup B)^c$
+
+Como se cumplen las dos contenciones se tiene que 
+
+$$(A\cup B)^c= A^c \cap B^c$$
+
+2. $(A\cap B)^c= A^c \cup B^c$
+
+Igualmente utilizaremos la técnica de doble contención.
+
+$(\subseteq)$
+
+Supongamos que tenemos un elemento cualquiera $x\in (A\cap B)^c$, por  \@ref(eq:complemento) tenemos:
+
+$$
+\begin{array}{rl}
+x\in (A\cap B)^c & \Rightarrow x\notin A\cap B\\
+& \Rightarrow x\notin A\ o\ x\notin B\\
+& \Rightarrow x\in A^c\ o\ x \in B^c\\
+& \Rightarrow x\in A^c\ o\ x \in B^c\\
+& \Rightarrow x\in A^c\cup B^c
+\end{array}
+$$
+
+Como se cumple para cualquier elemento, entonces $(A\cap B)^c \subseteq A^c\cup B^c$.
+
+$(\supseteq)$
+
+Ahora tomemos un elemento cualquiera $x\in A^c\cup B^c$, por \@ref(eq:intersec) de conjuntos tenemos
+
+$$
+\begin{array}{rl}
+x\in A^c\cup B^c &\Rightarrow x\in A^c\ o\ x\in B^c\\
+&\Rightarrow x\notin A\ o\ x\notin B\\
+&\Rightarrow x\notin (A\cap B)\\
+&\Rightarrow x\in (A\cap B)^c
+\end{array}
+$$
+
+Por lo tanto $A^c\cup B^c \subseteq (A\cap B)^c$
+
+Como se cumplen las dos contenciones se tiene que 
+
+$$(A\cap B)^c= A^c \cup B^c$$
+
+----
+
+### Producto Cartesiano
+
+```{definition label=parejas-ordenadas}
+Las __parejas ordenadas__ son pares de objetos, que denotaremos y definiremos como $(a,b)$ en la cual se distingen sus lementos, $a$ indica la primera entrada y $b$ la segunda entrada, en esta pareja importa el orden, es decir $(a,b)\ne (b,a)$.
+```
+
+Si $(a,b)=(c,d)$ entonces $a=c$ y $b=c$.
+
+```{definition label=prod-cartesiano}
+Supongamos que tenemos dos conjuntos $A$ y $B$, el __producto cartesiano__ es la colección de todos los pares ordenanos que podemos hacer con ambos elementos de dichos conjuntos, donde la primera componente pertenece al conjunto $A$ y la segunda componente al conjunto $B$. Su representación matemática es la siguiente:
+  
+$$
+\begin{equation}  
+A\times B = \{(a,b) : a\in A\ y\ b\in B\}
+(\#eq:prodcartesiano)
+\end{equation}
+$$
+```
+
+```{example label=ejem-prod-cart1}
+Supongamos que tenemos el conjunto $A=\{1,2\}$, el producto cartesiano de $A\times A$ es:
+
+$$
+\begin{array}{rl}
+A\times A & = \{ (a,b) : a\in A\ \text{y}\ b\in A\}\\
+A\times A & = \{ (1,1), (1,2), (2,1), (2,2)\}
+\end{array}
+$$
+```
+
+```{example label=ejem-prod-cart2}
+Otro ejemplo de producto cartesiano muy utilizado es el plano cartesiano, es decir 
+
+$$\mathbb R^2 = \mathbb R\times \mathbb R=\{(x,y): x,y\in \mathbb R\}$$
+```
+
+En general tenemos que el producto cartesiano cumple las siguientes propiedades
+
+- Para cualquier conjunto $A$ tenemos que $A\times\emptyset=\emptyset\times A=\emptyset$.
+
+- Para dos conjuntos cualquieras $A$ y $B$ se tiene que $A\times B \ne B\times A$.
+
+----
+
+### Potencia
+
+```{definition label=potencia}
+La __potencia__ de un conjunto se define como el conjunto que contiene a todos los subconjuntos posibles de dicho conjunto. Ésta muchas veces es llamada como el conjunto de partes. Lo denotaremos con $\mathcal P$.
+```
+
+
+
+```{example label=ejem-potencia-conj}
+Como ejemplo retomemos el conjunto definido en \@ref(exm:ejem-prod-cart1) donde A=\{1,2\}. El conjunto de partes del conjunto $A$ es:
+  
+$$\mathcal{P}(A)=\{\{1\},\{2\}, \{1,2\},\emptyset\}$$
+```
+
+__Propiedades de la potencia de un conjunto__
+
+- $\emptyset\in \mathcal P(A)$, ésto se debe a que el $\emptyset \subseteq A$ para cualquier conjunto. 
+
+- $A \in \mathcal P(A)$, ya que $A\subseteq A$. 
