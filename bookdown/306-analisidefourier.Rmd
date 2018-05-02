@@ -1,0 +1,10 @@
+# Análisis de Fourier en $\mathbb{R}^n$
+
+## Convolución de funciones
+
+## La transformada de Fourier
+
+## Funciones de rápido decrecimiento
+
+## Análisis de Fourier de medidas en $\mathbb{R}^n$
+

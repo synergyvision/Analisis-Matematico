@@ -1,0 +1,19 @@
+# Teoría de probabilidades
+
+## Variables aleatorias
+
+## Independencia
+
+## Esperanza condicional
+
+## Sucesiones de variables aleatorias independientes
+
+## Martingalas a tiempo discreto
+
+## Procesos estocásticos
+
+## Movimiento browniano
+
+## Integración estocástica
+
+## Aplicación a las finanzas

@@ -1,0 +1,9 @@
+# Sucesiones numéricas
+
+## Límite de una sucesión
+
+## Sucesiones monótonas
+
+## Subsucesiones y sucesiones de Cauchy
+
+## Límites inferior y superior

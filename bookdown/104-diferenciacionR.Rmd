@@ -1,0 +1,15 @@
+# Diferenciación
+
+## Definición y ejemplos
+
+##  El teorema del valor medio
+
+## Funciones convexas
+
+## Funciones inversas
+
+## Regla de L'Hospital
+
+## Teorema de Taylor en $\mathbb{R}$
+
+## Método de Newton

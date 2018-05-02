@@ -1,11 +1,13 @@
-# Los números reales y complejos
+# Sistema numérico real y complejo
 
 ## Introducción
 
-## Conjuntos totalmente ordenados
+## Propiedades algebraicas de $\mathbb{R}$
 
-## Cuerpos
+## Estructura de orden de $\mathbb{R}$
 
-## La recta real
+## Propiedades de completitud de $\mathbb{R}$
+
+## Inducción matemática
 
 ## Espacios euclídeos

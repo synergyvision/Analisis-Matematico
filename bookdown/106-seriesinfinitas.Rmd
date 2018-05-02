@@ -1,0 +1,11 @@
+# Series numéricas infinitas
+
+## Definición y ejemplos
+
+## Series con términos no-negativos
+
+## Criterios de convergencia
+
+## Convergencia condicional y absoluta
+
+## Sucesiones dobles y series

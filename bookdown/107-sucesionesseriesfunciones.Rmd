@@ -1,13 +1,9 @@
 # Sucesiones y series de funciones
 
-## Convergencia uniforme
+## Convergencia de sucesiones de funciones
 
-## Convergencia uniforme y continuidad
+## Propiedades del límite de funciones
 
-## Convergencia uniforme e integración
+## Convergencia de las series de funciones
 
-## Convergencia uniforme y diferenciación
-
-## Famili de funciones equicontinuas
-
-## El teorema de Stone-Weierstrass
+## Series de potencias

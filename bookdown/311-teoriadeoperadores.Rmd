@@ -1,0 +1,13 @@
+# Teoría de operadores
+
+## Tipos de operadores
+
+## Operadores compactos y de rango finito
+
+## El teorema espectral para operadores normales compactos
+
+## El álgebra del grupo $L^1$
+
+## Representaciones
+
+## Grupos abelianos localmente compactos

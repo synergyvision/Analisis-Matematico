@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Teoría de Conjuntos {#conjuntos}
 
 A continuación presentaremos una breve introducción a la teoria de conjuntos, introduciendo definiciones y algunas demostraciones de propiedades de los mismos.
