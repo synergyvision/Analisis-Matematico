@@ -16,8 +16,8 @@ monofontoptions: "Scale=0.8"
 keep_md: yes
 site: bookdown::bookdown_site
 description: ""
-url: 'http\://synergy.vision/Analisis-y-medida/'
-github-repo: synergyvision/Analisis-y-medida/
+url: 'http\://synergy.vision/Analisis-y-Medida/'
+github-repo: synergyvision/Analisis-y-Medida/
 cover-image: images/cover.png
 ---
 

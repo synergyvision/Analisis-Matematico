@@ -18,8 +18,8 @@ monofontoptions: "Scale=0.8"
 keep_md: yes
 site: bookdown::bookdown_site
 description: ""
-url: 'http\://synergy.vision/Analisis-y-medida/'
-github-repo: synergyvision/Analisis-y-medida/
+url: 'http\://synergy.vision/Analisis-y-Medida/'
+github-repo: synergyvision/Analisis-y-Medida/
 cover-image: images/cover.png
 ---
 
@@ -98,18 +98,6 @@ Nuestra cuenta de Twitter es (https://twitter.com/bysynergyvision) y nuestros re
 
 <!--chapter:end:000-author.Rmd-->
 
-# Conjuntos
-
-## Operaciones
-
-## Relaciones
-
-## Funciones
-
-## Cardinalidad
-
-<!--chapter:end:0001-Conjuntos.Rmd-->
-
 \mainmatter
 
 # Introducción 
@@ -168,6 +156,18 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 <!--chapter:end:010-introduction.Rmd-->
 
+# Conjuntos
+
+## Operaciones
+
+## Relaciones
+
+## Funciones
+
+## Cardinalidad
+
+<!--chapter:end:011-Conjuntos.Rmd-->
+
 # Sistema numérico real y complejo
 
 ## Introducción
@@ -208,7 +208,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 ## Límites inferior y superior
 
-<!--chapter:end:102-sucesionesnuméricas.Rmd-->
+<!--chapter:end:102-sucesionesnumericas.Rmd-->
 
 # Sucesiones y series
 
@@ -222,7 +222,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 ## Continuidad uniforme
 
-<!--chapter:end:103-límiteycontinuidad.Rmd-->
+<!--chapter:end:103-limiteycontinuidad.Rmd-->
 
 # Diferenciación
 
@@ -240,7 +240,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 ## Método de Newton
 
-<!--chapter:end:104-diferenciaciónR.Rmd-->
+<!--chapter:end:104-diferenciacionR.Rmd-->
 
 # Integración de Riemann
 
@@ -264,7 +264,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 ## La integral de Riemann-Stieltjes
 
-<!--chapter:end:105-integraciónR.Rmd-->
+<!--chapter:end:105-integracionR.Rmd-->
 
 # Series numéricas infinitas
 
@@ -347,7 +347,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 ## Series de Fourier
 
 
-<!--chapter:end:201-espaciosmétricos.Rmd-->
+<!--chapter:end:201-espaciosmetricos.Rmd-->
 
 # Espacios lineales normados
 
@@ -377,7 +377,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 ## Nets
 
-<!--chapter:end:2012-espaciostopológicos.Rmd-->
+<!--chapter:end:2012-espaciostopologicos.Rmd-->
 
 # Continuidad en espacios topológicos
 
@@ -401,7 +401,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 ## Teorema de extensión de Tietze
 
-<!--chapter:end:2014-espaciostopológicosnormados.Rmd-->
+<!--chapter:end:2014-espaciostopologicosnormados.Rmd-->
 
 # Espacios topológicos compactos
 
@@ -411,7 +411,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 ## Continuidad y compacidad
 
-<!--chapter:end:2015-espaciostopológicoscompactos.Rmd-->
+<!--chapter:end:2015-espaciostopologicoscompactos.Rmd-->
 
 # Espacios métricos totalmente acotados
 
@@ -453,7 +453,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 ## Teorema espectral de Hilbert
 
-<!--chapter:end:202-diferenciaciónRn.Rmd-->
+<!--chapter:end:202-diferenciacionRn.Rmd-->
 
 # Espacio de funciones diferenciables
 
@@ -501,13 +501,13 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 ## Teorema de Krein-Milman
 
-<!--chapter:end:204-integraciónlebesgueRn.Rmd-->
+<!--chapter:end:204-integracionlebesgueRn.Rmd-->
 
 
 <!--chapter:end:205-curvasysuperficiesRn.Rmd-->
 
 
-<!--chapter:end:206-integraciónensuperficies.Rmd-->
+<!--chapter:end:206-integracionensuperficies.Rmd-->
 
 # Conjuntos medibles
 
@@ -558,7 +558,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 ## Aplicaciones del teorema de Fubini
 
 
-<!--chapter:end:303-integración.Rmd-->
+<!--chapter:end:303-integracion.Rmd-->
 
 # Espacios $L^p$
 
@@ -588,7 +588,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 ## Funciones absolutamente contínuas
 
-<!--chapter:end:305-diferenciación.Rmd-->
+<!--chapter:end:305-diferenciacion.Rmd-->
 
 # Análisis de Fourier en $\mathbb{R}^n$
 
@@ -601,7 +601,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 ## Análisis de Fourier de medidas en $\mathbb{R}^n$
 
 
-<!--chapter:end:306-análisidefourier.Rmd-->
+<!--chapter:end:306-analisidefourier.Rmd-->
 
 # Medidas en espacios localmente compactos
 
@@ -682,7 +682,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 ## Semigrupo de operadores
 
-<!--chapter:end:312-análisisdesemigrupos.Rmd-->
+<!--chapter:end:312-analisisdesemigrupos.Rmd-->
 
 # Teoría de probabilidades
 
@@ -708,7 +708,7 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 # Apéndice
 
-<!--chapter:end:399-Apéndice.Rmd-->
+<!--chapter:end:399-Apendice.Rmd-->
 
 \cleardoublepage 
 
