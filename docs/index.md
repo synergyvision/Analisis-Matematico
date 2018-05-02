@@ -4,7 +4,7 @@
 title: "Introducción al análisis funcional y a la teoría de la medida"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-04-20"
+date: "2018-05-02"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -98,6 +98,18 @@ Nuestra cuenta de Twitter es (https://twitter.com/bysynergyvision) y nuestros re
 
 <!--chapter:end:000-author.Rmd-->
 
+# Conjuntos
+
+## Operaciones
+
+## Relaciones
+
+## Funciones
+
+## Cardinalidad
+
+<!--chapter:end:0001-Conjuntos.Rmd-->
+
 \mainmatter
 
 # Introducción 
@@ -156,19 +168,547 @@ El trabajo de tesis consiste en la investigación documental del estado del arte
 
 <!--chapter:end:010-introduction.Rmd-->
 
-# Los números reales y complejos
+# Sistema numérico real y complejo
 
 ## Introducción
 
-## Conjuntos totalmente ordenados
+## Propiedades algebraicas de $\mathbb{R}$
 
-## Cuerpos
+## Estructura de orden de $\mathbb{R}$
 
-## La recta real
+## Propiedades de completitud de $\mathbb{R}$
+
+## Inducción matemática
 
 ## Espacios euclídeos
 
 <!--chapter:end:101-realesycomplejos.Rmd-->
+
+# Estructuras algebraicas
+
+## Semigrupos y grupos
+
+## Espacios vectoriales
+
+## Transformaciones lineales
+
+## Espacios vectoriales cocientes
+
+## Álgebras
+
+<!--chapter:end:1011-estructurasalgebraicas.Rmd-->
+
+# Sucesiones numéricas
+
+## Límite de una sucesión
+
+## Sucesiones monótonas
+
+## Subsucesiones y sucesiones de Cauchy
+
+## Límites inferior y superior
+
+<!--chapter:end:102-sucesionesnuméricas.Rmd-->
+
+# Sucesiones y series
+
+## Límite de una función
+
+## Límites inferior y superior
+
+## Funciones contínuas
+
+## Propiedades de las funciones contínuas
+
+## Continuidad uniforme
+
+<!--chapter:end:103-límiteycontinuidad.Rmd-->
+
+# Diferenciación
+
+## Definición y ejemplos
+
+##  El teorema del valor medio
+
+## Funciones convexas
+
+## Funciones inversas
+
+## Regla de L'Hospital
+
+## Teorema de Taylor en $\mathbb{R}$
+
+## Método de Newton
+
+<!--chapter:end:104-diferenciaciónR.Rmd-->
+
+# Integración de Riemann
+
+## Integral de Riemann-Darboux
+
+## Propiedades de la integral
+
+## Evaluación de la integral
+
+## Fórmula de Stirling
+
+## Teoremas del valor medio, versión integral
+
+## Estimación de la integral
+
+## Integrales impropias
+
+## La integrabilidad según Riemann
+
+## Funciones a variación acotada
+
+## La integral de Riemann-Stieltjes
+
+<!--chapter:end:105-integraciónR.Rmd-->
+
+# Series numéricas infinitas
+
+## Definición y ejemplos
+
+## Series con términos no-negativos
+
+## Criterios de convergencia
+
+## Convergencia condicional y absoluta
+
+## Sucesiones dobles y series
+
+<!--chapter:end:106-seriesinfinitas.Rmd-->
+
+# Sucesiones y series de funciones
+
+## Convergencia de sucesiones de funciones
+
+## Propiedades del límite de funciones
+
+## Convergencia de las series de funciones
+
+## Series de potencias
+
+<!--chapter:end:107-sucesionesseriesfunciones.Rmd-->
+
+# Funciones en varias variables
+
+## Transformaciones lineales
+
+## Diferenciación
+
+## El principio de la contracción
+
+## El teorema de la función inversa
+
+## El teorema de la función implícita
+
+## Teorema del rango
+
+## Determinantes
+
+## Derivadas de orden superior
+
+## Diferenciación de integrales 
+
+<!--chapter:end:109-funcionesvariasvariables.Rmd-->
+
+# Integración de formas diferenciales
+
+## Integración
+
+## Aplicaciones primitivas
+
+## Cambio de variables
+
+## Formas diferenciales
+
+## Cadenas y símplices
+
+## Teorema de Stoke
+
+## Formas cerradas y formas exactas
+
+## Análisis vectorial
+
+<!--chapter:end:110-integracionformas.Rmd-->
+
+# Funciones especiales
+
+## Series de potencia
+
+## Funciones exponenciales y logarítmicas
+
+## Funciones trigonométricas
+
+## Completitud algebraica del cuerpo de los complejos
+
+## Series de Fourier
+
+
+<!--chapter:end:201-espaciosmétricos.Rmd-->
+
+# Espacios lineales normados
+
+## Normas y seminormas
+
+## Completación de un espacio normado
+
+## Series infinitas en espacios normados
+
+## Sumas no ordenadas en espacios normados
+
+## Trnasformaciones lineales acotadas
+
+## Álgebras de Banach
+
+<!--chapter:end:2011-espacioslinealesnormados.Rmd-->
+
+# Espacios topológicos
+
+## Abiertos y cerrados
+
+## Sistemas de entornos
+
+## Bases de entornos
+
+## Topología relativa
+
+## Nets
+
+<!--chapter:end:2012-espaciostopológicos.Rmd-->
+
+# Continuidad en espacios topológicos
+
+## Propiedades generales
+
+## Topologías iniciales
+
+## Topología producto
+
+## Topología cociente
+
+## Espacio de funciones contínuas
+
+## Conjuntos F-sigma y G-delta 
+
+<!--chapter:end:2013-continuidadespaciostopológicos.Rmd-->
+
+# Espacios topológicos normados
+
+## Lema de Urysohn
+
+## Teorema de extensión de Tietze
+
+<!--chapter:end:2014-espaciostopológicosnormados.Rmd-->
+
+# Espacios topológicos compactos
+
+## Convergencia en espacios compactos
+
+## Compacidad del producto cartesiano
+
+## Continuidad y compacidad
+
+<!--chapter:end:2015-espaciostopológicoscompactos.Rmd-->
+
+# Espacios métricos totalmente acotados
+
+<!--chapter:end:2016-emtotalmenteacotados.Rmd-->
+
+# Equicontinuidad
+
+<!--chapter:end:2017-equicontinuidad.Rmd-->
+
+# El teorema de Stone-Weierstrass
+
+<!--chapter:end:2018-stoneweierstrass.Rmd-->
+
+# Espacios toplógicos localmente compactos
+
+## Propiedades generales
+
+## Funciones a soporte compacto
+
+## Funciones que se anulan al infinito
+
+## Compactificación a un punto
+
+<!--chapter:end:2019-etlocalmentecompactos.Rmd-->
+
+# Espacios de Hilbert
+
+## Definición y ejemplos
+
+## Ortogonalidad
+
+## Separación de conjuntos convexos
+
+## Bases ortonormadas
+
+## Convergencia débil
+
+## Operadores contínuos y compactos
+
+## Teorema espectral de Hilbert
+
+<!--chapter:end:202-diferenciaciónRn.Rmd-->
+
+# Espacio de funciones diferenciables
+
+<!--chapter:end:2020-funcionesdiferenciables.Rmd-->
+
+# Particiones de la unidad
+
+<!--chapter:end:2021-particiondelaunidad.Rmd-->
+
+# Conexidad
+
+<!--chapter:end:2023-conexidad.Rmd-->
+
+# Espacios de Banach
+
+## Espacios normados
+
+## Separación de conjuntos convexos
+
+## Teorema de prolongamiento
+
+## Duales de los espacios $\ell^p$
+
+## Convergencia débil
+
+## Teorema de Banach-Steinhaus
+
+## Espacios reflexivos
+
+## Operadores contínuos y compactos
+
+## Teorema de Fredholm-Riesz
+
+## Aplicaciones abiertos y grafos cerrados
+
+## Caso complejo
+
+<!--chapter:end:203-medidadelebesgueRn.Rmd-->
+
+# Espacios convexos
+
+## Familias de seminormas
+
+## Teorema de separación y de prolongamiento
+
+## Teorema de Krein-Milman
+
+<!--chapter:end:204-integraciónlebesgueRn.Rmd-->
+
+
+<!--chapter:end:205-curvasysuperficiesRn.Rmd-->
+
+
+<!--chapter:end:206-integraciónensuperficies.Rmd-->
+
+# Conjuntos medibles
+
+## Introducción
+
+## Espacios medibles
+
+## Medidas
+
+## Espacios medibles completos
+
+## Medida externa y medibilidad
+
+## Extensión de una medida
+
+## Medida de Lebesgue
+
+## Medida de Lebesgue Stieltjes
+
+## Conjuntos especiales
+
+<!--chapter:end:301-conjuntosmedibles.Rmd-->
+
+# Funciones medibles
+
+## Transformaciones medibles
+
+## Funciones numéricas medibles
+
+## Funciones simples
+
+## Convergencia de funciones medibles
+
+<!--chapter:end:302-funcionesmedibles.Rmd-->
+
+# Integración
+
+## Construcción de la integral
+
+## Propiedades básicas de la integral
+
+## Conexión con la integral de Riemann en $\mathbb{R}^n$
+
+## Teoremas de convergencia
+
+## Integración sobre una medida producto
+
+## Aplicaciones del teorema de Fubini
+
+
+<!--chapter:end:303-integración.Rmd-->
+
+# Espacios $L^p$
+
+## Definición y propiedades generales
+
+## Aproximación en $L^p$
+
+## Convergencia en $L^p$
+
+## Integrabilidad uniforme
+
+## Funciones convexas y desigualdad de Jensen
+
+<!--chapter:end:304-espaciosLp.Rmd-->
+
+# Diferenciación
+
+## Medidas con signo
+
+## Medidas complejas
+
+## Continuidad absoluta de medidas
+
+## Diferenciación de medidas
+
+## Funciones a variación acotada
+
+## Funciones absolutamente contínuas
+
+<!--chapter:end:305-diferenciación.Rmd-->
+
+# Análisis de Fourier en $\mathbb{R}^n$
+
+## Convolución de funciones
+
+## La transformada de Fourier
+
+## Funciones de rápido decrecimiento
+
+## Análisis de Fourier de medidas en $\mathbb{R}^n$
+
+
+<!--chapter:end:306-análisidefourier.Rmd-->
+
+# Medidas en espacios localmente compactos
+
+## Medidas de Radon
+
+## El teorema de representación de Riesz
+
+## Productos de medidas de Radon
+
+## El operador dual
+
+## Operadores compactos
+
+<!--chapter:end:307-medidaesploccompactos.Rmd-->
+
+# Espacios localmente convexos
+
+## Propiedades generales
+
+## Funcionales lineales contínuos
+
+## Teoremas de separación de Hahn-Banach
+
+## Algunas construcciones
+
+<!--chapter:end:308-espacioslocconvexos.Rmd-->
+
+# Topologías débiles en espacios normados
+
+## Topología débil
+
+## Topología débil$^*$
+
+## Espacios reflexivos
+
+## Espacios uniformemente convexos
+
+<!--chapter:end:309-topdebespnormados.Rmd-->
+
+# Espacios de Hilbert
+
+## Principios generales
+
+## Ortogonalidad
+
+## Bases ortonormales
+
+## El adjunto del espacio de Hilbert
+
+
+<!--chapter:end:310-esphilbert.Rmd-->
+
+# Teoría de operadores
+
+## Tipos de operadores
+
+## Operadores compactos y de rango finito
+
+## El teorema espectral para operadores normales compactos
+
+## El álgebra del grupo $L^1$
+
+## Representaciones
+
+## Grupos abelianos localmente compactos
+
+<!--chapter:end:311-teoriadeoperadores.Rmd-->
+
+# Análisis en semigrupos
+
+## Semigrupos con topologías
+
+## Funciones debilmente casi periódicas
+
+## La estructura de los semigrupos compactos
+
+## Funciones fuertemente casi periódicas 
+
+## Semigrupo de operadores
+
+<!--chapter:end:312-análisisdesemigrupos.Rmd-->
+
+# Teoría de probabilidades
+
+## Variables aleatorias
+
+## Independencia
+
+## Esperanza condicional
+
+## Sucesiones de variables aleatorias independientes
+
+## Martingalas a tiempo discreto
+
+## Procesos estocásticos
+
+## Movimiento browniano
+
+## Integración estocástica
+
+## Aplicación a las finanzas
+
+<!--chapter:end:313-probabilidades.Rmd-->
+
+# Apéndice
+
+<!--chapter:end:399-Apéndice.Rmd-->
 
 \cleardoublepage 
 
