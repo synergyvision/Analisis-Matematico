@@ -1,6 +1,41 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Conjuntos
 
-## Operaciones
+Los términos *conjunto*, *colección* y *familia* suelen ser sinónimos, a pesar de que en algunos contextos una de estas palabras tiene prioridad sobre otra. Por ejemplo, se suele decir *colección de conjuntos* y *familia de funciones*. Los conjuntos usualmente se denotan con una letra mayúscula, mientras que para los elementos de un conjunto se utilizan minúsculas. La notación $a \in A$ indica que el elemento $a$ pertenece al conjunto $A$. Por ejemplo, $$2 \in \{a, 3, 2, b\}$$ indica que el elemento $2$ pertenece al conjunto $\{a, 3, 2, b\}$. Nótese que el orden en que se escriben los elementos de un conjunto es indiferente. Así el conjunto anterior es igual a $$\{3,b,a,2\}.$$
+
+Las llaves $\{ \ \}$ siempre se usarán en la definición de conjuntos. En general, para describir a un conjunto exsisten dos formas de hacerlo. Cuando un conjunto se define dando la lista completa de todos sus elementos, decimo por ejemplo 
+
+
+## Operaciones conjuntista
+
+Si $A$ es un subcinjunto de $B$, escribimos $A \subseteq B$. Si todos los conjuntos con los que se trabaja son subconjuntos de un conjunto $X$, entonces $X$ es llamado el conjunto universal. El conjunto potencia de un conjunto $X$ es la colección $\mathcal{P}(X)$ de todos los subconjuntos de $X$, es decir: $$ \mathcal{P}(X) = \{Y \, : \, Y \subseteq X\}.$$
+
+Si $A, B \subseteq X$, entonces $A \cup B$, $A \cap B$ y $A \setminus B$ denotan la unión, intersección y diferencia relativa de $A$ y $B$, El complemento de $A$, definido como los elementos de $X$ que no están en $A$, se denota por $A^c$. Si $\mathcal{A}$ es un subconjunto de $\mathcal{P}(X)$ y $B \in \mathcal{P}(X)$, se define la traza de $\mathcal{A}$ en $B$ como $$\mathcal{A}\cap B := \{A \cap B \, : \, A \in \mathcal{A}\}.$$
+
+La unión e intersección de una familia indexada $\mathcal{A}=\{A_i \, : \, i \in \mathcal{I}\}$ se denotan, respectivamente, como
+$$\cap \mathcal{A}:= \cap_{i \, \in \, \mathcal{I}},$$
+y
+$$\cup \mathcal{A}:= \cup_{i \, \in \, \mathcal{I}},$$ 
+
+Si el conjunto de índices $\mathcal{I}$ es $\{1,2, \hdots, n\}$ o $\{1,2, \hdots\}$, se escribe
+$$\cup_{j=1}^n A_j=A_1 \cup \hdots \cup A_n$$
+$$\cap_{j=1}^n A_j=A_1 \cap \hdots \cap A_n$$
+$$\cup_{j \geq 1} A_j=A_1 \cup A_2 \cup \cdots$$
+$$\cap_{j \geq 1} A_j=A_1 \cap A_2 \cap \cdots$$ 
+
+\begin{prop}
+La unión e intersección de conjuntos satisfacen:
+\begin{item}
+\item
+
+
+\end{item}
+\end{prop}
+
 
 ## Relaciones
 
