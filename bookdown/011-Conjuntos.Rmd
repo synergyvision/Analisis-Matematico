@@ -10,9 +10,9 @@ Los términos *conjunto*, *colección* y *familia* suelen ser sinónimos, a pesa
 Las llaves $\{ \ \}$ siempre se usarán en la definición de conjuntos. En general, para describir a un conjunto exsisten dos formas de hacerlo. Cuando un conjunto se define dando la lista completa de todos sus elementos, decimo por ejemplo 
 
 
-## Operaciones conjuntista
+## Operaciones conjuntistas
 
-Si $A$ es un subcinjunto de $B$, escribimos $A \subseteq B$. Si todos los conjuntos con los que se trabaja son subconjuntos de un conjunto $X$, entonces $X$ es llamado el conjunto universal. El conjunto potencia de un conjunto $X$ es la colección $\mathcal{P}(X)$ de todos los subconjuntos de $X$, es decir: $$ \mathcal{P}(X) = \{Y \, : \, Y \subseteq X\}.$$
+Si $A$ es un subconjunto de $B$, escribimos $A \subseteq B$. Si todos los conjuntos con los que se trabaja son subconjuntos de un conjunto $X$, entonces $X$ es llamado el conjunto universal. El conjunto potencia de un conjunto $X$ es la colección $\mathcal{P}(X)$ de todos los subconjuntos de $X$, es decir: $$ \mathcal{P}(X) = \{Y \, : \, Y \subseteq X\}.$$
 
 Si $A, B \subseteq X$, entonces $A \cup B$, $A \cap B$ y $A \setminus B$ denotan la unión, intersección y diferencia relativa de $A$ y $B$, El complemento de $A$, definido como los elementos de $X$ que no están en $A$, se denota por $A^c$. Si $\mathcal{A}$ es un subconjunto de $\mathcal{P}(X)$ y $B \in \mathcal{P}(X)$, se define la traza de $\mathcal{A}$ en $B$ como $$\mathcal{A}\cap B := \{A \cap B \, : \, A \in \mathcal{A}\}.$$
 
@@ -31,14 +31,12 @@ $$\cap_{j \geq 1} A_j=A_1 \cap A_2 \cap \cdots$$
 La unión e intersección de conjuntos satisfacen:
 \begin{item}
 \item
-
-
 \end{item}
 \end{prop}
 
-Operaciones conjuntistas
+## Operaciones conjuntistas
 
-Si $A$ es un subcinjunto de $B$, escribimos $A \subseteq B$. Si todos los conjuntos con los que se trabaja son subconjuntos de un conjunto $X$, entonces $X$ es llamado el conjunto universal. El conjunto potencia de un conjunto $X$ es la colección $\mathcal{P}(X)$ de todos los subconjuntos de $X$, es decir: $$ \mathcal{P}(X) = \{Y \, : \, Y \subseteq X\}.$$
+Si $A$ es un subconjunto de $B$, escribimos $A \subseteq B$. Si todos los conjuntos con los que se trabaja son subconjuntos de un conjunto $X$, entonces $X$ es llamado el conjunto universal. El conjunto potencia de un conjunto $X$ es la colección $\mathcal{P}(X)$ de todos los subconjuntos de $X$, es decir: $$ \mathcal{P}(X) = \{Y \, : \, Y \subseteq X\}.$$
 
 Si $A, B \subseteq X$, entonces $A \cup B$, $A \cap B$ y $A \setminus B$ denotan la unión, intersección y diferencia relativa de $A$ y $B$, El complemento de $A$, definido como los elementos de $X$ que no están en $A$, se denota por $A^c$. Si $\mathcal{A}$ es un subconjunto de $\mathcal{P}(X)$ y $B \in \mathcal{P}(X)$, se define la traza de $\mathcal{A}$ en $B$ como $$\mathcal{A}\cap B := \{A \cap B \, : \, A \in \mathcal{A}\}.$$
 
@@ -79,18 +77,18 @@ $\begin{array}[ccc]
 	
 Si $A_1 = A_2 = \cdots = A$, escribiremos $A^d$ para el producto finito  y $A^\infty$ para el producto infinito.
 	
-(proposicion)
+\begin{prop}
 El producto cartesiano satisface las siguiente propiedades:
 \begin{itemize}
 \item[(1)] $A \times (A_1 \cup A_2 \cup \cdots)=(A \times A_1 \cup A_2 \cup \cdots)=(A \times A_1) \cup (A \times A_2) \cup \cdots$;
 \item[(2)] $A \times (A_1 \cap A_2 \cap \cdots)=(A \times A_1 \cap A_2 \cap \cdots)=(A \times A_1) \cap (A \times A_2) \cap \cdots$;
 \item[(3)] $(A_1 \cap A_2 \cap \cdots)\times (B_1 \cap B_2 \cap \cdots)=(A_1 \times B_1) \cap (A_2 \times B_2) \cap \cdots$.
 \end{itemize}
-
+\end{prop}
 	
-El producto cartesiano $X:=\prod_{i \in \mathcal{I}}X_i$ de una familia de conjuntos no vacios $X_i$ se define como la colecci\'on de todas las funciones $f:\mathcal{I}\to \bigcup_{i \in \mathcal{I}}X_i$ tales que $f(i)\in X_i$, para cada $i$. N\'otese que el producto cartesiano de conjuntos no vac\'ios es siempre no vac\'io, por el axioma de elecci\'on. El valor $f(i)$ se denomina la {\bf i-\'esima coordenada de $f$}. En el caso particular en que el conjunto de \'indices $\mathcal{I}$ sea el conjunto $\{1,2, \hdots, n\}$, se tiene que toda funci\'on $f: \{1,2, \hdots, n\}\to X$ est\'a completamente determinada por por la $n$-tupla $(f(1), f(2), /hdots, f(n))$.
+El producto cartesiano $X:=\prod_{i \in \mathcal{I}}X_i$ de una familia de conjuntos no vacios $X_i$ se define como la colecci\'on de todas las funciones $f:\mathcal{I}\to \bigcup_{i \in \mathcal{I}}X_i$ tales que $f(i)\in X_i$, para cada $i$. N\'otese que el producto cartesiano de conjuntos no vac\'ios es siempre no vac\'io, por el axioma de elecci\'on. El valor $f(i)$ se denomina la {\bf i-\'esima coordenada de $f$}. En el caso particular en que el conjunto de \'indices $\mathcal{I}$ sea el conjunto $\{1,2, \hdots, n\}$, se tiene que toda funci\'on $f: \{1,2, \hdots, n\}\to X$ est\'a completamente determinada por por la $n$-tupla $(f(1), f(2), \dots, f(n))$.
 	
-Sistemas num\'ericos
+## Sistemas numéricos
 	
 Usaremos la siguiente notaci\'on para el sistema num\'e rico est\'andar:
 \begin{itemize}
@@ -103,7 +101,7 @@ Usaremos la siguiente notaci\'on para el sistema num\'e rico est\'andar:
 \end{itemize}
 
 
-Los terminos conjuntos, colecciones y familias son sinonimos, a pesar de que en algunos contextos se tenga mas preferencia sobre una frase que otra. Por ejemplo, se suele decir coleccion de objetos y familia de funciones. Los conjuntos se denotan usualmente con una letra mayuscula, y elementos de un conjunto con una letra minuscula. Se usa la notacion $$a \in A$$ para indicar que el elemento $a$ pertenece al conjunto $A$. 
+Los términos conjuntos, colecciones y familias son sinónimos, a pesar de que en algunos contextos se tenga mas preferencia sobre una frase que otra. Por ejemplo, se suele decir coleccion de objetos y familia de funciones. Los conjuntos se denotan usualmente con una letra mayuscula, y elementos de un conjunto con una letra minuscula. Se usa la notacion $$a \in A$$ para indicar que el elemento $a$ pertenece al conjunto $A$. 
 
 Existen dos maneras de representar a un conjunto (comprehensiva y extensiva, ver notas de Manuel.)
 
@@ -155,11 +153,11 @@ Aqui, $-\infty$ y $+ \infty$ denotan dos s\'imbolos abstractos, que satisfacen l
 
 Los elementos de $[0, +\infty]=\overline{\mathbb{R}}^+$ se denominan {\bf n\'umeros reales no negativos extendidos}.
 
-\
 
-Relaciones
 
-\
+## Relaciones  
+
+
 
 Una {\bf relaci\'on} en un conjunto no vac\'io $X$ es un conjunto $R \subseteq X \times X$, no vac\'io. Si $R$ es una relaci\'on de $X$ y $(x,y) \in R$, se escribe $x \sim_R y$, o $x \sim y$. Una relaci\'on de $X$ se dice:
 \begin{itemize}
@@ -202,7 +200,7 @@ Lema de Zorn: Sea $X$ un conjunto parcialmente ordenado, tal que cada cadena pos
 
 \
 
-Funciones
+##Funciones
 
 \
 
@@ -280,8 +278,5 @@ En efecto, si $A=\{(x,x) \, : \, x \in X\}$, entonces $\delta_{x,y}={\bf 1}_A(x,
 
 
 
-## Relaciones
-
-## Funciones
 
 ## Cardinalidad
