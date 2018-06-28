@@ -276,7 +276,57 @@ Un caso particular de función indicatriz es la función {\bf delta de Kronecker
 
 En efecto, si $A=\{(x,x) \, : \, x \in X\}$, entonces $\delta_{x,y}={\bf 1}_A(x,y)$.
 
+Las funciones $x^+$ y $x^-$ en $\mathbb{R}$ se definen como 
+\begin{array}{ccc}
+x^+:=\max\{x,0\} & \text{ y } & x^-:=\max\{-x,0\}.
+\end{array} 
+
+De estas definiciones se desprende fácilmente que 
+\begin{array}{ccc}
+x=x^+-x^- & \text{ y } & |x|=x^+ + x^-.
+\end{array} 
+
+La parte real y la parte imaginaria de un número complejo $z$ se denotan, respectívamente, por $\Re(z)$ y $\Im(z)$. Asimismo, la conjugada de $z$ y el módulo de $z$ se denotan por $\overline{z}$ y $|z|$. Se tiene que
+\begin{array}{cccccc}
+z=\Re(z) + i\Im(z) &,& \overline{z}=\Re(z)-i\Im(z) & \text{ y } & |z|=\sqrt{(\Re(z))^2+(\Im(z))^2}.
+\end{array}
+
+El signo $\sgn(z)$ de una variable compleja $z$ se define como
+\begin{equation}
+\sgn(z)= \left\{ \begin{array}{lcc}
+\frac{|z|}{z} & \text{ si } & z \neq 0 \\
+0 & \text{ si } & z = 0.
+\end{array}
+\right.
+\end{equation}
 
 
+Así, $|z|=z\sgn(z)$ para todo $z \in \mathbb{C}$ y $|\sgn(z)|=1$ siempre que $z\neq 0$. 
+
+Si $F \subseteq Y^X$, el funcional de evaluación en $x$ es la función $\text{ev}_x:F \to Y$ dada por
+\begin{equation}
+\text{ev}_x(f):=f(x), \qquad f \in F.
+\end{equation}
+
+El adjunto o dual de una función $\phi:Z \to X$ (con respecto a $F$) es la función $\phi^*:F \to Y^Z$ definida como
+\begin{equation}
+\phi^*(f):=f \circ \phi, \qquad f \in F.
+\end{equation}
+
+Las siguientes notaciones se utilizarán en los capítulos siguientes, para cada función a valores reales:
+\begin{array}{cc}
+f^+(x):=\max{f(x),0} & f^-:= (-f)^+\\
+(f_1 \vedge \dots \vedge f_n)(x):=\max_{1 \, \leq \, k \,\leq \, n}f_k(x) & (f_1 \wedge \dots \wedge f_n)(x):=\min_{1 \, \leq \, k \,\leq \, n}f_k(x)\\
+(\sup_n f_n)(x):=\sup_n f_n(x) & (\inf_n f_n)(x):=\inf_n f_n(x)\\
+(\lim_n f_n)(x):=\lim_n f_n(x) & (_n f_n)(x):= _n f_n(x).
+\end{array}
 
 ## Cardinalidad
+
+Dos conjuntos $A$ y $B$ se dicen tener la misma cardinalidad si existe una biyección de $A$ a $B$.Un conjunto $A$ se dice finito si $A$ tiene la misma cardinalidad que $\{1,2, \hdots, n\}$, para algún $n \in \mathbb{N}$. En este caso, los elementos de $A$ se pueden indexar utilizando el conjunto $\{1,2, \hdots, n\}$, de modo que se puede escribir $A=\{a_1, a_2, \hdots, a_n\}$. Un conjunto $A$ es infinito numerable si tiene la misma cardinalidad que el conjunto $\mathbb{N}$ de los n, en cuyo caso se escribe $A=\{a_0, a_1, a_2, \hdots\}$. Un conjunto es numerable si es finito o infinito numerable; en caso contrario, se dice que el conjunto es no-numerable. Los conjuntos $\mathbb{Z}$ y $\mathbb{Q}$ son numerables. El conjunto $\mathbb{R}$ es no numerable, asi como cualquier intervalo de números reales. La cardinalidad de $\mathbb{R}$ se denota por $\mathfrak{c}$, mientras que la cardinalidad de $\mathbb{N}$ se denota por $\aleph_0$.
+
+\bc{semigrupo}
+
+
+
+

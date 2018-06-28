@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-05-06">
+<meta name="date" content="2018-06-28">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -114,10 +114,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="acerca-del-autor.html"><a href="acerca-del-autor.html"><i class="fa fa-check"></i>Acerca del Autor</a></li>
 <li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
 <li class="chapter" data-level="2" data-path="conjuntos.html"><a href="conjuntos.html"><i class="fa fa-check"></i><b>2</b> Conjuntos</a><ul>
-<li class="chapter" data-level="2.1" data-path="conjuntos.html"><a href="conjuntos.html#operaciones"><i class="fa fa-check"></i><b>2.1</b> Operaciones</a></li>
-<li class="chapter" data-level="2.2" data-path="conjuntos.html"><a href="conjuntos.html#relaciones"><i class="fa fa-check"></i><b>2.2</b> Relaciones</a></li>
-<li class="chapter" data-level="2.3" data-path="conjuntos.html"><a href="conjuntos.html#funciones"><i class="fa fa-check"></i><b>2.3</b> Funciones</a></li>
-<li class="chapter" data-level="2.4" data-path="conjuntos.html"><a href="conjuntos.html#cardinalidad"><i class="fa fa-check"></i><b>2.4</b> Cardinalidad</a></li>
+<li class="chapter" data-level="2.1" data-path="conjuntos.html"><a href="conjuntos.html#operaciones-conjuntistas"><i class="fa fa-check"></i><b>2.1</b> Operaciones conjuntistas</a></li>
+<li class="chapter" data-level="2.2" data-path="conjuntos.html"><a href="conjuntos.html#operaciones-conjuntistas-1"><i class="fa fa-check"></i><b>2.2</b> Operaciones conjuntistas</a></li>
+<li class="chapter" data-level="2.3" data-path="conjuntos.html"><a href="conjuntos.html#sistemas-numericos"><i class="fa fa-check"></i><b>2.3</b> Sistemas numéricos</a></li>
+<li class="chapter" data-level="2.4" data-path="conjuntos.html"><a href="conjuntos.html#relaciones"><i class="fa fa-check"></i><b>2.4</b> Relaciones</a></li>
+<li class="chapter" data-level="2.5" data-path="conjuntos.html"><a href="conjuntos.html#cardinalidad"><i class="fa fa-check"></i><b>2.5</b> Cardinalidad</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="sistema-numerico-real-y-complejo.html"><a href="sistema-numerico-real-y-complejo.html"><i class="fa fa-check"></i><b>3</b> Sistema numérico real y complejo</a><ul>
 <li class="chapter" data-level="3.1" data-path="sistema-numerico-real-y-complejo.html"><a href="sistema-numerico-real-y-complejo.html#introduccion-1"><i class="fa fa-check"></i><b>3.1</b> Introducción</a></li>
@@ -409,6 +410,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1><span class="header-section-number">Capítulo 3</span> Sistema numérico real y complejo</h1>
 <div id="introduccion-1" class="section level2">
 <h2><span class="header-section-number">3.1</span> Introducción</h2>
+<p>En este capítulo se introducen las nociones esenciales para el estudio del sistema numérico real, el cual proveerá el basamento teórico para introducir la noción de límite. Por sistema numérico real entendemos a un conjunto no vacío <span class="math inline">\(\mathbb{R}\)</span>, junto con dos operaciones binarias, llamadas suma y producto, y una relación de orden total, satisfaciendo tres tipos de axiomas: los axiomas de cuerpo, los axiomas de orden y el axioma de completitud.</p>
+Existen varias maneras de construir reigurosamente al conjunto de los números reales. Una de ellas consiste primero en definir al conjunto de los números naturales <span class="math inline">\(\mathbb{N}\)</span>, luego a los enteros <span class="math inline">\(\mathbb{Z}\)</span>, siguiendo con los racionales <span class="math inline">\(\mathbb{Q}\)</span> y finalmente llegando a los números reales <span class="math inline">\(\mathbb{R}\)</span>. En esta construcción, se pide que el conjunto de los números naturales satisfagan una serie de axiomas, llamados axiomas de Peano, los cuales permiten definir las operaciones de suma y producto entre naturales. La resta se introduce luego, agrandando el sistema numérico de los naturales a <span class="math inline">\(\mathbb{Z}\)</span>, y permitiendo resolver ecuaciones de la forma <span class="math inline">\(x+m=n\)</span> para una indeterminada <span class="math inline">\(x\)</span>, y <span class="math inline">\(m,n \in \mathbb{N}\)</span>. Para obtener la división, se identifica el cociente <span class="math inline">\(m/n\)</span>, para <span class="math inline">\(m,n \in \mathbb{Z}\)</span> y <span class="math inline">\(n \neq 0\)</span>, con la clase <span class="math inline">\([(m,n)]\)</span> definida a partir de la relación <span class="math inline">\(\sim\)</span> en <span class="math inline">\(\mathbb{Z} \times (\mathbb{Z}\setminus\{0\})\)</span> dada por
+<span class="math display">\[\begin{equation}
+(m,n) \sim (m&#39;,n&#39;) \Longleftrightarrow mn&#39;=nm&#39;.
+\end{equation}\]</span>
+<p>En este sistema numérico, las ecuaciones del tipo <span class="math inline">\(ax+b=c\)</span>, con <span class="math inline">\(a,b,c \in \mathbb{Z}\)</span> y <span class="math inline">\(a\neq 0\)</span>, poseen solución. El último paso, la construcción de <span class="math inline">\(\mathbb{R}\)</span> a partir de <span class="math inline">\(\mathbb{Q}\)</span>, se realiza (informalmente) llenando los vacíos entre números racionales, mediante la incorporación de los números irracionales. Este es el principio del axioma de completitud.</p>
 </div>
 <div id="propiedades-algebraicas-de-mathbbr" class="section level2">
 <h2><span class="header-section-number">3.2</span> Propiedades algebraicas de <span class="math inline">\(\mathbb{R}\)</span></h2>

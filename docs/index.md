@@ -1,13 +1,10 @@
-# Introducción al análisis funcional y a la teoría de la medida
-Synergy Vision  
-`r Sys.Date()`  
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 
 --- 
 title: "Introducción al análisis funcional y a la teoría de la medida"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-05-06"
+date: "2018-06-28"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -112,21 +109,355 @@ Nuestra cuenta de Twitter es (https://twitter.com/bysynergyvision) y nuestros re
 
 <!--chapter:end:010-introduction.Rmd-->
 
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Conjuntos
 
-## Operaciones
+Los términos *conjunto*, *colección* y *familia* suelen ser sinónimos, a pesar de que en algunos contextos una de estas palabras tiene prioridad sobre otra. Por ejemplo, se suele decir *colección de conjuntos* y *familia de funciones*. Los conjuntos usualmente se denotan con una letra mayúscula, mientras que para los elementos de un conjunto se utilizan minúsculas. La notación $a \in A$ indica que el elemento $a$ pertenece al conjunto $A$. Por ejemplo, $$2 \in \{a, 3, 2, b\}$$ indica que el elemento $2$ pertenece al conjunto $\{a, 3, 2, b\}$. Nótese que el orden en que se escriben los elementos de un conjunto es indiferente. Así el conjunto anterior es igual a $$\{3,b,a,2\}.$$
 
-## Relaciones
+Las llaves $\{ \ \}$ siempre se usarán en la definición de conjuntos. En general, para describir a un conjunto exsisten dos formas de hacerlo. Cuando un conjunto se define dando la lista completa de todos sus elementos, decimo por ejemplo 
 
-## Funciones
+
+## Operaciones conjuntistas
+
+Si $A$ es un subconjunto de $B$, escribimos $A \subseteq B$. Si todos los conjuntos con los que se trabaja son subconjuntos de un conjunto $X$, entonces $X$ es llamado el conjunto universal. El conjunto potencia de un conjunto $X$ es la colección $\mathcal{P}(X)$ de todos los subconjuntos de $X$, es decir: $$ \mathcal{P}(X) = \{Y \, : \, Y \subseteq X\}.$$
+
+Si $A, B \subseteq X$, entonces $A \cup B$, $A \cap B$ y $A \setminus B$ denotan la unión, intersección y diferencia relativa de $A$ y $B$, El complemento de $A$, definido como los elementos de $X$ que no están en $A$, se denota por $A^c$. Si $\mathcal{A}$ es un subconjunto de $\mathcal{P}(X)$ y $B \in \mathcal{P}(X)$, se define la traza de $\mathcal{A}$ en $B$ como $$\mathcal{A}\cap B := \{A \cap B \, : \, A \in \mathcal{A}\}.$$
+
+La unión e intersección de una familia indexada $\mathcal{A}=\{A_i \, : \, i \in \mathcal{I}\}$ se denotan, respectivamente, como
+$$\cap \mathcal{A}:= \cap_{i \, \in \, \mathcal{I}},$$
+y
+$$\cup \mathcal{A}:= \cup_{i \, \in \, \mathcal{I}},$$ 
+
+Si el conjunto de índices $\mathcal{I}$ es $\{1,2, \hdots, n\}$ o $\{1,2, \hdots\}$, se escribe
+$$\cup_{j=1}^n A_j=A_1 \cup \hdots \cup A_n$$
+$$\cap_{j=1}^n A_j=A_1 \cap \hdots \cap A_n$$
+$$\cup_{j \geq 1} A_j=A_1 \cup A_2 \cup \cdots$$
+$$\cap_{j \geq 1} A_j=A_1 \cap A_2 \cap \cdots$$ 
+
+\begin{prop}
+La unión e intersección de conjuntos satisfacen:
+\begin{item}
+\item
+\end{item}
+\end{prop}
+
+## Operaciones conjuntistas
+
+Si $A$ es un subconjunto de $B$, escribimos $A \subseteq B$. Si todos los conjuntos con los que se trabaja son subconjuntos de un conjunto $X$, entonces $X$ es llamado el conjunto universal. El conjunto potencia de un conjunto $X$ es la colección $\mathcal{P}(X)$ de todos los subconjuntos de $X$, es decir: $$ \mathcal{P}(X) = \{Y \, : \, Y \subseteq X\}.$$
+
+Si $A, B \subseteq X$, entonces $A \cup B$, $A \cap B$ y $A \setminus B$ denotan la unión, intersección y diferencia relativa de $A$ y $B$, El complemento de $A$, definido como los elementos de $X$ que no están en $A$, se denota por $A^c$. Si $\mathcal{A}$ es un subconjunto de $\mathcal{P}(X)$ y $B \in \mathcal{P}(X)$, se define la traza de $\mathcal{A}$ en $B$ como $$\mathcal{A}\cap B := \{A \cap B \, : \, A \in \mathcal{A}\}.$$
+
+La unión e intersección de una familia indexada $\mathcal{A}=\{A_i \, : \, i \in \mathcal{I}\}$ se denotan, respectivamente, como
+$$\cap \mathcal{A}:= \cap_{i \, \in \, \mathcal{I}},$$
+y
+$$\cup \mathcal{A}:= \cup_{i \, \in \, \mathcal{I}},$$ 
+
+Si el conjunto de índices $\mathcal{I}$ es $\{1,2, \hdots, n\}$ o $\{1,2, \hdots\}$, se escribe
+$$\cup_{j=1}^n A_j=A_1 \cup \hdots \cup A_n$$
+$$\cap_{j=1}^n A_j=A_1 \cap \hdots \cap A_n$$
+$$\cup_{j \geq 1} A_j=A_1 \cup A_2 \cup \cdots$$
+$$\cap_{j \geq 1} A_j=A_1 \cap A_2 \cap \cdots$$ 
+
+\begin{prop}
+La unión e intersección de conjuntos satisfacen:
+\begin{itemize}
+\item {\bf Leyes de DeMorgan}
+\begin{itemize}
+\item[(1)] \left(\bigcap_{i \in \mathcal{I}}A_i \right)^c = \bigcup_{i \in \mathcal{I}}A_i^c;
+\item[(2)] \left(A\bigcap_{i \in \mathcal{I}} A_i  \right)^c=\bigcup_{i \in \mathcal{I}}A_i^c;
+\end{itemize}
+\begin{itemize}
+\item {\bf Leyes distributivas}
+\item[(3)] A \cup \left(\bigcap_{i \in \matjcal{I}}A_i  \right) = \bigcap_{i \i \mathcal{I} A \cup A_i};
+\item[(d)] A \cap \left(\bigcup_{i \in \mathcal{I}} A_i    \right) = \bigcup_{i \in \mathcal{I}}A \cap A_i.
+\end{itemize}
+\end{prop}
+	
+Una familia $\{A_i \, : \, i \in \mathcal{I}\}$ de conjuntos se dice {\bf disjunta} si $A_i \cap A_j=\emptyset$, siempre que $i \neq j$. En este caso, la uni\'on $\bigcup_{i \in \mathcal{I}}$ se dice {\bf uni\'on disjunta}. Una {\bf partici\'on} (o {\bf partici\'on conjuntista}) de un conjunto $X$ es una colecci\'on de conuntos disjuntos no vac\'ios , cuya uni\'on disjunta es todo $X$.
+	
+Una sucesi\'on de conjuntos $\{A_n\}_{n \geq 0}$ se dice {\bf ascendente} si $A_1  \leq subseteq A_2 \subseteq \cdots$, en cuyo caso escribiremos $A_n \uparrow$. Si $A_1 \supseteq A_2 \supseteq \cdots$, se dice que la sucesi\'on es {\bf decreciente}. Denotaremos por $A_n \downarrow$ a una sucesi\'on que es decreciente. Si $\{A_n\}_{n \geq 0}$ es creciente y $A=A_1 \cup A_2 \cup \cdots$ (respectivamente si $\{A_n\}_{n \geq 0}$ es decreciente y $A=A_1 \cap A_2 \cap \cdots$), escribiremos $A_n \uparrow A$ (respectivamente $A_n \downarrow A$).
+	
+El producto cartesiano de sucesiones finitas o infinitas numerables de conjuntos $A_1, A_2, \hdots$ se denotan, respectivamente, por
+$\begin{array}[ccc]
+\prod_{n=1}^d A_n = A_1 \times \cdots \times A_d &y& \prod_{n=1}^\infty A_n = A_1 \times A_2 \times \cdots.
+\end{array}$
+	
+Si $A_1 = A_2 = \cdots = A$, escribiremos $A^d$ para el producto finito  y $A^\infty$ para el producto infinito.
+	
+\begin{prop}
+El producto cartesiano satisface las siguiente propiedades:
+\begin{itemize}
+\item[(1)] $A \times (A_1 \cup A_2 \cup \cdots)=(A \times A_1 \cup A_2 \cup \cdots)=(A \times A_1) \cup (A \times A_2) \cup \cdots$;
+\item[(2)] $A \times (A_1 \cap A_2 \cap \cdots)=(A \times A_1 \cap A_2 \cap \cdots)=(A \times A_1) \cap (A \times A_2) \cap \cdots$;
+\item[(3)] $(A_1 \cap A_2 \cap \cdots)\times (B_1 \cap B_2 \cap \cdots)=(A_1 \times B_1) \cap (A_2 \times B_2) \cap \cdots$.
+\end{itemize}
+\end{prop}
+	
+El producto cartesiano $X:=\prod_{i \in \mathcal{I}}X_i$ de una familia de conjuntos no vacios $X_i$ se define como la colecci\'on de todas las funciones $f:\mathcal{I}\to \bigcup_{i \in \mathcal{I}}X_i$ tales que $f(i)\in X_i$, para cada $i$. N\'otese que el producto cartesiano de conjuntos no vac\'ios es siempre no vac\'io, por el axioma de elecci\'on. El valor $f(i)$ se denomina la {\bf i-\'esima coordenada de $f$}. En el caso particular en que el conjunto de \'indices $\mathcal{I}$ sea el conjunto $\{1,2, \hdots, n\}$, se tiene que toda funci\'on $f: \{1,2, \hdots, n\}\to X$ est\'a completamente determinada por por la $n$-tupla $(f(1), f(2), \dots, f(n))$.
+	
+## Sistemas numéricos
+	
+Usaremos la siguiente notaci\'on para el sistema num\'e rico est\'andar:
+\begin{itemize}
+\item $\mathbb{N}:=\{0,1,2,3, \hdots\}$: el conjunto de los {\bf n\'umeros naturales} o {\bf enteros no negativos};
+\item $\mathbb{P}:= \mathbb{N}\setminus \{0\}$: el conjunto de los {\bf n\'umeros enteros positivos};
+\item $\mathbb{Z}$: el conjunto de los {\bf n\'umeros enteros};
+\item $\mathbb{Q}$: el conjunto de los {\bf n\'umeros racionales};
+\item $\mathbb{R}$: el conjunto de los {\bf n\'umeros reales};
+\item $\mathbb{C}$: el conjunto de los {\bf n\'umeros complejos}.
+\end{itemize}
+
+
+Los términos conjuntos, colecciones y familias son sinónimos, a pesar de que en algunos contextos se tenga mas preferencia sobre una frase que otra. Por ejemplo, se suele decir coleccion de objetos y familia de funciones. Los conjuntos se denotan usualmente con una letra mayuscula, y elementos de un conjunto con una letra minuscula. Se usa la notacion $$a \in A$$ para indicar que el elemento $a$ pertenece al conjunto $A$. 
+
+Existen dos maneras de representar a un conjunto (comprehensiva y extensiva, ver notas de Manuel.)
+
+\
+
+
+Dos subconjuntos de $\mathbb{C}$ son de particular importancia:
+\begin{itemize}
+\item {\bf el disco unitario}:
+\[\mathbb{D}:=\{z \in \mathbb{C}: \, |z|<1\};\]
+\item {\bf el grupo circular}:
+\[\mathbb{T}:=\{z \in \mathbb{C}: \, |z|=1\}.\]
+\end{itemize}
+
+En general, el s\'imbolo $\mathbb{K}$ denota a un cuerpo de caracter\'istica $0$, como por ejemplo $\mathbb{Q}$, $\mathbb{R}$ o $\mathbb{C}$. 
+
+Si $A \subseteq \mathbb{R}$, escribiremos $A^+$ para denotar al conjunto $A \cap [0, \infty)$. Asi, por ejemplo, se tiene que $\mathbb{Z}^+=\{n \in \mathbb{Z} \, : \, n \geq 0\}=\mathbb{N}$.
+
+Si $A \subseteq \mathbb{C}$, se denota por $A_*$ al conjunto de elementos no nulos de $A$.
+
+Sea $d$ un entero positivo. Si $A$ es un conjunto, se define
+\[A^d:=A \times A \times \cdots \times A.\]
+
+Los {\bf espacios eucl\'ideos $d$-dimensionales reales y complejos} se definen, respectivamente, como $\mathbb{R}^d$ y $\mathbb{C}^d$, con $d \in \mathbb{P}$.
+
+Un {\bf intervalo $d$-dimensional} en $\mathbb{R}^d$ es un producto cartesiano de intervalos en $\mathbb{R}$. Es decir, si ${\bf a}:=(a_1, a_2, \hdots, a_d)$ y ${\bf b}:=(b_1, b_2, \hdots, b_d)$ son elementos de $\mathbb{R}^d$, un intervalo $d$-dimensional es de la forma
+\[({\bf a}, {\bf b}]:=(a_1, b_1] \times (a_2, b_2] \times \cdots \times (a_d, b_d].\]
+
+La {\bf norma eucl\'idea} en $\mathbb{K}^d$ se define como 
+\[|{\bf z}|:=\sqrt{|z_1|^2+|z_2|^2+ \cdots + |z_d|^2},\]
+para cada ${\bf z}=(z_1, z_2, \hdots, z_d) \in \mathbb{C}^d$.
+
+El {\bf sistema num\'erico real extendido} es el conjunto
+\[\overline{\mathbb{R}}:=\mathbb{R} \cup \{\pm \infty\}=[-\infty, +\infty].\]
+
+Aqui, $-\infty$ y $+ \infty$ denotan dos s\'imbolos abstractos, que satisfacen los siguientes axiomas:
+\begin{itemize}
+\item $-\infty, +\infty \notin \mathbb{R}$;
+\item $-\infty < x < +\infty$, para todo $x \in \mathbb{R}$;
+\item $x+\infty = \infty$, si $-\infty < x \leq +\infty$;
+\item $x-\infty = -\infty$, si $-\infty \leq x < \infty$;
+\item $x \cdot(+\infty)=\infty$, si $0 < x \leq +\infty$;
+\item $x \cdot(+\infty)=-\infty$, si $-\infty < x <0$;
+\item $x \cdot (-\infty)=-\infty$, si $0 < x < +\infty$;
+\item $x \cdot (-\infty)=+\infty$, si $-\infty \leq x < 0$;
+\item $\frac{x}{+\infty}=\frac{x}{-\infty}=0$, si $-\infty < x < +\infty$;
+\item $0 \cdot (\pm \infty)=0$.
+\end{itemize}
+
+Los elementos de $[0, +\infty]=\overline{\mathbb{R}}^+$ se denominan {\bf n\'umeros reales no negativos extendidos}.
+
+
+
+## Relaciones  
+
+
+
+Una {\bf relaci\'on} en un conjunto no vac\'io $X$ es un conjunto $R \subseteq X \times X$, no vac\'io. Si $R$ es una relaci\'on de $X$ y $(x,y) \in R$, se escribe $x \sim_R y$, o $x \sim y$. Una relaci\'on de $X$ se dice:
+\begin{itemize}
+\item {\bf reflexiva} si $x \sim x$, para todo $x \in X$;
+\item {\bf sim\'etrica} si $x \sim y$ implica $y \sim x$;
+\item {\bf transitiva} si $x \sim y$ y $y \sim z$ implican $x \sim z$;
+\item {\bf antisim\'etrica} si $x \sim y$ y $y \sim x$ implican $x=y$.
+\end{itemize}
+
+Una relaci\'on en $X$ que es reflexiva, sim\'etrica y transitiva se conoce como {\bf relaci\'on de equivalencia}. La {\bf clase de equivalencia de $x \in X$} es el conjunto
+\[[x]:= \{y \in X \, : \, x \sim y\}.\]
+
+La colecci\'on de clases de equivalencias distintas de $X$ se denota como $X/\sim$. As\'i:
+\[X/\sim = \{[x] \, : \, x \in X\}.\]
+Las relaciones de equivalencia de un conjunto no vac\'io X y las particiones conjuntistas de $X$ son dos nociones equivalentes. En efecto, dado que
+\begin{equation}
+x \in [y] \Longleftrightarrow y \in [x] \Longleftrightarrow [x]=[y],
+\end{equation}
+es claro que los elementos de $X/\sim$ son disjuntos dos a dos. Adem\'as,
+\begin{equation}
+\bigcup_{[x] \, \in \, X/\sim}[x]=\{y \in X \, : \, x \sim y, \text{ para alg\'un } x \in X\}=X.
+\end{equation}
+As\'i, la colecci\'on $X/\sim$ es una partici\'on de $X$. Rec\'iprocamente, dada una partici\'on de $X$, la relaci\'on definida por
+\begin{equation}
+x \sim y \Longleftrightarrow x \text{ y } y \text{ pertenecen al mismo bloque de la partici\'on }
+\end{equation}
+es una relaci\'on de equivalencia para $X$, donde cada clase de equivalencia es precisamente un bloque de la partici\'on.
+
+Un ejemplo de relaci\'on de equivalencia en $\mathbb{R}$ es el siguiente: la relaci\'on $\sim$ est\'a dada por
+\begin{equation}
+x\sim y \Longleftrightarrow x-y \in \mathbb{Q}.
+\end{equation}
+En este caso, existe solo una clase $[x] \in \mathbb{R}/\sim$ formada por n\'umeros racionales. De hecho, no es dif\'icil demostrar que $[x]=\mathbb{Q}$. Cualquier otra clase $[y]$ de $\mathbb{R}/\sim$ est\'a formada por n\'umeros irracionales.
+
+Una relaci\'on que es reflexiva, antisim\'etrica y transitiva es llamada un {\bf orden parcial}. En este caso, se escribe $x \leq y$ para denotar que el par $(x,y)$ pertenecen a este tipo de relaci\'on. Un conjunto con un orden parcial se denomina {\bf conjunto parcialmente ordenado}. Una {\bf cota superior} (respectivamente, {\bf cota inferior}) de un subconjunto $Y$ de un conjunto parcialmente ordenado $(X, \leq)$ es un elemento $x \in X$ tal que $y \leq x$ (respectivamente, $x \leq y$), para todo $y \in Y$. Un {\bf supremo} (respectivamente, un {\bf \'infimo})de $Y$ es una cota superior (respectivamente, inferior) $x_0$ de $Y$ tal que $x_0 \leq x$ (respectivamente, $x_0 \geq x$) para toda cota superior (respectivamente, inferior) $x$ de $Y$. Por ejemplo, el par $(\mathcal{P}(X), \subseteq)$ forma un conjunto parcialmente ordenado, para cada conjunto $X$. Si $Y \in \mathcal{P}(X)$, entonces los subconjuntos $\cap_{y \, \in \, Y}y$ y $\cup_{y \, \in \, Y}y$ corresponden al \'infimo y al supremo de $Y$, respectivamente. Un elemento $x$ de $X$ se dice {\bf maximal} si para cada $y \in X$ tal que $x \leq y$, se tiene que $x=y$. Del mismo modo, un elemento $x$ de $X$ se dice {\bf minimal} si para cada $y \in X$ tal que $x \geq y$, se tiene que $x=y$.
+
+Un subconjunto no vac\'io $Y$ de un conjunto parcialmente ordenado $(X, \leq)$ se dice {\bf totalmente ordenado} si, para cada $y_1, y_2 \in Y$ distintos se satisface $y_1 \leq y_2$ o $y_2 \leq y_1$. Un conjunto totalmente ordendao tambi\'en suele llamarse una {\bf cadena}. La noci\'on de cadena aparece en el siguiente resultado importante, que se prueba utilizando directamente el axioma de elecci\'on:
+
+Lema de Zorn: Sea $X$ un conjunto parcialmente ordenado, tal que cada cadena posea una cota superior en $X$. Entonces $X$ posee un elemento maximal.
+
+\
+
+##Funciones
+
+\
+
+Sean $X$ y $Y$ conjuntos. Una {funci\'on} de $X$ en $Y$ es (completar). Una funci\'on $f$ cuyo conjunto de partida es $X$ y conjunto de llegada es $Y$ se denota por $f: X \to Y$. La colecci\'on de todas las funciones de $X$ en $Y$ se denota como $Y^X$.
+
+La {\bf imagen} de $A \subseteq X$ y la {preimagen} de $B \subseteq Y$ bajo la funci\'on $f:X \to Y$ se definen, respectivamente, como
+\[f(A):=\{f(x) \in B \, : \, x \in A\},\]
+y
+\[f^{-1}(A):=\{x \in A \, : \, f(x) \in B\}.\]
+
+Una funci\'on $f:X \to Y$ es {\bf sobreyectiva} si $f(X)=Y$, e {\bf inyectiva} si $x_1 \neq x_2$ implica que $f(x_1)\neq f(x_2)$. Una {\bf sobreyecci\'on} (respectivamente, una {\bf inyecci\'on}) es una funci\'on que es sobreyectiva (respectivamente, inyetiva). Una funci\'on que es a la vez sobreyectiva e inyectiva se dice {\bf biyectiva}. 
+
+Un ejemplo importante de funci\'on sobreyectiva es la {funci\'on cociente} 
+$C_\sim: X \to X/\sim$, asociada a una relaci\'on de equivalencia $\sim$ de un conjunto no vac\'io $X$. Por definici\'on, $C_\sim(x):=[x]$. En particular, la preimagen de un subconjunto $B$ de $X/\sim$ bajo $C_\sim$ es la uni\'on de todas las clases de equivalencias $[x]$ in $B$.
+
+Si $X$, $Y$ son conjuntos y $\{X_i \, : \, i \in \mathcal{I}\}$, $\{Y_j \, : \, j \in \mathcal{J}\}$ son subconjuntos de $X$ y $Y$, respectivamente, se tiene que:
+\begin{itemize}
+\item[(a)] $f^{-1}\left(\bigcup_{j \in \mathcal{J}}Y_j \right)=\bigcup_{j \in \mathcal{J}}f^{-1}(Y_j)$;
+\item[(b)] $f^{-1}\left(\bigcap_{j \in \mathcal{J}}Y_j \right)=\bigcap_{j \in \mathcal{J}}f^{-1}(Y_j)$;
+\item[(c)] $f\left(\bigcup_{i \in \mathcal{I}}X_i \right)=\bigcup_{i \in \mathcal{I}}f(I_i)$;
+\item[(d)] $f\left(\bigcap_{i \in \mathcal{I}}X_i \right)\subseteq\bigcap_{i \in \mathcal{I}}f(I_i)$;
+\item[(e)] $f^{-1}(Y_j^c)=(f^{-1}(Y_j))^c$
+\item[(f)] $f(X_i^c)=(f(X_i))^c$;
+\item[(g)] $f(f^{-1}(Y_j)) \subseteq Y_j$; 
+\item[(h)] $X_i \subseteq f^{-1}(f(X_i))$.
+\end{itemize}
+
+\
+
+Las igualdades en $(d)$ y $(h)$ se satisfacen si $f$ es inyectiva, mientras que las igualdades de $(f)$ y $(g)$ suceden si $f$ es sobreyectiva.
+
+Para cada $f:X \to Y$, $\mathcal{A} \subseteq \mathcal{P}(X)$ y $\mathcal{B} \subseteq \mathcal{P}(X)$, se definen las colecciones
+\[f(\mathcal{A})=\{f(A) \, : \, A \in \mathcal{A}\} \subseteq \mathcal{P}(y)\]
+
+\[f^{-1}(\mathcal{B})=\{f^{-1}(B) \, : \, B \in \mathcal{B}\}\subseteq \mathcal{P}(y)\]
+ 
+Si $f:X \to Y$ y $g: Y \to Z$ son funciones, donde $f(X)\subseteq Y$, la función $g \circ f:X \to Z$ definida por $$(g\circ f)(x)=g(f(x))$$, para todo $x \in X$, se denomina {\bf función composición de $g$ con $f$}. Si $A \subseteq Z$, nótese que se tiene la siguiente relación: $$(g \circ f)^{-1}=f^{-1}(g^{-1}(A))$$.
+
+La {\bf función identidad} $\text{id}_X$ de un conjunto $X$ se define como $\text{id}_X(x)=x$, para cada $x \in X$. Si $A \subseteq X$, la restricción
+de $\text{id}_X$ a $A$ se denomina {\función inclusión} o {morfina de inclusión} y se denota como $\iota_A : A \hookuparrow X$.
+
+Si $f:X \to Y$ es biyectiva, la {\bf función inversa} $f^{-1}:Y \to X$ es la función definida como
+\[f^{-1}(y)=x \Longleftrigtharrow y=f(x).\]
+Se tiene que
+\begin{array}[ccc]
+f^{-1}\circ f=\text{id}_X &y& f \circ f^{-1}=\text{id}_Y.
+\end{array}
+
+Si $X$ es un conjunto universal y $A \subseteq X$, la {\bf función indicatriz de $A$} es la función definida por
+\begin{equation}
+{\bf 1}_A(x)= \left\{ \begin{array}{lcc}
+1 & \text{ si } & x \in A \\
+0 & \text{ si } & x \in A^c
+\end{array}
+\right.
+\end{equation}
+
+Toda función indicatriz satisface las siguientes propiedades:
+\begin{itemize}
+\item {\bf 1}_{A \cap B}={\bf 1}_A{\bf 1}_B;
+\item {\bf 1}_{A \cup B}= {\bf 1}_A + {\bf 1}_B - {\bf 1}_{A \cap B};
+\item {\bf 1}_{A^c}=1-{\bf 1}_A.
+\end{itemize}
+
+Un caso particular de función indicatriz es la función {\bf delta de Kronecker}:
+\begin{equation}
+\delta_{x,y}= \left\{ \begin{array}{lcc}
+1 & \text{ si } & x=y \\
+0 & \text{ si } & x \neq y
+\end{array}
+\right.
+\end{equation}
+
+En efecto, si $A=\{(x,x) \, : \, x \in X\}$, entonces $\delta_{x,y}={\bf 1}_A(x,y)$.
+
+Las funciones $x^+$ y $x^-$ en $\mathbb{R}$ se definen como 
+\begin{array}{ccc}
+x^+:=\max\{x,0\} & \text{ y } & x^-:=\max\{-x,0\}.
+\end{array} 
+
+De estas definiciones se desprende fácilmente que 
+\begin{array}{ccc}
+x=x^+-x^- & \text{ y } & |x|=x^+ + x^-.
+\end{array} 
+
+La parte real y la parte imaginaria de un número complejo $z$ se denotan, respectívamente, por $\Re(z)$ y $\Im(z)$. Asimismo, la conjugada de $z$ y el módulo de $z$ se denotan por $\overline{z}$ y $|z|$. Se tiene que
+\begin{array}{cccccc}
+z=\Re(z) + i\Im(z) &,& \overline{z}=\Re(z)-i\Im(z) & \text{ y } & |z|=\sqrt{(\Re(z))^2+(\Im(z))^2}.
+\end{array}
+
+El signo $\sgn(z)$ de una variable compleja $z$ se define como
+\begin{equation}
+\sgn(z)= \left\{ \begin{array}{lcc}
+\frac{|z|}{z} & \text{ si } & z \neq 0 \\
+0 & \text{ si } & z = 0.
+\end{array}
+\right.
+\end{equation}
+
+
+Así, $|z|=z\sgn(z)$ para todo $z \in \mathbb{C}$ y $|\sgn(z)|=1$ siempre que $z\neq 0$. 
+
+Si $F \subseteq Y^X$, el funcional de evaluación en $x$ es la función $\text{ev}_x:F \to Y$ dada por
+\begin{equation}
+\text{ev}_x(f):=f(x), \qquad f \in F.
+\end{equation}
+
+El adjunto o dual de una función $\phi:Z \to X$ (con respecto a $F$) es la función $\phi^*:F \to Y^Z$ definida como
+\begin{equation}
+\phi^*(f):=f \circ \phi, \qquad f \in F.
+\end{equation}
+
+Las siguientes notaciones se utilizarán en los capítulos siguientes, para cada función a valores reales:
+\begin{array}{cc}
+f^+(x):=\max{f(x),0} & f^-:= (-f)^+\\
+(f_1 \vedge \dots \vedge f_n)(x):=\max_{1 \, \leq \, k \,\leq \, n}f_k(x) & (f_1 \wedge \dots \wedge f_n)(x):=\min_{1 \, \leq \, k \,\leq \, n}f_k(x)\\
+(\sup_n f_n)(x):=\sup_n f_n(x) & (\inf_n f_n)(x):=\inf_n f_n(x)\\
+(\lim_n f_n)(x):=\lim_n f_n(x) & (_n f_n)(x):= _n f_n(x).
+\end{array}
 
 ## Cardinalidad
+
+Dos conjuntos $A$ y $B$ se dicen tener la misma cardinalidad si existe una biyección de $A$ a $B$.Un conjunto $A$ se dice finito si $A$ tiene la misma cardinalidad que $\{1,2, \hdots, n\}$, para algún $n \in \mathbb{N}$. En este caso, los elementos de $A$ se pueden indexar utilizando el conjunto $\{1,2, \hdots, n\}$, de modo que se puede escribir $A=\{a_1, a_2, \hdots, a_n\}$. Un conjunto $A$ es infinito numerable si tiene la misma cardinalidad que el conjunto $\mathbb{N}$ de los n, en cuyo caso se escribe $A=\{a_0, a_1, a_2, \hdots\}$. Un conjunto es numerable si es finito o infinito numerable; en caso contrario, se dice que el conjunto es no-numerable. Los conjuntos $\mathbb{Z}$ y $\mathbb{Q}$ son numerables. El conjunto $\mathbb{R}$ es no numerable, asi como cualquier intervalo de números reales. La cardinalidad de $\mathbb{R}$ se denota por $\mathfrak{c}$, mientras que la cardinalidad de $\mathbb{N}$ se denota por $\aleph_0$.
+
+\bc{semigrupo}
+
+
+
+
 
 <!--chapter:end:011-Conjuntos.Rmd-->
 
 # Sistema numérico real y complejo
 
 ## Introducción
+
+En este capítulo se introducen las nociones esenciales para el estudio del sistema numérico real, el cual proveerá el basamento teórico para introducir la noción de límite. Por sistema numérico real entendemos a un conjunto no vacío $\mathbb{R}$, junto con dos operaciones binarias, llamadas suma y producto, y una relación de orden total, satisfaciendo tres tipos de axiomas: los axiomas de cuerpo, los axiomas de orden y el axioma de completitud.
+
+Existen varias maneras de construir reigurosamente al conjunto de los números reales. Una de ellas consiste primero en definir al conjunto de los números naturales $\mathbb{N}$, luego a los enteros $\mathbb{Z}$, siguiendo con los racionales $\mathbb{Q}$ y finalmente llegando a los números reales $\mathbb{R}$. En esta construcción, se pide que el conjunto de los números naturales satisfagan una serie de axiomas, llamados axiomas de Peano, los cuales permiten definir las operaciones de suma y producto entre naturales. La resta se introduce luego, agrandando el sistema numérico de los naturales a $\mathbb{Z}$, y permitiendo resolver ecuaciones de la forma $x+m=n$ para una indeterminada $x$, y $m,n \in \mathbb{N}$. Para obtener la división, se identifica el cociente $m/n$, para $m,n \in \mathbb{Z}$ y $n \neq 0$, con la clase $[(m,n)]$ definida a partir de la relación $\sim$ en $\mathbb{Z} \times (\mathbb{Z}\setminus\{0\})$ dada por
+\begin{equation}
+(m,n) \sim (m',n') \Longleftrightarrow mn'=nm'.
+\end{equation}
+En este sistema numérico, las ecuaciones del tipo $ax+b=c$, con $a,b,c \in \mathbb{Z}$ y $a\neq 0$, poseen solución. El último paso, la construcción de $\mathbb{R}$ a partir de $\mathbb{Q}$, se realiza (informalmente) llenando los vacíos entre números racionales, mediante la incorporación de los números irracionales. Este es el principio del axioma de completitud.
+
+
+
 
 ## Propiedades algebraicas de $\mathbb{R}$
 
@@ -766,21 +1097,21 @@ LaTeX distributions and packages are also updated from time to time, and you may
 
 ```r
 system('pdflatex --version')
-## MiKTeX-pdfTeX 2.9.6354 (1.40.18) (MiKTeX 2.9.6350)
-## 2.9.6354 (1.40.18)
+## MiKTeX-pdfTeX 2.9.6607 (1.40.18) (MiKTeX 2.9.6600 64-bit)
+## Copyright (C) 1982 D. E. Knuth, (C) 1996-2018 Han The Thanh
 ## TeX is a trademark of the American Mathematical Society.
 ## using bzip2 version 1.0.6, 6-Sept-2010
-## compiled with curl version 7.54.0; using libcurl/7.54.0 WinSSL
+## compiled with curl version 7.56.1; using libcurl/7.56.1 WinSSL
 ## compiled with expat version 2.2; using expat_2.2.0
 ## compiled with jpeg version 9.2
 ## compiled with liblzma version 50020032; using 50020032
-## compiled with libpng version 1.6.29; using 1.6.29
+## compiled with libpng version 1.6.34; using 1.6.34
 ## compiled with libressl version LibreSSL 2.5.3; using LibreSSL 2.5.3
-## compiled with MiKTeX Application Framework version 1.6334; using 1.6334
-## compiled with MiKTeX Core version 1.6344; using 1.6344
+## compiled with MiKTeX Application Framework version 2.6592; using 2.6592
+## compiled with MiKTeX Core version 5.6594; using 5.6612
 ## compiled with MiKTeX Archive Extractor version 1.6300; using 1.6300
-## compiled with MiKTeX Package Manager version 1.6353; using 1.6353
-## compiled with poppler version 0.55.0
+## compiled with MiKTeX Package Manager version 1.6584; using 1.6584
+## compiled with poppler version 0.60.1
 ## compiled with uriparser version 0.8.4
 ## compiled with zlib version 1.2.11; using 1.2.11
 ```

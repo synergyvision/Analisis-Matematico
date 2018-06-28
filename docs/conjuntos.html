@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-05-06">
+<meta name="date" content="2018-06-28">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -114,10 +114,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="acerca-del-autor.html"><a href="acerca-del-autor.html"><i class="fa fa-check"></i>Acerca del Autor</a></li>
 <li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
 <li class="chapter" data-level="2" data-path="conjuntos.html"><a href="conjuntos.html"><i class="fa fa-check"></i><b>2</b> Conjuntos</a><ul>
-<li class="chapter" data-level="2.1" data-path="conjuntos.html"><a href="conjuntos.html#operaciones"><i class="fa fa-check"></i><b>2.1</b> Operaciones</a></li>
-<li class="chapter" data-level="2.2" data-path="conjuntos.html"><a href="conjuntos.html#relaciones"><i class="fa fa-check"></i><b>2.2</b> Relaciones</a></li>
-<li class="chapter" data-level="2.3" data-path="conjuntos.html"><a href="conjuntos.html#funciones"><i class="fa fa-check"></i><b>2.3</b> Funciones</a></li>
-<li class="chapter" data-level="2.4" data-path="conjuntos.html"><a href="conjuntos.html#cardinalidad"><i class="fa fa-check"></i><b>2.4</b> Cardinalidad</a></li>
+<li class="chapter" data-level="2.1" data-path="conjuntos.html"><a href="conjuntos.html#operaciones-conjuntistas"><i class="fa fa-check"></i><b>2.1</b> Operaciones conjuntistas</a></li>
+<li class="chapter" data-level="2.2" data-path="conjuntos.html"><a href="conjuntos.html#operaciones-conjuntistas-1"><i class="fa fa-check"></i><b>2.2</b> Operaciones conjuntistas</a></li>
+<li class="chapter" data-level="2.3" data-path="conjuntos.html"><a href="conjuntos.html#sistemas-numericos"><i class="fa fa-check"></i><b>2.3</b> Sistemas numéricos</a></li>
+<li class="chapter" data-level="2.4" data-path="conjuntos.html"><a href="conjuntos.html#relaciones"><i class="fa fa-check"></i><b>2.4</b> Relaciones</a></li>
+<li class="chapter" data-level="2.5" data-path="conjuntos.html"><a href="conjuntos.html#cardinalidad"><i class="fa fa-check"></i><b>2.5</b> Cardinalidad</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="sistema-numerico-real-y-complejo.html"><a href="sistema-numerico-real-y-complejo.html"><i class="fa fa-check"></i><b>3</b> Sistema numérico real y complejo</a><ul>
 <li class="chapter" data-level="3.1" data-path="sistema-numerico-real-y-complejo.html"><a href="sistema-numerico-real-y-complejo.html#introduccion-1"><i class="fa fa-check"></i><b>3.1</b> Introducción</a></li>
@@ -407,17 +408,159 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="conjuntos" class="section level1">
 <h1><span class="header-section-number">Capítulo 2</span> Conjuntos</h1>
-<div id="operaciones" class="section level2">
-<h2><span class="header-section-number">2.1</span> Operaciones</h2>
+<p>Los términos <em>conjunto</em>, <em>colección</em> y <em>familia</em> suelen ser sinónimos, a pesar de que en algunos contextos una de estas palabras tiene prioridad sobre otra. Por ejemplo, se suele decir <em>colección de conjuntos</em> y <em>familia de funciones</em>. Los conjuntos usualmente se denotan con una letra mayúscula, mientras que para los elementos de un conjunto se utilizan minúsculas. La notación <span class="math inline">\(a \in A\)</span> indica que el elemento <span class="math inline">\(a\)</span> pertenece al conjunto <span class="math inline">\(A\)</span>. Por ejemplo, <span class="math display">\[2 \in \{a, 3, 2, b\}\]</span> indica que el elemento <span class="math inline">\(2\)</span> pertenece al conjunto <span class="math inline">\(\{a, 3, 2, b\}\)</span>. Nótese que el orden en que se escriben los elementos de un conjunto es indiferente. Así el conjunto anterior es igual a <span class="math display">\[\{3,b,a,2\}.\]</span></p>
+<p>Las llaves <span class="math inline">\(\{ \ \}\)</span> siempre se usarán en la definición de conjuntos. En general, para describir a un conjunto exsisten dos formas de hacerlo. Cuando un conjunto se define dando la lista completa de todos sus elementos, decimo por ejemplo</p>
+<div id="operaciones-conjuntistas" class="section level2">
+<h2><span class="header-section-number">2.1</span> Operaciones conjuntistas</h2>
+<p>Si <span class="math inline">\(A\)</span> es un subconjunto de <span class="math inline">\(B\)</span>, escribimos <span class="math inline">\(A \subseteq B\)</span>. Si todos los conjuntos con los que se trabaja son subconjuntos de un conjunto <span class="math inline">\(X\)</span>, entonces <span class="math inline">\(X\)</span> es llamado el conjunto universal. El conjunto potencia de un conjunto <span class="math inline">\(X\)</span> es la colección <span class="math inline">\(\mathcal{P}(X)\)</span> de todos los subconjuntos de <span class="math inline">\(X\)</span>, es decir: <span class="math display">\[ \mathcal{P}(X) = \{Y \, : \, Y \subseteq X\}.\]</span></p>
+<p>Si <span class="math inline">\(A, B \subseteq X\)</span>, entonces <span class="math inline">\(A \cup B\)</span>, <span class="math inline">\(A \cap B\)</span> y <span class="math inline">\(A \setminus B\)</span> denotan la unión, intersección y diferencia relativa de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, El complemento de <span class="math inline">\(A\)</span>, definido como los elementos de <span class="math inline">\(X\)</span> que no están en <span class="math inline">\(A\)</span>, se denota por <span class="math inline">\(A^c\)</span>. Si <span class="math inline">\(\mathcal{A}\)</span> es un subconjunto de <span class="math inline">\(\mathcal{P}(X)\)</span> y <span class="math inline">\(B \in \mathcal{P}(X)\)</span>, se define la traza de <span class="math inline">\(\mathcal{A}\)</span> en <span class="math inline">\(B\)</span> como <span class="math display">\[\mathcal{A}\cap B := \{A \cap B \, : \, A \in \mathcal{A}\}.\]</span></p>
+<p>La unión e intersección de una familia indexada <span class="math inline">\(\mathcal{A}=\{A_i \, : \, i \in \mathcal{I}\}\)</span> se denotan, respectivamente, como <span class="math display">\[\cap \mathcal{A}:= \cap_{i \, \in \, \mathcal{I}},\]</span> y <span class="math display">\[\cup \mathcal{A}:= \cup_{i \, \in \, \mathcal{I}},\]</span></p>
+<p>Si el conjunto de índices <span class="math inline">\(\mathcal{I}\)</span> es <span class="math inline">\(\{1,2, \hdots, n\}\)</span> o <span class="math inline">\(\{1,2, \hdots\}\)</span>, se escribe <span class="math display">\[\cup_{j=1}^n A_j=A_1 \cup \hdots \cup A_n\]</span> <span class="math display">\[\cap_{j=1}^n A_j=A_1 \cap \hdots \cap A_n\]</span> <span class="math display">\[\cup_{j \geq 1} A_j=A_1 \cup A_2 \cup \cdots\]</span> <span class="math display">\[\cap_{j \geq 1} A_j=A_1 \cap A_2 \cap \cdots\]</span></p>
+
+</div>
+<div id="operaciones-conjuntistas-1" class="section level2">
+<h2><span class="header-section-number">2.2</span> Operaciones conjuntistas</h2>
+<p>Si <span class="math inline">\(A\)</span> es un subconjunto de <span class="math inline">\(B\)</span>, escribimos <span class="math inline">\(A \subseteq B\)</span>. Si todos los conjuntos con los que se trabaja son subconjuntos de un conjunto <span class="math inline">\(X\)</span>, entonces <span class="math inline">\(X\)</span> es llamado el conjunto universal. El conjunto potencia de un conjunto <span class="math inline">\(X\)</span> es la colección <span class="math inline">\(\mathcal{P}(X)\)</span> de todos los subconjuntos de <span class="math inline">\(X\)</span>, es decir: <span class="math display">\[ \mathcal{P}(X) = \{Y \, : \, Y \subseteq X\}.\]</span></p>
+<p>Si <span class="math inline">\(A, B \subseteq X\)</span>, entonces <span class="math inline">\(A \cup B\)</span>, <span class="math inline">\(A \cap B\)</span> y <span class="math inline">\(A \setminus B\)</span> denotan la unión, intersección y diferencia relativa de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, El complemento de <span class="math inline">\(A\)</span>, definido como los elementos de <span class="math inline">\(X\)</span> que no están en <span class="math inline">\(A\)</span>, se denota por <span class="math inline">\(A^c\)</span>. Si <span class="math inline">\(\mathcal{A}\)</span> es un subconjunto de <span class="math inline">\(\mathcal{P}(X)\)</span> y <span class="math inline">\(B \in \mathcal{P}(X)\)</span>, se define la traza de <span class="math inline">\(\mathcal{A}\)</span> en <span class="math inline">\(B\)</span> como <span class="math display">\[\mathcal{A}\cap B := \{A \cap B \, : \, A \in \mathcal{A}\}.\]</span></p>
+<p>La unión e intersección de una familia indexada <span class="math inline">\(\mathcal{A}=\{A_i \, : \, i \in \mathcal{I}\}\)</span> se denotan, respectivamente, como <span class="math display">\[\cap \mathcal{A}:= \cap_{i \, \in \, \mathcal{I}},\]</span> y <span class="math display">\[\cup \mathcal{A}:= \cup_{i \, \in \, \mathcal{I}},\]</span></p>
+<p>Si el conjunto de índices <span class="math inline">\(\mathcal{I}\)</span> es <span class="math inline">\(\{1,2, \hdots, n\}\)</span> o <span class="math inline">\(\{1,2, \hdots\}\)</span>, se escribe <span class="math display">\[\cup_{j=1}^n A_j=A_1 \cup \hdots \cup A_n\]</span> <span class="math display">\[\cap_{j=1}^n A_j=A_1 \cap \hdots \cap A_n\]</span> <span class="math display">\[\cup_{j \geq 1} A_j=A_1 \cup A_2 \cup \cdots\]</span> <span class="math display">\[\cap_{j \geq 1} A_j=A_1 \cap A_2 \cap \cdots\]</span></p>
+\begin{prop} La unión e intersección de conjuntos satisfacen: \begin{itemize} {}
+
+<p>\end{prop}</p>
+<p>Una familia <span class="math inline">\(\{A_i \, : \, i \in \mathcal{I}\}\)</span> de conjuntos se dice {} si <span class="math inline">\(A_i \cap A_j=\emptyset\)</span>, siempre que <span class="math inline">\(i \neq j\)</span>. En este caso, la uni'on <span class="math inline">\(\bigcup_{i \in \mathcal{I}}\)</span> se dice {}. Una {} (o {}) de un conjunto <span class="math inline">\(X\)</span> es una colecci'on de conuntos disjuntos no vac'ios , cuya uni'on disjunta es todo <span class="math inline">\(X\)</span>.</p>
+<p>Una sucesi'on de conjuntos <span class="math inline">\(\{A_n\}_{n \geq 0}\)</span> se dice {} si <span class="math inline">\(A_1 \leq subseteq A_2 \subseteq \cdots\)</span>, en cuyo caso escribiremos <span class="math inline">\(A_n \uparrow\)</span>. Si <span class="math inline">\(A_1 \supseteq A_2 \supseteq \cdots\)</span>, se dice que la sucesi'on es {}. Denotaremos por <span class="math inline">\(A_n \downarrow\)</span> a una sucesi'on que es decreciente. Si <span class="math inline">\(\{A_n\}_{n \geq 0}\)</span> es creciente y <span class="math inline">\(A=A_1 \cup A_2 \cup \cdots\)</span> (respectivamente si <span class="math inline">\(\{A_n\}_{n \geq 0}\)</span> es decreciente y <span class="math inline">\(A=A_1 \cap A_2 \cap \cdots\)</span>), escribiremos <span class="math inline">\(A_n \uparrow A\)</span> (respectivamente <span class="math inline">\(A_n \downarrow A\)</span>).</p>
+<p>El producto cartesiano de sucesiones finitas o infinitas numerables de conjuntos <span class="math inline">\(A_1, A_2, \hdots\)</span> se denotan, respectivamente, por <span class="math inline">\(\begin{array}[ccc] \prod_{n=1}^d A_n = A_1 \times \cdots \times A_d &amp;y&amp; \prod_{n=1}^\infty A_n = A_1 \times A_2 \times \cdots. \end{array}\)</span></p>
+<p>Si <span class="math inline">\(A_1 = A_2 = \cdots = A\)</span>, escribiremos <span class="math inline">\(A^d\)</span> para el producto finito y <span class="math inline">\(A^\infty\)</span> para el producto infinito.</p>
+
+<p>El producto cartesiano <span class="math inline">\(X:=\prod_{i \in \mathcal{I}}X_i\)</span> de una familia de conjuntos no vacios <span class="math inline">\(X_i\)</span> se define como la colecci'on de todas las funciones <span class="math inline">\(f:\mathcal{I}\to \bigcup_{i \in \mathcal{I}}X_i\)</span> tales que <span class="math inline">\(f(i)\in X_i\)</span>, para cada <span class="math inline">\(i\)</span>. N'otese que el producto cartesiano de conjuntos no vac'ios es siempre no vac'io, por el axioma de elecci'on. El valor <span class="math inline">\(f(i)\)</span> se denomina la {}. En el caso particular en que el conjunto de 'indices <span class="math inline">\(\mathcal{I}\)</span> sea el conjunto <span class="math inline">\(\{1,2, \hdots, n\}\)</span>, se tiene que toda funci'on <span class="math inline">\(f: \{1,2, \hdots, n\}\to X\)</span> est'a completamente determinada por por la <span class="math inline">\(n\)</span>-tupla <span class="math inline">\((f(1), f(2), \dots, f(n))\)</span>.</p>
+</div>
+<div id="sistemas-numericos" class="section level2">
+<h2><span class="header-section-number">2.3</span> Sistemas numéricos</h2>
+Usaremos la siguiente notaci'on para el sistema num'e rico est'andar:
+
+<p>Los términos conjuntos, colecciones y familias son sinónimos, a pesar de que en algunos contextos se tenga mas preferencia sobre una frase que otra. Por ejemplo, se suele decir coleccion de objetos y familia de funciones. Los conjuntos se denotan usualmente con una letra mayuscula, y elementos de un conjunto con una letra minuscula. Se usa la notacion <span class="math display">\[a \in A\]</span> para indicar que el elemento <span class="math inline">\(a\)</span> pertenece al conjunto <span class="math inline">\(A\)</span>.</p>
+<p>Existen dos maneras de representar a un conjunto (comprehensiva y extensiva, ver notas de Manuel.)</p>
+<p><br />
+</p>
+Dos subconjuntos de <span class="math inline">\(\mathbb{C}\)</span> son de particular importancia:
+
+<p>En general, el s'imbolo <span class="math inline">\(\mathbb{K}\)</span> denota a un cuerpo de caracter'istica <span class="math inline">\(0\)</span>, como por ejemplo <span class="math inline">\(\mathbb{Q}\)</span>, <span class="math inline">\(\mathbb{R}\)</span> o <span class="math inline">\(\mathbb{C}\)</span>.</p>
+<p>Si <span class="math inline">\(A \subseteq \mathbb{R}\)</span>, escribiremos <span class="math inline">\(A^+\)</span> para denotar al conjunto <span class="math inline">\(A \cap [0, \infty)\)</span>. Asi, por ejemplo, se tiene que <span class="math inline">\(\mathbb{Z}^+=\{n \in \mathbb{Z} \, : \, n \geq 0\}=\mathbb{N}\)</span>.</p>
+<p>Si <span class="math inline">\(A \subseteq \mathbb{C}\)</span>, se denota por <span class="math inline">\(A_*\)</span> al conjunto de elementos no nulos de <span class="math inline">\(A\)</span>.</p>
+<p>Sea <span class="math inline">\(d\)</span> un entero positivo. Si <span class="math inline">\(A\)</span> es un conjunto, se define <span class="math display">\[A^d:=A \times A \times \cdots \times A.\]</span></p>
+<p>Los {} se definen, respectivamente, como <span class="math inline">\(\mathbb{R}^d\)</span> y <span class="math inline">\(\mathbb{C}^d\)</span>, con <span class="math inline">\(d \in \mathbb{P}\)</span>.</p>
+<p>Un {} en <span class="math inline">\(\mathbb{R}^d\)</span> es un producto cartesiano de intervalos en <span class="math inline">\(\mathbb{R}\)</span>. Es decir, si <span class="math inline">\({\bf a}:=(a_1, a_2, \hdots, a_d)\)</span> y <span class="math inline">\({\bf b}:=(b_1, b_2, \hdots, b_d)\)</span> son elementos de <span class="math inline">\(\mathbb{R}^d\)</span>, un intervalo <span class="math inline">\(d\)</span>-dimensional es de la forma <span class="math display">\[({\bf a}, {\bf b}]:=(a_1, b_1] \times (a_2, b_2] \times \cdots \times (a_d, b_d].\]</span></p>
+<p>La {} en <span class="math inline">\(\mathbb{K}^d\)</span> se define como <span class="math display">\[|{\bf z}|:=\sqrt{|z_1|^2+|z_2|^2+ \cdots + |z_d|^2},\]</span> para cada <span class="math inline">\({\bf z}=(z_1, z_2, \hdots, z_d) \in \mathbb{C}^d\)</span>.</p>
+<p>El {} es el conjunto <span class="math display">\[\overline{\mathbb{R}}:=\mathbb{R} \cup \{\pm \infty\}=[-\infty, +\infty].\]</span></p>
+Aqui, <span class="math inline">\(-\infty\)</span> y <span class="math inline">\(+ \infty\)</span> denotan dos s'imbolos abstractos, que satisfacen los siguientes axiomas:
+
+<p>Los elementos de <span class="math inline">\([0, +\infty]=\overline{\mathbb{R}}^+\)</span> se denominan {}.</p>
 </div>
 <div id="relaciones" class="section level2">
-<h2><span class="header-section-number">2.2</span> Relaciones</h2>
-</div>
-<div id="funciones" class="section level2">
-<h2><span class="header-section-number">2.3</span> Funciones</h2>
+<h2><span class="header-section-number">2.4</span> Relaciones</h2>
+Una {} en un conjunto no vac'io <span class="math inline">\(X\)</span> es un conjunto <span class="math inline">\(R \subseteq X \times X\)</span>, no vac'io. Si <span class="math inline">\(R\)</span> es una relaci'on de <span class="math inline">\(X\)</span> y <span class="math inline">\((x,y) \in R\)</span>, se escribe <span class="math inline">\(x \sim_R y\)</span>, o <span class="math inline">\(x \sim y\)</span>. Una relaci'on de <span class="math inline">\(X\)</span> se dice:
+
+<p>Una relaci'on en <span class="math inline">\(X\)</span> que es reflexiva, sim'etrica y transitiva se conoce como {}. La {} es el conjunto <span class="math display">\[[x]:= \{y \in X \, : \, x \sim y\}.\]</span></p>
+La colecci'on de clases de equivalencias distintas de <span class="math inline">\(X\)</span> se denota como <span class="math inline">\(X/\sim\)</span>. As'i: <span class="math display">\[X/\sim = \{[x] \, : \, x \in X\}.\]</span> Las relaciones de equivalencia de un conjunto no vac'io X y las particiones conjuntistas de <span class="math inline">\(X\)</span> son dos nociones equivalentes. En efecto, dado que
+<span class="math display">\[\begin{equation}
+x \in [y] \Longleftrightarrow y \in [x] \Longleftrightarrow [x]=[y],
+\end{equation}\]</span>
+es claro que los elementos de <span class="math inline">\(X/\sim\)</span> son disjuntos dos a dos. Adem'as,
+<span class="math display">\[\begin{equation}
+\bigcup_{[x] \, \in \, X/\sim}[x]=\{y \in X \, : \, x \sim y, \text{ para alg\&#39;un } x \in X\}=X.
+\end{equation}\]</span>
+As'i, la colecci'on <span class="math inline">\(X/\sim\)</span> es una partici'on de <span class="math inline">\(X\)</span>. Rec'iprocamente, dada una partici'on de <span class="math inline">\(X\)</span>, la relaci'on definida por
+<span class="math display">\[\begin{equation}
+x \sim y \Longleftrightarrow x \text{ y } y \text{ pertenecen al mismo bloque de la partici\&#39;on }
+\end{equation}\]</span>
+<p>es una relaci'on de equivalencia para <span class="math inline">\(X\)</span>, donde cada clase de equivalencia es precisamente un bloque de la partici'on.</p>
+Un ejemplo de relaci'on de equivalencia en <span class="math inline">\(\mathbb{R}\)</span> es el siguiente: la relaci'on <span class="math inline">\(\sim\)</span> est'a dada por
+<span class="math display">\[\begin{equation}
+x\sim y \Longleftrightarrow x-y \in \mathbb{Q}.
+\end{equation}\]</span>
+<p>En este caso, existe solo una clase <span class="math inline">\([x] \in \mathbb{R}/\sim\)</span> formada por n'umeros racionales. De hecho, no es dif'icil demostrar que <span class="math inline">\([x]=\mathbb{Q}\)</span>. Cualquier otra clase <span class="math inline">\([y]\)</span> de <span class="math inline">\(\mathbb{R}/\sim\)</span> est'a formada por n'umeros irracionales.</p>
+<p>Una relaci'on que es reflexiva, antisim'etrica y transitiva es llamada un {}. En este caso, se escribe <span class="math inline">\(x \leq y\)</span> para denotar que el par <span class="math inline">\((x,y)\)</span> pertenecen a este tipo de relaci'on. Un conjunto con un orden parcial se denomina {}. Una {} (respectivamente, {}) de un subconjunto <span class="math inline">\(Y\)</span> de un conjunto parcialmente ordenado <span class="math inline">\((X, \leq)\)</span> es un elemento <span class="math inline">\(x \in X\)</span> tal que <span class="math inline">\(y \leq x\)</span> (respectivamente, <span class="math inline">\(x \leq y\)</span>), para todo <span class="math inline">\(y \in Y\)</span>. Un {} (respectivamente, un {})de <span class="math inline">\(Y\)</span> es una cota superior (respectivamente, inferior) <span class="math inline">\(x_0\)</span> de <span class="math inline">\(Y\)</span> tal que <span class="math inline">\(x_0 \leq x\)</span> (respectivamente, <span class="math inline">\(x_0 \geq x\)</span>) para toda cota superior (respectivamente, inferior) <span class="math inline">\(x\)</span> de <span class="math inline">\(Y\)</span>. Por ejemplo, el par <span class="math inline">\((\mathcal{P}(X), \subseteq)\)</span> forma un conjunto parcialmente ordenado, para cada conjunto <span class="math inline">\(X\)</span>. Si <span class="math inline">\(Y \in \mathcal{P}(X)\)</span>, entonces los subconjuntos <span class="math inline">\(\cap_{y \, \in \, Y}y\)</span> y <span class="math inline">\(\cup_{y \, \in \, Y}y\)</span> corresponden al 'infimo y al supremo de <span class="math inline">\(Y\)</span>, respectivamente. Un elemento <span class="math inline">\(x\)</span> de <span class="math inline">\(X\)</span> se dice {} si para cada <span class="math inline">\(y \in X\)</span> tal que <span class="math inline">\(x \leq y\)</span>, se tiene que <span class="math inline">\(x=y\)</span>. Del mismo modo, un elemento <span class="math inline">\(x\)</span> de <span class="math inline">\(X\)</span> se dice {} si para cada <span class="math inline">\(y \in X\)</span> tal que <span class="math inline">\(x \geq y\)</span>, se tiene que <span class="math inline">\(x=y\)</span>.</p>
+<p>Un subconjunto no vac'io <span class="math inline">\(Y\)</span> de un conjunto parcialmente ordenado <span class="math inline">\((X, \leq)\)</span> se dice {} si, para cada <span class="math inline">\(y_1, y_2 \in Y\)</span> distintos se satisface <span class="math inline">\(y_1 \leq y_2\)</span> o <span class="math inline">\(y_2 \leq y_1\)</span>. Un conjunto totalmente ordendao tambi'en suele llamarse una {}. La noci'on de cadena aparece en el siguiente resultado importante, que se prueba utilizando directamente el axioma de elecci'on:</p>
+<p>Lema de Zorn: Sea <span class="math inline">\(X\)</span> un conjunto parcialmente ordenado, tal que cada cadena posea una cota superior en <span class="math inline">\(X\)</span>. Entonces <span class="math inline">\(X\)</span> posee un elemento maximal.</p>
+<p><br />
+##Funciones</p>
+<p><br />
+Sean <span class="math inline">\(X\)</span> y <span class="math inline">\(Y\)</span> conjuntos. Una {funci'on} de <span class="math inline">\(X\)</span> en <span class="math inline">\(Y\)</span> es (completar). Una funci'on <span class="math inline">\(f\)</span> cuyo conjunto de partida es <span class="math inline">\(X\)</span> y conjunto de llegada es <span class="math inline">\(Y\)</span> se denota por <span class="math inline">\(f: X \to Y\)</span>. La colecci'on de todas las funciones de <span class="math inline">\(X\)</span> en <span class="math inline">\(Y\)</span> se denota como <span class="math inline">\(Y^X\)</span>.</p>
+<p>La {} de <span class="math inline">\(A \subseteq X\)</span> y la {preimagen} de <span class="math inline">\(B \subseteq Y\)</span> bajo la funci'on <span class="math inline">\(f:X \to Y\)</span> se definen, respectivamente, como <span class="math display">\[f(A):=\{f(x) \in B \, : \, x \in A\},\]</span> y <span class="math display">\[f^{-1}(A):=\{x \in A \, : \, f(x) \in B\}.\]</span></p>
+<p>Una funci'on <span class="math inline">\(f:X \to Y\)</span> es {} si <span class="math inline">\(f(X)=Y\)</span>, e {} si <span class="math inline">\(x_1 \neq x_2\)</span> implica que <span class="math inline">\(f(x_1)\neq f(x_2)\)</span>. Una {} (respectivamente, una {}) es una funci'on que es sobreyectiva (respectivamente, inyetiva). Una funci'on que es a la vez sobreyectiva e inyectiva se dice {}.</p>
+<p>Un ejemplo importante de funci'on sobreyectiva es la {funci'on cociente} <span class="math inline">\(C_\sim: X \to X/\sim\)</span>, asociada a una relaci'on de equivalencia <span class="math inline">\(\sim\)</span> de un conjunto no vac'io <span class="math inline">\(X\)</span>. Por definici'on, <span class="math inline">\(C_\sim(x):=[x]\)</span>. En particular, la preimagen de un subconjunto <span class="math inline">\(B\)</span> de <span class="math inline">\(X/\sim\)</span> bajo <span class="math inline">\(C_\sim\)</span> es la uni'on de todas las clases de equivalencias <span class="math inline">\([x]\)</span> in <span class="math inline">\(B\)</span>.</p>
+Si <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> son conjuntos y <span class="math inline">\(\{X_i \, : \, i \in \mathcal{I}\}\)</span>, <span class="math inline">\(\{Y_j \, : \, j \in \mathcal{J}\}\)</span> son subconjuntos de <span class="math inline">\(X\)</span> y <span class="math inline">\(Y\)</span>, respectivamente, se tiene que:
+
+<p><br />
+Las igualdades en <span class="math inline">\((d)\)</span> y <span class="math inline">\((h)\)</span> se satisfacen si <span class="math inline">\(f\)</span> es inyectiva, mientras que las igualdades de <span class="math inline">\((f)\)</span> y <span class="math inline">\((g)\)</span> suceden si <span class="math inline">\(f\)</span> es sobreyectiva.</p>
+<p>Para cada <span class="math inline">\(f:X \to Y\)</span>, <span class="math inline">\(\mathcal{A} \subseteq \mathcal{P}(X)\)</span> y <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span>, se definen las colecciones <span class="math display">\[f(\mathcal{A})=\{f(A) \, : \, A \in \mathcal{A}\} \subseteq \mathcal{P}(y)\]</span></p>
+<p><span class="math display">\[f^{-1}(\mathcal{B})=\{f^{-1}(B) \, : \, B \in \mathcal{B}\}\subseteq \mathcal{P}(y)\]</span></p>
+<p>Si <span class="math inline">\(f:X \to Y\)</span> y <span class="math inline">\(g: Y \to Z\)</span> son funciones, donde <span class="math inline">\(f(X)\subseteq Y\)</span>, la función <span class="math inline">\(g \circ f:X \to Z\)</span> definida por <span class="math display">\[(g\circ f)(x)=g(f(x))\]</span>, para todo <span class="math inline">\(x \in X\)</span>, se denomina {}. Si <span class="math inline">\(A \subseteq Z\)</span>, nótese que se tiene la siguiente relación: <span class="math display">\[(g \circ f)^{-1}=f^{-1}(g^{-1}(A))\]</span>.</p>
+<p>La {} <span class="math inline">\(\text{id}_X\)</span> de un conjunto <span class="math inline">\(X\)</span> se define como <span class="math inline">\(\text{id}_X(x)=x\)</span>, para cada <span class="math inline">\(x \in X\)</span>. Si <span class="math inline">\(A \subseteq X\)</span>, la restricción de <span class="math inline">\(\text{id}_X\)</span> a <span class="math inline">\(A\)</span> se denomina {inclusión} o {morfina de inclusión} y se denota como <span class="math inline">\(\iota_A : A \hookuparrow X\)</span>.</p>
+Si <span class="math inline">\(f:X \to Y\)</span> es biyectiva, la {} <span class="math inline">\(f^{-1}:Y \to X\)</span> es la función definida como <span class="math display">\[f^{-1}(y)=x \Longleftrigtharrow y=f(x).\]</span> Se tiene que
+<span class="math display">\[\begin{array}[ccc]
+f^{-1}\circ f=\text{id}_X &amp;y&amp; f \circ f^{-1}=\text{id}_Y.
+\end{array}\]</span>
+Si <span class="math inline">\(X\)</span> es un conjunto universal y <span class="math inline">\(A \subseteq X\)</span>, la {} es la función definida por
+<span class="math display">\[\begin{equation}
+{\bf 1}_A(x)= \left\{ \begin{array}{lcc}
+1 &amp; \text{ si } &amp; x \in A \\
+0 &amp; \text{ si } &amp; x \in A^c
+\end{array}
+\right.
+\end{equation}\]</span>
+Toda función indicatriz satisface las siguientes propiedades:
+
+Un caso particular de función indicatriz es la función {}:
+<span class="math display">\[\begin{equation}
+\delta_{x,y}= \left\{ \begin{array}{lcc}
+1 &amp; \text{ si } &amp; x=y \\
+0 &amp; \text{ si } &amp; x \neq y
+\end{array}
+\right.
+\end{equation}\]</span>
+<p>En efecto, si <span class="math inline">\(A=\{(x,x) \, : \, x \in X\}\)</span>, entonces <span class="math inline">\(\delta_{x,y}={\bf 1}_A(x,y)\)</span>.</p>
+Las funciones <span class="math inline">\(x^+\)</span> y <span class="math inline">\(x^-\)</span> en <span class="math inline">\(\mathbb{R}\)</span> se definen como
+<span class="math display">\[\begin{array}{ccc}
+x^+:=\max\{x,0\} &amp; \text{ y } &amp; x^-:=\max\{-x,0\}.
+\end{array}\]</span>
+De estas definiciones se desprende fácilmente que
+<span class="math display">\[\begin{array}{ccc}
+x=x^+-x^- &amp; \text{ y } &amp; |x|=x^+ + x^-.
+\end{array}\]</span>
+La parte real y la parte imaginaria de un número complejo <span class="math inline">\(z\)</span> se denotan, respectívamente, por <span class="math inline">\(\Re(z)\)</span> y <span class="math inline">\(\Im(z)\)</span>. Asimismo, la conjugada de <span class="math inline">\(z\)</span> y el módulo de <span class="math inline">\(z\)</span> se denotan por <span class="math inline">\(\overline{z}\)</span> y <span class="math inline">\(|z|\)</span>. Se tiene que
+<span class="math display">\[\begin{array}{cccccc}
+z=\Re(z) + i\Im(z) &amp;,&amp; \overline{z}=\Re(z)-i\Im(z) &amp; \text{ y } &amp; |z|=\sqrt{(\Re(z))^2+(\Im(z))^2}.
+\end{array}\]</span>
+El signo <span class="math inline">\(\sgn(z)\)</span> de una variable compleja <span class="math inline">\(z\)</span> se define como
+<span class="math display">\[\begin{equation}
+\sgn(z)= \left\{ \begin{array}{lcc}
+\frac{|z|}{z} &amp; \text{ si } &amp; z \neq 0 \\
+0 &amp; \text{ si } &amp; z = 0.
+\end{array}
+\right.
+\end{equation}\]</span>
+<p>Así, <span class="math inline">\(|z|=z\sgn(z)\)</span> para todo <span class="math inline">\(z \in \mathbb{C}\)</span> y <span class="math inline">\(|\sgn(z)|=1\)</span> siempre que <span class="math inline">\(z\neq 0\)</span>.</p>
+Si <span class="math inline">\(F \subseteq Y^X\)</span>, el funcional de evaluación en <span class="math inline">\(x\)</span> es la función <span class="math inline">\(\text{ev}_x:F \to Y\)</span> dada por
+<span class="math display">\[\begin{equation}
+\text{ev}_x(f):=f(x), \qquad f \in F.
+\end{equation}\]</span>
+El adjunto o dual de una función <span class="math inline">\(\phi:Z \to X\)</span> (con respecto a <span class="math inline">\(F\)</span>) es la función <span class="math inline">\(\phi^*:F \to Y^Z\)</span> definida como
+<span class="math display">\[\begin{equation}
+\phi^*(f):=f \circ \phi, \qquad f \in F.
+\end{equation}\]</span>
+Las siguientes notaciones se utilizarán en los capítulos siguientes, para cada función a valores reales:
+<span class="math display">\[\begin{array}{cc}
+f^+(x):=\max{f(x),0} &amp; f^-:= (-f)^+\\
+(f_1 \vedge \dots \vedge f_n)(x):=\max_{1 \, \leq \, k \,\leq \, n}f_k(x) &amp; (f_1 \wedge \dots \wedge f_n)(x):=\min_{1 \, \leq \, k \,\leq \, n}f_k(x)\\
+(\sup_n f_n)(x):=\sup_n f_n(x) &amp; (\inf_n f_n)(x):=\inf_n f_n(x)\\
+(\lim_n f_n)(x):=\lim_n f_n(x) &amp; (_n f_n)(x):= _n f_n(x).
+\end{array}\]</span>
 </div>
 <div id="cardinalidad" class="section level2">
-<h2><span class="header-section-number">2.4</span> Cardinalidad</h2>
+<h2><span class="header-section-number">2.5</span> Cardinalidad</h2>
+<p>Dos conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> se dicen tener la misma cardinalidad si existe una biyección de <span class="math inline">\(A\)</span> a <span class="math inline">\(B\)</span>.Un conjunto <span class="math inline">\(A\)</span> se dice finito si <span class="math inline">\(A\)</span> tiene la misma cardinalidad que <span class="math inline">\(\{1,2, \hdots, n\}\)</span>, para algún <span class="math inline">\(n \in \mathbb{N}\)</span>. En este caso, los elementos de <span class="math inline">\(A\)</span> se pueden indexar utilizando el conjunto <span class="math inline">\(\{1,2, \hdots, n\}\)</span>, de modo que se puede escribir <span class="math inline">\(A=\{a_1, a_2, \hdots, a_n\}\)</span>. Un conjunto <span class="math inline">\(A\)</span> es infinito numerable si tiene la misma cardinalidad que el conjunto <span class="math inline">\(\mathbb{N}\)</span> de los n, en cuyo caso se escribe <span class="math inline">\(A=\{a_0, a_1, a_2, \hdots\}\)</span>. Un conjunto es numerable si es finito o infinito numerable; en caso contrario, se dice que el conjunto es no-numerable. Los conjuntos <span class="math inline">\(\mathbb{Z}\)</span> y <span class="math inline">\(\mathbb{Q}\)</span> son numerables. El conjunto <span class="math inline">\(\mathbb{R}\)</span> es no numerable, asi como cualquier intervalo de números reales. La cardinalidad de <span class="math inline">\(\mathbb{R}\)</span> se denota por <span class="math inline">\(\mathfrak{c}\)</span>, mientras que la cardinalidad de <span class="math inline">\(\mathbb{N}\)</span> se denota por <span class="math inline">\(\aleph_0\)</span>.</p>
+
 
 </div>
 </div>
