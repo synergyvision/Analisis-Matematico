@@ -1,0 +1,300 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[OT1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xspace}
+\def\courssigle{\includegraphics[scale=0.04]{Vision.png} \xspace}
+\def\courstitre{Análisis moderno}
+\def\session{Semestre 01-2018}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The usual suspects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+%\usepackage{times}
+%\usepackage{enumitem}
+\usepackage[final]{pdfpages}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{array}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% French
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage[canadien]{babel}
+%\frenchspacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Date, Location, Contact Info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Date{\null\hfill\makebox{\small\today}}
+\def\Location{\null\hfill\makebox{Caracas, Venezuela}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Margins
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[paper=letterpaper,margin=0.75in]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Header, Footer, Page Numbering
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+%\setcounter{page}{12}
+
+\setlength{\headwidth}{\textwidth}
+\pagestyle{fancy}
+  \lhead{\sc \courssigle}
+  \chead{\sc \courstitre}
+  \rhead{\sc \session}
+  %\lfoot{Département de Mathématiques, Université du Québec à Montréal}
+  \lfoot{}
+  \cfoot{}
+  \rfoot{Página~\thepage~de~\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% set default spacing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setlength{\parindent}{0in}
+\renewcommand{\baselinestretch}{1.0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Notes, Todos, Tasks, etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{boxedminipage}
+\newenvironment{note}[1][Note]
+   {\bigskip\begin{center}\begin{boxedminipage}{4.5in}\setlength{\parindent}{1em}\noindent\textbf{#1. }}
+   {\end{boxedminipage}\end{center}\bigskip}
+\newenvironment{todo}{\begin{note}[Todo]}{\end{note}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Some macros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\emphasize#1{\emph{\textbf{#1}}}
+
+
+\newtheorem{ex}{\bf Ejercicio}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\newcommand{\V}{{\bf{V}}}
+\newcommand{\F}{{\bf{F}}}
+\newcommand\tab[1][1.5cm]{\hspace*{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+\Large\sc
+Plan del curso\\
+\end{center}
+
+\bigskip
+
+\textsc{Profesor}: \\
+\tab {\sc Yannic VARGAS.}\\
+\tab Correo: \texttt{yv@synergy.vision}
+
+\
+
+\textsc{Horario (tentativo)}: \\
+\tab lunes, 8h a 9h30, Honey Comb. \\
+\tab jueves, 8h a 9h30, Honey Comb.
+
+\
+
+\textsc{Objetivo del curso}: \\
+\tab Hacer un estudio detallado de conceptos y resultados clásicos del análisis matemático, \\
+\tab las probabilidades y la teoría de la medida, con énfasis en la aplicación a las finanzas.
+
+\
+
+\textsc{Material previo}: \\
+\tab El curso está estructurado de manera que todos los temas se aborden en profundidad,\\
+\tab a partir de nociones básicas vistas en clase. Sin embargo, muchos temas que anteceden \\
+\tab a este curso no serán discutidos por motivos de tiempo. En las referencias siguientes se \\
+\tab pueden encontrar material para completar los tópicos que anteceden a este curso:
+
+\medskip
+
+\tab - Bloch, Ethan, Proofs and Fundamentals, Birkha\"{u}ser, 2000.\\
+\tab \  \quad - Maia, Manuel, Lógica proposicional, teoremas y demostraciones, 2012. \\
+\tab \qquad {\footnotesize \url{https://upload.wikimedia.org/wikipedia/commons/b/b4/Logica_y_demostraciones.pdf}}\\
+\tab \quad \ - Sibley, Thomas, Foundations of Mathematics, John Wiley \& Sons 2009.\\
+
+\
+
+\textsc{Contenido}: \\
+
+\tab \textsc{Parte I: Análisis real}\\
+\tab \qquad \textbf{Conjuntos y funciones:} operaciones, conjuntos numéricos, relaciones,\\
+	\tab \qquad \qquad funciones, cardinalidad.\\
+	\tab \qquad \textbf{Sistema numérico real y complejo}: propiedades algebraicas, estructura \\
+	\tab \qquad \qquad de orden, completitud, inducción matemática, espacios Euclídeos.\\
+\tab \qquad \textbf{Estructuras algebraicas:} semigrupos y grupos, espacios vectoriales, \\
+	\tab \qquad \qquad transformaciones lineales, espacios vectoriales y cocientes, álgebras. \\
+\tab \qquad \textbf{Sucesiones numéricas:} límite de una sucesión, sucesiones monótonas, \\
+	\tab \qquad \qquad subsucesiones, límite inferior y superior.\\
+\tab \qquad \textbf{Sucesiones y series:} límite de una función, límite inferior y superior, \\
+	\tab \qquad \qquad funciones continuas, propiedades, continuidad uniforme.\\
+\tab \qquad \textbf{Diferenciación:} definición y ejemplos, el Teorema del Valor Medio, \\
+	\tab \qquad \qquad funciones convexas, funciones inversas, Regla de L'Hospital, Teorema \\ 
+	\tab \qquad \qquad de Taylor en $\mathbb{R}$, método de Newton.\\
+\tab \qquad \textbf{Integración de Riemann:} integral de Riemann-Darboux, propiedades de \\
+	\tab \qquad \qquad la integral, evaluación de la integral, fórmula de Stirling,\\ 
+	\tab \qquad \qquad versión integral del Teorema del Valor Medio, estimación de la integral, \\
+	\tab \qquad \qquad integrales impropias, la integrabilidad según Riemann, funciones a \\ 
+	\tab \qquad \qquad variación acotada, la integral de Riemann-Stieltjes.\\
+\tab \qquad \textbf{Series numéricas infinitas:} definición y ejemplos, series con términos \\
+	\tab \qquad \qquad no-negativos, criterios de convergencia, convergencia condicional y \\
+	\tab \qquad \qquad absoluta, sucesiones dobles y series. \\
+\tab \qquad \textbf{Sucesiones y series de funciones:} convergencia de sucesiones de funciones, \\
+	\tab \qquad \qquad propiedades del límite de funciones, convergencia de las series de funciones, \\
+	\tab \qquad \qquad series de potencia.\\
+\tab \qquad \textbf{Funciones en varias variables:} transformaciones lineales, diferenciación, \\
+	\tab \qquad \qquad Principio de la Contracción, Teorema de la Función Inversa, Teorema de \\
+	\tab \qquad \qquad la Función Implícita, Teorema del Rango, determinantes, derivadas de \\
+	\tab \qquad \qquad orden superior, diferenciación de integrales.\\
+\tab \qquad \textbf{Integración de formas diferenciales:} integración, aplicaciones de primitivas, \\	
+	\tab \qquad \qquad cambio de variables, formas diferenciales, cadenas y símplices, Teorema de \\
+	\tab \qquad \qquad Stoke, formas cerradas y formas exactas, análisis vectorial.\\
+
+\tab \textsc{Parte II: Principios de topología}\\
+\tab \qquad \textbf{Espacios métricos.}  \\
+\tab \qquad \textbf{Espacios lineales y normados:} normas y seminormas, completación de un \\
+	\tab \qquad \qquad espacio normado, series infinitas en espacios normados, sumas \\
+	\tab \qquad \qquad no-ordenadas en espacios normados, transformaciones lineales acotadas, \\
+	\tab \qquad \qquad álgebras de Banach. \\
+\tab \qquad \textbf{Espacios topológicos:} abiertos y cerrados, sistemas de entornos, bases de \\
+	\tab \qquad \qquad entornos, topología relativa, nets.\\
+\tab \qquad \textbf{Continuidad en espacios topológicos:} propiedades generales, topologías \\
+	\tab \qquad \qquad iniciales, topología producto, topología cociente, espacio de funciones \\
+	\tab \qquad \qquad continuas, conjuntos F-sigma y G-delta.\\
+\tab \qquad \textbf{Espacios topológicos normados:} Lema de Urysohn, Teorema de \\
+	\tab \qquad \qquad Extensión de Tietze.\\
+\tab \qquad \textbf{Espacios topológicos compactos:} convergencia en espacios compactos, \\ 
+	\tab \qquad \qquad compacidad del producto cartesiano, continuidad y compacidad.\\
+\tab \qquad \textbf{Espacios métricos totalmente acotados.}\\
+\tab \qquad \textbf{Equicontinuidad.}\\
+\tab \qquad \textbf{Teorema de Stone-Weierstrass.}\\
+\tab \qquad \textbf{Espacios topológicos localmente compactos:} propiedades generales, \\
+	\tab \qquad \qquad funciones a soporte compacto, funciones que se anulan en al infinito, \\
+	\tab \qquad \qquad compactificación a un punto.\\
+\tab \qquad \textbf{Espacio de funciones diferenciables.}\\
+\tab \qquad \textbf{Particiones de la unidad.}\\
+\tab \qquad \textbf{Conexidad.}\\
+\tab \qquad \textbf{Espacios convexos:} familias de seminormas, Teorema de Separación y \\
+	\tab \qquad \qquad de Prolongamiento, Teorema de Krein-Milman.\\
+
+\tab \textsc{Parte III: Medida e integración}\\
+\tab \qquad \textbf{Conjuntos medibles:} introducción, espacios medibles, medidas, espacios \\
+	\tab \qquad \qquad medibles completos, medida externa y medibilidad, extensión de una \\
+	\tab \qquad \qquad medida, medida de Lebesgue, medida de Lebesgue-Stieltjes, \\
+	\tab \qquad \qquad conjuntos especiales.\\
+\tab \qquad \textbf{Funciones medibles:} transformaciones medibles, funciones numéricas \\
+	\tab \qquad \qquad medibles, funciones simples, convergencia de funciones medibles.\\
+\tab \qquad \textbf{Integración:} construcción de la integral, propiedades básicas, conexiones \\
+	\tab \qquad \qquad con la integral de Riemann en $\mathbb{R}^n$, teoremas de convergencia, \\
+	\tab \qquad \qquad integración sobre una medida producto, aplicaciones del Teorema \\
+	\tab \qquad \qquad de Fubini.\\
+\tab \qquad \textbf{Espacios $L^p$:} definición y propiedades generales, aproximación en $L^p$, \\
+	\tab \qquad \qquad convergencia en $L^p$, integrabilidad uniforme, funciones convexas y \\
+	\tab \qquad \qquad desigualdad de Jensen.\\
+\tab \qquad \textbf{Diferenciación:} medidas con signo, medidas complejas, continuidad \\
+	\tab \qquad \qquad absoluta de medidas, diferenciación de medidas, funciones a \\
+	\tab \qquad \qquad variación acotada, funciones absolutamente continuas.\\
+\tab \qquad \textbf{Análisis de Fourier en $\mathbb{R}^n$:} convolución de funciones, la transformada \\
+	\tab \qquad \qquad de Fourier, funciones de rápido decrecimiento, análisis de Fourier \\
+	\tab \qquad \qquad de medidas en $\mathbb{R}^n$.\\ 
+\tab \qquad \textbf{Medidas en espacios localmente compactos:} medidas de Radon, \\
+	\tab \qquad \qquad Teorema de Representación de Riesz, productos de medidas de Radon, \\
+	\tab \qquad \qquad convergencia ``vague", Teorema de Representación de Daniell-Stone.\\
+	
+\tab \textsc{Parte IV: Análisis funcional}\\
+\tab \qquad \textbf{Espacios de Banach:} espacios normados, separación de conjuntos convexos, \\
+ 	\tab \qquad \qquad Teorema del Prolongamiento, duales de los espacios $\ell^p$, convergencia débil, \\
+	\tab \qquad \qquad Teorema de Banach-Steinhaus, espacios reflexivos, operadores contínuos y \\
+	\tab \qquad \qquad compactos, Teorema de Fredholm-Riesz, aplicaciones abiertas y grafos \\
+	\tab \qquad \qquad cerrados, caso complejo.\\
+\tab \qquad \textbf{Espacios localmente convexos:} propiedades generales, funcionales lineales \\
+	\tab \qquad \qquad contínuos, Teoremas de Separación de Hahn-Banach, algunas \\
+	\tab \qquad \qquad construcciones.\\
+\tab \qquad \textbf{Topologías débiles en espacios normados:} topología débil, espacios \\
+	\tab \qquad \qquad reflexivos, espacios uniformemente convexos.\\
+\tab \qquad \textbf{Espacios de Hilbert:} principios generales, ortogonalidad, bases ortonormales, \\
+	\tab \qquad \qquad el adjunto del espacio de Hilbert.\\
+\tab \qquad \textbf{Teoría de operadores:} tipos de operadores, operadores compactos y \\
+	\tab \qquad \qquad de rango finito, el Teorema Espectral para operadores normales \\
+	\tab \qquad \qquad compactos, el álgebra del grupo $L^1$, representaciones, grupos abelianos \\
+	\tab \qquad \qquad localmente compactos.\\
+\tab \qquad \textbf{Álgebras de Banach:} principios básicos, Teoría Espectral, el espectro de un \\
+	\tab \qquad \qquad álgebra, Teoría de Gelfand, el caso no-unitario, cálculo de operadores.\\ 
+	
+\tab \textsc{Parte V: Aplicaciones}\\
+\tab \qquad \textbf{Distribuciones:} teoría general, operaciones en distribuciones, distribuciones \\
+	\tab \qquad \qquad a soportes compactos, convolución de distribuciones, Teoría de Sobolev.\\
+\tab \qquad \textbf{Análisis en grupos localmente compactos:} grupos topológicos, medida \\
+	\tab \qquad \qquad de Haar, representaciones, grupos abelianos localmente compactos.\\
+\tab \qquad \textbf{Análisis en semigrupos:} semigrupos con topologías, funciones débilmente \\
+	\tab \qquad \qquad quasi-periódicas, la estructura de los semigrupos compactos, funciones \\
+	\tab \qquad \qquad fuertemente quasi-periódicas, semigrupo de operadores.\\
+\tab \qquad \textbf{Teoría de probabilidades:} variables aleatorias, independencia, esperanza \\
+	\tab \qquad \qquad condicional, sucesiones de variables aleatorias independientes, martingalas \\
+	\tab \qquad \qquad a tiempo discreto, procesos estocásticos, movimiento browniano. \\
+\tab \qquad \textbf{Integración estocástica:} integral de Ito para procesos simples, integral de \\ 
+	\tab \qquad \qquad Ito generalizada, integral de Ito como una martingala.\\
+\tab \qquad \textbf{Aplicación a las finanzas:} el proceso de precios de Stock, portafolios \\
+	\tab \qquad \qquad autofinanciados, opciones de llamadas, opción de precios de \\
+	\tab \qquad \qquad Black-Scholes.\\
+
+\
+
+\textsc{Referencias}: \\
+\tab Apostol, Thom, Mathematical Analysis, 2nd ed. Addison-Wesley, 2000\\
+\tab R. Ash and C. Doleans-Dade, Probability and Measure Theory, 2nd Ed., \\
+\tab \qquad \qquad Academic Press, San Diego, 2000.\\
+\tab H. Brezis, Functional Analysis, Sobolev Spaces, and Partial Differential Equations, \\
+\tab \qquad \qquad Springer-Verlag, New York, 2011.\\
+\tab J. Conway, A Course in Functional Analysis, Springer-Verlag, New York, 1990.\\
+\tab Dudley, Richard, Real Analysis and Probability, Cambridge University
+Press, 2002.\\
+\tab G. Folland, Real Analysis. Modern Techniques and Their Applications, \\
+\tab \qquad \qquad 2nd Ed. John Wiley \& Sons, New York, 1999.\\
+\tab H. Junghenn, Option Valuation: A First Course in Financial Mathemtics, CRC Press,\\
+\tab \qquad \qquad Boca Raton, 2012.\\
+\tab H. Junghenn, A Course in Real Analysis, CRC Press, Boca Raton, 2015.\\
+\tab S. Lang, Real and Functional Analysis, 3rd Ed., Springer-Verlag, New York, 1993.\\
+\tab I. Rana, An Introduction to Measure and Integration, 2nd Ed., Graduate Studies \\
+\tab \qquad \qquad in Mathematics Vol. 45, AMS, Providence, 2002.\\
+\tab Rudin, Walter, Principles of Mathematical Analysis, 3rd ed. McGraw-Hill,
+1976.\\
+\tab S. Shreve, Stochastic Calculus for Finance, Springer-Verlag, New York, 2004.\\
+\tab Strang, Gilbert, Linear Algebra and Its Application, 4th ed. Thomson \\
+\tab \qquad \qquad  Brooks/Cole, 2006.\\
+
+\
+
+\textsc{Evaluación}: \\
+\tab La evaluación consistirá de una serie de trabajos y exposiciones orales a lo largo \\
+\tab del semestre.
+
+
+
+
+
+
+
+
+
+\end{document}
