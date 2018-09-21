@@ -4,7 +4,7 @@
 title: "Introducción al análisis funcional y a la teoría de la medida"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-06-28"
+date: "2018-09-21"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -1047,7 +1047,7 @@ An R Markdown document (`*.Rmd`) is first compiled to Markdown (`*.md`) through 
 
 ```r
 rmarkdown::pandoc_version()
-## [1] '1.19.2.1'
+## [1] '1.19.2.4'
 ```
 
 If you find this version too low and there are Pandoc features only in a later version, you can install the later version of Pandoc, and **rmarkdown** will call the newer version instead of its built-in version.
@@ -1097,23 +1097,18 @@ LaTeX distributions and packages are also updated from time to time, and you may
 
 ```r
 system('pdflatex --version')
-## MiKTeX-pdfTeX 2.9.6607 (1.40.18) (MiKTeX 2.9.6600 64-bit)
-## Copyright (C) 1982 D. E. Knuth, (C) 1996-2018 Han The Thanh
-## TeX is a trademark of the American Mathematical Society.
-## using bzip2 version 1.0.6, 6-Sept-2010
-## compiled with curl version 7.56.1; using libcurl/7.56.1 WinSSL
-## compiled with expat version 2.2; using expat_2.2.0
-## compiled with jpeg version 9.2
-## compiled with liblzma version 50020032; using 50020032
-## compiled with libpng version 1.6.34; using 1.6.34
-## compiled with libressl version LibreSSL 2.5.3; using LibreSSL 2.5.3
-## compiled with MiKTeX Application Framework version 2.6592; using 2.6592
-## compiled with MiKTeX Core version 5.6594; using 5.6612
-## compiled with MiKTeX Archive Extractor version 1.6300; using 1.6300
-## compiled with MiKTeX Package Manager version 1.6584; using 1.6584
-## compiled with poppler version 0.60.1
-## compiled with uriparser version 0.8.4
-## compiled with zlib version 1.2.11; using 1.2.11
+## pdfTeX 3.14159265-2.6-1.40.18 (TeX Live 2017)
+## kpathsea version 6.2.3
+## Copyright 2017 Han The Thanh (pdfTeX) et al.
+## There is NO warranty.  Redistribution of this software is
+## covered by the terms of both the pdfTeX copyright and
+## the Lesser GNU General Public License.
+## For more information about these matters, see the file
+## named COPYING and the pdfTeX source.
+## Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
+## Compiled with libpng 1.6.29; using libpng 1.6.29
+## Compiled with zlib 1.2.11; using zlib 1.2.11
+## Compiled with xpdf version 3.04
 ```
 
 <!--chapter:end:400-apendice.Rmd-->
