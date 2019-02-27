@@ -294,13 +294,11 @@ L = \begin{pmatrix} \tlps(\gv_1) & \tlps(\gv_2) & ... & \tlps(\gv_k)\\
 \downarrow & \downarrow & \ddots & \downarrow
 \end{pmatrix}\right|\]
 
-Pero... tenemos 2 problemas:
 \begin{itemize}
 \item Necesitamos una manera cómoda con la que construir $\tlps$.
 \item ¿Utilizando otra parametrización llegamos al mismo resultado?
 \end{itemize}
 
-Vamos a reventar 2 pajaros de un tiro.
 
 \[ Area(P_k) = \left( \det \begin{pmatrix}
 \tlps(\gv_1) & \tlps(\gv_2) & ... & \tlps(\gv_k)\\
@@ -326,7 +324,7 @@ $Area(P_2) = \left(\det \begin{pmatrix}
 \pesc{\gv,\gu} & \pesc{\gv,\gv}
 \end{pmatrix} \right)^{\frac{1}{2}} = \left(\pesc{\gu,\gu}\pesc{\gv,\gv} - \pesc{\gu,\gv}^2\right)^{\frac{1}{2}} =\left(\md{\gu}\md{\gv} - \md{\gu}\md{\gv}(cos(\theta)^2)\right)^2 = \md{u}\md{v} \sqrt{1-cos^2(\theta)}  =  \md{u}\md{v} sen(\theta) = ||u\times v||$
 
-Bueno, esto cumple lo que la sabíamos de selectividad. El área de un paralelogramo 2 dimensional en $\real^3$ es la raiz cuadrada del módulo del producto vectorial.
+Esto cumple lo que la sabíamos de selectividad. El área de un paralelogramo 2 dimensional en $\real^3$ es la raiz cuadrada del módulo del producto vectorial.
 
 \textbf{Aplicación:} Vamos a aplicar esto para hallar el área de una $k-variedad$ en $\real^N$.
 
@@ -338,8 +336,6 @@ Aplicando taylor, en el que cada alargamiento $h$ depende de la dirección.
 \end{itemize}
 
 \textbf{Idea:} $Area(\Phi(Q_k)) = Area(P_k) + err(h)$ donde $Area(P_k) = \left(\det (\pesc{v_i,v_j})\right)^{\frac{1}{2}}, \{v_j\}$ genera $P_k$.
-
-\todo{Me he perdido porque $v_i = \dpa{\Phi}{s_j}(\gs_0)\cdot h_j$}
 
 \[\left(\det\left(\pesc{\dpa{\Phi}{s_i},\dpa{\Phi}{s_j}}h_ih_j\right)\right)^{\frac{1}{2}}\]
 
@@ -535,7 +531,7 @@ La matriz fácil de calcular es \[C_{\mathcal{B}\to \mathcal{C}} = \begin{pmatri
 
 Aplicando un giro (de aquí salen $\lambda$...) podemos ver que el si el ángulo entre $\gu,\gv \in (0,\pi) \leadsto +$ pero si el ángulo entre $\gu,\gv \in (\pi,2\pi) \leadsto -$. ¿Y en $\pi$? Entonces los vectores no serían independientes.
 
-\textbf{Idea:} Vamos a dedicarnos a jugar con los vectores de la base aplicandoles una deformación continua para ver que pasa con la discontinuidad de la orientación en $\pi$ a ver que encontramos.
+\textbf{Idea:} Vamos a manipular con los vectores de la base aplicandoles una deformación continua para ver que pasa con la discontinuidad de la orientación en $\pi$ a ver que encontramos.
 
 Sea la deformación $(\alpha(t),\beta(t)), t\in(0,1)$ continua, donde $(\alpha(0),\beta(0)) = (e_1,e_2)$ y $(\alpha(1),\beta(1)) = (e_1,e_2)$
 
@@ -589,9 +585,9 @@ Sea
 
 No hay ninguna manera de llevar $e_3$ a $\gw$ sin formar un único plano con los tres vectores.
 
-Aunque podríamos llevar $e_3 \to \gu$ y $e_1 \to \gw$... ¿Entonces?
+Aunque podríamos llevar $e_3 \to \gu$ y $e_1 \to \gw$.
 
-Mal! Porque no estamos manteniendo el orden, tendríamos la base $\mathcal{C}* = \{\gw,\gv,\gu\}\neq\mathcal{C}$.
+Si no se mantiene el orden, tendríamos la base $\mathcal{C}* = \{\gw,\gv,\gu\}\neq\mathcal{C}$.
 
 
 \paragraph{Caracterización práctica}
@@ -791,7 +787,7 @@ $\overrightarrow{n} = T_t\x T_{\theta} = ... = \overrightarrow{n}(t,\theta)$
 \overrightarrow{n}(t,\theta) \convs[][\theta\rightarrow 2\pi^-] (R,-\frac{t}{2})
 \end{gather*}
 
-Curioso: esta parametrización que no cubre el segmento con el que se empieza. Esta parametrización tiene una propiedad curiosa, al empezar, el vector normal apunta hacia dentro y al final, apunta hacia fuera. Es imposible cubrirla del todo con una parametrización.
+Nota: esta parametrización que no cubre el segmento con el que se empieza. Esta parametrización tiene una propiedad curiosa, al empezar, el vector normal apunta hacia dentro y al final, apunta hacia fuera. Es imposible cubrirla del todo con una parametrización.
 
 \paragraph{El otro ejemplo} típico de superficie no orientable es la botella de Klein
 
