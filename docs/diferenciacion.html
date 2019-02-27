@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Introducción al análisis funcional y a la teoría de la medida</title>
-  <meta name="description" content="Introducción al análisis funcional y a la teoría de la medida">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <title>Capítulo 7 Diferenciación | Introducción al análisis funcional y a la teoría de la medida</title>
+  <meta name="description" content="Capítulo 7 Diferenciación | Introducción al análisis funcional y a la teoría de la medida>
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Introducción al análisis funcional y a la teoría de la medida" />
+  <meta property="og:title" content="Capítulo 7 Diferenciación | Introducción al análisis funcional y a la teoría de la medida />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Analisis-y-Medida/" />
   <meta property="og:image" content="http://synergy.vision/Analisis-y-Medida/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Analisis-y-Medida/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introducción al análisis funcional y a la teoría de la medida" />
+  <meta name="twitter:title" content="Capítulo 7 Diferenciación | Introducción al análisis funcional y a la teoría de la medida />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Analisis-y-Medida/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-09-21">
+<meta name="date" content="2019-02-27">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,7 @@
 <link rel="next" href="integracion-de-riemann.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
@@ -51,41 +52,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -408,6 +435,467 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="diferenciacion" class="section level1">
 <h1><span class="header-section-number">Capítulo 7</span> Diferenciación</h1>
+A lo largo de esta secci'on vamos a trabajar en <span class="math inline">\(\real^n={(x_1,\dots c, x_n) \  x_j \in \real, j=1,...,N}\)</span>
+
+<p>Durante todo el año denotaremos al vector <span class="math inline">\((x_1,x_2,\dots,x_n)\)</span> como <span class="math inline">\(\gx\)</span> por comodidad.</p>
+
+<p>En general, un producto escalar es una matriz definida positiva y se opera de la siguiente manera:</p>
+<p><span class="math display">\[\pesc{\gx,\gy} = (x_1,x_2,...,x_N) \cdot \begin{pmatrix}
+a_11 &amp;\cdots&amp; a_1N\\
+\vdots&amp; \ddots &amp; \vdots\\
+a_N1 &amp; \cdots&amp; a_NN
+\end{pmatrix}
+\cdot \begin{pmatrix} y_1\\
+\vdots\\ y_N \end{pmatrix}\]</span></p>
+
+<p>Hay tres casos particulares, la norma uno 
+<span class="math display">\[ \md{\gx}_1 = |x_1| + |x_2| + ... + |x_n| \]</span></p>
+<p>La norma 2, que es la norma euclídea</p>
+<p>y la norma infinito 
+<span class="math display">\[\md{\gx}_{\infty} = \max\left\{|x_1|,|x_2|,\dots,|x_n|\right\} \]</span></p>
+<p>Vamos a demostrar que la norma <span class="math inline">\(p\)</span> cumple las 3 propiedades de una norma. Para ello, nos apoyaremos en dos teoremas previos:</p>
+
+
+
+<p>Una vez probadas las dos desigualdades anteriores, pasamos a probar la desigualdad triangular:</p>
+
+<p>EJERCICIO PROPUESTO: Tomamos en el plano el conjunto de los puntos cuya norma es 1. Tomando en la norma p=2 sale la circunferencia. ¿Y en p=3?</p>
+
+
+Propiedades:
+
+
+
+<p>Con un producto escalar puedo definir una norma y con esa norma puedo definir una distancia. Pero… ¿Podemos definir una norma
+que no venga de un producto escalar y/o alguna distancia que no provenga de una norma? Sí, por ejemplo</p>
+<p><span class="math display">\[ \tilde{d} (\gx,\gy) = \abs{\arctg(y) - \arctg(x)} \]</span></p>
+<p>No cuesta mucho comprobar que cumple las 3 propiedades de una distancia. Además, esta distancia es cuanto menos curiosa porque nunca será mayor de <span class="math inline">\(\pi\)</span>.</p>
+<p>Podemos comprobar que si existiera una norma que midiese esta distancia tendríamos <span class="math display">\[\tilde{\md{\gx}} = \tilde{d} (\gx,\gor{0}) = \abs{\arctg (x)} \]</span>
+pero esto no cumple la propiedad: <span class="math inline">\(\tilde{\md{\lambda x}} = \abs{\arctg \lambda x} \neq \abs{\lambda}\abs{\arctg x} =  \abs{\lambda x}\tilde{||x||}\)</span>
+ya que ninguna distancia puede ser mayor que <span class="math inline">\(\pi\)</span> y tomando un <span class="math inline">\(\lambda &gt; \pi\)</span> se produciría la contradicción.</p>
+
+
+Esa norma asociada al producto escalar tiene dos propiedades importantes:
+
+
+<p>Sea <span class="math inline">\(\md{\cdot}\)</span> una norma en <span class="math inline">\(\real^N\)</span>. Si intento calcular la norma de un vector <span class="math inline">\(\gx\)</span></p>
+<p><span class="math display">\[ \md{\gx} = \md{\sum x_i e_i} \leq \sum_{i=1}^N \md{x_1 e_1} = \sum_{i=1}^N|x_i|\cdot\md{e_i} \]</span></p>
+<p>Tenemos: <span class="math inline">\(\md{\gx} \leq \sum_{i=1}^N c_i |x_i|\)</span> siendo <span class="math inline">\(c_i = \md{e_i}\)</span>. Aplicando Cauchy-Schwarz nos queda
+<span class="math display">\[ \sum_{i=1}^N \left(c_i^2\right)^\frac{1}{2} \cdot \sum \left(|x_i|^2\right)^\frac{1}{2} \]</span>
+Es decir, puedo controlar cualquier norma con una constante y la norma euclídea:
+<span class="math display">\[|||\gx||| \leq C \md{x}_{2}\]</span>
+En particular, <span class="math inline">\(0 \leq |||\gor{x_n} - \gx|||\leq c ||\gor{x_n}-\gx||\)</span>.</p>
+
+
+<p>Sea <span class="math inline">\(F(\gx) = |||\gx|||\)</span> y <span class="math inline">\(F:\real^N \rightarrow \real^N\)</span>
+<span class="math display">\[|F(\gx)-F(\gy)| = \left| |||\gx - \gy||| \right| = |||\gx - \gy||| \leq C ||\gx - \gy||\]</span>
+Utilizando: <span class="math inline">\(|||\ga-\gb||| \ge |||\ga||| - |||\gb|||\)</span> </p>
+<p>Es decir, cualquier norma en <span class="math inline">\(\real^n\)</span> es  respecto de la norma euclídea. </p>
+
+
+
+
+Para evitar jaleos, al tratar la distancia vamos a tomar la norma euclídea. Como todas las normas son equivalentes, nos da igual tomar una que otra.
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><span class="math inline">\(F(\gor{x}) = |||\gor{x}|||\)</span> una norma (que ya sabemos que es continua):</p>
+<p> <span class="math inline">\(m \md{x} \leq |||\gor{x}||| \leq C||\gor{x}||\)</span></p>
+
+
+
+
+
+<p>Al tener definida una norma de vectores podemos definir convergencia y continuidad:</p>
+
+
+
+<p>A partir de esta definición podemos estudiar qué hacen las funciones continuas con conjuntos abiertos y cerrados. Sea <span class="math inline">\(F\)</span> continua. Contrario a lo que podríamos intuir,</p>
+
+<p>Empezamos definiendo en qué consiste una función inversa:</p>
+
+<p>A partir de aquí podemos extraer dos conclusiones que sí nos ayudarán a discernir si un conjunto imagen es abierto y cerrado.</p>
+
+<p>Este teorema nos sirve para decir fácilmente si un conjunto es abierto o cerrado. Por ejemplo, consideremos
+<span class="math display">\[ M=\{(x,y,z) \in \real^3 \tq x^2 + \cos\left(x\abs{y}\right) - e^z &lt; 1 \} \]</span></p>
+<p>Podemos definir ahí la función <span class="math inline">\(F\)</span> como
+<span class="math display">\[ F(x,y,z) = x^2 + \cos\left(x\abs{y}\right) - e^z\]</span></p>
+<p>que va de <span class="math inline">\(\real^3\)</span> a cierto conjunto <span class="math inline">\(A = \{ a \in \real \tq a &lt; 1 \}\)</span>. Podemos reescribir <span class="math inline">\(M\)</span> como
+<span class="math display">\[M=\{(x,y,z) \in \real^3 \tq  F(x,y,z) \in A\}\]</span></p>
+<p>o, de otra forma, <span class="math inline">\(M = \inv{F}(A)\)</span>. Según el teorema (), como <span class="math inline">\(A\)</span> es abierto entonces <span class="math inline">\(M\)</span> también es abierto.</p>
+
+
+
+
+<p>Además, toda aplicación lineal se puede escribir en forma de matriz.</p>
+<p><span class="math display">\[L(\gor{x})=A\gor{x} =
+\begin{pmatrix}
+a_{11}  &amp; \cdots &amp; a_{1n}       \\
+\vdots  &amp; \ddots &amp;  \vdots  \\
+a_{n1}  &amp; \cdots &amp; a_{nn}
+\end{pmatrix}\]</span></p>
+
+
+<p>Consideramos una aplicación continua</p>
+<p><span class="math display">\[\begin{align*}
+\appl{F}{\real^N&amp;}{\real} \\
+\gor{x} &amp;\longrightarrow F(\gx) = \underbrace{||A\gx||}_{L(\gx)}
+\end{align*}\]</span></p>
+<p>Sabemos que existe <span class="math inline">\(C&gt;0\)</span> tal que <span class="math inline">\(||A\gx|| \leq C||\gx||\)</span>, es decir, <span class="math inline">\(||A\gx||\leq C\)</span> si <span class="math inline">\(||\gx||=1\)</span>. Queremos saber cuál es la mejor constante que podemos encontrar, la que más se ajuste. Consideramos el conjunto <span class="math inline">\(M\)</span> de todos los vectores de la esfera unidad, es decir</p>
+<p><span class="math display">\[ M = \{||A\gx|| \tq ||\gx||=1\}\subset \real \]</span></p>
+<p>Entonces mejor constante <span class="math inline">\(C\)</span> es la cota superior mínima (supremo) que vamos a llamar <span class="math inline">\(\alpha\)</span>. Al ser <span class="math inline">\(F\)</span> continua y <span class="math inline">\(M\)</span> compacto, sabemos que el supremo <span class="math inline">\(\alpha \in M\)</span>.</p>
+
+
+<p>Basándonos en lo que hemos obtenido, calculamos la norma uno de
+<span class="math display">\[A = \begin{pmatrix}
+      1&amp;2\\-3&amp;1\\2&amp;0
+     \end{pmatrix}\]</span></p>
+<p>Tenemos que maximizar, sabiendo que <span class="math inline">\(|x|+|y| = 1\)</span>:</p>
+<p><span class="math display">\[ |x+2y| + |-3x+y| + |2x| \leq |x|+|2y| + |3x| + |y| + 2|x| = 6|x|+3|y| \leq 6 (|x|+|y|) =6 \]</span>
+¿Podemos encontrar un vector <span class="math inline">\(\gx = (x_0,y_0)\)</span> tal que <span class="math inline">\(||A(x_0,y_0)^T||_1 = 6\)</span>?\
+Tomando <span class="math inline">\(x_0 = 1\)</span> y <span class="math inline">\(y_0 = 0\)</span> lo encontramos. Como <span class="math inline">\(\gx\)</span> está en la esfera unidad y es una cota, es el máximo y por lo tanto la norma que buscamos.</p>
+<p>Curiosamente,  y escoger el más grande.</p>
+<p>Si tomamos la norma infinito de
+<span class="math display">\[A = \begin{pmatrix}
+      1&amp;2\\-3&amp;1\\2&amp;0
+     \end{pmatrix}\]</span></p>
+<p>Tenemos que .</p>
+<p>Queremos buscar ahora cuánto vale la norma de una matriz cuando usamos la norma euclídea. Usaremos los dos lemas siguientes para apoyarnos.</p>
+
+<p>Tenemos <span class="math inline">\(A^TA\)</span> diagonalizable, de dimensión <span class="math inline">\(N \times N\)</span>. Buscamos cuánto vale <span class="math inline">\(\norm{A\gx}\)</span> con <span class="math inline">\(\gx \in \real^N\)</span>. Empezamos desarrollando el vector en una base ortonormal de <span class="math inline">\(A^T A\)</span>: <span class="math display">\[ \gx = \sum \alpha_i \gv_i \]</span> y por lo tanto <span class="math display">\[ ||\gx|| = \sum \alpha_i^2 \pesc{\gv_i,\gv_i}\]</span>.</p>
+<p>Desarrollamos el producto <span class="math display">\[\trans{A}A\gx = \trans{A}A\left(\sum \alpha_i \gv_i\right) = \sum \left(\alpha_i\lambda_i\gor{v}_i\right) \]</span> donde <span class="math inline">\(\lambda_i\)</span> son los autovalores de <span class="math inline">\(\trans{A}A\)</span>.</p>
+<p>Ahora queremos hallar el máximo de <span class="math inline">\(||A\gx||\)</span> cuando <span class="math inline">\(||\gx|| = 1\)</span>:</p>
+<p><span class="math display">\[ ||A\gx||^2 = \pesc{A\gx,A\gx} = \pesc{\trans{A}A\gx,\gx} = \pesc{\sum \lambda_i \alpha_i \gv_i,\sum\alpha_i \gv_i} \]</span></p>
+<p>Como la base de <span class="math inline">\(\{\gv_n\}\)</span> es ortonormal, <span class="math inline">\(\pesc{\gv_i, \gv_j} = 0\)</span> si <span class="math inline">\(i≠j\)</span>, por lo tanto sólo nos queda
+<span class="math display">\[ \pesc{\sum \lambda_i \alpha_i \gv_i,\sum\alpha_i \gv_i} = \sum \lambda_i \alpha_i^2 \leq \lambda_{max} \left(\sum \alpha_i^2\right) = \lambda_{max} \]</span></p>
+<p>teniendo en cuenta que <span class="math inline">\(\norm{\gx} = 1\)</span> y donde <span class="math inline">\(\lambda_max\)</span> es el autovalor máximo. Es decir, hemos llegado a que
+<span class="math display">\[ \max\norm{A\gx} ≤ \sqrt{\lambda_{max}} \]</span></p>
+<p>Hemos definido una cota para <span class="math inline">\(\norm{A\gx}\)</span>. Ahora bien, esa cota se alcanza cuando <span class="math inline">\(\gx\)</span> es el autovector asociado a <span class="math inline">\(\lambda_{max}\)</span>, por lo tanto la cota es un máximo y la norma de la matriz.</p>
+
+
+<p>Importante el detalle de <span class="math inline">\(0 &lt; ||\gx-\ga||\)</span>, no es un <span class="math inline">\(\leq\)</span>, porque no se necesita que la función esté siquiera definida en el punto <span class="math inline">\(\ga\)</span>.</p>
+
+Idea para el cálculo de límites:
+
+<p>Si <span class="math inline">\(\displaystyle\lim F({t\gor{v}})\)</span> toma valores distintos dependiendo de <span class="math inline">\(\gor{v}\)</span> entonces <span class="math inline">\(\nexists \displaystyle\mylim{x}{0}{\gx}\)</span></p>
+<p>Por otra parte, si <span class="math inline">\(\forall t \in \real, \mylim{x}{a}{t\gor{v}} = L\)</span>, entonces <span class="math inline">\(\gor{L}\)</span> es el candidato a ser el límite (no tiene por qué serlo). El siguiente paso sería demostrar con argumentos de comparación (Sandwich) u otros que <span class="math inline">\(\mylim{x}{a}{\gx} = L\)</span>.</p>
+<p>El contraejemplo para ver que la existencia del límite por rectas no implica la existencia del límite es estudiar la función <span class="math display">\[ f(x,y) = \frac{x y^2}{x^2 + y^4}\]</span> . Veamos por qué.</p>
+<p>Si os acercamos al límite por medio de rectas:</p>
+<p><span class="math display">\[ f(x,y) = f(x,mx) = \frac{x\cdot(mx)^2}{x^2 + (mx)^4} = \frac{m^2x^3}{(1 + x^2m^4)x^2} \]</span>
+<span class="math display">\[ \lim{x\to 0} (f(x,mx)) \rightarrow 0, \forall m \in \real \]</span></p>
+<p>Pero si nos acercamos al límite por medio de <span class="math inline">\(x = y^2\)</span> tenemos:</p>
+<p><span class="math display">\[ f(x,y) = f(y^2,y) = \frac{y^2y^2}{y^4+y^4} = \frac{y^4}{2y^4} = \frac{1}{2} ≠ 0\]</span></p>
+<p>Por lo tanto, el límite no existe a pesar de que existe cuando nos acercamos por rectas.</p>
+
+
+
+<hr />
+
+
+
+
+
+
+
+
+<p>Aproximación lineal <span class="math inline">\(\sim\)</span> Diferencial.</p>
+<p>Matriz jacobiana <span class="math inline">\(\sim\)</span> Jacobiana.</p>
+
+
+<p>El contraejemplo para demostrar la implicación a la izquierda es el mismo que en los límites a lo largo de rectas.</p>
+$f(x,y) = {
+<span class="math display">\[\begin{matrix}
+\displaystyle\frac{xy^2}{x+y^2} &amp; (x,y) \neq (0,0) \\
+0 &amp; (x,y)=(0,0)
+          \end{matrix}\]</span>
+<p>.
+$</p>
+<p>Según las aplicaciones que tengamos, la diferencial se suele llamar de una u otra forma. Con <span class="math inline">\(\appl{\delta}{\real}{\real^M}\)</span> utilizamos notación vectorial en vez de matricial porque tendríamos una matriz columna. Por ejemplo: la velocidad (en un instante de tiempo, un punto en el espacio).</p>
+
+
+<p>
+Consideremos la composición de dos funciones de la siguiente forma:</p>
+<p><span class="math inline">\(\appl{F}{\real^N}{\real^M}\)</span>.</p>
+<p><span class="math inline">\(\appl{G}{\real^M}{\real^K}\)</span>.</p>
+<p><span class="math inline">\(\appl{H=G\circ F}{\real^N}{\real^K}\)</span>.</p>
+<p>$ ^N, ^M$</p>
+
+<p>Con <span class="math inline">\(F\)</span> diferenciable en <span class="math inline">\(\ga\)</span> y <span class="math inline">\(G\)</span> diferenciable en <span class="math inline">\(F(\gor{a})\)</span>. Entonces <span class="math inline">\(H=G\circ F\)</span> es diferenciable en $$.
+Además la expresión matricial es:</p>
+<p><span class="math display">\[ \underbrace{DH(\ga)}_{K\times N} = \underbrace{DG(F(\ga))}_{K\times M}\cdot \underbrace{DF(\ga)}_{M\times N} \]</span></p>
+<p>No hace falta calcular toda la matriz si sólo queremos un elemento. Para calcular 1 único elemento de la matriz diferencial (el de la fila <span class="math inline">\(i\)</span>, columna <span class="math inline">\(j\)</span>), usamos la siguiente fórmula
+<span class="math display">\[ \dpa{H_i}{x_j}(\ga) = \sum_{k=1}^M \dpa{G_i}{y_k}\cdot\dpa{F_k}{x_j} \]</span></p>
+<p>Siempre teniendo en cuenta que <span class="math inline">\(\displaystyle\dpa{G_i}{y_k}\)</span> está evaluado en <span class="math inline">\(F(\ga)\)</span> y <span class="math inline">\(\displaystyle\dpa{F_k}{x_j}\)</span> está evaluado en <span class="math inline">\(\ga\)</span>.</p>
+
+El teorema anterior que vimos del valor medio era para funciones de una variable, y proponía lo siguiente:
+
+<p>Después el teorema lo extendimos a funciones de <span class="math inline">\(\real^N\)</span> en <span class="math inline">\(\real\)</span>: dada <span class="math inline">\(\appl{F}{\real^N}{\real}\)</span> entonces definíamos</p>
+<p><span class="math display">\[ \sigma(t)  = t\gor{b}+(1-t)\gor{a} \]</span></p>
+<p>y <span class="math inline">\(g = F\circ \sigma\)</span> era una aplicación de los reales a los reales, y entonces aplicando el teorema anterior teníamos que</p>
+<p><span class="math display">\[ F(\gor{b}-\gor{a}) = g(1)-g(0)  = g&#39;(s) \]</span>
+para algún <span class="math inline">\(s\in[0,1]\)</span>.</p>
+<p>Sin embargo, al tratar de extrapolar este resultado a una función <span class="math inline">\(\appl{F}{\real^N}{\real^2}\)</span> nos queda que</p>
+<p><span class="math display">\[ F(\gor{b})-F(\ga) = \begin{pmatrix}
+                         \pesc{\nabla F_1(\gor{c_1}),{\gor{b}-\ga}}\\
+                         \pesc{\nabla F_2(\gor{c_2}),\gor{b}-\ga}
+                        \end{pmatrix}
+ \]</span>
+Tenemos 2 <span class="math inline">\(c\)</span> distintos, uno para cada <span class="math inline">\(f\)</span>, por lo que este teorema pierde sentido. Hay que buscar una extensión, otra formulación del teorema que nos permita aplicarlo a las funciones que estamos estudiando.</p>
+
+
+<p>Este teorema nos sirve, por ejemplo, para ver que si tenemos <span class="math inline">\(\appl{F}{\real^N}{\real^M}, F \in C^1\)</span>, definida en un conjunto abierto y conexo y <span class="math inline">\(DF(\gx) \equiv 0\; \forall\gx\)</span>, entonces <span class="math inline">\(F\)</span> es constante.</p>
+
+<p><span class="math inline">\(\appl{F}{\real^N}{\real^M}\)</span> (escalar)</p>
+<p><span class="math inline">\(\ga \sim\)</span> Recta que pasa por <span class="math inline">\(\ga\)</span> con dirección <span class="math inline">\(\gor{v}\)</span>.</p>
+<p><span class="math inline">\(r(t) = \ga + t\gor{v}\)</span>.</p>
+
+<p>Como una recta tiene infinitos vectores directores (dependiendo de la longitud), siempre tomaremos vectores directores unitarios, con <span class="math inline">\(\norm{\gor{v}} = 1\)</span>.</p>
+<p>Vamos a estudiar: <span class="math inline">\(g(t) = F(\ga + t\gor{v}) = F \circ r (t)\)</span>.</p>
+<span class="math inline">\(t \sim 0 \dimplies \ga + t\gor{v} \sim \ga\)</span>
+
+
+<p>La existencia de <span class="math inline">\(D_{\gor{v}}F(\ga), \forall \gor{v}\in \real^N\)</span> NO garantiza que <span class="math inline">\(F\)</span> sea derivable.</p>
+<p>Si sabemos que <span class="math inline">\(F\)</span> SÍ es diferenciable podemos usar la regla de la cadena obteniendo:</p>
+<p><span class="math inline">\(D_{\gor{v}}F(\ga) = g&#39;(0) = D(F\circ r)(0) = ... = \pesc{\nabla F(\ga),\gor{v}}\)</span></p>
+
+
+<p>Contraejemplo de la no reciprocidad: <span class="math inline">\(f(x) = x^2 sin\left(\frac{1}{x}\right)\)</span></p>
+
+
+
+<p><span class="math inline">\(\deriv{}{y}\left(\deriv{f}{x}\right) \equiv \deriv{^2f}{x \partial y}\)</span></p>
+
+
+
+<p>
+Tenemos una función <span class="math inline">\(\appl{F}{\real^N}{\real}\)</span>, con <span class="math inline">\(F\in C^k\)</span> (<span class="math inline">\(k\)</span> veces derivable), y queremos el desarrollo de Taylor de <span class="math inline">\(F\)</span> alrededor de <span class="math inline">\(\ga \in \real^N\)</span>.</p>
+<p>En dimensión 1, el desarrollo era el que sigue</p>
+<p><span class="math display">\[ g(x) = g(0) + g&#39;(0)x + \frac{g&#39;&#39;(0)}{2!}x^2 + ... + \frac{g^{k)}(0)}{k!}x^k + \underbrace{\frac{g^{k+1)}(s)}{(k+1)!}x^{(k+1)}}_{\text{error}} \]</span></p>
+<p>Tenemos que expandir este desarrollo a más dimensiones. Tomamos <span class="math display">\[ g(t) \equiv F(t(\ga + \gor{h}) + (1-t)\ga) \]</span> reduciendo así el cálculo a dimensión 1. Operamos ahora para calcular las derivadas:</p>
+<p><span class="math display">\[\begin{gather*}
+g&#39;(t) = \pesc{\nabla F(a+th),h} = \sum_{i=1}^N \deriv{F}{x_i}(a+th)\cdot h_i \\
+g&#39;&#39;(t) = \sum_{i=1}^N\left(\sum_{j=1}^N \deriv{}{x_j}\deriv{F}{x_i}(\ga+\gor{h})\cdot{h_j}\right)h_i = \sum_{i,j = 1}^N \deriv{^2F}{x_i \partial x_j}(\ga+t\gor{h})h_ih_j \\
+\dotsb \\
+\frac{g^{s)} (0)}{s!} = \frac{1}{s!}\sum_{i_1,i_2,...,i_s=1}^N \frac{\partial^s F}{\partial x_{i_1},x_{i_2},...,x_{i_s}}
+\end{gather*}\]</span></p>
+<p>De esta forma, el desarrollo de Taylor de orden <span class="math inline">\(k\)</span> de <span class="math inline">\(F\)</span> en <span class="math inline">\(\ga\)</span> en general es</p>
+<p><span class="math display">\[\begin{equation}
+T^k_F(x) = \sum_{\alpha = 0}^k
+    \left(
+        \frac{1}{\alpha !}
+        \sum_{i_1,\dotsc,i_\alpha = 0}^N
+            (x_{i_1} - a_{i_1}) \dotsb (x_{i_\alpha} - a_{i_\alpha})
+            \frac{\partial^\alpha F}{\partial x_{i_1} \dotsb \partial x_{i_\alpha}}
+             (\ga)
+    \right)
+\end{equation}\]</span></p>
+<p>Por ejemplo, el desarrollo de Taylor de una función <span class="math inline">\(F(x,y)\)</span> con <span class="math inline">\(\ga = (a,b)\)</span> queda lo siguiente (con <span class="math inline">\(F_{xyz\dotsc} = \dfrac{\partial^nF}{\partial x \partial y \partial z \dotsb}\)</span>)</p>
+<p><span class="math display">\[\begin{align*}
+T^k_{F}(\gx) &amp;= F(\ga) \\
+&amp; +  (x - a) F_x(\ga) + (y - b) F_y(\ga)  \\
+&amp; +\frac{1}{2!}\left[(x-a)^2F_{xx}(\ga) + 2(x-a)(y-b)F_{xy}(\ga) + (y-b)^2F_{yy}(\ga)\right] \\
+&amp; +\frac{1}{3!}\left[(x-a)^3F_{xxx}(\ga) + 3(x-a)^2(y-b)F_{xxy}(\ga) + 3(x-a)(y-b)^2 F_{xyy} (\ga) + (y-b)^3F_{yyy} (\ga)\right] \\
+&amp; +\dotsb
+\end{align*}\]</span></p>
+<p>Existe una forma más compacta para el desarrollo de Taylor de orden dos usando el producto escalar, el vector gradiente y la matriz hessiana (<span class="math inline">\(D^2F\)</span>) de derivadas segundas:</p>
+<p><span class="math display">\[ F(\gor{a}+\gor{h}) = F(\ga) + \pesc{\grad F(\ga),\gor{h}} + \frac{1}{2} \gor{h}^T D^2F(\ga)\gor{h} \]</span></p>
+
+<hr />
+
+
+<p>En el mundo lineal tenemos podemos resolver sistemas de dos formas. Con <span class="math inline">\(\appl{F}{\real^N}{\real^N}\)</span> y <span class="math inline">\(L(\gx) = A\gx\)</span>, siendo <span class="math inline">\(A\)</span> una matriz <span class="math inline">\(N\x N\)</span>; queremos resolver el sistema <span class="math inline">\(A\gx = \gy\)</span> sabiendo que <span class="math inline">\(A\gor{0} = \gor{0}\)</span>.</p>
+<p>Este sistema tiene solución si y sólo si <span class="math inline">\(\det(A) \neq 0\)</span>: es la condición para que exista <span class="math inline">\(A^{-1}\)</span>.</p>
+<p>Existe también la posibilidad de tener una función <span class="math inline">\(\appl{F}{\real^{N+M}}{\real^N}\)</span> con <span class="math inline">\(L(\gx) = A\gx\)</span>, <span class="math inline">\(A\)</span> matriz <span class="math inline">\(N\x (N+M)\)</span>.</p>
+<p>Para resolver el sistema <span class="math inline">\(A\gx = \gy\)</span> parametrizamos <span class="math inline">\(M\)</span> variables.</p>
+<p>En el mundo , consideramos una función <span class="math inline">\(\appl{F}{\real^N}{\real^N}\)</span>. Entonces tenemos un sistema de ecuaciones</p>
+<p><span class="math display">\[ \left.\begin{matrix}
+F(x_1,\dotsc,x_N) = y_1\\
+F(x_1,\dotsc,x_N) = y_2\\
+\vdots\\
+F(x_1,\cdots,x_N) = y_N
+        \end{matrix}
+\right\} F(\gx)=\gy \]</span></p>
+<p>Vamos a intentar resolver este problema utilizando Taylor para aproximar al orden lineal, pero tenemos que pagar un precio: para que taylor funcione tenemos que trabajar cerca del punto. Esto significa que .</p>
+
+
+<p>El teorema de la aplicación contractiva nos sirve, por ejemplo, para comprobar si hay una solución de una ecuación diferencial ordinaria (EDO).</p>
+<p><span class="math display">\[\left.\begin{matrix}y&#39;(x) = f(x,y(x))\\
+        y(x_0) = y_0
+       \end{matrix}\right\} \leftrightarrow y(x) = y_0 + \int_{x_0}^x f(s,y(s)) ds\]</span></p>
+<p>Podemos definir:</p>
+<p><span class="math display">\[\begin{align*}
+y_1(x) &amp;= y_0 + \int_{x_0}^{x} f(s,y_0)ds\\
+y_2(x) &amp;= y_0 + \int_{x_0}^x f(s,y_1(s))ds \equiv T(y_1)\\
+&amp;\dots\\
+y_n &amp;= T(y_{n-1}) =  y_0 + \int_{x_0}^x f(s,y_{n-1}(s))ds\\
+¿T(y) &amp;= y?
+\end{align*}\]</span>
+Aquí es donde entraría la diferencia entre trabajar en <span class="math inline">\(\real^N\)</span> y un espacio de funciones.</p>
+<p>Ejercicio propuesto: Aplicar este argumento a iterativo</p>
+<p><span class="math inline">\(\left. \begin{matrix} y&#39; = y\\  y(0) = 1 \equiv y_0  \end{matrix}\right\}\)</span></p>
+
+En Cálculo I teníamos el siguiente teorema:
+
+<p>El teorema nos daba un resultado  que asegura que existe la inversa, que es diferenciable y además nos daba su fórmula.</p>
+<p>Buscamos ahora lo que ocurre en dimensión <span class="math inline">\(N\)</span>. Tomamos <span class="math inline">\(\appl{f}{\real^N}{\real^N}\)</span> y supongamos que en algún abierto <span class="math inline">\(\exists F^{-1}\)</span> y <span class="math inline">\(F,F^{-1} \in C^1\)</span>.</p>
+<p>Entonces está claro que</p>
+<p><span class="math display">\[ (F\circ \F)(y) = y \implies DF(\F(y))D\F(y) = Id \]</span>
+<span class="math display">\[ (\F\circ F)(y) = y \implies D\F(F(y))DF(y) = Id \]</span></p>
+<p>Con <span class="math inline">\(\appl{F}{\Omega\subset \real^N}{\real^N}\)</span> queremos probar que existe una aplicación <span class="math inline">\(\appl{G}{V}{U}\)</span> que verifique las siguientes condiciones</p>
+<p><span class="math display">\[\begin{gather*}
+G\circ F(\gx) = \gx, \forall\gx\in U \subset \Omega \\
+F\circ G(\gy) = \gy, \forall \gy \in V \\
+G \text{ diferenciable}
+\end{gather*}\]</span></p>
+
+
+
+<p>Sea <span class="math inline">\(F(x,y) = (x^2-5y^2,4xy)\)</span>.</p>
+<p>Tomamos <span class="math inline">\((x_0,y_0)\)</span>.</p>
+<p>¿<span class="math inline">\(F\)</span> invertible en un entorno de <span class="math inline">\(F(x_0,y_0)\)</span>?</p>
+<p>Calculamos Df:</p>
+<p><span class="math display">\[Df = \begin{pmatrix}
+        2x&amp;-10y\\
+        4y &amp; 4x
+       \end{pmatrix}\]</span></p>
+<p><span class="math display">\[\det(DF) = 8x^2 + 40y^2 \neq 0 \text{ si } (x,y) \neq (0,0)\]</span></p>
+<p>Cuando el determinante sea 0, significa que no puedo aplicar el teorema, por tanto, no sé si la función es invertible o no. Aplicamos los fundamentos. ¿Es inyectiva la función?</p>
+<p>No es inyectiva en ningún entorno del (0,0).</p>
+<p>El hecho de que el teorema sea local nos puede llevar a confusiones. Por ejemplo, sea <span class="math display">\[ F (r,\sigma) = (rcos(\sigma),r\sen(\sigma)), r \in [0,1], \sigma \in [0,4\pi]\]</span></p>
+<p>Entonces hay dos soluciones para la inversa:</p>
+<p><span class="math display">\[ F^{-1} (0,\frac{1}{2}) = \left\{\begin{matrix}2\pi+\frac{\pi}{2}\\\frac{pi}{2}\end{matrix}\right. \]</span></p>
+<p>Lo que hay que hacer es partir de un punto del conjunto de salida. El teorema dice que escogido un punto del conjunto de salida, existe un entorno en el conjunto de llegada en el que se puede definir la función inversa. </p>
+<p>Otro ejemplo es considerar <span class="math inline">\(g(x) = f(x) + \varepsilon x\)</span> siendo <span class="math inline">\(f(s) =\left\{\begin{matrix}x^2sin\left(\frac{1}{x}\right)&amp; \text{ si } x\neq0\\0 &amp;\text{si } x=0\end{matrix}\right.\)</span>
+Esta función <span class="math inline">\(g \notin C^1\)</span>. <span class="math inline">\(g\)</span> es derivable (<span class="math inline">\(g&#39;(0) = \varepsilon&gt;0\)</span>) pero la derivada no es continua. Se deja como ejercicio para el lector la comprobación.</p>
+
+Tomemos el caso particular de una superficie en <span class="math inline">\(\real^3\)</span>. Puede venir dada de dos formas:
+
+<p>¿Existe alguna forma de expresar <span class="math inline">\(F(x,y,z)\)</span> de la forma <span class="math inline">\(z=f(x,y)\)</span>? Pensando en el ejemplo de la esfera: <span class="math inline">\(F(x,y,z) = x^2+y^2+z^2+1\)</span>, se puede expresar de dos formas:</p>
+<p><span class="math display">\[ z = \pm \sqrt{1 - x^2 - y^2} \]</span></p>
+<p>¿Cuál es la condición que necesitamos para poder despejar <span class="math inline">\(z\)</span>? Supongamos que sabemos despejar <span class="math inline">\(z=f(x,y)\)</span>, entonces tenemos: <span class="math inline">\(F(x,y,f(x,y)) = 0\)</span>. Derivando implíctamente</p>
+<p><span class="math display">\[ \underbrace{\frac{\partial}{\partial x} [F(x,y,f(x,y)]}_{\dpa{F}{x} + \dpa{F}{z}\cdot\dpa{f}{x}}= \underbrace{\frac{\partial}{\partial y} [F(x,y,f(x,y)]}_{\dpa{F}{y} + \dpa{F}{z}\cdot\dpa{f}{y}} = 0 \]</span></p>
+<p>Si <span class="math inline">\(f\)</span> es diferenciable tenemos:
+<span class="math display">\[\dpa{f}{x}(x,y) = - \frac{\dpa{F}{x}(x,y,f(x,y))}{\dpa{F}{z}(x,y,f(x,y))}\]</span>
+<span class="math display">\[\dpa{f}{y}(x,y) = - \frac{\dpa{F}{y}(x,y,f(x,y))}{\dpa{F}{z}(x,y,f(x,y))}\]</span>
+Necesitamos entonces que <span class="math inline">\(\displaystyle\dpa{F}{z}\left(x,y,f(x,y)\right) \neq 0\)</span>. Veamos cómo extrapolar esto de forma general con tres variables.</p>
+
+
+
+
+
+
+
+<p>Estudiar si es posible despejar <span class="math inline">\(u(x,y,z), v(x,y,z)\)</span> en las ecuaciones:</p>
+<p><span class="math display">\[\left\{\begin{matrix} xy^2+xzu+yv^2 &amp;= 3\\ xyu^3+2xv-u^2v^2 &amp;= 2\end{matrix}\right.\]</span>
+En un entorno de <span class="math inline">\((x,y,z) = (1,1,1)\)</span></p>
+<p>Vamos a tener que definir una
+<span class="math display">\[\appl{F}{\real^5}{\real^2}\]</span>
+<span class="math display">\[(x,y,z,u,v) \rightarrow F(x,y,z,u,v)= (xy^2+xzu+yv^2-3,xyu^3+2xv-u^2v^2-2)\]</span>
+Podemos comprobar fácilmente que <span class="math inline">\(F\in C^{\infty}\)</span> y <span class="math inline">\(F(1,1,1,1,1) = ... = (0,0)\)</span>.</p>
+<p>Para poder despejar u,v tenemos que evaluar <span class="math inline">\(D_{(u,v)}F\)</span> en <span class="math inline">\((1,1,1,1,1)\)</span>.</p>
+<p><span class="math display">\[D_{(u,v)} = \begin{pmatrix} \dpa{F_1}{u}&amp;\dpa{F_1}{v}\\ \dpa{F_2}{u} &amp;\dpa{F_2}{v}\end{pmatrix}
+= \begin{pmatrix} xz &amp; 2yv\\3xyu^2-2uv^2 &amp; 2x-2u^2v \end{pmatrix} = ... = \begin{pmatrix} 1&amp;2\\ 3&amp;0 \end{pmatrix}\]</span></p>
+<p>Tenemos <span class="math inline">\(\det D_{(u,v)} = -6 \neq 0\)</span>. Entonces estamos en las hipótesis para utilizar el teorema y garantizar que en un entorno del punto <span class="math inline">\((1,1,1)\)</span> blablabla.
+COMPLETAR</p>
+<p>Vamos a calcular (porque lo pide el enunciado) <span class="math display">\[\dpa{u}{x},\dpa{v}{x},\dpa{v}{z}\]</span>.</p>
+<p>Como el teorema garantiza que existe, derivamos implícitamente:</p>
+<p>Vamos a derivar implícitamente respecto a <span class="math inline">\(x\)</span> el sistema:
+<span class="math display">\[\left\{\begin{matrix} y^2+zu+xzu_x + y 2v v_x = 0 \\ yu^3+xy3u^3u_x  + 2v + 2xv_x - 2uu_xv^2-2u^2vv_x = 0 \end{matrix}\right.\]</span>
+Donde <span class="math inline">\(u_x = \dpa{u}{x}\)</span>.</p>
+<p> si <span class="math inline">\((x,y,z) = (1,1,1) \implies (u,v) = (1,1)\)</span></p>
+<p>Sustiuyendo:
+<span class="math display">\[\left\{\begin{matrix}1+1+u_x+2v_x &amp;= 0 \\ 1+3u_x+2+2v_x-2u_x-2v_x &amp;= 0\end{matrix}\right.\]</span>
+<span class="math display">\[\left\{\begin{matrix}u_x(1,1,1) + 2v_x(1,1,1) &amp;= -2\\ u_x(1,1,1) &amp;= -3 \end{matrix}\right.\]</span></p>
+<p>Faltaría calcular <span class="math inline">\(\dpa{v}{z}\)</span></p>
+
+
+<p>Demostrar T.F.Inversa a partir del T.F Implícita
+Tenemos:
+<span class="math display">\[\begin{gather}
+ \appl{F}{\real^N}{\real^N}\\
+ F\in C^1\\
+ F(\ga) = \gb\\
+ \det DF(\ga) \neq 0
+\end{gather}\]</span>
+¿Podemos despejar <span class="math inline">\(F(\gx) = \gy\)</span> para <span class="math inline">\(\gx\)</span> en un entorno de <span class="math inline">\(\ga\)</span> <span class="math inline">\(\gy\)</span> en un entorno de <span class="math inline">\(\gb\)</span>?</p>
+<p><span class="math inline">\(F(\gx) = \gy\)</span> es lo mismo que <span class="math inline">\(H(\gx,\gy) = 0\)</span> con <span class="math inline">\(H(\gx,\gy) = F(\gx)-\gy\)</span>.</p>
+<p><span class="math inline">\(\appl{H}{\real^N\times \real^N}{\real^N}. H\in C^1\)</span> y <span class="math inline">\(H(\ga,\gb) = 0\)</span>. Tenemos el punto de partida en el que anclar el teorema. Queremos hallar <span class="math inline">\(\gx\)</span> como función de <span class="math inline">\(\gy\)</span> en la ecuación <span class="math inline">\(H(\gx,\gy) = 0\)</span>.</p>
+<p>Necesitamos para aplicar el teorema: <span class="math inline">\(\det D_x H(\gx,\gb) \neq 0\)</span>.</p>
+<p><span class="math inline">\(D_x H = D_x F \neq 0\)</span> (por (4))</p>
+
+<p><span class="math inline">\(\exists f(\gy) \tlq H(f(\gy),\gy) = \gor{0} \equiv F(f(\gy)) - \gy = \gor{0} \equiv F(f(\gy)) = \gy\)</span>.</p>
+<p>Ahora tenemos que ver que la composición en el otro sentido también nos da la identidad.</p>
+<p><span class="math display">\[f(F(\underbrace{f(\gy)}_{v}) = f(\gy) \implies f(F(v)) = v\]</span></p>
+<hr />
+
+<p>¿Dónde está escondida la indentidad en un sistema de ecuaciones (lineales o no)?</p>
+
+
+
+
+
+
+<p><span class="math display">\[\left\{\begin{array}{cc}
+   F_1\equiv x^2+z^2+2xz-2x-2z+1&amp;=0\\
+   F_2\equiv x^2+4y^2+4z^2+4xy+4xz+8xy&amp;=0
+  \end{array}\right.\]</span>
+¿Es depejable en función de z en un entorno de <span class="math inline">\((x,y) = (0,-1), z=1\)</span>?</p>
+<p>Solución:</p>
+<ol style="list-style-type: decimal">
+<li><p>Ver que el punto safisface las ecuaciones.</p></li>
+<li><p>Ese sistema es como definir:
+<span class="math display">\[\appl{F}{\real^3}{\real^2}, F\in C^1, F(0,-1,1) = (0,0)\]</span></p></li>
+<li><p>Calculamos el determinante de <span class="math inline">\(DF(0,-1,1)\)</span> y vemos que da <span class="math inline">\(0\)</span>.</p></li>
+</ol>
+<p>Conclusión: no podemos aplicar el teorema, pero pensando un poco vemos que</p>
+<p><span class="math display">\[F_1 = (x+z)^2 -2(x+z) + 1 = (x+z-1)^2\]</span>
+<span class="math display">\[F_1 = 0 \dimplies x=1-z\]</span>
+<span class="math display">\[F_2(x,y,z) = F_2(1-z,y,z) = (1-z)^2 + 4y^2 + 4z^2 + 4(1-z)y + 4(1-z)z+8yz\]</span>
+<span class="math display">\[ =... = a(z)y^2+b(z)y+c(z) \implies y=\frac{-b\pm \sqrt{...}}{2a}\]</span>
+¿Cual de las 2 soluciones escoger? Sabemos (por el enunciado) que si <span class="math inline">\(z=1\)</span> entonces <span class="math inline">\(y=-1\)</span>. Escogeremos la solución a la que dandole el valor <span class="math inline">\(z=1\)</span> nos de <span class="math inline">\(-1\)</span>.</p>
+
+<p><span class="math display">\[\begin{array}{cc}
+   x^3+z^3y^3+z &amp;= 0\\
+   cos(xyz)+sen(z)-1 = 0
+  \end{array}\]</span>
+¿Es despejable en función de <span class="math inline">\(z\)</span> en un entorno de <span class="math inline">\((x,y) = (0,0), z=0\)</span>.</p>
+<p>Solución:</p>
+<ol style="list-style-type: decimal">
+<li><p>El punto es solución del sistema.</p></li>
+<li><p>Definimos <span class="math display">\[\appl{F}{\real^3}{\real^2}, F\in C^1, F(0,0,0)=(0,0)\]</span></p></li>
+<li><p>Calculamos el determinante de <span class="math inline">\(DF(0,0,0)\)</span> y vemos que da <span class="math inline">\(0\)</span>.</p></li>
+</ol>
+<p>Conclusión: no podemos aplicar el teorema\
+Supongamos que si se puede despejar. Entonces tendríamos algo de la forma:</p>
+<p><span class="math display">\[\begin{gather*}
+ \left\{\begin{array}{cc}
+   [x(z)]^3+z^3[y(z)]^3+z &amp;= 0\\
+   cos(x(z)y(z)z)+sen(z)-1 &amp;= 0
+  \end{array}\right\}\rightarrow\\
+  \,\\
+   \left\{ \begin{array}{cc}
+               3[x(z)]^3x&#39;(z) + 3z^2[y(z)]^2 + z^32y(z)y&#39;(z) + 1 &amp;=0\\
+               -sen(x(z)y(z)z) \cdot\{...\} + cos(z) &amp;= 0
+              \end{array}\right\}
+              \equiv\\\,\\
+              \left\{
+              \begin{array}{cc}
+               0+1&amp;=0\\
+               0+1&amp;=0
+              \end{array}\right.
+ \end{gather*}\]</span>
+Esto demuestra que no pueden existir las derivadas.</p>
+<hr />
 <div id="definicion-y-ejemplos" class="section level2">
 <h2><span class="header-section-number">7.1</span> Definición y ejemplos</h2>
 </div>
@@ -463,7 +951,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -475,6 +963,10 @@ gitbook.start({
 "edit": {
 "link": "https://github.com/synergyvision/Analisis_y_Medida/edit/master/bookdown/104-diferenciacionR.Rmd",
 "text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
 },
 "download": ["Analisis y Medida.pdf"],
 "toc": {
@@ -489,8 +981,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Introducción al análisis funcional y a la teoría de la medida</title>
-  <meta name="description" content="Introducción al análisis funcional y a la teoría de la medida">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <title>Capítulo 8 Integración de Riemann | Introducción al análisis funcional y a la teoría de la medida</title>
+  <meta name="description" content="Capítulo 8 Integración de Riemann | Introducción al análisis funcional y a la teoría de la medida>
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Introducción al análisis funcional y a la teoría de la medida" />
+  <meta property="og:title" content="Capítulo 8 Integración de Riemann | Introducción al análisis funcional y a la teoría de la medida />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Analisis-y-Medida/" />
   <meta property="og:image" content="http://synergy.vision/Analisis-y-Medida/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Analisis-y-Medida/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introducción al análisis funcional y a la teoría de la medida" />
+  <meta name="twitter:title" content="Capítulo 8 Integración de Riemann | Introducción al análisis funcional y a la teoría de la medida />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Analisis-y-Medida/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-09-21">
+<meta name="date" content="2019-02-27">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,7 @@
 <link rel="next" href="series-numericas-infinitas.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
@@ -51,41 +52,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -408,6 +435,439 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="integracion-de-riemann" class="section level1">
 <h1><span class="header-section-number">Capítulo 8</span> Integración de Riemann</h1>
+<p>En dimensión 1, la teoría de integración la basábamos en la integral de Riemann. Tomábamos una partición de <span class="math inline">\([a,b]\)</span>: <span class="math inline">\(\mathcal{P} = a = t_0 &lt; t_1&lt;...&lt;t_k = b\)</span> y a cada subintervalo de esa partición <span class="math inline">\(I_i =[t_i,t_{i+1}]\)</span> asignábamos dos pares de valores, <span class="math inline">\(M_i\)</span> y <span class="math inline">\(m_i\)</span>:</p>
+<p><span class="math display">\[\begin{gather*}
+M_i = \sup \{f(x)\tq x\in I_i\}\\
+m_i = \inf \{f(x)\tq x\in I_i\}
+\end{gather*}\]</span></p>
+<p>Definíamos las sumas superiores (<span class="math inline">\(\mathbb{U}\)</span>) e inferiores (<span class="math inline">\(\mathbb{L}\)</span>):</p>
+<p><span class="math display">\[\begin{gather*}
+\mathbb{U}(f,\mathcal{P}) = \sum_{i=0}^{k-1} M_i(t_{i+1}-t_i) \\
+\mathbb{L}(f,\mathcal{P}) = \sum_{i=0}^{k-1} m_i(t_{i+1}-t_i)
+\end{gather*}\]</span></p>
+<p>Esto nos da una aproximación al área debajo de la función como una suma de rectángulos. Tal y como los hemos definido, está claro que</p>
+<p><span class="math display">\[ \mathbb{L}(f,\mathcal{P}) ≤ \int_a^b f ≤ \mathbb{U}(f,\mathcal{P}) \]</span></p>
+<p>También parece obvio que, cuanto más pequeña sea la anchura de los intervalos, más se aproximarán las sumas superiores e inferiores al valor real. Definimos entonces</p>
+<p><span class="math display">\[\begin{gather*}
+\alpha = \lim_{\abs{\mathcal{P}}\to 0} \mathbb{U}(f,\mathcal{P}) \\
+β = \lim_{\abs{\mathcal{P}}\to 0} \mathbb{L}(f,\mathcal{P})
+\end{gather*}\]</span></p>
+<p>, donde <span class="math inline">\(\abs{\mathcal{P}} = \max t_{i+1} - t-i\)</span>, es decir, la anchura máxima de los intervalos que formarn <span class="math inline">\(\mathcal{P}\)</span>. A partir de aquí podemos llegar a la definición de función integrable:</p>
+
+
+<p>El recíproco es . Se ve fácilmente si <span class="math inline">\(f\)</span> es una función escalonada, por ejemplo: podemos calcular el área debajo de ella sin problemas pero no es continua.</p>
+
+
+
+<p>En dimensión mayor que uno teníamos una serie de generalizaciones, y empezábamos con el teorema de Fubini que nos permite el cambio en el orden de integración:</p>
+
+
+<p>Por ejemplo, si tenemos la siguiente integral (ver figura ) <span class="math display">\[ I_1 = \int_0^2\int_{y^2}^{2y} f(x,y)\,dx\,dy \]</span> y queremos invertirla cambiamos los límites de integración: <span class="math display">\[ I_1 = \int_0^4 \int_{\frac{x}{2}}^{\sqrt{x}} f(x,y)\, dy\,dx \]</span></p>
+<p>Otro ejemplo: estudiemos <span class="math display">\[ I_2 = \int_a^bf(x)\,dx = \int_a^b\int_0^{f(x)}dx\,dy \]</span>. Si probamos a cambiar el orden de integración, tenemos que</p>
+<p><span class="math display">\[ I_2 = \int_0^M\int_{A(y)}dx\,dy \]</span></p>
+<p>Donde <span class="math inline">\(M\)</span> es el máximo de <span class="math inline">\(f\)</span> y <span class="math inline">\(A(y) = \{ x\in [a,b] \tq f(x) ≥ y \}\)</span>. La longitud de ese conjunto <span class="math inline">\(A\)</span> se denomina la medida, y entonces podemos expresar</p>
+<p><span class="math display">\[ I_2 = \int_0^\infty \abs{\{x \tq f(x) &gt; y\}}\,dy \]</span> ya que la medida del conjunto será <span class="math inline">\(0\)</span> cuando <span class="math inline">\(y &gt; M\)</span>.</p>
+<p>Curiosamente, hemos pasado de una integral de Riemann a otra con una expresión distinta, la llamada . Esto pertence al campo de la , y permite estudiar conjuntos extraños y más monstruos y engendros varios. </p>
+<p>En general, podemos expresar nuestro cambio de variable de forma más general para cualquier cambio de variable:</p>
+
+
+
+<p>Para calcular la longitud aplicamos las ideas básicas del cálculo integral:  el intervalo <span class="math inline">\([a,b]\)</span>, y aproximamos cada uno de esos trozos por un segmento. Calculamos la suma de la longitud de esos segmentos, hacemos tender la anchura de los  y si converge, la longitud se puede medir.</p>
+
+<p>Este teorema responde a una idea con respecto al cambio de variable: si tomamos <span class="math inline">\(\Gamma\)</span> como la curva que queremos integrar, entonces se puede expresar</p>
+<p><span class="math display">\[ L(\sigma) = \int_\Gamma 1\,d\sigma = \int_a^b \md{\sigma&#39;(t)}\,dt  \]</span></p>
+<p>donde <span class="math inline">\(\md{\sigma&#39;(t)}\)</span> es el cambio en la medida correspondiente.</p>
+
+<p> en general si la curva es sólo continua</p>
+
+<p><span class="math display">\[\appl{\sigma}{[0,1]}{\real^2}\]</span></p>
+
+<p>Descripción gráfica: entre <span class="math inline">\(\frac{1}{2^k}\)</span> y <span class="math inline">\(\frac{1}{2^{k+1}}\)</span> y formo un triángulo isósceles con esos 2 puntos y de altura hasta la bisectriz.</p>
+<p>Sea el triangulo K:</p>
+
+<p><span class="math display">\[Longitud =L_k = ... ??? ... = \frac{1}{2k+1} \{\sqrt{\frac{1}{4k^2}+1} + \sqrt{\frac{1}{4k^2+4} +1} \} \ge \frac{1}{2k+1}\]</span>
+<span class="math display">\[\text{Longitud total } = \sum L_k \ge \sum_k \frac{1}{2k+1} = \infty\]</span></p>
+<p>Este mostruito no tiene longitud. ¿Y si en vez de rectas tomamos sinusoides? Esa función si debería ser <span class="math inline">\(C^1\)</span> pero la longitud es <span class="math inline">\(\infty\)</span>. Entonces la curva no puede ser <span class="math inline">\(C^1\)</span> (sería un contrajemplo del teorema)</p>
+
+
+<p><span class="math display">\[ \appl{\sigma}{[a,b]}{\real^n} \]</span></p>
+<p>con <span class="math inline">\(\sigma\)</span> curva <span class="math inline">\(C^1\)</span> y regular. Entonces</p>
+<p><span class="math display">\[ L(s) = \int_a^s \md{\sigma&#39;(t)}\,dt \]</span></p>
+<p>y por el Teorema Fundamental del Cálculo</p>
+<p><span class="math display">\[ L&#39;(s) = \md{\sigma&#39;(s)} \]</span></p>
+<p>Al imponer que la curva sea regular, entonces <span class="math inline">\(\sigma&#39;(s)\neq 0\)</span> y por lo tanto existe la inversa <span class="math inline">\(\inv{L}\)</span>. Si tenemos entonces un <span class="math inline">\(\tau ∈ [0,L(b)]\)</span>, entonces <span class="math inline">\(S=\inv{L}(\tau) ∈ [a,b]\)</span>.</p>
+<p>Definimos</p>
+<p><span class="math display">\[\begin{gather*}
+\sigma^\ast = \sigma \circ \inv{L} \\
+\sigma^\ast = \sigma(\inv{L}(\tau)) \\
+(\sigma^\ast)&#39;(\tau) = \sigma&#39;(\inv{L}(tau)) (\inv{L}(\tau))&#39; = \sigma&#39;(\inv{L}(\tau)) \frac{1}{L&#39;(\inv{L}(\tau))} = \sigma&#39;(s) \frac{1}{L&#39;(s)} = \frac{\sigma&#39;(s)}{\md{\sigma&#39;(s)}}
+\end{gather*}\]</span></p>
+<p>Es decir, hemos conseguido una parametrización con velocidad constante <span class="math inline">\(\md{(\sigma^\ast)&#39;} = 1\)</span> y por lo tanto</p>
+<p><span class="math display">\[ L(\tau) = \int_0^\tau \md{(\sigma^\ast)&#39;}\,ds = \int_0^s 1\,ds = s \]</span></p>
+
+
+<p>Supongamos que estamos en <span class="math inline">\(\real^3\)</span>. Podemos hablar de la longitud de una variedad de dimensión 1, del área de una de dimensión 2 o del volumen de una de dimensión 3. Ahora bien, ¿qué ocurre cuando pasamos a dimensiones superiores? La denominación será la siguiente</p>
+
+<p>Para calcular esas  empezaremos partiendo del área de un parelelepípedo.</p>
+<p>Definiremos el paralelepípedo como, dados <span class="math inline">\(k\)</span> vectores independientes <span class="math inline">\(\{\gv_i\} \subset \real^N\)</span>,</p>
+<p><span class="math display">\[ P_k = \sum_{i=1}^k \lambda_i\gv_i\;\lambda_i \in [0,1] \]</span></p>
+<p>Elemento de área: <span class="math inline">\(P_k \equiv \{ \sum_{i=1}^k \lambda_i\gor{v}_i, \lambda_i \in [0,1]\}\subset \real^N\)</span></p>
+<p>Definimos una <span class="math display">\[\begin{gather*}
+\appl{\Psi}{\real^N}{\real^N}\\
+\gx \longrightarrow (\Psi_1(\gx),...,\Psi_n(\gx))
+\end{gather*}\]</span></p>
+
+<p>Si <span class="math inline">\(\gx,\gy\in P_k \implies \pesc{\gx,\gy} = \underbrace{\pesc{\Psi(\gx),\Psi(\gy)}}_{\text{Prod } \real^N} = \underbrace{{\tilde{\Psi}(\gx),\tilde{\Psi}(\gy)}}_{\text{Prod } \real^K}\)</span></p>
+<p> Área <span class="math inline">\((P_k)\)</span> = Área <span class="math inline">\((\tilde{\Psi}(P_k)) \equiv \displaystyle \int_{\tilde{\Psi}(P_k)}d\gor{s}\)</span>, una integral en <span class="math inline">\(\real^K, K&lt;N\)</span></p>
+<p>El paso que vamos a dar ahora es: Construir una aplicación <span class="math inline">\(L\)</span> tal que <span class="math inline">\(L(\gor{e}_i) = \tilde{\Psi}(\gor{v}_i)\)</span></p>
+<p>Y aplicamos el cambio de variables:
+<span class="math display">\[\int_{\tlps(P_k)} d\gor{s} = \int_{[0,1]^K} \abs{\det\left( \dpa{s}{t} \right)} d\gor{t}\]</span></p>
+Tenemos:
+
+<p>Con la segunda propiedad podemos construir la aplicación <span class="math inline">\(L\)</span>.</p>
+<p><span class="math display">\[\begin{gather*}
+L = \begin{pmatrix} \tlps(\gv_1) &amp; \tlps(\gv_2) &amp; ... &amp; \tlps(\gv_k)\\
+\downarrow &amp; \downarrow &amp; \ddots &amp; \downarrow
+\end{pmatrix} = \frac{d\gor{s}}{d\gor{t}}\end{gather*}\]</span></p>
+<p> <span class="math display">\[Area(P_k) = \abs{\det L} = \left|\det \begin{pmatrix}
+\tlps(\gv_1) &amp; \tlps(\gv_2) &amp; ... &amp; \tlps(\gv_k)\\
+\downarrow &amp; \downarrow &amp; \ddots &amp; \downarrow
+\end{pmatrix}\right|\]</span></p>
+Pero… tenemos 2 problemas:
+
+<p>Vamos a reventar 2 pajaros de un tiro.</p>
+<p><span class="math display">\[ Area(P_k) = \left( \det \begin{pmatrix}
+\tlps(\gv_1) &amp; \tlps(\gv_2) &amp; ... &amp; \tlps(\gv_k)\\
+\downarrow &amp; \downarrow &amp; \ddots &amp; \downarrow
+\end{pmatrix}
+\begin{pmatrix}
+\tlps(\gv_1) &amp; \tlps(\gv_2) &amp; ... &amp; \tlps(\gv_k)\\
+\downarrow &amp; \downarrow &amp; \ddots &amp; \downarrow
+\end{pmatrix} ^T \right)^{\frac{1}{2}}\]</span>
+¿Qué ganamos?
+<span class="math display">\[\begin{pmatrix}
+\pesc{\tlps(\gv_1),\tlps(\gv_1)} &amp; \pesc{\tlps(\gv_1),\tlps(\gv_2)} &amp; ... &amp; \pesc{\tlps(\gv_1),\tlps(\gv_k)}\\
+\pesc{\tlps(\gv_2),\tlps(\gv_1)} &amp; \pesc{\tlps(\gv_2),\tlps(\gv_2)} &amp; ... &amp; \pesc{\tlps(\gv_2),\tlps(\gv_k)}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+\pesc{\tlps(\gv_k),\tlps(\gv_1)} &amp; \pesc{\tlps(\gv_k),\tlps(\gv_2)} &amp; ... &amp; \pesc{\tlps(\gv_k),\tlps(\gv_k)}
+\end{pmatrix} = (\ast) = \left(\det(\pesc{v_i,v_j})\right)^{\frac{1}{2}}\]</span>
+(<span class="math inline">\(\ast\)</span>) Hemos construido las cosas de tal manera que se mantiene el producto escalar.</p>
+
+<p><span class="math inline">\(P_2 \subset \real^3\)</span> generado por <span class="math inline">\(\gu,\gv\in\real^2\)</span></p>
+<p><span class="math inline">\(Area(P_2) = \left(\det \begin{pmatrix} \pesc{\gu,\gu} &amp; \pesc{\gu,\gv}\\ \pesc{\gv,\gu} &amp; \pesc{\gv,\gv} \end{pmatrix} \right)^{\frac{1}{2}} = \left(\pesc{\gu,\gu}\pesc{\gv,\gv} - \pesc{\gu,\gv}^2\right)^{\frac{1}{2}} =\left(\md{\gu}\md{\gv} - \md{\gu}\md{\gv}(cos(\theta)^2)\right)^2 = \md{u}\md{v} \sqrt{1-cos^2(\theta)} = \md{u}\md{v} sen(\theta) = ||u\times v||\)</span></p>
+<p>Bueno, esto cumple lo que la sabíamos de selectividad. El área de un paralelogramo 2 dimensional en <span class="math inline">\(\real^3\)</span> es la raiz cuadrada del módulo del producto vectorial.</p>
+<p> Vamos a aplicar esto para hallar el área de una <span class="math inline">\(k-variedad\)</span> en <span class="math inline">\(\real^N\)</span>.</p>
+
+<p> <span class="math inline">\(Area(\Phi(Q_k)) = Area(P_k) + err(h)\)</span> donde <span class="math inline">\(Area(P_k) = \left(\det (\pesc{v_i,v_j})\right)^{\frac{1}{2}}, \{v_j\}\)</span> genera <span class="math inline">\(P_k\)</span>.</p>
+
+<p><span class="math display">\[\left(\det\left(\pesc{\dpa{\Phi}{s_i},\dpa{\Phi}{s_j}}h_ih_j\right)\right)^{\frac{1}{2}}\]</span></p>
+<p>Tomamos <span class="math inline">\(h_i = h, \forall i\)</span></p>
+<p><span class="math display">\[\underbrace{\underbrace{h^k}_{Area(Q_k)} \left(\det\left(\pesc{\dpa{\Phi}{s_i},\dpa{\Phi}{s_j}}\right)\right)^{\frac{1}{2}}}_{Area(P_k)}\]</span></p>
+<p>Conclusión: <span class="math display">\[Area(M) = \sum_n Area(Q_k^n) \left(\det\left(\pesc{\dpa{\Phi}{s_i}(\gs_0^n),\dpa{\Phi}{s_j}(\gs_0^n)}\right)\right)^{\frac{1}{2}} + err(h)\]</span></p>
+<p>Si llamamos <span class="math inline">\(F(s_0^n) = \left(\det\left(\pesc{\dpa{\Phi}{s_i}(\gs_0^n),\dpa{\Phi}{s_j}(\gs_0^n)}\right)\right)^{\frac{1}{2}}\)</span></p>
+<p>Tenemos: <span class="math display">\[\sum_n Area(Q_k) F(s_0^n) \convs[Riemann] \int_D F(\gs)d\gs\]</span></p>
+<p> <span class="math inline">\(Area(M) = \int_D \left(\det\left(\pesc{\dpa{\Phi}{s_i},\dpa{\Phi}{s_j}}\right)\right)^{\frac{1}{2}}\)</span></p>
+<p>Lo que en Cálculo 2 llamábamos <span class="math inline">\(\md{T_u\times T_v}\)</span>.</p>
+<p>Dada una <span class="math inline">\(\appl{f}{\real^N}{\real}\)</span> podemos definir: <span class="math display">\[\int_{\Phi(D)}f dA = \int_{D}f(\Phi(s)) \left(\det(\pesc{\Phi_{s_i},\Phi_{s_j}})\right)^{\frac{1}{2}} ds\]</span></p>
+
+
+<p><span class="math display">\[\appl{\sigma}{[a,b]}{\real^N}\]</span></p>
+<p>Sea <span class="math inline">\(\Gamma = \{\sigma(t)\in\real^N\tq t\in[a,b]\}\)</span></p>
+<p>El elemento de área sería:</p>
+<p><span class="math display">\[\int_{\Gamma} fdA = \int_a^bf(\sigma(t)) (\pesc{\sigma&#39;,\sigma&#39;})^{\frac{1}{2}}\]</span></p>
+
+<p><span class="math display">\[
+\Phi : D\subset\real^2\rightarrow \real^3\]</span>
+<span class="math display">\[(s_1,s_2)\rightarrow (x(s_1,s_2),y(s_1,s_2),z(s_1,s_2))\]</span></p>
+<p>Tenemos en este caso:
+<span class="math display">\[\int_{\Phi(D)}fdA = \int_D f(\Phi(s_1,s_2)) (\det(\pesc{\Phi_{s_i},\Phi_{s_j}}))^{\frac{1}{2}})ds\]</span>
+<span class="math display">\[(\det(\pesc{\Phi_{s_i},\Phi_{s_j}}))^{\frac{1}{2}}) = (*) = \md{\Phi_1 \times \Phi_2}\]</span>
+<span class="math inline">\((*)\)</span> visto anteriormente.</p>
+<p>Integrales de  sobre  y  en <span class="math inline">\(\real^3\)</span>.</p>
+
+<p>Volvemos a plantearnos el problema: ¿Distintas parametrizaciones nos da el mismo trabajo/flujo? Depende de la  de la parametrización. No es lo mismo el trabajo para ir desde abajo de la curva hasta arriba que para bajarla. ¿Este problema traducido a <span class="math inline">\(\real^K\)</span>, flipas o k ase?</p>
+<p>Recordamos algunos teoremas y definiciones vistos en Calculo 2:</p>
+
+<p>Los campos vectoriales son funciones <span class="math inline">\(\appl{F}{\real^N}{\real^N}\)</span>, en el que a cada punto se le asigna un vector.
+</p>
+
+
+
+
+
+
+
+<p>Todos estos teoremas son parecidos en cuanto a que a la izquierda se tiene el campo evaluado en la frontera y a la derecha tenemos una integral en el interior de una expresión más o menos compleja en la que aparecen las derivadas. Cabe esperar que sean casos particulares de un teorema superior, cosa que es cierta. Este teorema se le llama de  en general.</p>
+<p>De aquí al final de curso nos dedicaremos a llegar a ese teorema y ver que estos 3 teoremas son casos particulares.</p>
+<p>Para ello nos adentraremos en el espinoso jardín de la orientación.</p>
+
+<p>El tema de la orientación tiene que ver con tener cuidado con el orden. Vamos a ver los ejemplos de pocas dimensiones:</p>
+
+
+<p><span class="math display">\[\mathcal{B}_1 = \{(0,1),(1,0)\}\]</span>
+<span class="math display">\[\mathcal{B}_2 = \{(1,0),(0,1)\}\]</span></p>
+<p>Sea <span class="math inline">\(\gv = (v_1,v_2)_{\mathcal{B}_1} = (v_2,v_1)_{\mathcal{B}_2} \neq \gv\)</span></p>
+<p>Lo que haremos en este caso será un cambio de base, <span class="math inline">\(\mathcal{B}_1,\mathcal{B}_2\)</span> bases en <span class="math inline">\(\real^N\)</span>. Sea <span class="math inline">\(\mathcal{C}_{\mathcal{B}_1\to\mathcal{B}_2}\)</span> matriz del cambio de base de <span class="math inline">\(\mathcal{B}_1\)</span> a <span class="math inline">\(\mathcal{B}_2\)</span>.</p>
+
+<p>¿Que pasaría si el determinante de esa matriz de cambio de base sea 0? No puede ser (por definición de cambio de base, que tiene que ser reversible).</p>
+
+<p><span class="math inline">\(\real^3\)</span>.
+Sean
+<span class="math display">\[\mathcal{B}_1 = (\gu,\gv,\gw),\mathcal{B}_2 = (\gv,\gu,\gw),\mathcal{B}_3 = (\gw,\gu,\gv)\]</span></p>
+Si tomamos $=
+<span class="math display">\[\begin{pmatrix} 1\\0\\0\end{pmatrix}\]</span>
+_{_1} =
+<span class="math display">\[\begin{pmatrix}0\\1\\0\end{pmatrix}\]</span>
+_{_2} =
+<span class="math display">\[\begin{pmatrix}0\\1\\0\end{pmatrix}\]</span>
+<p>_{_3} $</p>
+<p>Siguiendo este razonamiento llegamos a la matriz de cambio de base:</p>
+<p><span class="math display">\[\mathcal{C}_{\mathcal{B}_1\to\mathcal{B}_2} = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\]</span>
+Cuyo determinante es negativo.</p>
+<p>Lo mismo con</p>
+<p><span class="math display">\[\mathcal{C}_{\mathcal{B}_1\to\mathcal{B}_1} = \begin{pmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \end{pmatrix}\]</span>
+Cuyo determinante es positivo.</p>
+<p>¿Porqué al cambiar el orden se cambia la orientación?</p>
+<p>Aceptamos como orientación positiva la de la base canónica ordenada como Dios manda: <span class="math inline">\(\{(1,0,0,...,0), (0,1,0,0,...,0), (0,0,1,0,0,...,0),...,(0,0,...,0,1)\}\)</span></p>
+<p>Vamos con algún ejemplo más:</p>
+
+<p>(Importante)</p>
+<p>En <span class="math inline">\(\real^3\)</span>, sean <span class="math inline">\(\gu,\gv\)</span> independientes.</p>
+<p>Construimos <span class="math inline">\(\mathcal{B} = \{\gu,\gv,\gu\times\gv\}\)</span>. Queremos saber si esta base es de orientación positiva u orientación negativa.</p>
+<p><span class="math display">\[\gu\times\gv = \left|
+\begin{array}{ccc}
+ \overrightarrow{i} &amp; \overrightarrow{j} &amp; \overrightarrow{k}\\
+u_1 &amp; u_2 &amp; u_3 \\
+v_1 &amp; v_2 &amp; v_3
+ \end{array}\right| = ... = \left(\left|\begin{array}{cc}u_2&amp;v_2\\u_3&amp;v_3\end{array}\right|,\left|\begin{array}{cc}u_1&amp;v_1\\u_3&amp;v_3\end{array}\right|,-\left|\begin{array}{cc}u_1&amp;v_1\\u_2&amp;v_2\end{array}\right|\right)\]</span></p>
+<p>[_{} = \begin{pmatrix}
+u_1&amp;v_1&amp; |\begin{array}{cc} u_2&amp;v_2\u_3&amp;v_3 \end{array}|\</p>
+<p>u_2&amp;v_2&amp; -|\begin{array}{cc} u_1&amp;v_1\u_3&amp;v_3 \end{array}|\</p>
+<p>u_3&amp;v_3&amp; |\begin{array}{cc} u_1&amp;v_1\u_2&amp;v_2\end{array}|
+\end{pmatrix}]</p>
+<p>Cuyo determinante es <span class="math display">\[\left|\begin{array}{cc}u_2&amp;v_2\\u_3&amp;v_3\end{array}\right|^2+\left|\begin{array}{cc}u_1&amp;v_1\\u_3&amp;v_3\end{array}\right|^2+\left|\begin{array}{cc}u_1&amp;v_1\\u_2&amp;v_2\end{array}\right|^2&gt;0\]</span></p>
+
+<p><span class="math inline">\(\real^2\)</span></p>
+<p>Sean <span class="math display">\[\mathcal{C} = \{(1,0),(0,1)\}\]</span>
+<span class="math display">\[\mathcal{B} = \{(u_1,u_2),(v_1,v_2)\}\]</span></p>
+<p>La matriz fácil de calcular es <span class="math display">\[C_{\mathcal{B}\to \mathcal{C}} = \begin{pmatrix} u_1&amp;v_1\\u_2&amp;v_2\end{pmatrix}\]</span>
+<span class="math display">\[0&lt;\det \begin{pmatrix} u_1&amp;v_1\\u_2&amp;v_2\end{pmatrix}  = \pesc{(u_1,u_2),(v_1,v_2)} = \pesc{(\lambda,0),(\beta,-\alpha)} = \lambda\beta\]</span></p>
+<p>Aplicando un giro (de aquí salen <span class="math inline">\(\lambda\)</span>…) podemos ver que el si el ángulo entre <span class="math inline">\(\gu,\gv \in (0,\pi) \leadsto +\)</span> pero si el ángulo entre <span class="math inline">\(\gu,\gv \in (\pi,2\pi) \leadsto -\)</span>. ¿Y en <span class="math inline">\(\pi\)</span>? Entonces los vectores no serían independientes.</p>
+<p> Vamos a dedicarnos a jugar con los vectores de la base aplicandoles una deformación continua para ver que pasa con la discontinuidad de la orientación en <span class="math inline">\(\pi\)</span> a ver que encontramos.</p>
+<p>Sea la deformación <span class="math inline">\((\alpha(t),\beta(t)), t\in(0,1)\)</span> continua, donde <span class="math inline">\((\alpha(0),\beta(0)) = (e_1,e_2)\)</span> y <span class="math inline">\((\alpha(1),\beta(1)) = (e_1,e_2)\)</span></p>
+
+
+<p>en <span class="math inline">\(\real^3\)</span>.</p>
+<p>Idea geométrica: Yo tengo 2 bases y quiero pasar de una a otra, si puedo encontrar un camino en el que los 3 vectores nunca pertenezcan al mismo plano entonces la orientación es la misma. .</p>
+<p>Sea
+<span class="math display">\[\mathcal{B} = \{e_1,e_2,e_3\} \hspace*{150pt} \mathcal{C} = \{\gu,\gv,\gw\}\]</span></p>
+
+<p>No hay ninguna manera de llevar <span class="math inline">\(e_3\)</span> a <span class="math inline">\(\gw\)</span> sin formar un único plano con los tres vectores.</p>
+<p>Aunque podríamos llevar <span class="math inline">\(e_3 \to \gu\)</span> y <span class="math inline">\(e_1 \to \gw\)</span>… ¿Entonces?</p>
+<p>Mal! Porque no estamos manteniendo el orden, tendríamos la base <span class="math inline">\(\mathcal{C}* = \{\gw,\gv,\gu\}\neq\mathcal{C}\)</span>.</p>
+
+
+<p>Ahora que ya tenemos vista la orientación de bases en <span class="math inline">\(\real^N\)</span> vamos a ver la orientación en <span class="math inline">\(T_a M\)</span> (espacio tangente de una variedad en un punto)</p>
+
+<p>Sea <span class="math inline">\(\{e_1,e_2,\dotsc,e_k\}\)</span> la base canónica en <span class="math inline">\(\real^k\)</span>, y <span class="math inline">\(\Phi(u_0)=\ga\)</span></p>
+<p>Como la variedad viene dada por una parametrización, tomamos <span class="math inline">\(\img D\Phi\)</span>, es decir: <span class="math display">\[T_{\ga}M = \img D\Phi(u_0)  = \{D\Phi(u_0)\gv,\gv\in\real^K\}\]</span>
+Tomando la base euclídea:
+<span class="math display">\[D\Phi(u_0) \{\sum^k v_i\gor{e}_i\}\equiv \sum^k v_i\underbrace{[D\Phi(u_0)\gor{e}_i]}{\in\real^N} \]</span></p>
+
+<p>Es decir, la <span class="math inline">\(\img D\Phi\)</span> está generada por los k vectores <span class="math display">\[\begin{equation}\label{baseTaM}
+\{ D\Phi(u_0)\gor{e}_1,\dotsc ,D\Phi(u_0)\gor{e}_k \}
+\end{equation}\]</span></p>
+
+<p>La condición de rango máximo nos asegura que los <span class="math inline">\(k\)</span> vectores son linealmente independientes.</p>
+
+<p>El conjunto () es una base de <span class="math inline">\(T_{\ga}M\)</span></p>
+<p> Si tenemos 2 parametrizaciones distintas <span class="math inline">\(\Phi,\Psi\)</span> entonces tendremos 2 bases diferentes. Cabe plantearse bajo qué condiciones se mantiene la orientación. (aunque todavía no tengamos muy claro que es la orientación de una variedad)</p>
+
+<p>Las orientaciones de una curva en <span class="math inline">\(\real^N\)</span> es fácil, basta comprobar los sentidos de los vectores tangentes.</p>
+<p>Vamos a hacer las cuentas:</p>
+<p>Sean <span class="math inline">\(\sigma,\beta\)</span> parametrizacones del mismo trozo de la curva, que parten de orígenes distintos.</p>
+<p><span class="math display">\[\appl{\sigma}{U}{\Gamma},s\to \sigma(s)\]</span>
+<span class="math display">\[\appl{\beta}{V}{\Gamma},t\to \beta(t)\]</span></p>
+<p>Tenemos un teorema que nos garantiza que existe un  ()g, tal que <span class="math display">\[\sigma(s) = \beta(g(s)) \y \sigma&#39;(s) = \beta&#39;(g(s))\cdot g&#39;(s)\]</span></p>
+<p>En este caso, para que las dos parametrizaciones den la misma orientación, <span class="math inline">\(g&#39;&gt;0\)</span>.</p>
+
+<p>Las orientaciones de una superficie también, basta comprobar los sentidos de los vectores normales.</p>
+<p><span class="math display">\[\appl{\Phi}{U}{\real^3}, (u,v) \to \Phi(u,v)\]</span>
+<span class="math display">\[\appl{\Psi}{V}{\real^3}, (r,s) \to \Psi(r,s)\]</span></p>
+<p>Tenemos un teorema que nos garantiza… tal que <span class="math display">\[g(u,v) = (g_1(u,v),g_2(u,v))\]</span></p>
+<p>En este caso, calculamos <span class="math display">\[\left.\begin{array}{c}
+\Phi_u\times\Phi_v \\
+\Psi_r\times\Psi_s
+\end{array}\right\}\]</span></p>
+<p>Tenemos que <span class="math inline">\(\Phi(u,v) = \Psi(g_1(u,v),g_2(u,v))\)</span></p>
+<p><span class="math display">\[\begin{gather*}
+\Phi_1(u,v) = \Psi_1(g_1(u,v),g_2(u,v))\\
+(\Phi_1)_{u} = (\Psi_1)_r r_u + (\Psi_1)_s s_u = ((\Psi)_r\,(\Psi_1)_s)\begin{pmatrix}
+(g_1)_u\\(g_2)_v
+\end{pmatrix}
+\end{gather*}\]</span>
+Se calculan las 6 derivadas <span class="math inline">\((\Phi_1,\Phi_2,\Phi_3)\)</span> respecto de <span class="math inline">\(u\)</span> y de <span class="math inline">\(v\)</span>  y acabamos llegando a</p>
+<p><span class="math display">\[\begin{pmatrix}
+(\Phi_1)_u\\(\Phi_2)_u\\(\Phi_3)_u
+\end{pmatrix} = \begin{pmatrix}
+(\Psi_1)_r &amp; (\Psi_1)_s\\
+(\Psi_2)_r &amp; (\Psi_2)_s\\
+(\Psi_3)_r &amp; (\Psi_3)_s
+\end{pmatrix}\begin{pmatrix}
+(g_1)_u\\
+(g_2)_u
+\end{pmatrix}
+\]</span>
+Análogamente:
+<span class="math display">\[\begin{pmatrix}
+(\Phi_1)_v\\(\Phi_2)_v\\(\Phi_3)_v
+\end{pmatrix} = \begin{pmatrix}
+(\Psi_1)_r &amp; (\Psi_1)_s\\
+(\Psi_2)_r &amp; (\Psi_2)_s\\
+(\Psi_3)_r &amp; (\Psi_3)_s
+\end{pmatrix}\begin{pmatrix}
+(g_1)_v\\
+(g_2)_v
+\end{pmatrix}
+\]</span></p>
+<p>Ahora procedemos a calcular
+<span class="math display">\[\Phi_u\x\Phi_v = \dotsc = \left(
+\left|\begin{array}{cc}
+(\Phi_2)_u &amp; (\Phi_2)_v\\
+(\Phi_3)_u &amp; (\Phi_3)_v
+\end{array}
+\right|,-
+\left|\begin{array}{cc}
+(\Phi_1)_u &amp; (\Phi_1)_v\\
+(\Phi_3)_u &amp; (\Phi_3)_v
+\end{array}
+\right|,
+\left|\begin{array}{cc}
+(\Phi_1)_u &amp; (\Phi_1)_v\\
+(\Phi_2)_u &amp; (\Phi_2)_v
+\end{array}
+\right|
+\right)\]</span></p>
+<p>Tomando el primer elemento calculamos:</p>
+<p><span class="math display">\[
+\det\left(
+\begin{array}{cc}
+(\Psi_2)_r &amp; (\Psi_2)_s\\
+(\Psi_3)_r &amp; (\Psi_3)_s
+\end{array}
+\right)\begin{pmatrix}
+(g_1)_u &amp;(g_1)_v \\
+(g_2)_u &amp; (g_2)_v
+\end{pmatrix} =
+\left| \begin{array}{cc}
+(\Psi_2)_r &amp; (\Psi_2)_s\\
+(\Psi_3)_r &amp; (\Psi_3)_s
+\end{array}\right| \det Dg
+\]</span></p>
+<p>Repitiendo la cuenta con el resto de los elementos, llegamos a</p>
+<p><span class="math display">\[\Phi_u\x\Phi_v = \Psi_r\x\Psi_s\cdot (\det Dg)\]</span></p>
+
+<p>Para mantener la orientación necesitamos <span class="math inline">\(\det Dg &gt; 0\)</span></p>
+
+<p>Este teorema solo afecta a la zona de la subvariedad <span class="math inline">\(M\)</span> parametrizada por <span class="math inline">\(\Phi\)</span> y <span class="math inline">\(\Psi\)</span> al mismo tiempo.</p>
+
+
+<p></p>
+<p>La parametrización es
+<span class="math display">\[
+\Phi(t,\theta) = \left((R+t\cdot sen\frac{\theta}{2})cos\theta, (R+t\cdot sen\frac{\theta}{2})sen\theta, t cos\frac{\theta}{2} \right) \, t\in(-1,1),\theta\in(0,2\pi)
+\]</span></p>
+¿Estamos seguros de que es una parametrización?
+
+<p>Vamos a comprobar el homeomorfismo,</p>
+<p>Tenemos 2 posibles caminos:</p>
+
+<p>Despejamos en función de <span class="math inline">\(x,y,z\)</span></p>
+<p><span class="math inline">\(\frac{y}{x} = tg \theta\)</span>.</p>
+<p>Definimos : <span class="math display">\[
+\begin{array}{ccc}
+\theta &amp;= arctg\frac{y}{x} &amp; (1)\\
+\theta &amp;= arctg\frac{y}{x} + \pi &amp; (2)\\
+\theta &amp;= arctg\frac{y}{x} + 2\pi &amp; (3)
+\end{array}
+\]</span>
+Y comprobar que es continua</p>
+
+<p>Escribimos este conjunto como un conjunto de nivel y ver que es una variedad, por lo tanto no hace falta comprobar el homeomorfismo sobre la imagen.</p>
+<p><span class="math display">\[\begin{gather*}
+\sqrt{x^2+y^2} = (R + t\cdot cos\frac{\theta}{2})\\
+\sqrt{x^2+y^2} - R = \frac{z}{tg\frac{&quot;arctg\frac{y}{x}&quot;}{?}}
+\end{gather*}\]</span></p>
+
+<p>Una clave importante es que cuando <span class="math inline">\(\theta\rightarrow 0^+ \implies \Phi(t,\theta)\)</span> pero si <span class="math inline">\(\theta\rightarrow 2\pi^{-} \implies \Phi(-t,\theta)\)</span></p>
+<p><span class="math inline">\(\overrightarrow{n} = T_t\x T_{\theta} = ... = \overrightarrow{n}(t,\theta)\)</span></p>
+<p><span class="math display">\[\begin{gather*}
+\overrightarrow{n}(t,\theta) \convs[][\theta\rightarrow 0^+] (-R,\frac{t}{2})\\
+\overrightarrow{n}(t,\theta) \convs[][\theta\rightarrow 2\pi^-] (R,-\frac{t}{2})
+\end{gather*}\]</span></p>
+<p>Curioso: esta parametrización que no cubre el segmento con el que se empieza. Esta parametrización tiene una propiedad curiosa, al empezar, el vector normal apunta hacia dentro y al final, apunta hacia fuera. Es imposible cubrirla del todo con una parametrización.</p>
+
+<p>típico de superficie no orientable es la botella de Klein</p>
+
+
+<p>Conjuntos con frontera en <span class="math inline">\(\real^2\)</span>.</p>
+<p>Utilizamos la tercera caracterización de subvariedad, que dice que existe un  que vamos a llamar <span class="math inline">\(\Phi\)</span>, (que por ser difeomorfismo, existe <span class="math inline">\(\Psi = \Phi^{-1})\)</span>.</p>
+<p>Podemos suponer que estamos trabajano con un cuadrado en el plano y su imagen para facilitar las cuentas.</p>
+Partimos de
+
+<p>En U es fácil orientar un cuadrado. ¿Cómo nos “llevamos” la orientación? Con la diferencial, que si queremos que sea la misma orientación <span class="math inline">\(\implies \det D\Phi &gt; 0\)</span>.</p>
+<p>Sea <span class="math inline">\(\mathcal{C} = \{e_1=(1,0),e_2=(0,1)\}\)</span> base canónica en <span class="math inline">\(\real^2\)</span> (variables (s,t)).</p>
+<p>Sea <span class="math inline">\(\mathcal{B} = \{D\Psi(s_0,0)e_1,D\Psi(s_0,0)e_2\}\)</span> base en <span class="math inline">\(\real^2\)</span> (variables <span class="math inline">\((x,y)\)</span>)</p>
+<p>Tenemos también <span class="math inline">\(\sigma(s) = \Psi(s,0)\)</span> parametrización de un trozo de <span class="math inline">\(dM\)</span> que contiene a <span class="math inline">\(x_0\)</span>.</p>
+<p><span class="math display">\[D\Psi = \begin{pmatrix}
+\displaystyle\dpa{\Psi_1}{s} &amp;\displaystyle\dpa{\Psi_1}{t}\\
+\displaystyle\dpa{\Psi_2}{s} &amp;\displaystyle\dpa{\Psi_2}{t}
+\end{pmatrix}\]</span>
+En la primera columna lo que tenemos es el vector tangente a la curva. Cuando <span class="math inline">\(t=0\)</span> tenemos la parametrización de la frontera.</p>
+<p><span class="math display">\[
+D\Psi|_(s_0,0) = \begin{pmatrix}
+\sigma&#39;(s_0) &amp; \overrightarrow{v}\\
+\downarrow &amp; \downarrow
+\end{pmatrix}
+\]</span></p>
+<p>Haciendo un desarrollo de Taylor tenemos:</p>
+<p><span class="math display">\[
+\Psi(s_0,t) = \begin{pmatrix}
+\Psi_1(s_0,0)\\
+\Psi_2(s_0,0)
+\end{pmatrix} + t \underbrace{\begin{pmatrix}
+\dpa{\Psi_1}{t} (s_0,0)\\
+\dpa{\Psi_2}{t} (s_0,0)
+\end{pmatrix}}_{\gor{v}} + err
+\]</span></p>
+<p><span class="math display">\[\underbrace{\begin{pmatrix}\Psi_1(s_0,t)\\
+\Psi_2(s_0,t)
+\end{pmatrix} }_{\in M\, t&gt;0}= \gor{x}_0 + t\gv + err
+\]</span>
+Conclusión: <span class="math inline">\(\gv\)</span> “apunta hacia el interior de <span class="math inline">\(M\)</span>”.</p>
+
+<p><span class="math display">\[\mathcal{C} = \{e_1,e_2\}\]</span>
+<span class="math display">\[\mathcal{B} = \{D\Psi(s_0,0)e_1,D\Psi(s_0,0)e_2\} = \{\sigma&#39;(s_0),\gv\}\]</span></p>
+<p><span class="math display">\[\mathcal{B} \text{ orientación positiva } \dimplies \det D\Psi(s_0,0) &gt; 0 \dimplies \text{ Ángulo entre } \sigma&#39;(s_0) \text{ y } \gv \in (0,\pi)\]</span></p>
+<p>Con un dibujo se llegaría a entender perfectamente la siguiente conclusión (basada en la interpretación geométrica de que el ángulo <span class="math inline">\(\in (0,\pi)\)</span>)</p>
+<p>
+ si recorremos la frontera de la subvariedad con la mano izquierda hacia dentro es la orientación positiva si nuestra subvariedad queda en el interior de esa frontera/curva, si nuestra subvariedad es el exterior de la curva pues será la orientación negativa.</p>
+
+<p><span class="math display">\[\appl{\Phi}{\real^2}{\real^3}\]</span></p>
+<p>Tenemos $(s) = (s,0) $, parametrización de un trozo de <span class="math inline">\(dM\)</span> que contiene a <span class="math inline">\(x_0\)</span>.</p>
+<p>Siendo <span class="math display">\[D\Phi(s_0,0) = \begin{pmatrix}
+...
+\end{pmatrix} = \begin{pmatrix}
+\sigma&#39;(s_0) &amp; \overrightarrow{v}\\
+\downarrow &amp; \downarrow
+\end{pmatrix}\]</span></p>
+<p></p>
+<p><span class="math display">\[\mathcal{C}  = \{e_1,e_2,e_3\}\]</span></p>
+<p><span class="math display">\[\mathcal{B} = \{D\Phi(s_0,0)e_1,D\Phi(s_0,0)e_2\} = \{\sigma&#39;(s_0),\gv\}\]</span></p>
+<p>Solo se tienen 2 vectores. Anteriormente hemos visto que es el producto vectorial ()</p>
+<p>Es decir</p>
+<p><span class="math display">\[\mathcal{B} = \{\sigma&#39;(s_0),\gv,\sigma&#39;(s_0)\x\gv\}\]</span></p>
+<p>Con las cuentas vistas antes del ejemplo comprobamos que <span class="math inline">\(\gv\)</span> apunta hacia el interior de <span class="math inline">\(M\)</span>.</p>
 <div id="integral-de-riemann-darboux" class="section level2">
 <h2><span class="header-section-number">8.1</span> Integral de Riemann-Darboux</h2>
 </div>
@@ -472,7 +932,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -484,6 +944,10 @@ gitbook.start({
 "edit": {
 "link": "https://github.com/synergyvision/Analisis_y_Medida/edit/master/bookdown/105-integracionR.Rmd",
 "text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
 },
 "download": ["Analisis y Medida.pdf"],
 "toc": {
@@ -498,8 +962,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;
