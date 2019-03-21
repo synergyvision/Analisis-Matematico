@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2019-02-27">
+<meta name="date" content="2019-03-21">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,13 +34,13 @@
   
 <link rel="prev" href="analisis-en-semigrupos.html">
 <link rel="next" href="apendice.html">
-<script src="libs/jquery/jquery.min.js"></script>
-<link href="libs/gitbook/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 
 
 
@@ -51,69 +51,6 @@
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 
 
-<style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -435,6 +372,354 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="teoria-de-probabilidades" class="section level1">
 <h1><span class="header-section-number">Capítulo 41</span> Teoría de probabilidades</h1>
+<p>##Conjuntos y funciones <span class="math inline">\(\sigma\)</span>-aditivas}</p>
+Sea un conjunto <span class="math inline">\(\Omega\)</span>, y sea <span class="math inline">\(\mathcal{A}\)</span> una <span class="math inline">\(\sigma\)</span>-álgebra
+sobre <span class="math inline">\(\Omega\)</span>. Se dice que <span class="math inline">\(\mathcal{A}\)</span> es una <span class="math inline">\(\sigma\)</span>-álgebra si
+cumple las siguientes propiedades:
+
+Es decir, una <span class="math inline">\(\sigma\)</span>-álgebra es una clase de conjuntos cerrada para
+las operaciones complementario y unión numerable. Existen una serie de
+propiedades inmediatas derivadas de las propiedades que definen a la
+<span class="math inline">\(\sigma\)</span>-álgebra:\
+<span class="math inline">\(\emptyset \in \mathcal{A}\)</span>\
+<span class="math inline">\(\mathcal{A}\)</span> es cerrada para la operación intersección numerable.
+
+Al par (<span class="math inline">\(\Omega\)</span>, <span class="math inline">\(\mathcal{A}\)</span>) se le llama espacio medible, y a los
+conjuntos que pertenecen a <span class="math inline">\(\mathcal{A}\)</span> se les denomina conjuntos
+medibles.
+
+Si tomamos la relación de inclusión entre conjuntos (<span class="math inline">\(\subseteq\)</span>) como
+una relación de orden, podemos hablar sin ambiguedad de
+sucesiones monótonas. En este sentido, una sucesión creciente de
+conjuntos es una sucesión <span class="math inline">\(\{A_n\}_{n \in \mathbb{N}}\)</span> en la que se
+cumple que <span class="math inline">\(A_i \subseteq A_{i+1}, \forall i \in \mathbb{N}\)</span>. De forma
+análoga se puede definir sucesión decreciente de conjuntos.\
+Existe una forma intuitiva de definir el límite de una
+sucesión monótona de conjuntos. En particular, el límite de una
+sucesión creciente de conjuntos <span class="math inline">\(\{A_n\}_{n \in \mathbb{N} }\)</span> se puede
+definir como
+<span class="math display">\[\lim_{n\to\infty} A_n = \bigcup_{k \in \mathbb{N}}^{\infty} A_k\]</span>
+Esta definición aprovecha la relación de orden entre los conjuntos de
+la sucesión para afirmar que si un elemento está en el último
+conjunto de la sucesión, entonces está en todos los anteriores, y por
+tanto en todos, por ello se puede utilizar una intersección
+numerable (que está bien definida) para formalizar el
+concepto.\
+Con una intuición análoga se define el límite de una sucesión
+decreciente de conjuntos. Si <span class="math inline">\(\{A_n\}_{n\in\mathbb{N}}\)</span> es una
+sucesión decreciente de conjuntos, entonces:
+<span class="math display">\[ \lim_{n\to\infty} A_n = \bigcap_{k\in\mathbb{N}}^{\infty} A_k \]</span>
+
+No solo se puede hablar de límites en sucesiones monótonas. Para
+definir los límites en sucesiones arbitrarias de conjuntos tenemos que
+recurrir a los conceptos de límite inferior y límite superior. La
+intuición de estos límites superior e inferior pasan por el concepto
+de las colas de la sucesión.\
+Dada una sucesión de conjuntos <span class="math inline">\(\{A_n\}_{n\in\mathbb{N} }\)</span> podemos
+considerar el conjunto
+<span class="math display">\[ B_n = \bigcap_{k=n}^{\infty} A_k \]</span>
+y este conjunto contiene aquellos elementos que están en
+ los <span class="math inline">\(A_k\)</span> para <span class="math inline">\(k \geq n\)</span>. Es fácil probar que la
+sucesión <span class="math inline">\(\{B_n\}_{n\in\mathbb{N}}\)</span> es una sucesión creciente de
+conjuntos, y por tanto se puede obtener el límite <span class="math inline">\(\lim_{n\to\infty} B_n\)</span>. Informalmente, ese límite es un conjunto que contiene a todos
+los elementos de <span class="math inline">\(A_n\)</span> que están en todos los conjuntos <span class="math inline">\(A_k\)</span> a partir
+de cierto <span class="math inline">\(n\in\mathbb{N}\)</span>. Definimos el límite inferior de <span class="math inline">\(A_n\)</span> como
+<span class="math display">\[ \liminf A_n = \lim_{n\to\infty} B_n = \bigcup_{n\in\mathbb{N}}
+\bigcap_{k=n}^{\infty} A_n \]</span>
+Análogamente, podríamos definir la sucesión de conjuntos
+<span class="math inline">\(\{C_n\}_{n\in\mathbb{N}}\)</span> como
+<span class="math display">\[ C_n = \bigcup_{k=n}^{\infty} A_n \]</span>
+Cada <span class="math inline">\(C_n\)</span> contiene todos los elementos que están presentes en algún
+<span class="math inline">\(A_k\)</span> para <span class="math inline">\(k \geq n\)</span>. Es fácil también ver que la sucesión
+<span class="math inline">\(\{C_n\}_{n\in\mathbb{N}}\)</span> es una sucesión decreciente de conjuntos, y
+por tanto su límite también está bien definido. Se puede definir
+entonces el límite superior de <span class="math inline">\(\{A_n\}_{n\in\mathbb{N}}\)</span> como
+<span class="math display">\[ \limsup A_n = \lim_{n\to\infty} C_n = \bigcap_{n\in\mathbb{N}}
+\bigcup_{k=n}^{\infty} A_n \]</span>
+Informalmente se puede pensar en este límite superior de <span class="math inline">\(A_n\)</span> como el
+conjunto de los elementos que están en infinitos conjuntos de la
+sucesión.\
+A partir de estas definiciones, es fácil comprobar que
+<span class="math display">\[ \liminf A_n \subseteq \limsup A_n \]</span>
+
+Diremos que una sucesión de conjuntos tiene límite si su límite
+inferior y superior coinciden, y el límite tendrá como valor
+efectivamente el de estos límites. Es decir:
+<span class="math display">\[ \lim A_n = \liminf A_n = \limsup A_n \]</span>
+en caso de que límite superior e inferior coincidan.
+
+Una vez definidos los conceptos sobre conjuntos con los que vamos a
+trabajar, pasamos a definir las funciones sobre conjuntos. Vamos
+entonces a definir lo que es una función de conjunto. Sean los
+espacios medibles (<span class="math inline">\(\Omega\)</span>, <span class="math inline">\(\mathcal{A}\)</span>) y(<span class="math inline">\(\Omega&#39;\)</span>,
+<span class="math inline">\(\mathcal{A}&#39;\)</span>), definimos la función:
+<span class="math display">\[ X: \mathcal{A} \to \mathcal{A}&#39;\]</span>
+<span class="math display">\[ A \longrightarrow X(A)\]</span>
+A raíz de esta definición podemos definir también lo que se conoce
+como función inversa. Dada una función <span class="math inline">\(X\)</span>, la función inversa de <span class="math inline">\(X\)</span>,
+<span class="math inline">\(X^{-1}\)</span>, asigna a cada conjunto <span class="math inline">\(A&#39; \in \mathcal{A}&#39;\)</span> el conjunto <span class="math inline">\(A \in \mathcal{A}\)</span> tal que <span class="math inline">\(X(A) = A&#39;\)</span>. La propiedad básica que cumplen
+las funciones inversas es que preservan las operaciones e inclusiones
+de conjuntos.
+
+Sea un conjunto <span class="math inline">\(\Omega\)</span> y una <span class="math inline">\(\sigma\)</span>-álgebra <span class="math inline">\(\mathcal{A}\)</span> sobre
+<span class="math inline">\(\Omega\)</span>. Definimos la función de conjunto:
+<span class="math display">\[\varphi : \mathcal{A} \rightarrow \mathbb{R}\]</span>
+
+Se dice que <span class="math inline">\(\varphi\)</span> es aditiva si
+<span class="math inline">\(\varphi(\displaystyle\sum_{1}^{n}A_k)=\displaystyle\sum_1^n\varphi(A_k)\)</span>\
+Se dice que <span class="math inline">\(\varphi\)</span> es <span class="math inline">\(\sigma\)</span>-aditiva si
+<span class="math inline">\(\varphi(\displaystyle\sum_1^\infty A_k)=\displaystyle\sum_1^\infty \varphi(A_k)\)</span>
+
+Sea <span class="math inline">\(\varphi\)</span> definida como antes. Se dice que <span class="math inline">\(\varphi\)</span> es
+ si <span class="math inline">\(\varphi(A \cup B) \leq \varphi(A) + \varphi(B)\)</span>
+
+Una vez introducido el concepto de límite para una sucesión de
+conjuntos, vamos a tratar de definir la continuidad para funciones de
+conjunto. Tendremos tres tipos de continuidad, cada uno relacionado
+con un tipo de sucesiones de conjuntos de las que hemos definido
+anteriormente. En esta sección trabajaremos con una función <span class="math inline">\(\varphi : \Omega \to \Omega&#39;\)</span>\
+Diremos que <span class="math inline">\(\varphi\)</span> es continua por abajo si cumple que, dada una
+sucesión creciente de elementos <span class="math inline">\(A_n \uparrow A\)</span>, se tiene que
+<span class="math display">\[ \lim \varphi (A_n) = \varphi (A) \]</span>
+Por otra parte, diremos que <span class="math inline">\(\varphi\)</span> es continua por arriba si cumple
+que dada una sucesión decreciente de elementos <span class="math inline">\(A_n \downarrow A\)</span>, se
+tiene que
+<span class="math display">\[ \lim \varphi (A_n) = \varphi (A)\]</span>
+Por último, diremos que una función es continua si lo es por arriba y por abajo.
+
+Una vez demostrado este teorema, vamos a ver un teorema que nos
+relaciona las propiedades del supremo e ínfimo de una función
+<span class="math inline">\(\sigma\)</span>-aditiva con los conjuntos sobre los que está dicha función
+definida:
+
+Una función de conjuntos <span class="math inline">\(\mu^\circ\)</span> es una medida si verifica:
+
+A la tupla (<span class="math inline">\(\Omega\)</span>, <span class="math inline">\(\mathcal{A}\)</span>, <span class="math inline">\(\mu_{\mathcal{A}}\)</span>) se le
+denomina espacio de medida.\
+ Una medida exterior es una
+función de conjuntos positiva y <span class="math inline">\(\sigma\)</span>-subaditiva, es decir, no se
+cumple la primera propiedad. La <span class="math inline">\(\sigma\)</span>-subaditividad implica que
+<span class="math inline">\(\mu(A \cup B) \leq \mu(A) + \mu(B)\)</span>.\
+Para que una medida exterior fuera una medida tendría que ser
+<span class="math inline">\(\sigma\)</span>-aditiva. Es decir, la falla la primera condición. Sí que es
+positiva ya que <span class="math inline">\(\mu^\circ(\emptyset)=0\)</span> y es creciente. Esta medida
+exterior se aplica a cualquier conjunto. Va a haber unos subconjuntos
+en los que la función se comporte como si fuera aditiva.\
+Una vez definido el concepto de medida, vamos a dar ahora el de
+probabilidad. Una probabilidad <span class="math inline">\(\mathcal{P}\)</span> sobre un espacio medible
+(<span class="math inline">\(\Omega\)</span>, <span class="math inline">\(\mathcal{A}\)</span>) es una medida que además cumple que
+<span class="math inline">\(\mathcal{P}(\Omega)=1\)</span>. Por tanto, tiene las siguientes
+propiedades:\
+<span class="math inline">\(\mathcal{P}(\emptyset)=0\)</span>\
+<span class="math inline">\(\forall A \in \mathcal{A}, 0 \leq \mathcal{P}(A) \leq 1\)</span>\
+Es una función <span class="math inline">\(\sigma\)</span>-aditiva\
+De forma análoga al concepto de espacio de medida, podemos definir
+ahora el de espacio probabilístico. Un espacio probabilístico es una
+tupla formada por un conjunto <span class="math inline">\(\Omega\)</span>, una <span class="math inline">\(\sigma\)</span>-álgebra sobre ese
+conjunto, <span class="math inline">\(\mathcal{A}\)</span>, y una función de probabilidad <span class="math inline">\(\mathcal{P}\)</span>.
+
+Una vez vistas las definiciones anteriores de medida y medida
+exterior, vamos a ver un teorema fundamental, que nos servirá para
+justificar la forma en la que haremos el cálculo de probabilidades a
+posteriori. Veamos dos lemas antes que nos serán necesarios para la
+demostración del teorema principal.\
+ Un conjunto <span class="math inline">\(A\in S(\Omega)\)</span> es
+<span class="math inline">\(\mu^\circ\)</span>-medible si se cumple que <span class="math inline">\(\mu^\circ(D) \geq \mu^\circ(AD)+\mu^\circ(A^cD), \forall D \in S(\Omega)\)</span>\
+ Una extensión exterior <span class="math inline">\(\mu^\circ\)</span> de una medida
+<span class="math inline">\(\mu\)</span> se define como:
+<span class="math display">\[\mu^\circ (A) = \inf \sum_j (A_j), \quad A \subset \cup A_j,\quad
+recubrimiento \]</span>
+
+Una vez definidos los conceptos sobre espacios de medida y espacios
+probabilísticos, vamos a aproximarnos al concepto de función medible.
+Para ello, daremos dos definiciones de función medible, para demostrar
+más adelante que estas dos definiciones son equivalentes. Empecemos
+con la definición constructiva de función medible. Dado que nos
+interesa que el codominio sea <span class="math inline">\(\mathbb{R}\)</span>, trabajaremos con funciones
+definidas entre un espacio medible (<span class="math inline">\(\Omega\)</span>, <span class="math inline">\(\mathcal{A}\)</span>) y
+(<span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(\mathcal{B}\)</span>), donde <span class="math inline">\(\mathcal{B}\)</span> representa la
+<span class="math inline">\(\sigma\)</span>-álgebra de Borel.\
+Primero, se define la función puntual <span class="math inline">\(X: \Omega \to \mathbb{R}\)</span>, que
+asigna a cada <span class="math inline">\(\omega \in \Omega\)</span> un número <span class="math inline">\(x = X(\omega)\)</span> único.
+Llamaremos a esta función variable aleatoria. Utilizaremos de aquí en
+adelante la siguiente notación:
+
+Sea entonces la función <span class="math inline">\(X = \displaystyle \sum_j x_jI_{A_j}\)</span>, donde
+<span class="math inline">\(A_j\)</span> son conjuntos medibles y <span class="math inline">\(I_{A_j}\)</span> denota la función indicadora
+de dicho conjunto. Estas funciones se llaman funciones elementales, y
+cuando el número de valores distintos que toma la función <span class="math inline">\(X\)</span> es
+finito, se conocen como funciones simples. Entonces, la definición
+constructiva de función medible es la que sigue:\
+ Una función es
+medible si es límite de una sucesión de funciones simples <span class="math inline">\(\{X_n\}\)</span>
+convergentes.\
+Esta definición que hemos dado es constructiva, y por tanto, nos será
+muy útil para la definición constructiva de las integrales. No
+obstante, para enunciar y demostrar las propiedades de las funciones
+medibles, suele ser más útil la definición descriptiva siguiente:\
+ Sea una función
+<span class="math inline">\(\varphi : \mathcal{A} \rightarrow \mathcal{B}\)</span>. Se dice que <span class="math inline">\(\varphi\)</span>
+es medible si <span class="math inline">\(\forall B \in \mathcal{B} \Rightarrow \varphi^{-1}(B) \in \mathcal{A}\)</span>. Es decir, una función se dice medible si la imagen
+inversa de todo conjunto medible es medible.\
+No obstante, se puede dar, a raíz de esta, otra definición más económica:\
+Para la definición anterior, es suficiente con exigir la medibilidad
+de las imágenes inversas de los elementos de una subclase <span class="math inline">\(\alpha\)</span>
+para la cual la <span class="math inline">\(\sigma\)</span>-álgebra minimal sobre <span class="math inline">\(\alpha\)</span> sea
+<span class="math inline">\(\mathcal{B}\)</span>\
+Veamos ahora que las dos definiciones que hemos dado son equivalentes.
+
+Vamos a establecer ahora criterios que nos permitan comparar variables
+aleatorias. Dado un espacio de probabilidad (<span class="math inline">\(\Omega\)</span>, <span class="math inline">\(\mathcal{A}\)</span>,
+<span class="math inline">\(\mathcal{P}\)</span>), se dice que dos variables aleatorias son equivalentes
+si:
+<span class="math display">\[ X\mathcal{R}Y \Leftrightarrow \mathcal{P}[X = Y] = 1\]</span>
+Análogamente:
+<span class="math display">\[X(\omega) = Y(\omega) \forall \omega \in \Omega \setminus \Lambda,
+\mathcal{P}(\Lambda) = 0\]</span>
+
+Si <span class="math inline">\(P[|X_n- X| \geq \varepsilon]\rightarrow 0\)</span>, entonces se dice que
+<span class="math inline">\(X_n\stackrel{\mathbb{P}}{\longrightarrow} X\)</span>, es decir, <span class="math inline">\(X_n\)</span>
+converge en probabilidad a <span class="math inline">\(X\)</span>\
+
+Se dice que una variable aleatoria <span class="math inline">\(X\)</span> converge uniformemente en <span class="math inline">\(u\)</span>
+si se cumple que <span class="math inline">\(\mathcal{P}[\mid X_{n+u} - X_n \mid \geq \varepsilon] \to 0\)</span>
+
+Una sucesión de variables aleatorias, <span class="math inline">\({ X_n }\)</span> , converge con
+probabilidad 1, o de forma casi segura, a una variable aleatoria <span class="math inline">\(X\)</span> (
+que puede degenerar en una constante K) cuando se cumple que:
+<span class="math display">\[P(\lim_{n\rightarrow\infty}X_n=X)=1\]</span>
+De esta forma interpretamos que <span class="math inline">\(X_n\stackrel{c.s}{\longrightarrow}X\)</span>
+cuando la probabilidad de que en el límite la sucesión de variables
+aleatorias y aquella a la que converge sean iguales es uno
+
+Para el cálculo de probabilidades, nos será muy útil el concepto de
+integral sobre funciones de conjunto. Este concepto nos servirá para
+calcular lo que se conoce como la esperanza matemática de una variable
+aleatoria <span class="math inline">\(X\)</span>. En este apartado trabajaremos sobre el espacio de
+probabilidad <span class="math inline">\((\Omega, \mathcal{A}, \mathcal{P})\)</span>. Comenzaremos
+definiendo la integral para las funciones simples, para dar luego una
+definición de integral para funciones no negativas y por último para
+funciones cualesquiera.\
+Sea entonces <span class="math inline">\(\{A_k\} \in \mathcal{A}\)</span>, tal que <span class="math inline">\(\displaystyle \sum_k A_k = \Omega\)</span>, partición medible del espacio. Sea entonces la función
+simple <span class="math inline">\(X = \displaystyle \sum_{j=1}^m x_jI_{A_j}, x_j \geq 0\)</span>. La
+integral de la función <span class="math inline">\(X\)</span> se define como:
+<span class="math display">\[\int_{\Omega} X d\mathcal{P} = \sum_{j=1}^m x_j\mathcal{P}_{A_j}\]</span>
+Ahora, para cualquier función no negativa <span class="math inline">\(X\)</span>, se define la integral
+de la función como:
+<span class="math display">\[\int_{\Omega} X d\mathcal{P} = \lim \int_{\Omega}X_n d \mathcal{P}\]</span>
+Donde <span class="math inline">\(\{X_{n}\} \to X\)</span>. Finalmente, la integral en <span class="math inline">\(\Omega\)</span> de una
+función medible <span class="math inline">\(X\)</span> se define como:
+<span class="math display">\[\int_{\Omega} X d\mathcal{P} = \int_{\Omega}X^{+} d\mathcal{P} -
+\int_{\Omega} X^{-} d\mathcal{P}\]</span>
+donde <span class="math inline">\(X^{+} = XI_{[X\geq0]}\)</span> y <span class="math inline">\(X^{-} = -XI_{[X&lt;0]}\)</span>. Si
+<span class="math inline">\(\displaystyle \int_{\Omega}Xd\mathcal{P}\)</span> es finita, es decir, si los
+dos términos de la diferencia anterior son finitos, entonces se dice
+que <span class="math inline">\(X\)</span> es integrable en <span class="math inline">\(\Omega\)</span>. Ahora, una vez definida la
+integral, vamos a ver algunas de sus propiedades. Tenemos primero una
+serie de propiedades relacionadas con la aditividad de la integral.
+Sean <span class="math inline">\(X,Y\)</span> dos funciones medibles, entonces (no se demostrarán las
+propiedades triviales):\
+<span class="math inline">\(\displaystyle \int (X+Y)d\mathcal{P} = \int Xd\mathcal{P} + \int Yd\mathcal{P}\)</span>\
+
+<span class="math inline">\(\displaystyle \int_{A+B} X d\mathcal{P} = \int_A X d\mathcal{P} + \int_B X d \mathcal{P}\)</span>\
+<span class="math inline">\(\displaystyle \int cXd\mathcal{P} = c\int Xd\mathcal{P}\)</span>\
+Veamos ahora algunas propiedades relacionadas con el orden:\
+<span class="math inline">\(X \geq 0 \rightarrow \displaystyle \int X d\mathcal{P} \geq \int 0 = 0\)</span>\
+<span class="math inline">\(X \geq Y \rightarrow \displaystyle \int X d\mathcal{P} \geq \int Y d\mathcal{P}\)</span>\
+<span class="math inline">\(\displaystyle X \stackrel{c.s}{=} Y \rightarrow \int X d\mathcal{P} = \int Y d\mathcal{P}\)</span>\
+
+Dado un espacio probabilístico <span class="math inline">\((\Omega, \mathcal{A}, P)\)</span> y una v.a.
+<span class="math inline">\(X\)</span>, se define la esperanza matemática de <span class="math inline">\(X\)</span> como:
+<span class="math display">\[E(X)=\int_{\Omega}XdP=\int_{\omega \in \Omega}{X(\omega)dP(\omega)}\]</span>
+\\
+La esperanza matemática se define de forma distinta si estamos
+trabajando con una v.a. discreta o continua. En el caso de una v.a.
+discreta, sea <span class="math inline">\(p(x_i)\)</span> su función de probabilidad. Definimos la
+esperanza matemática como:
+<span class="math display">\[E(X)=x_1p(X=x_1)+\ldots + x_n p(X=x_n)=\sum_{i=1}^{n}{x_i p(x_i)}\]</span>
+En el caso de una v.a. continua, sea <span class="math inline">\(f(x)\)</span> la función de densidad.
+Definimos la esperanza matemática como:
+<span class="math display">\[E(X)=\int_{-\infty}^{+\infty} {xf(x)dx}\]</span>
+
+Una vez vista la definición de integral y esperanza matemática y
+algunas de sus propiedades, vamos a enunciar y demostrar un teorema de
+convergencia que nos será de mucha utilidad para el estudio de
+variables aleatorias. Veamos su enunciado y demostración:
+
+Veamos ahora un resultado que nos da información sobre el límite
+superior e inferior de una sucesión de variables aleatorias, en caso
+de que estas estén acotadas por variables aleatorias integrables
+
+
+
+
+
+
+<p>Vamos a ver algunas desigualdades que nos permitirán
+simplificar el cálculo de carácterísticas asociadas a variables
+aleatorias.\</p>
+<p>\</p>
+<p>Dado un espacio probabilístico (<span class="math inline">\(\Omega\)</span>, <span class="math inline">\(\mathcal{A}\)</span>,
+<span class="math inline">\(\mathcal{P}\)</span>) y una variable aleatoria <span class="math inline">\(X\)</span>, se define el momento
+r-ésimo o de orden r de la variable <span class="math inline">\(X\)</span> a:
+<span class="math display">\[ EX^r = \int X^r \, d \mathcal{P} \]</span>
+Dicho momento existe si <span class="math inline">\(E|X|^r &lt; \infty\)</span></p>
+
+
+<p><span class="math inline">\(E|XY| \leq \left(E|X|^r \right)^{\frac{1}{r}} \left(E|Y|^s \right)^{\frac{1}{s}}\)</span> con <span class="math inline">\(r&gt;s\)</span> ; $ +=1$</p>
+
+<p><span class="math inline">\(E|XY|\leq \left(E|X|^2 \right)^{\frac{1}{2}} \left(E|Y|^2 \right)^{\frac{1}{2}}\)</span></p>
+
+<p>Si <span class="math inline">\(r \geq 1 \Rightarrow (E|X+X&#39;|^r)^{\frac{1}{r}} \leq \left(E|X|^r \right)^{\frac{1}{r}} + \left(E|X&#39;|^r \right)^{\frac{1}{r}}\)</span></p>
+
+<p>Sea <span class="math inline">\(X\)</span> una v.a. y sea <span class="math inline">\(g\)</span> una función boreliana. Entonces se tiene:</p>
+
+Vamos a demostrar que en efecto se cumple la desigualdad básica:
+
+
+
+<p>Se dice que una sucesión de variables aleatorias <span class="math inline">\(X_n\)</span> converge en
+r-medida a <span class="math inline">\(X\)</span> si:
+<span class="math display">\[ E|X_n - X|^r \to 0\]</span>
+Lo notamos como <span class="math inline">\(X_n \stackrel{r}{\rightarrow} X\)</span></p>
+
+
+
+<p>Función puntual que se define sobre la recta real, no negativa, no
+decreciente, continua por la izquierda y que cumple que <span class="math inline">\(F(-\infty) = 0, F(+\infty) = 1\)</span>\</p>
+
+Se conoce como distribución inducida por la variable aleatoria <span class="math inline">\(X\)</span> a
+(<span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(\mathcal{B}\)</span>, <span class="math inline">\(\mathcal{P}^X\)</span>), donde la medida de
+probabilidad <span class="math inline">\(\mathcal{P}^X\)</span> se define como:
+<span class="math display">\[ \mathcal{P}^X(B) = \mathcal{P}(X^{-1}(B)), \, \forall B \in \mathcal{B} \]</span>
+Tenemos entonces que:
+
+
+Llamamos función generatriz de momentos de la variable aleatoria <span class="math inline">\(X\)</span> a
+la función:
+<span class="math display">\[ M_X(t) = E(e^{tX}); \, t \in \mathbb{R} \]</span>
+
+<p>Dada una variable aleatoria <span class="math inline">\(\mathbb{X}\)</span> continua, definimos su
+función característica como:
+<span class="math display">\[\varphi_X(t)=E(e^{itX})=\int_{-\infty}^{\infty}e^{itx}f_{X}(x)=E(cos(tX))+iE(sen(TX))\]</span></p>
+
+<p>Se dice que los eventos <span class="math inline">\(A_t\)</span> son independientes
+si para todo subconjunto finito <span class="math inline">\((t_i,\ldots ,t_n)\)</span> se tiene que:
+<span class="math display">\[P\bigcap_{k=1}^n A_{tk}=\displaystyle\prod_{k=1}^{n}P\, A_{tk}\]</span>
+De hecho, el concepto de independencia es relativo a la familia de
+clases. Una clase de eventos se dice independiente si sus eventos son
+independientes.</p>
+
+
+Esto tiene tres aplicaciones fundamentales:
+
+Una familia de variables aleatorias <span class="math inline">\(X_{T_s}=\{ X_t \, , \, t\in T_s \}\)</span> induce <span class="math inline">\(\sigma\)</span> algebras <span class="math inline">\(\mathcal{B}(X_{T_s})\)</span> de eventos
+
+ Las variables aleatorias <span class="math inline">\(X_t\, , \, t\in T\)</span> son
+independientes si para cada clase finita <span class="math inline">\((S_{t_1},\ldots , S_{t_n})\)</span>
+de conjuntos de Borel en R:
+<span class="math inline">\(P\bigcap_{k=1}^{n}[X_{t_k}\in S{t_k}]=\displaystyle\prod_{k=1}^n P[X_{t_k}\in S_{t_k}]\)</span>
+
 <div id="variables-aleatorias" class="section level2">
 <h2><span class="header-section-number">41.1</span> Variables aleatorias</h2>
 </div>
@@ -479,13 +764,13 @@ ga('send', 'pageview');
 <a href="apendice.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
-<script src="libs/gitbook/js/app.min.js"></script>
-<script src="libs/gitbook/js/lunr.js"></script>
-<script src="libs/gitbook/js/plugin-search.js"></script>
-<script src="libs/gitbook/js/plugin-sharing.js"></script>
-<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
