@@ -636,7 +636,7 @@ $$\lim\mathbb{X}_n(\omega)=\mathbb{X}(\omega)\, \omega \in A$$
 Para el cálculo de probabilidades, nos será muy útil el concepto de
 integral sobre funciones de conjunto. Este concepto nos servirá para
 calcular lo que se conoce como la esperanza matemática de una variable
-aleatoria $X$. En este apartado trabajaremos sobre el espacio de
+aleatoria $X$. En esta seccion trabajaremos sobre el espacio de
 probabilidad $(\Omega, \mathcal{A}, \mathcal{P})$. Comenzaremos
 definiendo la integral para las funciones simples, para dar luego una
 definición de integral para funciones no negativas y por último para
