@@ -6,10 +6,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Capítulo 2 Conjuntos | Introducción al análisis funcional y a la teoría de la medida</title>
-  <meta name="description" content="Capítulo 2 Conjuntos | Introducción al análisis funcional y a la teoría de la medida>
+  <meta name="description" content="Capítulo 2 Conjuntos | Introducción al análisis funcional y a la teoría de la medida">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Capítulo 2 Conjuntos | Introducción al análisis funcional y a la teoría de la medida />
+  <meta property="og:title" content="Capítulo 2 Conjuntos | Introducción al análisis funcional y a la teoría de la medida" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Analisis-y-Medida/" />
   <meta property="og:image" content="http://synergy.vision/Analisis-y-Medida/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Analisis-y-Medida/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 2 Conjuntos | Introducción al análisis funcional y a la teoría de la medida />
+  <meta name="twitter:title" content="Capítulo 2 Conjuntos | Introducción al análisis funcional y a la teoría de la medida" />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Analisis-y-Medida/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2019-02-27">
+<meta name="date" content="2019-04-03">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -52,67 +52,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -211,7 +185,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="11" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html"><i class="fa fa-check"></i><b>11</b> Funciones en varias variables</a><ul>
 <li class="chapter" data-level="11.1" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#transformaciones-lineales-1"><i class="fa fa-check"></i><b>11.1</b> Transformaciones lineales</a></li>
-<li class="chapter" data-level="11.2" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#diferenciacion-1"><i class="fa fa-check"></i><b>11.2</b> Diferenciación</a></li>
+<li class="chapter" data-level="11.2" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#diferenciacion-2"><i class="fa fa-check"></i><b>11.2</b> Diferenciación</a></li>
 <li class="chapter" data-level="11.3" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#el-principio-de-la-contraccion"><i class="fa fa-check"></i><b>11.3</b> El principio de la contracción</a></li>
 <li class="chapter" data-level="11.4" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#el-teorema-de-la-funcion-inversa"><i class="fa fa-check"></i><b>11.4</b> El teorema de la función inversa</a></li>
 <li class="chapter" data-level="11.5" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#el-teorema-de-la-funcion-implicita"><i class="fa fa-check"></i><b>11.5</b> El teorema de la función implícita</a></li>
@@ -340,13 +314,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="32.4" data-path="espacios-lp.html"><a href="espacios-lp.html#integrabilidad-uniforme"><i class="fa fa-check"></i><b>32.4</b> Integrabilidad uniforme</a></li>
 <li class="chapter" data-level="32.5" data-path="espacios-lp.html"><a href="espacios-lp.html#funciones-convexas-y-desigualdad-de-jensen"><i class="fa fa-check"></i><b>32.5</b> Funciones convexas y desigualdad de Jensen</a></li>
 </ul></li>
-<li class="chapter" data-level="33" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html"><i class="fa fa-check"></i><b>33</b> Diferenciación</a><ul>
-<li class="chapter" data-level="33.1" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#medidas-con-signo"><i class="fa fa-check"></i><b>33.1</b> Medidas con signo</a></li>
-<li class="chapter" data-level="33.2" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#medidas-complejas"><i class="fa fa-check"></i><b>33.2</b> Medidas complejas</a></li>
-<li class="chapter" data-level="33.3" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#continuidad-absoluta-de-medidas"><i class="fa fa-check"></i><b>33.3</b> Continuidad absoluta de medidas</a></li>
-<li class="chapter" data-level="33.4" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#diferenciacion-de-medidas"><i class="fa fa-check"></i><b>33.4</b> Diferenciación de medidas</a></li>
-<li class="chapter" data-level="33.5" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#funciones-a-variacion-acotada-1"><i class="fa fa-check"></i><b>33.5</b> Funciones a variación acotada</a></li>
-<li class="chapter" data-level="33.6" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#funciones-absolutamente-continuas"><i class="fa fa-check"></i><b>33.6</b> Funciones absolutamente contínuas</a></li>
+<li class="chapter" data-level="33" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html"><i class="fa fa-check"></i><b>33</b> Diferenciación</a><ul>
+<li class="chapter" data-level="33.1" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#medidas-con-signo"><i class="fa fa-check"></i><b>33.1</b> Medidas con signo</a></li>
+<li class="chapter" data-level="33.2" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#medidas-complejas"><i class="fa fa-check"></i><b>33.2</b> Medidas complejas</a></li>
+<li class="chapter" data-level="33.3" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#continuidad-absoluta-de-medidas"><i class="fa fa-check"></i><b>33.3</b> Continuidad absoluta de medidas</a></li>
+<li class="chapter" data-level="33.4" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#diferenciacion-de-medidas"><i class="fa fa-check"></i><b>33.4</b> Diferenciación de medidas</a></li>
+<li class="chapter" data-level="33.5" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#funciones-a-variacion-acotada-1"><i class="fa fa-check"></i><b>33.5</b> Funciones a variación acotada</a></li>
+<li class="chapter" data-level="33.6" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#funciones-absolutamente-continuas"><i class="fa fa-check"></i><b>33.6</b> Funciones absolutamente contínuas</a></li>
 </ul></li>
 <li class="chapter" data-level="34" data-path="analisis-de-fourier-en-mathbbrn.html"><a href="analisis-de-fourier-en-mathbbrn.html"><i class="fa fa-check"></i><b>34</b> Análisis de Fourier en <span class="math inline">\(\mathbb{R}^n\)</span></a><ul>
 <li class="chapter" data-level="34.1" data-path="analisis-de-fourier-en-mathbbrn.html"><a href="analisis-de-fourier-en-mathbbrn.html#convolucion-de-funciones"><i class="fa fa-check"></i><b>34.1</b> Convolución de funciones</a></li>
@@ -395,15 +369,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="40.5" data-path="analisis-en-semigrupos.html"><a href="analisis-en-semigrupos.html#semigrupo-de-operadores"><i class="fa fa-check"></i><b>40.5</b> Semigrupo de operadores</a></li>
 </ul></li>
 <li class="chapter" data-level="41" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html"><i class="fa fa-check"></i><b>41</b> Teoría de probabilidades</a><ul>
-<li class="chapter" data-level="41.1" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#variables-aleatorias"><i class="fa fa-check"></i><b>41.1</b> Variables aleatorias</a></li>
-<li class="chapter" data-level="41.2" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#independencia"><i class="fa fa-check"></i><b>41.2</b> Independencia</a></li>
-<li class="chapter" data-level="41.3" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#esperanza-condicional"><i class="fa fa-check"></i><b>41.3</b> Esperanza condicional</a></li>
-<li class="chapter" data-level="41.4" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#sucesiones-de-variables-aleatorias-independientes"><i class="fa fa-check"></i><b>41.4</b> Sucesiones de variables aleatorias independientes</a></li>
-<li class="chapter" data-level="41.5" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#martingalas-a-tiempo-discreto"><i class="fa fa-check"></i><b>41.5</b> Martingalas a tiempo discreto</a></li>
-<li class="chapter" data-level="41.6" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#procesos-estocasticos"><i class="fa fa-check"></i><b>41.6</b> Procesos estocásticos</a></li>
-<li class="chapter" data-level="41.7" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#movimiento-browniano"><i class="fa fa-check"></i><b>41.7</b> Movimiento browniano</a></li>
-<li class="chapter" data-level="41.8" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#integracion-estocastica"><i class="fa fa-check"></i><b>41.8</b> Integración estocástica</a></li>
-<li class="chapter" data-level="41.9" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#aplicacion-a-las-finanzas"><i class="fa fa-check"></i><b>41.9</b> Aplicación a las finanzas</a></li>
+<li class="chapter" data-level="41.1" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#conjuntos-y-funciones-sigma-aditivas"><i class="fa fa-check"></i><b>41.1</b> Conjuntos y funciones <span class="math inline">\(\sigma\)</span>-aditivas}</a></li>
+<li class="chapter" data-level="41.2" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#variables-aleatorias"><i class="fa fa-check"></i><b>41.2</b> Variables aleatorias</a></li>
+<li class="chapter" data-level="41.3" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#independencia-2"><i class="fa fa-check"></i><b>41.3</b> Independencia</a></li>
+<li class="chapter" data-level="41.4" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#esperanza-condicional"><i class="fa fa-check"></i><b>41.4</b> Esperanza condicional</a></li>
+<li class="chapter" data-level="41.5" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#sucesiones-de-variables-aleatorias-independientes"><i class="fa fa-check"></i><b>41.5</b> Sucesiones de variables aleatorias independientes</a></li>
+<li class="chapter" data-level="41.6" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#martingalas-a-tiempo-discreto"><i class="fa fa-check"></i><b>41.6</b> Martingalas a tiempo discreto</a></li>
+<li class="chapter" data-level="41.7" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#procesos-estocasticos"><i class="fa fa-check"></i><b>41.7</b> Procesos estocásticos</a></li>
+<li class="chapter" data-level="41.8" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#movimiento-browniano"><i class="fa fa-check"></i><b>41.8</b> Movimiento browniano</a></li>
+<li class="chapter" data-level="41.9" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#integracion-estocastica"><i class="fa fa-check"></i><b>41.9</b> Integración estocástica</a></li>
+<li class="chapter" data-level="41.10" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#aplicacion-a-las-finanzas"><i class="fa fa-check"></i><b>41.10</b> Aplicación a las finanzas</a></li>
 </ul></li>
 <li class="chapter" data-level="42" data-path="apendice.html"><a href="apendice.html"><i class="fa fa-check"></i><b>42</b> Apéndice</a></li>
 <li class="appendix"><span><b>Apéndice</b></span></li>
@@ -441,54 +416,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">2.1</span> Operaciones conjuntistas</h2>
 <p>Si <span class="math inline">\(A\)</span> es un subconjunto de <span class="math inline">\(B\)</span>, escribimos <span class="math inline">\(A \subseteq B\)</span>. Si todos los conjuntos con los que se trabaja son subconjuntos de un conjunto <span class="math inline">\(X\)</span>, entonces <span class="math inline">\(X\)</span> es llamado el conjunto universal. El conjunto potencia de un conjunto <span class="math inline">\(X\)</span> es la colección <span class="math inline">\(\mathcal{P}(X)\)</span> de todos los subconjuntos de <span class="math inline">\(X\)</span>, es decir: <span class="math display">\[ \mathcal{P}(X) = \{Y \, : \, Y \subseteq X\}.\]</span></p>
 <p>Si <span class="math inline">\(A, B \subseteq X\)</span>, entonces <span class="math inline">\(A \cup B\)</span>, <span class="math inline">\(A \cap B\)</span> y <span class="math inline">\(A \setminus B\)</span> denotan la unión, intersección y diferencia relativa de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, El complemento de <span class="math inline">\(A\)</span>, definido como los elementos de <span class="math inline">\(X\)</span> que no están en <span class="math inline">\(A\)</span>, se denota por <span class="math inline">\(A^c\)</span>. Si <span class="math inline">\(\mathcal{A}\)</span> es un subconjunto de <span class="math inline">\(\mathcal{P}(X)\)</span> y <span class="math inline">\(B \in \mathcal{P}(X)\)</span>, se define la traza de <span class="math inline">\(\mathcal{A}\)</span> en <span class="math inline">\(B\)</span> como <span class="math display">\[\mathcal{A}\cap B := \{A \cap B \, : \, A \in \mathcal{A}\}.\]</span></p>
-<p>La unión e intersección de una familia indexada <span class="math inline">\(\mathcal{A}=\{A_i \, : \, i \in \mathcal{I}\}\)</span> se denotan, respectivamente, como
-<span class="math display">\[\cap \mathcal{A}:= \cap_{i \, \in \, \mathcal{I}},\]</span>
-y
-<span class="math display">\[\cup \mathcal{A}:= \cup_{i \, \in \, \mathcal{I}},\]</span></p>
-<p>Si el conjunto de índices <span class="math inline">\(\mathcal{I}\)</span> es <span class="math inline">\(\{1,2, \hdots, n\}\)</span> o <span class="math inline">\(\{1,2, \hdots\}\)</span>, se escribe
-<span class="math display">\[\cup_{j=1}^n A_j=A_1 \cup \hdots \cup A_n\]</span>
-<span class="math display">\[\cap_{j=1}^n A_j=A_1 \cap \hdots \cap A_n\]</span>
-<span class="math display">\[\cup_{j \geq 1} A_j=A_1 \cup A_2 \cup \cdots\]</span>
-<span class="math display">\[\cap_{j \geq 1} A_j=A_1 \cap A_2 \cap \cdots\]</span></p>
+<p>La unión e intersección de una familia indexada <span class="math inline">\(\mathcal{A}=\{A_i \, : \, i \in \mathcal{I}\}\)</span> se denotan, respectivamente, como <span class="math display">\[\cap \mathcal{A}:= \cap_{i \, \in \, \mathcal{I}},\]</span> y <span class="math display">\[\cup \mathcal{A}:= \cup_{i \, \in \, \mathcal{I}},\]</span></p>
+<p>Si el conjunto de índices <span class="math inline">\(\mathcal{I}\)</span> es <span class="math inline">\(\{1,2, \hdots, n\}\)</span> o <span class="math inline">\(\{1,2, \hdots\}\)</span>, se escribe <span class="math display">\[\cup_{j=1}^n A_j=A_1 \cup \hdots \cup A_n\]</span> <span class="math display">\[\cap_{j=1}^n A_j=A_1 \cap \hdots \cap A_n\]</span> <span class="math display">\[\cup_{j \geq 1} A_j=A_1 \cup A_2 \cup \cdots\]</span> <span class="math display">\[\cap_{j \geq 1} A_j=A_1 \cap A_2 \cap \cdots\]</span></p>
 
 </div>
 <div id="operaciones-conjuntistas-1" class="section level2">
 <h2><span class="header-section-number">2.2</span> Operaciones conjuntistas</h2>
 <p>Si <span class="math inline">\(A\)</span> es un subconjunto de <span class="math inline">\(B\)</span>, escribimos <span class="math inline">\(A \subseteq B\)</span>. Si todos los conjuntos con los que se trabaja son subconjuntos de un conjunto <span class="math inline">\(X\)</span>, entonces <span class="math inline">\(X\)</span> es llamado el conjunto universal. El conjunto potencia de un conjunto <span class="math inline">\(X\)</span> es la colección <span class="math inline">\(\mathcal{P}(X)\)</span> de todos los subconjuntos de <span class="math inline">\(X\)</span>, es decir: <span class="math display">\[ \mathcal{P}(X) = \{Y \, : \, Y \subseteq X\}.\]</span></p>
 <p>Si <span class="math inline">\(A, B \subseteq X\)</span>, entonces <span class="math inline">\(A \cup B\)</span>, <span class="math inline">\(A \cap B\)</span> y <span class="math inline">\(A \setminus B\)</span> denotan la unión, intersección y diferencia relativa de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, El complemento de <span class="math inline">\(A\)</span>, definido como los elementos de <span class="math inline">\(X\)</span> que no están en <span class="math inline">\(A\)</span>, se denota por <span class="math inline">\(A^c\)</span>. Si <span class="math inline">\(\mathcal{A}\)</span> es un subconjunto de <span class="math inline">\(\mathcal{P}(X)\)</span> y <span class="math inline">\(B \in \mathcal{P}(X)\)</span>, se define la traza de <span class="math inline">\(\mathcal{A}\)</span> en <span class="math inline">\(B\)</span> como <span class="math display">\[\mathcal{A}\cap B := \{A \cap B \, : \, A \in \mathcal{A}\}.\]</span></p>
-<p>La unión e intersección de una familia indexada <span class="math inline">\(\mathcal{A}=\{A_i \, : \, i \in \mathcal{I}\}\)</span> se denotan, respectivamente, como
-<span class="math display">\[\cap \mathcal{A}:= \cap_{i \, \in \, \mathcal{I}},\]</span>
-y
-<span class="math display">\[\cup \mathcal{A}:= \cup_{i \, \in \, \mathcal{I}},\]</span></p>
-<p>Si el conjunto de índices <span class="math inline">\(\mathcal{I}\)</span> es <span class="math inline">\(\{1,2, \hdots, n\}\)</span> o <span class="math inline">\(\{1,2, \hdots\}\)</span>, se escribe
-<span class="math display">\[\cup_{j=1}^n A_j=A_1 \cup \hdots \cup A_n\]</span>
-<span class="math display">\[\cap_{j=1}^n A_j=A_1 \cap \hdots \cap A_n\]</span>
-<span class="math display">\[\cup_{j \geq 1} A_j=A_1 \cup A_2 \cup \cdots\]</span>
-<span class="math display">\[\cap_{j \geq 1} A_j=A_1 \cap A_2 \cap \cdots\]</span></p>
-\begin{prop}
-La unión e intersección de conjuntos satisfacen:
-\begin{itemize}
+<p>La unión e intersección de una familia indexada <span class="math inline">\(\mathcal{A}=\{A_i \, : \, i \in \mathcal{I}\}\)</span> se denotan, respectivamente, como <span class="math display">\[\cap \mathcal{A}:= \cap_{i \, \in \, \mathcal{I}},\]</span> y <span class="math display">\[\cup \mathcal{A}:= \cup_{i \, \in \, \mathcal{I}},\]</span></p>
+<p>Si el conjunto de índices <span class="math inline">\(\mathcal{I}\)</span> es <span class="math inline">\(\{1,2, \hdots, n\}\)</span> o <span class="math inline">\(\{1,2, \hdots\}\)</span>, se escribe <span class="math display">\[\cup_{j=1}^n A_j=A_1 \cup \hdots \cup A_n\]</span> <span class="math display">\[\cap_{j=1}^n A_j=A_1 \cap \hdots \cap A_n\]</span> <span class="math display">\[\cup_{j \geq 1} A_j=A_1 \cup A_2 \cup \cdots\]</span> <span class="math display">\[\cap_{j \geq 1} A_j=A_1 \cap A_2 \cap \cdots\]</span></p>
+\begin{prop} La unión e intersección de conjuntos satisfacen: \begin{itemize} {}
 
-{}
-\begin{itemize}
-
-(<em>{i }A_i )^c = </em>{i }A_i^c;
-
-(A<em>{i } A_i )^c=</em>{i }A_i^c;
-\end{itemize}
-\begin{itemize}
-
-{}
-
-A (<em>{i }A_i ) = </em>{i  A A_i};
-
-<p>A (<em>{i } A_i ) = </em>{i }A A_i.
-\end{itemize}
-\end{prop}</p>
+<p>\end{prop}</p>
 <p>Una familia <span class="math inline">\(\{A_i \, : \, i \in \mathcal{I}\}\)</span> de conjuntos se dice {} si <span class="math inline">\(A_i \cap A_j=\emptyset\)</span>, siempre que <span class="math inline">\(i \neq j\)</span>. En este caso, la uni'on <span class="math inline">\(\bigcup_{i \in \mathcal{I}}\)</span> se dice {}. Una {} (o {}) de un conjunto <span class="math inline">\(X\)</span> es una colecci'on de conuntos disjuntos no vac'ios , cuya uni'on disjunta es todo <span class="math inline">\(X\)</span>.</p>
 <p>Una sucesi'on de conjuntos <span class="math inline">\(\{A_n\}_{n \geq 0}\)</span> se dice {} si <span class="math inline">\(A_1 \leq subseteq A_2 \subseteq \cdots\)</span>, en cuyo caso escribiremos <span class="math inline">\(A_n \uparrow\)</span>. Si <span class="math inline">\(A_1 \supseteq A_2 \supseteq \cdots\)</span>, se dice que la sucesi'on es {}. Denotaremos por <span class="math inline">\(A_n \downarrow\)</span> a una sucesi'on que es decreciente. Si <span class="math inline">\(\{A_n\}_{n \geq 0}\)</span> es creciente y <span class="math inline">\(A=A_1 \cup A_2 \cup \cdots\)</span> (respectivamente si <span class="math inline">\(\{A_n\}_{n \geq 0}\)</span> es decreciente y <span class="math inline">\(A=A_1 \cap A_2 \cap \cdots\)</span>), escribiremos <span class="math inline">\(A_n \uparrow A\)</span> (respectivamente <span class="math inline">\(A_n \downarrow A\)</span>).</p>
-<p>El producto cartesiano de sucesiones finitas o infinitas numerables de conjuntos <span class="math inline">\(A_1, A_2, \hdots\)</span> se denotan, respectivamente, por
-<span class="math inline">\(\begin{array}[ccc] \prod_{n=1}^d A_n = A_1 \times \cdots \times A_d &amp;y&amp; \prod_{n=1}^\infty A_n = A_1 \times A_2 \times \cdots. \end{array}\)</span></p>
+<p>El producto cartesiano de sucesiones finitas o infinitas numerables de conjuntos <span class="math inline">\(A_1, A_2, \hdots\)</span> se denotan, respectivamente, por <span class="math inline">\(\begin{array}[ccc] \prod_{n=1}^d A_n = A_1 \times \cdots \times A_d &amp;y&amp; \prod_{n=1}^\infty A_n = A_1 \times A_2 \times \cdots. \end{array}\)</span></p>
 <p>Si <span class="math inline">\(A_1 = A_2 = \cdots = A\)</span>, escribiremos <span class="math inline">\(A^d\)</span> para el producto finito y <span class="math inline">\(A^\infty\)</span> para el producto infinito.</p>
 
 <p>El producto cartesiano <span class="math inline">\(X:=\prod_{i \in \mathcal{I}}X_i\)</span> de una familia de conjuntos no vacios <span class="math inline">\(X_i\)</span> se define como la colecci'on de todas las funciones <span class="math inline">\(f:\mathcal{I}\to \bigcup_{i \in \mathcal{I}}X_i\)</span> tales que <span class="math inline">\(f(i)\in X_i\)</span>, para cada <span class="math inline">\(i\)</span>. N'otese que el producto cartesiano de conjuntos no vac'ios es siempre no vac'io, por el axioma de elecci'on. El valor <span class="math inline">\(f(i)\)</span> se denomina la {}. En el caso particular en que el conjunto de 'indices <span class="math inline">\(\mathcal{I}\)</span> sea el conjunto <span class="math inline">\(\{1,2, \hdots, n\}\)</span>, se tiene que toda funci'on <span class="math inline">\(f: \{1,2, \hdots, n\}\to X\)</span> est'a completamente determinada por por la <span class="math inline">\(n\)</span>-tupla <span class="math inline">\((f(1), f(2), \dots, f(n))\)</span>.</p>
@@ -506,16 +449,11 @@ Dos subconjuntos de <span class="math inline">\(\mathbb{C}\)</span> son de parti
 <p>En general, el s'imbolo <span class="math inline">\(\mathbb{K}\)</span> denota a un cuerpo de caracter'istica <span class="math inline">\(0\)</span>, como por ejemplo <span class="math inline">\(\mathbb{Q}\)</span>, <span class="math inline">\(\mathbb{R}\)</span> o <span class="math inline">\(\mathbb{C}\)</span>.</p>
 <p>Si <span class="math inline">\(A \subseteq \mathbb{R}\)</span>, escribiremos <span class="math inline">\(A^+\)</span> para denotar al conjunto <span class="math inline">\(A \cap [0, \infty)\)</span>. Asi, por ejemplo, se tiene que <span class="math inline">\(\mathbb{Z}^+=\{n \in \mathbb{Z} \, : \, n \geq 0\}=\mathbb{N}\)</span>.</p>
 <p>Si <span class="math inline">\(A \subseteq \mathbb{C}\)</span>, se denota por <span class="math inline">\(A_*\)</span> al conjunto de elementos no nulos de <span class="math inline">\(A\)</span>.</p>
-<p>Sea <span class="math inline">\(d\)</span> un entero positivo. Si <span class="math inline">\(A\)</span> es un conjunto, se define
-<span class="math display">\[A^d:=A \times A \times \cdots \times A.\]</span></p>
+<p>Sea <span class="math inline">\(d\)</span> un entero positivo. Si <span class="math inline">\(A\)</span> es un conjunto, se define <span class="math display">\[A^d:=A \times A \times \cdots \times A.\]</span></p>
 <p>Los {} se definen, respectivamente, como <span class="math inline">\(\mathbb{R}^d\)</span> y <span class="math inline">\(\mathbb{C}^d\)</span>, con <span class="math inline">\(d \in \mathbb{P}\)</span>.</p>
-<p>Un {} en <span class="math inline">\(\mathbb{R}^d\)</span> es un producto cartesiano de intervalos en <span class="math inline">\(\mathbb{R}\)</span>. Es decir, si <span class="math inline">\({\bf a}:=(a_1, a_2, \hdots, a_d)\)</span> y <span class="math inline">\({\bf b}:=(b_1, b_2, \hdots, b_d)\)</span> son elementos de <span class="math inline">\(\mathbb{R}^d\)</span>, un intervalo <span class="math inline">\(d\)</span>-dimensional es de la forma
-<span class="math display">\[({\bf a}, {\bf b}]:=(a_1, b_1] \times (a_2, b_2] \times \cdots \times (a_d, b_d].\]</span></p>
-<p>La {} en <span class="math inline">\(\mathbb{K}^d\)</span> se define como
-<span class="math display">\[|{\bf z}|:=\sqrt{|z_1|^2+|z_2|^2+ \cdots + |z_d|^2},\]</span>
-para cada <span class="math inline">\({\bf z}=(z_1, z_2, \hdots, z_d) \in \mathbb{C}^d\)</span>.</p>
-<p>El {} es el conjunto
-<span class="math display">\[\overline{\mathbb{R}}:=\mathbb{R} \cup \{\pm \infty\}=[-\infty, +\infty].\]</span></p>
+<p>Un {} en <span class="math inline">\(\mathbb{R}^d\)</span> es un producto cartesiano de intervalos en <span class="math inline">\(\mathbb{R}\)</span>. Es decir, si <span class="math inline">\({\bf a}:=(a_1, a_2, \hdots, a_d)\)</span> y <span class="math inline">\({\bf b}:=(b_1, b_2, \hdots, b_d)\)</span> son elementos de <span class="math inline">\(\mathbb{R}^d\)</span>, un intervalo <span class="math inline">\(d\)</span>-dimensional es de la forma <span class="math display">\[({\bf a}, {\bf b}]:=(a_1, b_1] \times (a_2, b_2] \times \cdots \times (a_d, b_d].\]</span></p>
+<p>La {} en <span class="math inline">\(\mathbb{K}^d\)</span> se define como <span class="math display">\[|{\bf z}|:=\sqrt{|z_1|^2+|z_2|^2+ \cdots + |z_d|^2},\]</span> para cada <span class="math inline">\({\bf z}=(z_1, z_2, \hdots, z_d) \in \mathbb{C}^d\)</span>.</p>
+<p>El {} es el conjunto <span class="math display">\[\overline{\mathbb{R}}:=\mathbb{R} \cup \{\pm \infty\}=[-\infty, +\infty].\]</span></p>
 Aqui, <span class="math inline">\(-\infty\)</span> y <span class="math inline">\(+ \infty\)</span> denotan dos s'imbolos abstractos, que satisfacen los siguientes axiomas:
 
 <p>Los elementos de <span class="math inline">\([0, +\infty]=\overline{\mathbb{R}}^+\)</span> se denominan {}.</p>
@@ -524,11 +462,8 @@ Aqui, <span class="math inline">\(-\infty\)</span> y <span class="math inline">\
 <h2><span class="header-section-number">2.4</span> Relaciones</h2>
 Una {} en un conjunto no vac'io <span class="math inline">\(X\)</span> es un conjunto <span class="math inline">\(R \subseteq X \times X\)</span>, no vac'io. Si <span class="math inline">\(R\)</span> es una relaci'on de <span class="math inline">\(X\)</span> y <span class="math inline">\((x,y) \in R\)</span>, se escribe <span class="math inline">\(x \sim_R y\)</span>, o <span class="math inline">\(x \sim y\)</span>. Una relaci'on de <span class="math inline">\(X\)</span> se dice:
 
-<p>Una relaci'on en <span class="math inline">\(X\)</span> que es reflexiva, sim'etrica y transitiva se conoce como {}. La {} es el conjunto
-<span class="math display">\[[x]:= \{y \in X \, : \, x \sim y\}.\]</span></p>
-<p>La colecci'on de clases de equivalencias distintas de <span class="math inline">\(X\)</span> se denota como <span class="math inline">\(X/\sim\)</span>. As'i:
-<span class="math display">\[X/\sim = \{[x] \, : \, x \in X\}.\]</span>
-Las relaciones de equivalencia de un conjunto no vac'io X y las particiones conjuntistas de <span class="math inline">\(X\)</span> son dos nociones equivalentes. En efecto, dado que
+<p>Una relaci'on en <span class="math inline">\(X\)</span> que es reflexiva, sim'etrica y transitiva se conoce como {}. La {} es el conjunto <span class="math display">\[[x]:= \{y \in X \, : \, x \sim y\}.\]</span></p>
+La colecci'on de clases de equivalencias distintas de <span class="math inline">\(X\)</span> se denota como <span class="math inline">\(X/\sim\)</span>. As'i: <span class="math display">\[X/\sim = \{[x] \, : \, x \in X\}.\]</span> Las relaciones de equivalencia de un conjunto no vac'io X y las particiones conjuntistas de <span class="math inline">\(X\)</span> son dos nociones equivalentes. En efecto, dado que
 <span class="math display">\[\begin{equation}
 x \in [y] \Longleftrightarrow y \in [x] \Longleftrightarrow [x]=[y],
 \end{equation}\]</span>
@@ -540,70 +475,52 @@ As'i, la colecci'on <span class="math inline">\(X/\sim\)</span> es una partici'o
 <span class="math display">\[\begin{equation}
 x \sim y \Longleftrightarrow x \text{ y } y \text{ pertenecen al mismo bloque de la partici\&#39;on }
 \end{equation}\]</span>
-es una relaci'on de equivalencia para <span class="math inline">\(X\)</span>, donde cada clase de equivalencia es precisamente un bloque de la partici'on.</p>
-<p>Un ejemplo de relaci'on de equivalencia en <span class="math inline">\(\mathbb{R}\)</span> es el siguiente: la relaci'on <span class="math inline">\(\sim\)</span> est'a dada por
+<p>es una relaci'on de equivalencia para <span class="math inline">\(X\)</span>, donde cada clase de equivalencia es precisamente un bloque de la partici'on.</p>
+Un ejemplo de relaci'on de equivalencia en <span class="math inline">\(\mathbb{R}\)</span> es el siguiente: la relaci'on <span class="math inline">\(\sim\)</span> est'a dada por
 <span class="math display">\[\begin{equation}
 x\sim y \Longleftrightarrow x-y \in \mathbb{Q}.
 \end{equation}\]</span>
-En este caso, existe solo una clase <span class="math inline">\([x] \in \mathbb{R}/\sim\)</span> formada por n'umeros racionales. De hecho, no es dif'icil demostrar que <span class="math inline">\([x]=\mathbb{Q}\)</span>. Cualquier otra clase <span class="math inline">\([y]\)</span> de <span class="math inline">\(\mathbb{R}/\sim\)</span> est'a formada por n'umeros irracionales.</p>
+<p>En este caso, existe solo una clase <span class="math inline">\([x] \in \mathbb{R}/\sim\)</span> formada por n'umeros racionales. De hecho, no es dif'icil demostrar que <span class="math inline">\([x]=\mathbb{Q}\)</span>. Cualquier otra clase <span class="math inline">\([y]\)</span> de <span class="math inline">\(\mathbb{R}/\sim\)</span> est'a formada por n'umeros irracionales.</p>
 <p>Una relaci'on que es reflexiva, antisim'etrica y transitiva es llamada un {}. En este caso, se escribe <span class="math inline">\(x \leq y\)</span> para denotar que el par <span class="math inline">\((x,y)\)</span> pertenecen a este tipo de relaci'on. Un conjunto con un orden parcial se denomina {}. Una {} (respectivamente, {}) de un subconjunto <span class="math inline">\(Y\)</span> de un conjunto parcialmente ordenado <span class="math inline">\((X, \leq)\)</span> es un elemento <span class="math inline">\(x \in X\)</span> tal que <span class="math inline">\(y \leq x\)</span> (respectivamente, <span class="math inline">\(x \leq y\)</span>), para todo <span class="math inline">\(y \in Y\)</span>. Un {} (respectivamente, un {})de <span class="math inline">\(Y\)</span> es una cota superior (respectivamente, inferior) <span class="math inline">\(x_0\)</span> de <span class="math inline">\(Y\)</span> tal que <span class="math inline">\(x_0 \leq x\)</span> (respectivamente, <span class="math inline">\(x_0 \geq x\)</span>) para toda cota superior (respectivamente, inferior) <span class="math inline">\(x\)</span> de <span class="math inline">\(Y\)</span>. Por ejemplo, el par <span class="math inline">\((\mathcal{P}(X), \subseteq)\)</span> forma un conjunto parcialmente ordenado, para cada conjunto <span class="math inline">\(X\)</span>. Si <span class="math inline">\(Y \in \mathcal{P}(X)\)</span>, entonces los subconjuntos <span class="math inline">\(\cap_{y \, \in \, Y}y\)</span> y <span class="math inline">\(\cup_{y \, \in \, Y}y\)</span> corresponden al 'infimo y al supremo de <span class="math inline">\(Y\)</span>, respectivamente. Un elemento <span class="math inline">\(x\)</span> de <span class="math inline">\(X\)</span> se dice {} si para cada <span class="math inline">\(y \in X\)</span> tal que <span class="math inline">\(x \leq y\)</span>, se tiene que <span class="math inline">\(x=y\)</span>. Del mismo modo, un elemento <span class="math inline">\(x\)</span> de <span class="math inline">\(X\)</span> se dice {} si para cada <span class="math inline">\(y \in X\)</span> tal que <span class="math inline">\(x \geq y\)</span>, se tiene que <span class="math inline">\(x=y\)</span>.</p>
 <p>Un subconjunto no vac'io <span class="math inline">\(Y\)</span> de un conjunto parcialmente ordenado <span class="math inline">\((X, \leq)\)</span> se dice {} si, para cada <span class="math inline">\(y_1, y_2 \in Y\)</span> distintos se satisface <span class="math inline">\(y_1 \leq y_2\)</span> o <span class="math inline">\(y_2 \leq y_1\)</span>. Un conjunto totalmente ordendao tambi'en suele llamarse una {}. La noci'on de cadena aparece en el siguiente resultado importante, que se prueba utilizando directamente el axioma de elecci'on:</p>
 <p>Lema de Zorn: Sea <span class="math inline">\(X\)</span> un conjunto parcialmente ordenado, tal que cada cadena posea una cota superior en <span class="math inline">\(X\)</span>. Entonces <span class="math inline">\(X\)</span> posee un elemento maximal.</p>
 <p><br />
-</p>
-<p>##Funciones</p>
+##Funciones</p>
 <p><br />
-</p>
-<p>Sean <span class="math inline">\(X\)</span> y <span class="math inline">\(Y\)</span> conjuntos. Una {funci'on} de <span class="math inline">\(X\)</span> en <span class="math inline">\(Y\)</span> es (completar). Una funci'on <span class="math inline">\(f\)</span> cuyo conjunto de partida es <span class="math inline">\(X\)</span> y conjunto de llegada es <span class="math inline">\(Y\)</span> se denota por <span class="math inline">\(f: X \to Y\)</span>. La colecci'on de todas las funciones de <span class="math inline">\(X\)</span> en <span class="math inline">\(Y\)</span> se denota como <span class="math inline">\(Y^X\)</span>.</p>
-<p>La {} de <span class="math inline">\(A \subseteq X\)</span> y la {preimagen} de <span class="math inline">\(B \subseteq Y\)</span> bajo la funci'on <span class="math inline">\(f:X \to Y\)</span> se definen, respectivamente, como
-<span class="math display">\[f(A):=\{f(x) \in B \, : \, x \in A\},\]</span>
-y
-<span class="math display">\[f^{-1}(A):=\{x \in A \, : \, f(x) \in B\}.\]</span></p>
+Sean <span class="math inline">\(X\)</span> y <span class="math inline">\(Y\)</span> conjuntos. Una {funci'on} de <span class="math inline">\(X\)</span> en <span class="math inline">\(Y\)</span> es (completar). Una funci'on <span class="math inline">\(f\)</span> cuyo conjunto de partida es <span class="math inline">\(X\)</span> y conjunto de llegada es <span class="math inline">\(Y\)</span> se denota por <span class="math inline">\(f: X \to Y\)</span>. La colecci'on de todas las funciones de <span class="math inline">\(X\)</span> en <span class="math inline">\(Y\)</span> se denota como <span class="math inline">\(Y^X\)</span>.</p>
+<p>La {} de <span class="math inline">\(A \subseteq X\)</span> y la {preimagen} de <span class="math inline">\(B \subseteq Y\)</span> bajo la funci'on <span class="math inline">\(f:X \to Y\)</span> se definen, respectivamente, como <span class="math display">\[f(A):=\{f(x) \in B \, : \, x \in A\},\]</span> y <span class="math display">\[f^{-1}(A):=\{x \in A \, : \, f(x) \in B\}.\]</span></p>
 <p>Una funci'on <span class="math inline">\(f:X \to Y\)</span> es {} si <span class="math inline">\(f(X)=Y\)</span>, e {} si <span class="math inline">\(x_1 \neq x_2\)</span> implica que <span class="math inline">\(f(x_1)\neq f(x_2)\)</span>. Una {} (respectivamente, una {}) es una funci'on que es sobreyectiva (respectivamente, inyetiva). Una funci'on que es a la vez sobreyectiva e inyectiva se dice {}.</p>
-<p>Un ejemplo importante de funci'on sobreyectiva es la {funci'on cociente}
-<span class="math inline">\(C_\sim: X \to X/\sim\)</span>, asociada a una relaci'on de equivalencia <span class="math inline">\(\sim\)</span> de un conjunto no vac'io <span class="math inline">\(X\)</span>. Por definici'on, <span class="math inline">\(C_\sim(x):=[x]\)</span>. En particular, la preimagen de un subconjunto <span class="math inline">\(B\)</span> de <span class="math inline">\(X/\sim\)</span> bajo <span class="math inline">\(C_\sim\)</span> es la uni'on de todas las clases de equivalencias <span class="math inline">\([x]\)</span> in <span class="math inline">\(B\)</span>.</p>
+<p>Un ejemplo importante de funci'on sobreyectiva es la {funci'on cociente} <span class="math inline">\(C_\sim: X \to X/\sim\)</span>, asociada a una relaci'on de equivalencia <span class="math inline">\(\sim\)</span> de un conjunto no vac'io <span class="math inline">\(X\)</span>. Por definici'on, <span class="math inline">\(C_\sim(x):=[x]\)</span>. En particular, la preimagen de un subconjunto <span class="math inline">\(B\)</span> de <span class="math inline">\(X/\sim\)</span> bajo <span class="math inline">\(C_\sim\)</span> es la uni'on de todas las clases de equivalencias <span class="math inline">\([x]\)</span> in <span class="math inline">\(B\)</span>.</p>
 Si <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> son conjuntos y <span class="math inline">\(\{X_i \, : \, i \in \mathcal{I}\}\)</span>, <span class="math inline">\(\{Y_j \, : \, j \in \mathcal{J}\}\)</span> son subconjuntos de <span class="math inline">\(X\)</span> y <span class="math inline">\(Y\)</span>, respectivamente, se tiene que:
 
 <p><br />
-</p>
-<p>Las igualdades en <span class="math inline">\((d)\)</span> y <span class="math inline">\((h)\)</span> se satisfacen si <span class="math inline">\(f\)</span> es inyectiva, mientras que las igualdades de <span class="math inline">\((f)\)</span> y <span class="math inline">\((g)\)</span> suceden si <span class="math inline">\(f\)</span> es sobreyectiva.</p>
-<p>Para cada <span class="math inline">\(f:X \to Y\)</span>, <span class="math inline">\(\mathcal{A} \subseteq \mathcal{P}(X)\)</span> y <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span>, se definen las colecciones
-<span class="math display">\[f(\mathcal{A})=\{f(A) \, : \, A \in \mathcal{A}\} \subseteq \mathcal{P}(y)\]</span></p>
+Las igualdades en <span class="math inline">\((d)\)</span> y <span class="math inline">\((h)\)</span> se satisfacen si <span class="math inline">\(f\)</span> es inyectiva, mientras que las igualdades de <span class="math inline">\((f)\)</span> y <span class="math inline">\((g)\)</span> suceden si <span class="math inline">\(f\)</span> es sobreyectiva.</p>
+<p>Para cada <span class="math inline">\(f:X \to Y\)</span>, <span class="math inline">\(\mathcal{A} \subseteq \mathcal{P}(X)\)</span> y <span class="math inline">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span>, se definen las colecciones <span class="math display">\[f(\mathcal{A})=\{f(A) \, : \, A \in \mathcal{A}\} \subseteq \mathcal{P}(y)\]</span></p>
 <p><span class="math display">\[f^{-1}(\mathcal{B})=\{f^{-1}(B) \, : \, B \in \mathcal{B}\}\subseteq \mathcal{P}(y)\]</span></p>
 <p>Si <span class="math inline">\(f:X \to Y\)</span> y <span class="math inline">\(g: Y \to Z\)</span> son funciones, donde <span class="math inline">\(f(X)\subseteq Y\)</span>, la función <span class="math inline">\(g \circ f:X \to Z\)</span> definida por <span class="math display">\[(g\circ f)(x)=g(f(x))\]</span>, para todo <span class="math inline">\(x \in X\)</span>, se denomina {}. Si <span class="math inline">\(A \subseteq Z\)</span>, nótese que se tiene la siguiente relación: <span class="math display">\[(g \circ f)^{-1}=f^{-1}(g^{-1}(A))\]</span>.</p>
-<p>La {} <span class="math inline">\(\text{id}_X\)</span> de un conjunto <span class="math inline">\(X\)</span> se define como <span class="math inline">\(\text{id}_X(x)=x\)</span>, para cada <span class="math inline">\(x \in X\)</span>. Si <span class="math inline">\(A \subseteq X\)</span>, la restricción
-de <span class="math inline">\(\text{id}_X\)</span> a <span class="math inline">\(A\)</span> se denomina {inclusión} o {morfina de inclusión} y se denota como <span class="math inline">\(\iota_A : A \hookuparrow X\)</span>.</p>
-<p>Si <span class="math inline">\(f:X \to Y\)</span> es biyectiva, la {} <span class="math inline">\(f^{-1}:Y \to X\)</span> es la función definida como
-<span class="math display">\[f^{-1}(y)=x \Longleftrigtharrow y=f(x).\]</span>
-Se tiene que
-\begin{array}[ccc]
-f^{-1}f=_X &amp;y&amp; f f^{-1}=_Y.
-\end{array}</p>
-<p>Si <span class="math inline">\(X\)</span> es un conjunto universal y <span class="math inline">\(A \subseteq X\)</span>, la {} es la función definida por
+<p>La {} <span class="math inline">\(\text{id}_X\)</span> de un conjunto <span class="math inline">\(X\)</span> se define como <span class="math inline">\(\text{id}_X(x)=x\)</span>, para cada <span class="math inline">\(x \in X\)</span>. Si <span class="math inline">\(A \subseteq X\)</span>, la restricción de <span class="math inline">\(\text{id}_X\)</span> a <span class="math inline">\(A\)</span> se denomina {inclusión} o {morfina de inclusión} y se denota como <span class="math inline">\(\iota_A : A \hookuparrow X\)</span>.</p>
+Si <span class="math inline">\(f:X \to Y\)</span> es biyectiva, la {} <span class="math inline">\(f^{-1}:Y \to X\)</span> es la función definida como <span class="math display">\[f^{-1}(y)=x \Longleftrigtharrow y=f(x).\]</span> Se tiene que
+<span class="math display">\[\begin{array}[ccc]
+f^{-1}\circ f=\text{id}_X &amp;y&amp; f \circ f^{-1}=\text{id}_Y.
+\end{array}\]</span>
+Si <span class="math inline">\(X\)</span> es un conjunto universal y <span class="math inline">\(A \subseteq X\)</span>, la {} es la función definida por
 <span class="math display">\[\begin{equation}
 {\bf 1}_A(x)= \left\{ \begin{array}{lcc}
 1 &amp; \text{ si } &amp; x \in A \\
 0 &amp; \text{ si } &amp; x \in A^c
 \end{array}
 \right.
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 Toda función indicatriz satisface las siguientes propiedades:
-\begin{itemize}
 
-{}_{A B}={}_A{}_B;
-
-{}_{A B}= {}_A + {}<em>B - {}</em>{A B};
-
-<p>{}_{A^c}=1-{}_A.
-\end{itemize}</p>
-<p>Un caso particular de función indicatriz es la función {}:
+Un caso particular de función indicatriz es la función {}:
 <span class="math display">\[\begin{equation}
 \delta_{x,y}= \left\{ \begin{array}{lcc}
 1 &amp; \text{ si } &amp; x=y \\
 0 &amp; \text{ si } &amp; x \neq y
 \end{array}
 \right.
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 <p>En efecto, si <span class="math inline">\(A=\{(x,x) \, : \, x \in X\}\)</span>, entonces <span class="math inline">\(\delta_{x,y}={\bf 1}_A(x,y)\)</span>.</p>
 Las funciones <span class="math inline">\(x^+\)</span> y <span class="math inline">\(x^-\)</span> en <span class="math inline">\(\mathbb{R}\)</span> se definen como
 <span class="math display">\[\begin{array}{ccc}
@@ -617,30 +534,30 @@ La parte real y la parte imaginaria de un número complejo <span class="math inl
 <span class="math display">\[\begin{array}{cccccc}
 z=\Re(z) + i\Im(z) &amp;,&amp; \overline{z}=\Re(z)-i\Im(z) &amp; \text{ y } &amp; |z|=\sqrt{(\Re(z))^2+(\Im(z))^2}.
 \end{array}\]</span>
-<p>El signo <span class="math inline">\(\sgn(z)\)</span> de una variable compleja <span class="math inline">\(z\)</span> se define como
+El signo <span class="math inline">\(\sgn(z)\)</span> de una variable compleja <span class="math inline">\(z\)</span> se define como
 <span class="math display">\[\begin{equation}
 \sgn(z)= \left\{ \begin{array}{lcc}
 \frac{|z|}{z} &amp; \text{ si } &amp; z \neq 0 \\
 0 &amp; \text{ si } &amp; z = 0.
 \end{array}
 \right.
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 <p>Así, <span class="math inline">\(|z|=z\sgn(z)\)</span> para todo <span class="math inline">\(z \in \mathbb{C}\)</span> y <span class="math inline">\(|\sgn(z)|=1\)</span> siempre que <span class="math inline">\(z\neq 0\)</span>.</p>
-<p>Si <span class="math inline">\(F \subseteq Y^X\)</span>, el funcional de evaluación en <span class="math inline">\(x\)</span> es la función <span class="math inline">\(\text{ev}_x:F \to Y\)</span> dada por
+Si <span class="math inline">\(F \subseteq Y^X\)</span>, el funcional de evaluación en <span class="math inline">\(x\)</span> es la función <span class="math inline">\(\text{ev}_x:F \to Y\)</span> dada por
 <span class="math display">\[\begin{equation}
 \text{ev}_x(f):=f(x), \qquad f \in F.
-\end{equation}\]</span></p>
-<p>El adjunto o dual de una función <span class="math inline">\(\phi:Z \to X\)</span> (con respecto a <span class="math inline">\(F\)</span>) es la función <span class="math inline">\(\phi^*:F \to Y^Z\)</span> definida como
+\end{equation}\]</span>
+El adjunto o dual de una función <span class="math inline">\(\phi:Z \to X\)</span> (con respecto a <span class="math inline">\(F\)</span>) es la función <span class="math inline">\(\phi^*:F \to Y^Z\)</span> definida como
 <span class="math display">\[\begin{equation}
 \phi^*(f):=f \circ \phi, \qquad f \in F.
-\end{equation}\]</span></p>
-<p>Las siguientes notaciones se utilizarán en los capítulos siguientes, para cada función a valores reales:
-\begin{array}{cc}
-f^+(x):= &amp; f^-:= (-f)^+\
-(f_1 f_n)(x):=<em>{1 , , k ,, n}f_k(x) &amp; (f_1 f_n)(x):=</em>{1 , , k ,, n}f_k(x)\
-(_n f_n)(x):=_n f_n(x) &amp; (_n f_n)(x):=_n f_n(x)\
-(_n f_n)(x):=_n f_n(x) &amp; (_n f_n)(x):= _n f_n(x).
-\end{array}</p>
+\end{equation}\]</span>
+Las siguientes notaciones se utilizarán en los capítulos siguientes, para cada función a valores reales:
+<span class="math display">\[\begin{array}{cc}
+f^+(x):=\max{f(x),0} &amp; f^-:= (-f)^+\\
+(f_1 \vedge \dots \vedge f_n)(x):=\max_{1 \, \leq \, k \,\leq \, n}f_k(x) &amp; (f_1 \wedge \dots \wedge f_n)(x):=\min_{1 \, \leq \, k \,\leq \, n}f_k(x)\\
+(\sup_n f_n)(x):=\sup_n f_n(x) &amp; (\inf_n f_n)(x):=\inf_n f_n(x)\\
+(\lim_n f_n)(x):=\lim_n f_n(x) &amp; (_n f_n)(x):= _n f_n(x).
+\end{array}\]</span>
 </div>
 <div id="cardinalidad" class="section level2">
 <h2><span class="header-section-number">2.5</span> Cardinalidad</h2>
@@ -711,7 +628,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

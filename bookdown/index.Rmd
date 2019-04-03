@@ -1,5 +1,5 @@
 --- 
-title: "Introducción al análisis funcional y a la teoría de la medida"
+title: "Análisis, Medida y Probabilidades"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
 date: "`r Sys.Date()`"

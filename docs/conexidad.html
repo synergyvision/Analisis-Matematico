@@ -6,10 +6,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Capítulo 26 Conexidad | Introducción al análisis funcional y a la teoría de la medida</title>
-  <meta name="description" content="Capítulo 26 Conexidad | Introducción al análisis funcional y a la teoría de la medida>
+  <meta name="description" content="Capítulo 26 Conexidad | Introducción al análisis funcional y a la teoría de la medida">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Capítulo 26 Conexidad | Introducción al análisis funcional y a la teoría de la medida />
+  <meta property="og:title" content="Capítulo 26 Conexidad | Introducción al análisis funcional y a la teoría de la medida" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Analisis-y-Medida/" />
   <meta property="og:image" content="http://synergy.vision/Analisis-y-Medida/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Analisis-y-Medida/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 26 Conexidad | Introducción al análisis funcional y a la teoría de la medida />
+  <meta name="twitter:title" content="Capítulo 26 Conexidad | Introducción al análisis funcional y a la teoría de la medida" />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Analisis-y-Medida/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2019-02-27">
+<meta name="date" content="2019-04-03">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -52,67 +52,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -211,7 +185,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="11" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html"><i class="fa fa-check"></i><b>11</b> Funciones en varias variables</a><ul>
 <li class="chapter" data-level="11.1" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#transformaciones-lineales-1"><i class="fa fa-check"></i><b>11.1</b> Transformaciones lineales</a></li>
-<li class="chapter" data-level="11.2" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#diferenciacion-1"><i class="fa fa-check"></i><b>11.2</b> Diferenciación</a></li>
+<li class="chapter" data-level="11.2" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#diferenciacion-2"><i class="fa fa-check"></i><b>11.2</b> Diferenciación</a></li>
 <li class="chapter" data-level="11.3" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#el-principio-de-la-contraccion"><i class="fa fa-check"></i><b>11.3</b> El principio de la contracción</a></li>
 <li class="chapter" data-level="11.4" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#el-teorema-de-la-funcion-inversa"><i class="fa fa-check"></i><b>11.4</b> El teorema de la función inversa</a></li>
 <li class="chapter" data-level="11.5" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#el-teorema-de-la-funcion-implicita"><i class="fa fa-check"></i><b>11.5</b> El teorema de la función implícita</a></li>
@@ -340,13 +314,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="32.4" data-path="espacios-lp.html"><a href="espacios-lp.html#integrabilidad-uniforme"><i class="fa fa-check"></i><b>32.4</b> Integrabilidad uniforme</a></li>
 <li class="chapter" data-level="32.5" data-path="espacios-lp.html"><a href="espacios-lp.html#funciones-convexas-y-desigualdad-de-jensen"><i class="fa fa-check"></i><b>32.5</b> Funciones convexas y desigualdad de Jensen</a></li>
 </ul></li>
-<li class="chapter" data-level="33" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html"><i class="fa fa-check"></i><b>33</b> Diferenciación</a><ul>
-<li class="chapter" data-level="33.1" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#medidas-con-signo"><i class="fa fa-check"></i><b>33.1</b> Medidas con signo</a></li>
-<li class="chapter" data-level="33.2" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#medidas-complejas"><i class="fa fa-check"></i><b>33.2</b> Medidas complejas</a></li>
-<li class="chapter" data-level="33.3" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#continuidad-absoluta-de-medidas"><i class="fa fa-check"></i><b>33.3</b> Continuidad absoluta de medidas</a></li>
-<li class="chapter" data-level="33.4" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#diferenciacion-de-medidas"><i class="fa fa-check"></i><b>33.4</b> Diferenciación de medidas</a></li>
-<li class="chapter" data-level="33.5" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#funciones-a-variacion-acotada-1"><i class="fa fa-check"></i><b>33.5</b> Funciones a variación acotada</a></li>
-<li class="chapter" data-level="33.6" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#funciones-absolutamente-continuas"><i class="fa fa-check"></i><b>33.6</b> Funciones absolutamente contínuas</a></li>
+<li class="chapter" data-level="33" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html"><i class="fa fa-check"></i><b>33</b> Diferenciación</a><ul>
+<li class="chapter" data-level="33.1" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#medidas-con-signo"><i class="fa fa-check"></i><b>33.1</b> Medidas con signo</a></li>
+<li class="chapter" data-level="33.2" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#medidas-complejas"><i class="fa fa-check"></i><b>33.2</b> Medidas complejas</a></li>
+<li class="chapter" data-level="33.3" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#continuidad-absoluta-de-medidas"><i class="fa fa-check"></i><b>33.3</b> Continuidad absoluta de medidas</a></li>
+<li class="chapter" data-level="33.4" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#diferenciacion-de-medidas"><i class="fa fa-check"></i><b>33.4</b> Diferenciación de medidas</a></li>
+<li class="chapter" data-level="33.5" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#funciones-a-variacion-acotada-1"><i class="fa fa-check"></i><b>33.5</b> Funciones a variación acotada</a></li>
+<li class="chapter" data-level="33.6" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#funciones-absolutamente-continuas"><i class="fa fa-check"></i><b>33.6</b> Funciones absolutamente contínuas</a></li>
 </ul></li>
 <li class="chapter" data-level="34" data-path="analisis-de-fourier-en-mathbbrn.html"><a href="analisis-de-fourier-en-mathbbrn.html"><i class="fa fa-check"></i><b>34</b> Análisis de Fourier en <span class="math inline">\(\mathbb{R}^n\)</span></a><ul>
 <li class="chapter" data-level="34.1" data-path="analisis-de-fourier-en-mathbbrn.html"><a href="analisis-de-fourier-en-mathbbrn.html#convolucion-de-funciones"><i class="fa fa-check"></i><b>34.1</b> Convolución de funciones</a></li>
@@ -395,15 +369,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="40.5" data-path="analisis-en-semigrupos.html"><a href="analisis-en-semigrupos.html#semigrupo-de-operadores"><i class="fa fa-check"></i><b>40.5</b> Semigrupo de operadores</a></li>
 </ul></li>
 <li class="chapter" data-level="41" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html"><i class="fa fa-check"></i><b>41</b> Teoría de probabilidades</a><ul>
-<li class="chapter" data-level="41.1" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#variables-aleatorias"><i class="fa fa-check"></i><b>41.1</b> Variables aleatorias</a></li>
-<li class="chapter" data-level="41.2" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#independencia"><i class="fa fa-check"></i><b>41.2</b> Independencia</a></li>
-<li class="chapter" data-level="41.3" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#esperanza-condicional"><i class="fa fa-check"></i><b>41.3</b> Esperanza condicional</a></li>
-<li class="chapter" data-level="41.4" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#sucesiones-de-variables-aleatorias-independientes"><i class="fa fa-check"></i><b>41.4</b> Sucesiones de variables aleatorias independientes</a></li>
-<li class="chapter" data-level="41.5" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#martingalas-a-tiempo-discreto"><i class="fa fa-check"></i><b>41.5</b> Martingalas a tiempo discreto</a></li>
-<li class="chapter" data-level="41.6" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#procesos-estocasticos"><i class="fa fa-check"></i><b>41.6</b> Procesos estocásticos</a></li>
-<li class="chapter" data-level="41.7" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#movimiento-browniano"><i class="fa fa-check"></i><b>41.7</b> Movimiento browniano</a></li>
-<li class="chapter" data-level="41.8" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#integracion-estocastica"><i class="fa fa-check"></i><b>41.8</b> Integración estocástica</a></li>
-<li class="chapter" data-level="41.9" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#aplicacion-a-las-finanzas"><i class="fa fa-check"></i><b>41.9</b> Aplicación a las finanzas</a></li>
+<li class="chapter" data-level="41.1" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#conjuntos-y-funciones-sigma-aditivas"><i class="fa fa-check"></i><b>41.1</b> Conjuntos y funciones <span class="math inline">\(\sigma\)</span>-aditivas}</a></li>
+<li class="chapter" data-level="41.2" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#variables-aleatorias"><i class="fa fa-check"></i><b>41.2</b> Variables aleatorias</a></li>
+<li class="chapter" data-level="41.3" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#independencia-2"><i class="fa fa-check"></i><b>41.3</b> Independencia</a></li>
+<li class="chapter" data-level="41.4" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#esperanza-condicional"><i class="fa fa-check"></i><b>41.4</b> Esperanza condicional</a></li>
+<li class="chapter" data-level="41.5" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#sucesiones-de-variables-aleatorias-independientes"><i class="fa fa-check"></i><b>41.5</b> Sucesiones de variables aleatorias independientes</a></li>
+<li class="chapter" data-level="41.6" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#martingalas-a-tiempo-discreto"><i class="fa fa-check"></i><b>41.6</b> Martingalas a tiempo discreto</a></li>
+<li class="chapter" data-level="41.7" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#procesos-estocasticos"><i class="fa fa-check"></i><b>41.7</b> Procesos estocásticos</a></li>
+<li class="chapter" data-level="41.8" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#movimiento-browniano"><i class="fa fa-check"></i><b>41.8</b> Movimiento browniano</a></li>
+<li class="chapter" data-level="41.9" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#integracion-estocastica"><i class="fa fa-check"></i><b>41.9</b> Integración estocástica</a></li>
+<li class="chapter" data-level="41.10" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#aplicacion-a-las-finanzas"><i class="fa fa-check"></i><b>41.10</b> Aplicación a las finanzas</a></li>
 </ul></li>
 <li class="chapter" data-level="42" data-path="apendice.html"><a href="apendice.html"><i class="fa fa-check"></i><b>42</b> Apéndice</a></li>
 <li class="appendix"><span><b>Apéndice</b></span></li>
@@ -436,15 +411,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="conexidad" class="section level1">
 <h1><span class="header-section-number">Capítulo 26</span> Conexidad</h1>
 
-En <span class="math inline">\(\real^3\)</span> tenemos puntos (dimensión 0), curvas (dimensión 1), superficies (dimensión 2) y abiertos (dimensión 3) sobre los que integrar en los que la imaginación resulta bastante útil. Pero… ¿qué pasa en <span class="math inline">\(\real^N\)</span>?
-Entonces en <span class="math inline">\(\real^N\)</span> tenemos objetos de dimensión <span class="math inline">\(0,...,N\)</span> sobre los que vamos a poder definir propiedades, integrales, etc.
-
-Repasamos la idea de que en <span class="math inline">\(\real^3\)</span> podíamos representar una superficie de varias maneras y cómo cálculabamos su plano tangente.
-
-Dada una superficie como una gráfica, simplemente construíamos el vector normal al plano derivando parcialmente:
-<span class="math display">\[ \vn = \left( \dpa{f}{x},\dpa{f}{y}, 1 \right) \]</span>
-
-Con una parametrización <span class="math inline">\(\phi\)</span>
+En <span class="math inline">\(\real^3\)</span> tenemos puntos (dimensión 0), curvas (dimensión 1), superficies (dimensión 2) y abiertos (dimensión 3) sobre los que integrar en los que la imaginación resulta bastante útil. Pero… ¿qué pasa en <span class="math inline">\(\real^N\)</span>? Entonces en <span class="math inline">\(\real^N\)</span> tenemos objetos de dimensión <span class="math inline">\(0,...,N\)</span> sobre los que vamos a poder definir propiedades, integrales, etc.  Repasamos la idea de que en <span class="math inline">\(\real^3\)</span> podíamos representar una superficie de varias maneras y cómo cálculabamos su plano tangente.  Dada una superficie como una gráfica, simplemente construíamos el vector normal al plano derivando parcialmente: <span class="math display">\[ \vn = \left( \dpa{f}{x},\dpa{f}{y}, 1 \right) \]</span>  Con una parametrización <span class="math inline">\(\phi\)</span>
 <span class="math display">\[\begin{align*}
 \appl{\phi}{D\subset\real^2 &amp;}{\real^3} \\
 \phi(u,v) &amp;= (x(u,v),y(u,v),z(u,v))
@@ -455,42 +422,18 @@ calculamos el plano tangente tomando los dos vectores directores y calculamos el
         T_v = \left( \dpa{x}{v},\dpa{y}{v},\dpa{z}{v}\right)\\
 \overrightarrow{n} = T_u\times T_v\\
 \end{gather*}\]</span>
-Nos podemos encontrar el problema de que <span class="math inline">\(\overrightarrow{n} = \overrightarrow{0}\)</span>. Para evitar ese caso, estableceremos que el rango de la matriz de las 6 derivadas tiene que ser 2.
+Nos podemos encontrar el problema de que <span class="math inline">\(\overrightarrow{n} = \overrightarrow{0}\)</span>. Para evitar ese caso, estableceremos que el rango de la matriz de las 6 derivadas tiene que ser 2.  Supongamos que nos dan una gráfica definida como un conjunto de nivel <span class="math inline">\(F(x,y,z) = 0\)</span> . Para calcular el plano tangente en este caso tenemos que <span class="math inline">\(\overrightarrow{n} = \nabla F\)</span>. Nos puede ocurrir que <span class="math inline">\(F\)</span> no sea derivable o que <span class="math inline">\(\nabla F = \overrightarrow{0}\)</span>. Supongamos que sea diferenciable, ¿cómo preveer que puede salir? Para evitarlo, debemos forzar de nuevo que la matriz de las derivadas tenga rango máximo (en este caso 1).  Vamos a ver que pasa con las curvas en <span class="math inline">\(\real^3\)</span> y cómo calcular la recta tangente
 
-Supongamos que nos dan una gráfica definida como un conjunto de nivel <span class="math inline">\(F(x,y,z) = 0\)</span> .
-Para calcular el plano tangente en este caso tenemos que <span class="math inline">\(\overrightarrow{n} = \nabla F\)</span>.
-Nos puede ocurrir que <span class="math inline">\(F\)</span> no sea derivable o que <span class="math inline">\(\nabla F = \overrightarrow{0}\)</span>. Supongamos que sea diferenciable, ¿cómo preveer que puede salir? Para evitarlo, debemos forzar de nuevo que la matriz de las derivadas tenga rango máximo (en este caso 1).
+Vemos claramente que las condiciones para poder calcular superficies tangentes llegan siempre a obligar a que la matriz tenga  (ver sección ). A partir de aquí, podemos crear nuestra definición de subvariedad diferenciable: 
 
-Vamos a ver que pasa con las curvas en <span class="math inline">\(\real^3\)</span> y cómo calcular la recta tangente
+Veamos ejemplos de si algunos objetos son variedades diferenciables o no:  <span class="math display">\[\appl{F}{U\subset\real^3}{\real}\]</span> <span class="math display">\[\{(x,y,z) \tq F(x,y,z) = 0\}\]</span> En este caso tenemos <span class="math inline">\(N=2, K=1\)</span>. La condición de rango nos dice que <span class="math inline">\(\nabla F(\gx) \neq (0,0,0)\)</span>. Esto es, obliga a en cada punto existe un vector normal <span class="math inline">\(\overrightarrow{n}\)</span>, exactamente la misma condición que habíamos visto antes.
 
-Vemos claramente que las condiciones para poder calcular superficies tangentes llegan siempre a obligar a que la matriz tenga  (ver sección ). A partir de aquí, podemos crear nuestra definición de subvariedad diferenciable:
-
-Veamos ejemplos de si algunos objetos son variedades diferenciables o no:
-
-<span class="math display">\[\appl{F}{U\subset\real^3}{\real}\]</span>
-<span class="math display">\[\{(x,y,z) \tq F(x,y,z) = 0\}\]</span>
-En este caso tenemos <span class="math inline">\(N=2, K=1\)</span>.
-La condición de rango nos dice que <span class="math inline">\(\nabla F(\gx) \neq (0,0,0)\)</span>. Esto es, obliga a en cada punto existe un vector normal <span class="math inline">\(\overrightarrow{n}\)</span>, exactamente la misma condición que habíamos visto antes.
-
-<span class="math display">\[\sigma(t) = (x(t),y(t),z(t))\equiv S_1 \cap S_2 = \]</span>
-<span class="math display">\[= \{F_1(x,y,z) = 0\}\cap \{F_2(x,y,z) = 0\}\]</span>
-Si tomamos <span class="math inline">\(U\cap \sigma = \{(x,y,z)\in\real^3 \tq F_1 = 0 \y F_2 = 0\}\)</span>
-Siendo <span class="math display">\[\appl{F}{U\subset\real^3}{\real^2}, N+K=3,K=2\]</span><span class="math display">\[F(x,y,z) = (F_1(x,y,z),F_2(x,y,z))\]</span>
-Veamos la condición de rango en este caso:
-<span class="math display">\[rango \begin{pmatrix} \dpa{F_1}{x}&amp;\dpa{F_1}{y}&amp;\dpa{F_1}{z}\\\dpa{F_2}{x}&amp;\dpa{F_2}{y}&amp;\dpa{F_2}{z}\end{pmatrix}\]</span>
-Para que el rango sea máximo, los vectores tienen que ser no paralelos, es decir, <span class="math inline">\(S_1, S_2\)</span> sean transversales, no paralelas. De nuevo, la misma condición que habíamos visto antes.
-
-Podemos definir un punto de una manera un tanto rebuscada:
+<span class="math display">\[\sigma(t) = (x(t),y(t),z(t))\equiv S_1 \cap S_2 = \]</span> <span class="math display">\[= \{F_1(x,y,z) = 0\}\cap \{F_2(x,y,z) = 0\}\]</span> Si tomamos <span class="math inline">\(U\cap \sigma = \{(x,y,z)\in\real^3 \tq F_1 = 0 \y F_2 = 0\}\)</span> Siendo <span class="math display">\[\appl{F}{U\subset\real^3}{\real^2}, N+K=3,K=2\]</span><span class="math display">\[F(x,y,z) = (F_1(x,y,z),F_2(x,y,z))\]</span> Veamos la condición de rango en este caso: <span class="math display">\[rango \begin{pmatrix} \dpa{F_1}{x}&amp;\dpa{F_1}{y}&amp;\dpa{F_1}{z}\\\dpa{F_2}{x}&amp;\dpa{F_2}{y}&amp;\dpa{F_2}{z}\end{pmatrix}\]</span> Para que el rango sea máximo, los vectores tienen que ser no paralelos, es decir, <span class="math inline">\(S_1, S_2\)</span> sean transversales, no paralelas. De nuevo, la misma condición que habíamos visto antes.  Podemos definir un punto de una manera un tanto rebuscada:
 <span class="math display">\[\begin{gather*}
 \appl{F}{\real^K}{\real^K}\\
 \gx \rightarrow \gx - \ga
 \end{gather*}\]</span>
-En este caso, la subvariedad <span class="math inline">\(M\)</span> es nuestro punto <span class="math inline">\(\ga\)</span>:
-<span class="math display">\[M = \{\gx \in \real^K \tq F(\gx) = \gor{0}\} = \{\ga\}\]</span>
-Tenemos $DF = Id $, que tiene rango máximo y por lo tanto <span class="math inline">\(\{\ga\}\)</span> es una subvariedad diferenciable (dimensión 0, codimensión <span class="math inline">\(k\)</span>).
-
-<span class="math inline">\(\appl{F}{\Omega\subset\real^N}{0}\)</span>. En este caso tenemos codimensión <span class="math inline">\(0\)</span> y dimensión <span class="math inline">\(N\)</span>.
-
+En este caso, la subvariedad <span class="math inline">\(M\)</span> es nuestro punto <span class="math inline">\(\ga\)</span>: <span class="math display">\[M = \{\gx \in \real^K \tq F(\gx) = \gor{0}\} = \{\ga\}\]</span> Tenemos $DF = Id $, que tiene rango máximo y por lo tanto <span class="math inline">\(\{\ga\}\)</span> es una subvariedad diferenciable (dimensión 0, codimensión <span class="math inline">\(k\)</span>).  <span class="math inline">\(\appl{F}{\Omega\subset\real^N}{0}\)</span>. En este caso tenemos codimensión <span class="math inline">\(0\)</span> y dimensión <span class="math inline">\(N\)</span>. 
 <span class="math display">\[\begin{gather*}
 \appl{F}{\real^2}{\real}\\
    F(x,y) = x^3 - y^6 \\
@@ -498,75 +441,17 @@ Tenemos $DF = Id $, que tiene rango máximo y por lo tanto <span class="math inl
   DF = (3x^2-6y^5) \\
   DF(0,0) = (0,0)
 \end{gather*}\]</span>
-La matriz diferencial tiene rango <span class="math inline">\(0\)</span> en el punto <span class="math inline">\((0,0)\)</span>. ¿Quiere esto decir que <span class="math inline">\(M\)</span> no es una subvariedad diferenciable en el 0?
-No. Lo que quiere decir que no hemos encontrado la función que cumpla las hipótesis. Podemos operar
-<span class="math display">\[M = \{x^3=y^6\} = \{x = y^2\}  = \{x-y^2 = 0\}\]</span>
-Y vemos que si tomamos <span class="math inline">\(G(x,y) = x-y^2\)</span>, esta función representa la misma subvariedad <span class="math inline">\(M\)</span>, y <span class="math inline">\(DG(x,y) = (1,2y)\)</span> tiene rango 1 en el origen.
+La matriz diferencial tiene rango <span class="math inline">\(0\)</span> en el punto <span class="math inline">\((0,0)\)</span>. ¿Quiere esto decir que <span class="math inline">\(M\)</span> no es una subvariedad diferenciable en el 0? No. Lo que quiere decir que no hemos encontrado la función que cumpla las hipótesis. Podemos operar <span class="math display">\[M = \{x^3=y^6\} = \{x = y^2\}  = \{x-y^2 = 0\}\]</span> Y vemos que si tomamos <span class="math inline">\(G(x,y) = x-y^2\)</span>, esta función representa la misma subvariedad <span class="math inline">\(M\)</span>, y <span class="math inline">\(DG(x,y) = (1,2y)\)</span> tiene rango 1 en el origen.  <span class="math display">\[M = \{(x,y)\in \real^2 \tq x^2-y^2 = 0\}\]</span> Definimos una función <span class="math inline">\(F\)</span>: <span class="math display">\[\appl{F}{\real^2}{\real}\]</span> <span class="math display">\[F(x,y) = x^2-y^2\]</span> <span class="math inline">\(DF = (2x,-2y)\)</span>. La condición de rango falla en <span class="math inline">\((0,0)\)</span>. Valoramos si este objeto no es una subvariedad o si tendremos que definir una función de una manera más inteligente, tal y como hicimos en el caso anterior.
 
-<span class="math display">\[M = \{(x,y)\in \real^2 \tq x^2-y^2 = 0\}\]</span>
-Definimos una función <span class="math inline">\(F\)</span>:
-<span class="math display">\[\appl{F}{\real^2}{\real}\]</span>
-<span class="math display">\[F(x,y) = x^2-y^2\]</span>
-<span class="math inline">\(DF = (2x,-2y)\)</span>. La condición de rango falla en <span class="math inline">\((0,0)\)</span>.
-Valoramos si este objeto no es una subvariedad o si tendremos que definir una función de una manera más inteligente, tal y como hicimos en el caso anterior.
+En este caso, vemos que <span class="math inline">\(M = \{ y=x \cup y = -x \}\)</span>. No debería ser una subvariedad porque en el <span class="math inline">\((0,0)\)</span> no es derivable (ver figura ). Intentaremos demostrarlo por reducción al absurdo. Supongamos que <span class="math inline">\(M\)</span> es una subvariedad. Entonces, según la definición () existe un <span class="math inline">\(U, (0,0) \in U\)</span> y una aplicación <span class="math inline">\(\appl{G}{U\subset\real^2}{\real}\)</span> con <span class="math inline">\(U\cap M = \{G(x,y) = 0\}\)</span>. Entonces tendríamos que <span class="math display">\[\rango DG(x,y) = 1, \forall(x,y) \in U \implies \rango \left(\dpa{G}{x},\dpa{G}{y}\right) = 1\]</span> Ahí tenemos dos casos, o bien que la primera componente no sea <span class="math inline">\(0\)</span> o que sea la segunda la que no es nula. Supongamos primero que <span class="math inline">\(\dpa{G}{x}(0,0) \neq 0\)</span>. Podemos aplicar el Teorema de la unción implícita (), que nos dice que podemos despejar <span class="math inline">\(x = x(y)\)</span>. En este caso: <span class="math inline">\(U \cap M = \{x(y)^2-y^2 = 0\}\)</span>. Si fijamos <span class="math inline">\(y=\varepsilon\)</span>, entonces <span class="math inline">\(x(\varepsilon) = \pm \varepsilon\)</span> No es una función, lo que contradice el Teorema de la función implícita, y por lo tanto es imposible que <span class="math inline">\(\dpa{G}{x}(0,0) \neq 0\)</span>. Análogamente, tampoco puede cumplirse que <span class="math inline">\(\dpa{G}{y}(0,0) \neq 0\)</span>. Hemos demostrado por lo tanto que no puede existir una función que defina esto como subvariedad diferencial. Este es el ejemplo de que cualquier objeto que tenga autointersección no puede ser subvariedad.  <span class="math inline">\(M = \{(x,y) \in \real^2 \tq x^2-y^2 = 0, y\ge 0\}\)</span> Vamos a suponer que existe una función <span class="math inline">\(F \in C^1\)</span> que representa ese objeto (que viene definido por 2 condiciones). <span class="math inline">\(M = \{F(x,y) = 0\}\)</span> para alguna <span class="math inline">\(F\)</span>. Condición de rango: <span class="math inline">\(\left(\dpa{F}{x},\dpa{F}{y}\right) \neq (0,0)\)</span>. Condición de rango: <span class="math inline">\(\left(\dpa{F}{x},\dpa{F}{y}\right) = (0,0), x=y=0\)</span>. Vamos a ver si es subvariedad o no. En este caso intuimos que no debería serlo. Volvemos a demostrar por reducción al absurdo: Supongamos que <span class="math inline">\(M\)</span> es subvariedad, entonces <span class="math inline">\(\exists G(x,y)\)</span> tal que <span class="math inline">\(\appl{G}{U\subset\real^2}{\real}, U \cap M = \{G(x,y) = 0\}\)</span> Supongamos <span class="math inline">\(\displaystyle \dpa{G}{x}\neq 0\)</span>. Entonces tenemos <span class="math display">\[ M\cap U = \{y(x)^2 - y^2 = 0\} \]</span> Si fijamos <span class="math inline">\(x=\varepsilon \implies y(x) = \abs{\varepsilon}\)</span>, pero esto quiere decir que <span class="math inline">\(G \notin C^1\)</span>. De forma análoga con la segunda coordenada, vemos que <span class="math inline">\(M\)</span> no es una subvariedad.  Nos quitamos el punto conflictivo del caso anterior, el <span class="math inline">\((0,0)\)</span>. <span class="math inline">\(N = \{(x,y)\in \real^2 \tq x^2-y^2 = 0, y&gt;0\}\)</span> La lógica nos dice que este caso si debería ser subvariedad diferencial: la definición de la función es local, y siempre podremos encontrar un entorno que no incluya el 0, que es el punto problemático. Comprobamos que efectivamente el rango de <span class="math inline">\(\nabla F\)</span> es máximo <span class="math inline">\(\forall (x,y)\in \real^2\)</span> y por lo tanto <span class="math inline">\(M\)</span> es una subvariedad.   Superficie en <span class="math inline">\(\real^3\)</span> parametrizada: <span class="math inline">\(S = \{\Phi(u,v) = (x(u,v),y(u,v),z(u,v))\}\)</span>. A la hora de trabajar con superficies parametrizadas, nos interesaría poder definir una especie de función inversa que nos permita hacer cambios en el plano y llevarlos a la superficie o al reves, pero… ¡tienen dimensiones distintas! La esperanza que nos queda es que la superficie parametrizada tiene dimensión 2, igual que el plano.
 
-En este caso, vemos que <span class="math inline">\(M = \{ y=x \cup y = -x \}\)</span>. No debería ser una subvariedad porque en el <span class="math inline">\((0,0)\)</span> no es derivable (ver figura ). Intentaremos demostrarlo por reducción al absurdo.
-Supongamos que <span class="math inline">\(M\)</span> es una subvariedad. Entonces, según la definición () existe un <span class="math inline">\(U, (0,0) \in U\)</span> y una aplicación <span class="math inline">\(\appl{G}{U\subset\real^2}{\real}\)</span> con <span class="math inline">\(U\cap M = \{G(x,y) = 0\}\)</span>. Entonces tendríamos que
-<span class="math display">\[\rango DG(x,y) = 1, \forall(x,y) \in U \implies \rango \left(\dpa{G}{x},\dpa{G}{y}\right) = 1\]</span>
-Ahí tenemos dos casos, o bien que la primera componente no sea <span class="math inline">\(0\)</span> o que sea la segunda la que no es nula. Supongamos primero que <span class="math inline">\(\dpa{G}{x}(0,0) \neq 0\)</span>. Podemos aplicar el Teorema de la unción implícita (), que nos dice que podemos despejar <span class="math inline">\(x = x(y)\)</span>. En este caso:
-<span class="math inline">\(U \cap M = \{x(y)^2-y^2 = 0\}\)</span>.
-Si fijamos <span class="math inline">\(y=\varepsilon\)</span>, entonces <span class="math inline">\(x(\varepsilon) = \pm \varepsilon\)</span> No es una función, lo que contradice el Teorema de la función implícita, y por lo tanto es imposible que <span class="math inline">\(\dpa{G}{x}(0,0) \neq 0\)</span>. Análogamente, tampoco puede cumplirse que <span class="math inline">\(\dpa{G}{y}(0,0) \neq 0\)</span>.
-Hemos demostrado por lo tanto que no puede existir una función que defina esto como subvariedad diferencial. Este es el ejemplo de que cualquier objeto que tenga autointersección no puede ser subvariedad.
-
-<span class="math inline">\(M = \{(x,y) \in \real^2 \tq x^2-y^2 = 0, y\ge 0\}\)</span>
-Vamos a suponer que existe una función <span class="math inline">\(F \in C^1\)</span> que representa ese objeto (que viene definido por 2 condiciones). <span class="math inline">\(M = \{F(x,y) = 0\}\)</span> para alguna <span class="math inline">\(F\)</span>.
-Condición de rango: <span class="math inline">\(\left(\dpa{F}{x},\dpa{F}{y}\right) \neq (0,0)\)</span>.
-Condición de rango: <span class="math inline">\(\left(\dpa{F}{x},\dpa{F}{y}\right) = (0,0), x=y=0\)</span>.
-Vamos a ver si es subvariedad o no. En este caso intuimos que no debería serlo. Volvemos a demostrar por reducción al absurdo:
-Supongamos que <span class="math inline">\(M\)</span> es subvariedad, entonces <span class="math inline">\(\exists G(x,y)\)</span> tal que <span class="math inline">\(\appl{G}{U\subset\real^2}{\real}, U \cap M = \{G(x,y) = 0\}\)</span>
-Supongamos <span class="math inline">\(\displaystyle \dpa{G}{x}\neq 0\)</span>. Entonces tenemos <span class="math display">\[ M\cap U = \{y(x)^2 - y^2 = 0\} \]</span>
-Si fijamos <span class="math inline">\(x=\varepsilon \implies y(x) = \abs{\varepsilon}\)</span>, pero esto quiere decir que <span class="math inline">\(G \notin C^1\)</span>. De forma análoga con la segunda coordenada, vemos que <span class="math inline">\(M\)</span> no es una subvariedad.
-
-Nos quitamos el punto conflictivo del caso anterior, el <span class="math inline">\((0,0)\)</span>.
-<span class="math inline">\(N = \{(x,y)\in \real^2 \tq x^2-y^2 = 0, y&gt;0\}\)</span>
-La lógica nos dice que este caso si debería ser subvariedad diferencial: la definición de la función es local, y siempre podremos encontrar un entorno que no incluya el 0, que es el punto problemático.
-Comprobamos que efectivamente el rango de <span class="math inline">\(\nabla F\)</span> es máximo <span class="math inline">\(\forall (x,y)\in \real^2\)</span> y por lo tanto <span class="math inline">\(M\)</span> es una subvariedad.
-
-Superficie en <span class="math inline">\(\real^3\)</span> parametrizada: <span class="math inline">\(S = \{\Phi(u,v) = (x(u,v),y(u,v),z(u,v))\}\)</span>.
-A la hora de trabajar con superficies parametrizadas, nos interesaría poder definir una especie de función inversa que nos permita hacer cambios en el plano y llevarlos a la superficie o al reves, pero… ¡tienen dimensiones distintas! La esperanza que nos queda es que la superficie parametrizada tiene dimensión 2, igual que el plano.
-
-<span class="math display">\[\appl{\sigma}{[0,2\pi)}{\real^2}\]</span>
-<span class="math display">\[t \rightarrow \sigma(t) = (cos(t),sen(t))\]</span>
-Inversa: <span class="math inline">\(\Psi(x,y) = t\)</span> ángulo de la representación en polares.
-Vamos a estudiar el problema de la continuidad:
-Tomamos <span class="math inline">\(\{(X_n,Y_n)\}\)</span> con <span class="math inline">\(x^2+y^2 = 1 \tlq (x_n,y_n) \convs (1,0)\)</span>
-Si <span class="math inline">\(\Psi\)</span> es continua, debe ser <span class="math inline">\(\Psi(x_n,y_n) \convs (1,0) = 0\)</span>. En este caso no es continua porque:
-Si tomamos <span class="math display">\[\begin{align*}
+<span class="math display">\[\appl{\sigma}{[0,2\pi)}{\real^2}\]</span> <span class="math display">\[t \rightarrow \sigma(t) = (cos(t),sen(t))\]</span> Inversa: <span class="math inline">\(\Psi(x,y) = t\)</span> ángulo de la representación en polares. Vamos a estudiar el problema de la continuidad: Tomamos <span class="math inline">\(\{(X_n,Y_n)\}\)</span> con <span class="math inline">\(x^2+y^2 = 1 \tlq (x_n,y_n) \convs (1,0)\)</span> Si <span class="math inline">\(\Psi\)</span> es continua, debe ser <span class="math inline">\(\Psi(x_n,y_n) \convs (1,0) = 0\)</span>. En este caso no es continua porque: Si tomamos
+<span class="math display">\[\begin{align*}
 P_n &amp;= \left(cos\left(2\pi - \frac{1}{n}\right), sen\left(2\pi - \frac{1}{n}\right) \right)\\
 P_n &amp;\convs (1,0)\\
 \Psi(P_n) &amp;= 2\pi - \frac{1}{n} \convs 2\pi\neq\Psi(1,0)
-\end{align*}\]</span>
-
-<span class="math display">\[\appl{f}{(0,1)\subset\real}{\real^2}\]</span>
-<span class="math display">\[t \rightarrow f(t) = (t,g(t)), \text{continua, con inversa continua}\]</span>
-Vamos a definir la inversa:
-<span class="math display">\[P\in f(0,1) \implies P(x,g(x)) \text{Para algún } x\in(0,1)\]</span>
-<span class="math inline">\(P = (x,g(x))\)</span>
-<span class="math display">\[\Psi(P) = t \in (0,1) \tlq f(t) = (x,g(x)) \implies t = x\]</span>
-Vamos a estudiar la continuidad:
-<span class="math display">\[\{P_n\} \subset f(0,1), P_n \rightarrow P \in f(0,1)\]</span>
-<span class="math display">\[P_i = (x_i,g(x_i)), \text{ para algún } i \in (0,1)\]</span>
-<span class="math display">\[P_n \convs P_0 \dimplies (x_n,g(x_n)) \rightarrow (x_0,g(x_0)) \implies x_n (= \Psi(P_n)) \rightarrow x_0 (=\Psi(P_0)) \]</span>
-¿La gráfica de una función es homeomorfismo sobre su imagen?
-
-<span class="math display">\[\appl{\sigma_3}{(0,4\pi)}{\real^2}\]</span>
-<span class="math display">\[t \rightarrow \sigma(t) = (cos(t),sen(t))\]</span>
-No es inyectiva <span class="math inline">\(\implies \nexists \Psi\)</span>.
-
-<span class="math display">\[\appl{\sigma_4)}{(0,2\pi)}{\real^2}\]</span>
-<span class="math display">\[t \rightarrow \sigma(t) = (cos(t),sen(t))\]</span>
-La diferencia con el ejemplo 1, es que es cerrado.
-Hay que percatarse de que la tangente no es inyectiva, entonces… la inversa es algo más complicada que <span class="math inline">\(\arctan\)</span>, así que vamos a definirla a trozos siguiendo el esquema de la figura .
+\end{align*}\paragraph{Ejemplo 2}\]</span>
+<span class="math display">\[\appl{f}{(0,1)\subset\real}{\real^2}\]</span> <span class="math display">\[t \rightarrow f(t) = (t,g(t)), \text{continua, con inversa continua}\]</span> Vamos a definir la inversa: <span class="math display">\[P\in f(0,1) \implies P(x,g(x)) \text{Para algún } x\in(0,1)\]</span> <span class="math inline">\(P = (x,g(x))\)</span> <span class="math display">\[\Psi(P) = t \in (0,1) \tlq f(t) = (x,g(x)) \implies t = x\]</span> Vamos a estudiar la continuidad: <span class="math display">\[\{P_n\} \subset f(0,1), P_n \rightarrow P \in f(0,1)\]</span> <span class="math display">\[P_i = (x_i,g(x_i)), \text{ para algún } i \in (0,1)\]</span> <span class="math display">\[P_n \convs P_0 \dimplies (x_n,g(x_n)) \rightarrow (x_0,g(x_0)) \implies x_n (= \Psi(P_n)) \rightarrow x_0 (=\Psi(P_0)) \]</span> ¿La gráfica de una función es homeomorfismo sobre su imagen?  <span class="math display">\[\appl{\sigma_3}{(0,4\pi)}{\real^2}\]</span> <span class="math display">\[t \rightarrow \sigma(t) = (cos(t),sen(t))\]</span> No es inyectiva <span class="math inline">\(\implies \nexists \Psi\)</span>.  <span class="math display">\[\appl{\sigma_4)}{(0,2\pi)}{\real^2}\]</span> <span class="math display">\[t \rightarrow \sigma(t) = (cos(t),sen(t))\]</span> La diferencia con el ejemplo 1, es que es cerrado. Hay que percatarse de que la tangente no es inyectiva, entonces… la inversa es algo más complicada que <span class="math inline">\(\arctan\)</span>, así que vamos a definirla a trozos siguiendo el esquema de la figura .
 
 <span class="math display">\[\Psi(x,y) =
 \begin{cases}
@@ -574,95 +459,45 @@ Hay que percatarse de que la tangente no es inyectiva, entonces… la inversa es
 \arctan\left(\frac{y}{x}\right) + \pi &amp; (x,y) \in 2\\
 \arctan\left(\frac{y}{x}\right)+2\pi&amp; (x,y) \in 3
 \end{cases}
-\]</span>
-Hay que estudiar la continuidad en <span class="math inline">\((0,-1)\)</span> y en <span class="math inline">\((0,1)\)</span>.
+\]</span> Hay que estudiar la continuidad en <span class="math inline">\((0,-1)\)</span> y en <span class="math inline">\((0,1)\)</span>.  Tomamos <span class="math inline">\(\{P_n\} \rightarrow (0,1), P_n \in S_1\)</span> Queremos probar que <span class="math inline">\(\Psi(P_n) \rightarrow \Psi(0,1) = \frac{\pi}{2}\)</span>. Ejercicio para el lector: Sucesiones que se acercan por la derecha o por la izquierda y comprobar que vale lo que tiene que valer. 
 
-Tomamos <span class="math inline">\(\{P_n\} \rightarrow (0,1), P_n \in S_1\)</span>
-Queremos probar que <span class="math inline">\(\Psi(P_n) \rightarrow \Psi(0,1) = \frac{\pi}{2}\)</span>.
-Ejercicio para el lector:
-Sucesiones que se acercan por la derecha o por la izquierda y comprobar que vale lo que tiene que valer.
+La parametrización es <span class="math display">\[\sigma_5 (x(t),y(t)) = \left(\frac{\cos(t)}{\sin^2(t)+1},\frac{\sin(t)\cos(t)}{\sin^2(t)+1}\right), t\in \left(\frac{-\pi}{2},\frac{3\pi}{2}\right)\]</span> Al origen podemos acercarnos de distintas formas:
 
-La parametrización es <span class="math display">\[\sigma_5 (x(t),y(t)) = \left(\frac{\cos(t)}{\sin^2(t)+1},\frac{\sin(t)\cos(t)}{\sin^2(t)+1}\right), t\in \left(\frac{-\pi}{2},\frac{3\pi}{2}\right)\]</span>
-Al origen podemos acercarnos de distintas formas:
-
-Sea <span class="math inline">\(\{P_n\}\subset \sigma_5(t) \rightarrow (0,0)\)</span>.
-Podemos tomar la sucesión <span class="math inline">\(\{P_n\} = \{P_1,P_2,P_3,...\}\)</span> cada uno en una región (1,2,3 ciclicamente).
-<span class="math display">\[\Psi(P_n) \begin{cases}
+Sea <span class="math inline">\(\{P_n\}\subset \sigma_5(t) \rightarrow (0,0)\)</span>. Podemos tomar la sucesión <span class="math inline">\(\{P_n\} = \{P_1,P_2,P_3,...\}\)</span> cada uno en una región (1,2,3 ciclicamente). <span class="math display">\[\Psi(P_n) \begin{cases}
 \in 3 &amp; \text{ si }n \text{ es múltiplo de }3\\
 \in 2 &amp; \text{ si } n\equiv 2\ mod \ 3\\
 \in 1 &amp; \text{ si } n \equiv 1\ mod \ 3
-\end{cases}\]</span>
-Por tanto <span class="math inline">\(\nexists \displaystyle \lim_{n\rightarrow \infty} \Psi(P_n)\)</span>
+\end{cases}\]</span> Por tanto <span class="math inline">\(\nexists \displaystyle \lim_{n\rightarrow \infty} \Psi(P_n)\)</span>
 
-definir “parametrización”.
+definir “parametrización”.  Curva parametrizada en <span class="math inline">\(\real^3\)</span> <span class="math inline">\(\Gamma = \{\sigma(t) = (x(t),y(t),z(t)), t \in (a,b)\}\)</span> Queremos excluir:
 
-Curva parametrizada en <span class="math inline">\(\real^3\)</span>
-<span class="math inline">\(\Gamma = \{\sigma(t) = (x(t),y(t),z(t)), t \in (a,b)\}\)</span>
-Queremos excluir:
-
-Superficies de parametrización en <span class="math inline">\(\real^3\)</span>.
-<span class="math display">\[S = \{\Phi(u,v) = (x(u,v),y(u,v),z(u,v)), (u,v)\in D\}\]</span>
-Queremos evitar:
+Superficies de parametrización en <span class="math inline">\(\real^3\)</span>. <span class="math display">\[S = \{\Phi(u,v) = (x(u,v),y(u,v),z(u,v)), (u,v)\in D\}\]</span> Queremos evitar:
 
 Ya tenemos todo lo necesario para definir parametrización:
 
-<span class="math inline">\(\Phi_{1,2}(x,y) = (x,y,\pm \sqrt{1-x^2-y^2})\)</span>. Esta  nos deja sin definir el ecuador. Para ello tenemos que definir más  
-Estas cartas son expresando x,y en función de las otras 2. En total hacen falta 3 parametrizaciones.
+   <span class="math inline">\(\Phi_{1,2}(x,y) = (x,y,\pm \sqrt{1-x^2-y^2})\)</span>. Esta  nos deja sin definir el ecuador. Para ello tenemos que definir más   Estas cartas son expresando x,y en función de las otras 2. En total hacen falta 3 parametrizaciones.  otra manera de parametrizar, la proyección estereográfica.  El dibujo de la proyección es:  <span class="math display">\[(u,v) \in \real^2 \rightarrow (u,v,0) \rightarrow r\equiv (0,0,R) + t(u,v,-R) = (tu,tv,R(1-t)\]</span> Imponiendo <span class="math inline">\(\underbrace{P}_{r(t_0)} \equiv r\cap S\)</span> tenemos: <span class="math display">\[(t_0u)^2+(t_0v)^2 + R^2(1-t)^2 = R^2 \rightarrow ... \rightarrow t_0 = \frac{2R^2}{u^2+v^2+R^2}\]</span> Conclusión: <span class="math display">\[P = (tu,tv,R(1-t) = \frac{2R^2}{u^2+v^2+R^2}u,\frac{2R^2}{u^2+v^2+R^2}v,\frac{R(u^2+v^2-R^2)}{u^2+v^2+R^2} = \Phi(u,v)\]</span>. Vemos que <span class="math inline">\(\Phi\in C^1, \Phi(\real^2) = S_R-\{(0,0,R)\}\)</span> ¿Es una parametrización? Hay que comprobar
 
-otra manera de parametrizar, la proyección estereográfica.
+En .2, llamaremos  al conjunto definido por la fórmula y el dominio, <span class="math inline">\((\Phi,\omega)\)</span>. El conjunto de todas las cartas locales que definen una subvariedad se llama Atlas.  La proyección estereográfica tiene 2 cartas, la del polo norte (que excluye ese punto) y la del polo sur.  <span class="math inline">\(\ref{eq_1}.1 \dimplies \ref{eq_2}.2\)</span>. Si tenemos una subvariedad dada como conjunto de nivel la podemos parametrizar (y viceversa).
 
-El dibujo de la proyección es:
-
-<span class="math display">\[(u,v) \in \real^2 \rightarrow (u,v,0) \rightarrow r\equiv (0,0,R) + t(u,v,-R) = (tu,tv,R(1-t)\]</span>
-Imponiendo <span class="math inline">\(\underbrace{P}_{r(t_0)} \equiv r\cap S\)</span> tenemos: <span class="math display">\[(t_0u)^2+(t_0v)^2 + R^2(1-t)^2 = R^2 \rightarrow ... \rightarrow t_0 = \frac{2R^2}{u^2+v^2+R^2}\]</span>
-Conclusión: <span class="math display">\[P = (tu,tv,R(1-t) = \frac{2R^2}{u^2+v^2+R^2}u,\frac{2R^2}{u^2+v^2+R^2}v,\frac{R(u^2+v^2-R^2)}{u^2+v^2+R^2} = \Phi(u,v)\]</span>.
-Vemos que <span class="math inline">\(\Phi\in C^1, \Phi(\real^2) = S_R-\{(0,0,R)\}\)</span> ¿Es una parametrización?
-Hay que comprobar
-
-En .2, llamaremos  al conjunto definido por la fórmula y el dominio, <span class="math inline">\((\Phi,\omega)\)</span>. El conjunto de todas las cartas locales que definen una subvariedad se llama Atlas.
-
-La proyección estereográfica tiene 2 cartas, la del polo norte (que excluye ese punto) y la del polo sur.
-
-<span class="math inline">\(\ref{eq_1}.1 \dimplies \ref{eq_2}.2\)</span>. Si tenemos una subvariedad dada como conjunto de nivel la podemos parametrizar (y viceversa).
-
-\begin{proof}
-Esquema: <span class="math inline">\(1\implies 2, 2\implies 3, 3 \implies 1\)</span>
-
-Sea <span class="math inline">\(\ga \in M, \exists U\subset\real^{N+K}\)</span> abierto con <span class="math inline">\(\ga \in U\)</span> y una función <span class="math inline">\(\appl{F}{U\subset \rnk}{\rk}, F\in C^1(U), \tlq U\cap M = \{\gx \in U\tq F(\gx) = \gor{0}\}\)</span>. Además <span class="math inline">\(DF\)</span> tiene rango máximo (K).
-Queremos demostrar que existe una parametrización <span class="math inline">\(\Phi\)</span>.
-
-el orden de las variables, suponemos que el menor de orden <span class="math inline">\(K\)</span> con determinante no nulo corresponde con las <span class="math inline">\(K\)</span> últimas variables.
-Por el teorema de la función implícita, <span class="math inline">\(F(x_1,...,x_n,x_{n+1},...,x_{n+k}) = \gor{0}\)</span>, con <span class="math inline">\(x_{n+1},...,x_{n+k}\)</span> despejable en función de las <span class="math inline">\(\{x_i,i=1,...,n\}\)</span> en un entonro de <span class="math inline">\(\gor{a}\)</span>.
-Es decir: existen <span class="math inline">\(\omega\subset \real^N, \omega&#39;\subset\rk\)</span> abiertos tales que <span class="math inline">\(\gor{a}\in \omega \times \omega&#39;\)</span> y una función <span class="math inline">\(\appl{g}{\omega\subset\real^N}{\omega&#39;\subset\rk}\)</span> de manera que
-<span class="math display">\[\left\{\begin{array}{c}
+\begin{proof} Esquema: <span class="math inline">\(1\implies 2, 2\implies 3, 3 \implies 1\)</span>  Sea <span class="math inline">\(\ga \in M, \exists U\subset\real^{N+K}\)</span> abierto con <span class="math inline">\(\ga \in U\)</span> y una función <span class="math inline">\(\appl{F}{U\subset \rnk}{\rk}, F\in C^1(U), \tlq U\cap M = \{\gx \in U\tq F(\gx) = \gor{0}\}\)</span>. Además <span class="math inline">\(DF\)</span> tiene rango máximo (K). Queremos demostrar que existe una parametrización <span class="math inline">\(\Phi\)</span>.  el orden de las variables, suponemos que el menor de orden <span class="math inline">\(K\)</span> con determinante no nulo corresponde con las <span class="math inline">\(K\)</span> últimas variables. Por el teorema de la función implícita, <span class="math inline">\(F(x_1,...,x_n,x_{n+1},...,x_{n+k}) = \gor{0}\)</span>, con <span class="math inline">\(x_{n+1},...,x_{n+k}\)</span> despejable en función de las <span class="math inline">\(\{x_i,i=1,...,n\}\)</span> en un entonro de <span class="math inline">\(\gor{a}\)</span>. Es decir: existen <span class="math inline">\(\omega\subset \real^N, \omega&#39;\subset\rk\)</span> abiertos tales que <span class="math inline">\(\gor{a}\in \omega \times \omega&#39;\)</span> y una función <span class="math inline">\(\appl{g}{\omega\subset\real^N}{\omega&#39;\subset\rk}\)</span> de manera que <span class="math display">\[\left\{\begin{array}{c}
 g(a_1,...,a_n) = (a_{n+1},...,a_{n+k})\\
-F(\gx,g(\gx)) = \gor{0}, \forall \gx \in \omega\end{array}\right.\]</span>
-Idea: la parametrización es <span class="math inline">\(\Phi (\gx) = (\gx,g(\gx))\)</span>
-Vamos a comprobar las condiciones:
+F(\gx,g(\gx)) = \gor{0}, \forall \gx \in \omega\end{array}\right.\]</span> Idea: la parametrización es <span class="math inline">\(\Phi (\gx) = (\gx,g(\gx))\)</span> Vamos a comprobar las condiciones:
 
-Es decir, $(x,y) = (x,g(x)) )  (x,g(x)) = (x,y) $. También <span class="math inline">\(\inv{\Phi}(x,y) = x, \forall(x,y)\in (\omega\times\omega&#39;) \cap M\)</span> Continua.
-
-Vamos a emplear un argumento como el de la demostración del segundo teorema del rango. 
-Buscamos:
+Es decir, $(x,y) = (x,g(x)) )  (x,g(x)) = (x,y) $. También <span class="math inline">\(\inv{\Phi}(x,y) = x, \forall(x,y)\in (\omega\times\omega&#39;) \cap M\)</span> Continua.  Vamos a emplear un argumento como el de la demostración del segundo teorema del rango.  Buscamos:
 <span class="math display">\[\begin{align*}
 \appl{\Phi}{\rnk}{\rnk} \tlq \Phi(V\cap M) = (\ast &amp;,0)\\
 &amp;\uparrow\\
 k \text{ últimas coor} &amp; \text{denadas}
 \end{align*}\]</span>
-Siendo <span class="math inline">\(\Phi\)</span> un difeomorfismo.
+Siendo <span class="math inline">\(\Phi\)</span> un difeomorfismo.  existe una parametrización local <span class="math inline">\(\appl{\Psi}{\real^N}{\rnk}\)</span>.
 
-existe una parametrización local <span class="math inline">\(\appl{\Psi}{\real^N}{\rnk}\)</span>.
-
-Completar el número de variables
-Definimos
+Completar el número de variables Definimos
 <span class="math display">\[\begin{align*}
 \appl{\alpha}{\omega\times\real^K \subset \real^N\times\real^K}&amp;{\real^N\times\real^K}\\
 (\gor{u},\gor{v})\longrightarrow &amp;\alpha(\gor{u},\gor{v}) = \Psi(\gor{u}) + (\gor{0},\gor{v})\\
 \gor{u} \in \real^N,\gor{v} \in \real^K, \Phi(\gor{u})\in \real^{N+K}
-\end{align*}\]</span>
-
-<p>Aplicar el teorema de la función inversa () a <span class="math inline">\(\alpha\)</span>.
-<span class="math display">\[D\alpha =
+\end{align*}\paragraph{Paso 2)}\]</span>
+<p>Aplicar el teorema de la función inversa () a <span class="math inline">\(\alpha\)</span>. <span class="math display">\[D\alpha =
 \left(t.
 \begin{array}{c|c}
         D\Psi_k  \rightarrow &amp; 0\\
@@ -672,15 +507,7 @@ Definimos
 \]</span></p>
 <hr />
 
-En <span class="math inline">\(\real^3\)</span> tenemos puntos (dimensión 0), curvas (dimensión 1), superficies (dimensión 2) y abiertos (dimensión 3) sobre los que integrar en los que la imaginación resulta bastante útil. Pero… ¿qué pasa en <span class="math inline">\(\real^N\)</span>?
-Entonces en <span class="math inline">\(\real^N\)</span> tenemos objetos de dimensión <span class="math inline">\(0,...,N\)</span> sobre los que vamos a poder definir propiedades, integrales, etc.
-
-Repasamos la idea de que en <span class="math inline">\(\real^3\)</span> podíamos representar una superficie de varias maneras y cómo cálculabamos su plano tangente.
-
-Dada una superficie como una gráfica, simplemente construíamos el vector normal al plano derivando parcialmente:
-<span class="math display">\[ \vn = \left( \dpa{f}{x},\dpa{f}{y}, 1 \right) \]</span>
-
-Con una parametrización <span class="math inline">\(\phi\)</span>
+En <span class="math inline">\(\real^3\)</span> tenemos puntos (dimensión 0), curvas (dimensión 1), superficies (dimensión 2) y abiertos (dimensión 3) sobre los que integrar en los que la imaginación resulta bastante útil. Pero… ¿qué pasa en <span class="math inline">\(\real^N\)</span>? Entonces en <span class="math inline">\(\real^N\)</span> tenemos objetos de dimensión <span class="math inline">\(0,...,N\)</span> sobre los que vamos a poder definir propiedades, integrales, etc.  Repasamos la idea de que en <span class="math inline">\(\real^3\)</span> podíamos representar una superficie de varias maneras y cómo cálculabamos su plano tangente.  Dada una superficie como una gráfica, simplemente construíamos el vector normal al plano derivando parcialmente: <span class="math display">\[ \vn = \left( \dpa{f}{x},\dpa{f}{y}, 1 \right) \]</span>  Con una parametrización <span class="math inline">\(\phi\)</span>
 <span class="math display">\[\begin{align*}
 \appl{\phi}{D\subset\real^2 &amp;}{\real^3} \\
 \phi(u,v) &amp;= (x(u,v),y(u,v),z(u,v))
@@ -691,42 +518,18 @@ calculamos el plano tangente tomando los dos vectores directores y calculamos el
         T_v = \left( \dpa{x}{v},\dpa{y}{v},\dpa{z}{v}\right)\\
 \overrightarrow{n} = T_u\times T_v\\
 \end{gather*}\]</span>
-Nos podemos encontrar el problema de que <span class="math inline">\(\overrightarrow{n} = \overrightarrow{0}\)</span>. Para evitar ese caso, estableceremos que el rango de la matriz de las 6 derivadas tiene que ser 2.
+Nos podemos encontrar el problema de que <span class="math inline">\(\overrightarrow{n} = \overrightarrow{0}\)</span>. Para evitar ese caso, estableceremos que el rango de la matriz de las 6 derivadas tiene que ser 2.  Supongamos que nos dan una gráfica definida como un conjunto de nivel <span class="math inline">\(F(x,y,z) = 0\)</span> . Para calcular el plano tangente en este caso tenemos que <span class="math inline">\(\overrightarrow{n} = \nabla F\)</span>. Nos puede ocurrir que <span class="math inline">\(F\)</span> no sea derivable o que <span class="math inline">\(\nabla F = \overrightarrow{0}\)</span>. Supongamos que sea diferenciable, ¿cómo preveer que puede salir? Para evitarlo, debemos forzar de nuevo que la matriz de las derivadas tenga rango máximo (en este caso 1).  Vamos a ver que pasa con las curvas en <span class="math inline">\(\real^3\)</span> y cómo calcular la recta tangente
 
-Supongamos que nos dan una gráfica definida como un conjunto de nivel <span class="math inline">\(F(x,y,z) = 0\)</span> .
-Para calcular el plano tangente en este caso tenemos que <span class="math inline">\(\overrightarrow{n} = \nabla F\)</span>.
-Nos puede ocurrir que <span class="math inline">\(F\)</span> no sea derivable o que <span class="math inline">\(\nabla F = \overrightarrow{0}\)</span>. Supongamos que sea diferenciable, ¿cómo preveer que puede salir? Para evitarlo, debemos forzar de nuevo que la matriz de las derivadas tenga rango máximo (en este caso 1).
+Vemos claramente que las condiciones para poder calcular superficies tangentes llegan siempre a obligar a que la matriz tenga  (ver sección ). A partir de aquí, podemos crear nuestra definición de subvariedad diferenciable: 
 
-Vamos a ver que pasa con las curvas en <span class="math inline">\(\real^3\)</span> y cómo calcular la recta tangente
+Veamos ejemplos de si algunos objetos son variedades diferenciables o no:  <span class="math display">\[\appl{F}{U\subset\real^3}{\real}\]</span> <span class="math display">\[\{(x,y,z) \tq F(x,y,z) = 0\}\]</span> En este caso tenemos <span class="math inline">\(N=2, K=1\)</span>. La condición de rango nos dice que <span class="math inline">\(\nabla F(\gx) \neq (0,0,0)\)</span>. Esto es, obliga a en cada punto existe un vector normal <span class="math inline">\(\overrightarrow{n}\)</span>, exactamente la misma condición que habíamos visto antes.
 
-Vemos claramente que las condiciones para poder calcular superficies tangentes llegan siempre a obligar a que la matriz tenga  (ver sección ). A partir de aquí, podemos crear nuestra definición de subvariedad diferenciable:
-
-Veamos ejemplos de si algunos objetos son variedades diferenciables o no:
-
-<span class="math display">\[\appl{F}{U\subset\real^3}{\real}\]</span>
-<span class="math display">\[\{(x,y,z) \tq F(x,y,z) = 0\}\]</span>
-En este caso tenemos <span class="math inline">\(N=2, K=1\)</span>.
-La condición de rango nos dice que <span class="math inline">\(\nabla F(\gx) \neq (0,0,0)\)</span>. Esto es, obliga a en cada punto existe un vector normal <span class="math inline">\(\overrightarrow{n}\)</span>, exactamente la misma condición que habíamos visto antes.
-
-<span class="math display">\[\sigma(t) = (x(t),y(t),z(t))\equiv S_1 \cap S_2 = \]</span>
-<span class="math display">\[= \{F_1(x,y,z) = 0\}\cap \{F_2(x,y,z) = 0\}\]</span>
-Si tomamos <span class="math inline">\(U\cap \sigma = \{(x,y,z)\in\real^3 \tq F_1 = 0 \y F_2 = 0\}\)</span>
-Siendo <span class="math display">\[\appl{F}{U\subset\real^3}{\real^2}, N+K=3,K=2\]</span><span class="math display">\[F(x,y,z) = (F_1(x,y,z),F_2(x,y,z))\]</span>
-Veamos la condición de rango en este caso:
-<span class="math display">\[rango \begin{pmatrix} \dpa{F_1}{x}&amp;\dpa{F_1}{y}&amp;\dpa{F_1}{z}\\\dpa{F_2}{x}&amp;\dpa{F_2}{y}&amp;\dpa{F_2}{z}\end{pmatrix}\]</span>
-Para que el rango sea máximo, los vectores tienen que ser no paralelos, es decir, <span class="math inline">\(S_1, S_2\)</span> sean transversales, no paralelas. De nuevo, la misma condición que habíamos visto antes.
-
-Podemos definir un punto de una manera un tanto rebuscada:
+<span class="math display">\[\sigma(t) = (x(t),y(t),z(t))\equiv S_1 \cap S_2 = \]</span> <span class="math display">\[= \{F_1(x,y,z) = 0\}\cap \{F_2(x,y,z) = 0\}\]</span> Si tomamos <span class="math inline">\(U\cap \sigma = \{(x,y,z)\in\real^3 \tq F_1 = 0 \y F_2 = 0\}\)</span> Siendo <span class="math display">\[\appl{F}{U\subset\real^3}{\real^2}, N+K=3,K=2\]</span><span class="math display">\[F(x,y,z) = (F_1(x,y,z),F_2(x,y,z))\]</span> Veamos la condición de rango en este caso: <span class="math display">\[rango \begin{pmatrix} \dpa{F_1}{x}&amp;\dpa{F_1}{y}&amp;\dpa{F_1}{z}\\\dpa{F_2}{x}&amp;\dpa{F_2}{y}&amp;\dpa{F_2}{z}\end{pmatrix}\]</span> Para que el rango sea máximo, los vectores tienen que ser no paralelos, es decir, <span class="math inline">\(S_1, S_2\)</span> sean transversales, no paralelas. De nuevo, la misma condición que habíamos visto antes.  Podemos definir un punto de una manera un tanto rebuscada:
 <span class="math display">\[\begin{gather*}
 \appl{F}{\real^K}{\real^K}\\
 \gx \rightarrow \gx - \ga
 \end{gather*}\]</span>
-En este caso, la subvariedad <span class="math inline">\(M\)</span> es nuestro punto <span class="math inline">\(\ga\)</span>:
-<span class="math display">\[M = \{\gx \in \real^K \tq F(\gx) = \gor{0}\} = \{\ga\}\]</span>
-Tenemos $DF = Id $, que tiene rango máximo y por lo tanto <span class="math inline">\(\{\ga\}\)</span> es una subvariedad diferenciable (dimensión 0, codimensión <span class="math inline">\(k\)</span>).
-
-<span class="math inline">\(\appl{F}{\Omega\subset\real^N}{0}\)</span>. En este caso tenemos codimensión <span class="math inline">\(0\)</span> y dimensión <span class="math inline">\(N\)</span>.
-
+En este caso, la subvariedad <span class="math inline">\(M\)</span> es nuestro punto <span class="math inline">\(\ga\)</span>: <span class="math display">\[M = \{\gx \in \real^K \tq F(\gx) = \gor{0}\} = \{\ga\}\]</span> Tenemos $DF = Id $, que tiene rango máximo y por lo tanto <span class="math inline">\(\{\ga\}\)</span> es una subvariedad diferenciable (dimensión 0, codimensión <span class="math inline">\(k\)</span>).  <span class="math inline">\(\appl{F}{\Omega\subset\real^N}{0}\)</span>. En este caso tenemos codimensión <span class="math inline">\(0\)</span> y dimensión <span class="math inline">\(N\)</span>. 
 <span class="math display">\[\begin{gather*}
 \appl{F}{\real^2}{\real}\\
    F(x,y) = x^3 - y^6 \\
@@ -734,75 +537,17 @@ Tenemos $DF = Id $, que tiene rango máximo y por lo tanto <span class="math inl
   DF = (3x^2-6y^5) \\
   DF(0,0) = (0,0)
 \end{gather*}\]</span>
-La matriz diferencial tiene rango <span class="math inline">\(0\)</span> en el punto <span class="math inline">\((0,0)\)</span>. ¿Quiere esto decir que <span class="math inline">\(M\)</span> no es una subvariedad diferenciable en el 0?
-No. Lo que quiere decir que no hemos encontrado la función que cumpla las hipótesis. Podemos operar
-<span class="math display">\[M = \{x^3=y^6\} = \{x = y^2\}  = \{x-y^2 = 0\}\]</span>
-Y vemos que si tomamos <span class="math inline">\(G(x,y) = x-y^2\)</span>, esta función representa la misma subvariedad <span class="math inline">\(M\)</span>, y <span class="math inline">\(DG(x,y) = (1,2y)\)</span> tiene rango 1 en el origen.
+La matriz diferencial tiene rango <span class="math inline">\(0\)</span> en el punto <span class="math inline">\((0,0)\)</span>. ¿Quiere esto decir que <span class="math inline">\(M\)</span> no es una subvariedad diferenciable en el 0? No. Lo que quiere decir que no hemos encontrado la función que cumpla las hipótesis. Podemos operar <span class="math display">\[M = \{x^3=y^6\} = \{x = y^2\}  = \{x-y^2 = 0\}\]</span> Y vemos que si tomamos <span class="math inline">\(G(x,y) = x-y^2\)</span>, esta función representa la misma subvariedad <span class="math inline">\(M\)</span>, y <span class="math inline">\(DG(x,y) = (1,2y)\)</span> tiene rango 1 en el origen.  <span class="math display">\[M = \{(x,y)\in \real^2 \tq x^2-y^2 = 0\}\]</span> Definimos una función <span class="math inline">\(F\)</span>: <span class="math display">\[\appl{F}{\real^2}{\real}\]</span> <span class="math display">\[F(x,y) = x^2-y^2\]</span> <span class="math inline">\(DF = (2x,-2y)\)</span>. La condición de rango falla en <span class="math inline">\((0,0)\)</span>. Valoramos si este objeto no es una subvariedad o si tendremos que definir una función de una manera más inteligente, tal y como hicimos en el caso anterior.
 
-<span class="math display">\[M = \{(x,y)\in \real^2 \tq x^2-y^2 = 0\}\]</span>
-Definimos una función <span class="math inline">\(F\)</span>:
-<span class="math display">\[\appl{F}{\real^2}{\real}\]</span>
-<span class="math display">\[F(x,y) = x^2-y^2\]</span>
-<span class="math inline">\(DF = (2x,-2y)\)</span>. La condición de rango falla en <span class="math inline">\((0,0)\)</span>.
-Valoramos si este objeto no es una subvariedad o si tendremos que definir una función de una manera más inteligente, tal y como hicimos en el caso anterior.
+En este caso, vemos que <span class="math inline">\(M = \{ y=x \cup y = -x \}\)</span>. No debería ser una subvariedad porque en el <span class="math inline">\((0,0)\)</span> no es derivable (ver figura ). Intentaremos demostrarlo por reducción al absurdo. Supongamos que <span class="math inline">\(M\)</span> es una subvariedad. Entonces, según la definición () existe un <span class="math inline">\(U, (0,0) \in U\)</span> y una aplicación <span class="math inline">\(\appl{G}{U\subset\real^2}{\real}\)</span> con <span class="math inline">\(U\cap M = \{G(x,y) = 0\}\)</span>. Entonces tendríamos que <span class="math display">\[\rango DG(x,y) = 1, \forall(x,y) \in U \implies \rango \left(\dpa{G}{x},\dpa{G}{y}\right) = 1\]</span> Ahí tenemos dos casos, o bien que la primera componente no sea <span class="math inline">\(0\)</span> o que sea la segunda la que no es nula. Supongamos primero que <span class="math inline">\(\dpa{G}{x}(0,0) \neq 0\)</span>. Podemos aplicar el Teorema de la unción implícita (), que nos dice que podemos despejar <span class="math inline">\(x = x(y)\)</span>. En este caso: <span class="math inline">\(U \cap M = \{x(y)^2-y^2 = 0\}\)</span>. Si fijamos <span class="math inline">\(y=\varepsilon\)</span>, entonces <span class="math inline">\(x(\varepsilon) = \pm \varepsilon\)</span> No es una función, lo que contradice el Teorema de la función implícita, y por lo tanto es imposible que <span class="math inline">\(\dpa{G}{x}(0,0) \neq 0\)</span>. Análogamente, tampoco puede cumplirse que <span class="math inline">\(\dpa{G}{y}(0,0) \neq 0\)</span>. Hemos demostrado por lo tanto que no puede existir una función que defina esto como subvariedad diferencial. Este es el ejemplo de que cualquier objeto que tenga autointersección no puede ser subvariedad.  <span class="math inline">\(M = \{(x,y) \in \real^2 \tq x^2-y^2 = 0, y\ge 0\}\)</span> Vamos a suponer que existe una función <span class="math inline">\(F \in C^1\)</span> que representa ese objeto (que viene definido por 2 condiciones). <span class="math inline">\(M = \{F(x,y) = 0\}\)</span> para alguna <span class="math inline">\(F\)</span>. Condición de rango: <span class="math inline">\(\left(\dpa{F}{x},\dpa{F}{y}\right) \neq (0,0)\)</span>. Condición de rango: <span class="math inline">\(\left(\dpa{F}{x},\dpa{F}{y}\right) = (0,0), x=y=0\)</span>. Vamos a ver si es subvariedad o no. En este caso intuimos que no debería serlo. Volvemos a demostrar por reducción al absurdo: Supongamos que <span class="math inline">\(M\)</span> es subvariedad, entonces <span class="math inline">\(\exists G(x,y)\)</span> tal que <span class="math inline">\(\appl{G}{U\subset\real^2}{\real}, U \cap M = \{G(x,y) = 0\}\)</span> Supongamos <span class="math inline">\(\displaystyle \dpa{G}{x}\neq 0\)</span>. Entonces tenemos <span class="math display">\[ M\cap U = \{y(x)^2 - y^2 = 0\} \]</span> Si fijamos <span class="math inline">\(x=\varepsilon \implies y(x) = \abs{\varepsilon}\)</span>, pero esto quiere decir que <span class="math inline">\(G \notin C^1\)</span>. De forma análoga con la segunda coordenada, vemos que <span class="math inline">\(M\)</span> no es una subvariedad.  Nos quitamos el punto conflictivo del caso anterior, el <span class="math inline">\((0,0)\)</span>. <span class="math inline">\(N = \{(x,y)\in \real^2 \tq x^2-y^2 = 0, y&gt;0\}\)</span> La lógica nos dice que este caso si debería ser subvariedad diferencial: la definición de la función es local, y siempre podremos encontrar un entorno que no incluya el 0, que es el punto problemático. Comprobamos que efectivamente el rango de <span class="math inline">\(\nabla F\)</span> es máximo <span class="math inline">\(\forall (x,y)\in \real^2\)</span> y por lo tanto <span class="math inline">\(M\)</span> es una subvariedad.   Superficie en <span class="math inline">\(\real^3\)</span> parametrizada: <span class="math inline">\(S = \{\Phi(u,v) = (x(u,v),y(u,v),z(u,v))\}\)</span>. A la hora de trabajar con superficies parametrizadas, nos interesaría poder definir una especie de función inversa que nos permita hacer cambios en el plano y llevarlos a la superficie o al reves, pero… ¡tienen dimensiones distintas! La esperanza que nos queda es que la superficie parametrizada tiene dimensión 2, igual que el plano.
 
-En este caso, vemos que <span class="math inline">\(M = \{ y=x \cup y = -x \}\)</span>. No debería ser una subvariedad porque en el <span class="math inline">\((0,0)\)</span> no es derivable (ver figura ). Intentaremos demostrarlo por reducción al absurdo.
-Supongamos que <span class="math inline">\(M\)</span> es una subvariedad. Entonces, según la definición () existe un <span class="math inline">\(U, (0,0) \in U\)</span> y una aplicación <span class="math inline">\(\appl{G}{U\subset\real^2}{\real}\)</span> con <span class="math inline">\(U\cap M = \{G(x,y) = 0\}\)</span>. Entonces tendríamos que
-<span class="math display">\[\rango DG(x,y) = 1, \forall(x,y) \in U \implies \rango \left(\dpa{G}{x},\dpa{G}{y}\right) = 1\]</span>
-Ahí tenemos dos casos, o bien que la primera componente no sea <span class="math inline">\(0\)</span> o que sea la segunda la que no es nula. Supongamos primero que <span class="math inline">\(\dpa{G}{x}(0,0) \neq 0\)</span>. Podemos aplicar el Teorema de la unción implícita (), que nos dice que podemos despejar <span class="math inline">\(x = x(y)\)</span>. En este caso:
-<span class="math inline">\(U \cap M = \{x(y)^2-y^2 = 0\}\)</span>.
-Si fijamos <span class="math inline">\(y=\varepsilon\)</span>, entonces <span class="math inline">\(x(\varepsilon) = \pm \varepsilon\)</span> No es una función, lo que contradice el Teorema de la función implícita, y por lo tanto es imposible que <span class="math inline">\(\dpa{G}{x}(0,0) \neq 0\)</span>. Análogamente, tampoco puede cumplirse que <span class="math inline">\(\dpa{G}{y}(0,0) \neq 0\)</span>.
-Hemos demostrado por lo tanto que no puede existir una función que defina esto como subvariedad diferencial. Este es el ejemplo de que cualquier objeto que tenga autointersección no puede ser subvariedad.
-
-<span class="math inline">\(M = \{(x,y) \in \real^2 \tq x^2-y^2 = 0, y\ge 0\}\)</span>
-Vamos a suponer que existe una función <span class="math inline">\(F \in C^1\)</span> que representa ese objeto (que viene definido por 2 condiciones). <span class="math inline">\(M = \{F(x,y) = 0\}\)</span> para alguna <span class="math inline">\(F\)</span>.
-Condición de rango: <span class="math inline">\(\left(\dpa{F}{x},\dpa{F}{y}\right) \neq (0,0)\)</span>.
-Condición de rango: <span class="math inline">\(\left(\dpa{F}{x},\dpa{F}{y}\right) = (0,0), x=y=0\)</span>.
-Vamos a ver si es subvariedad o no. En este caso intuimos que no debería serlo. Volvemos a demostrar por reducción al absurdo:
-Supongamos que <span class="math inline">\(M\)</span> es subvariedad, entonces <span class="math inline">\(\exists G(x,y)\)</span> tal que <span class="math inline">\(\appl{G}{U\subset\real^2}{\real}, U \cap M = \{G(x,y) = 0\}\)</span>
-Supongamos <span class="math inline">\(\displaystyle \dpa{G}{x}\neq 0\)</span>. Entonces tenemos <span class="math display">\[ M\cap U = \{y(x)^2 - y^2 = 0\} \]</span>
-Si fijamos <span class="math inline">\(x=\varepsilon \implies y(x) = \abs{\varepsilon}\)</span>, pero esto quiere decir que <span class="math inline">\(G \notin C^1\)</span>. De forma análoga con la segunda coordenada, vemos que <span class="math inline">\(M\)</span> no es una subvariedad.
-
-Nos quitamos el punto conflictivo del caso anterior, el <span class="math inline">\((0,0)\)</span>.
-<span class="math inline">\(N = \{(x,y)\in \real^2 \tq x^2-y^2 = 0, y&gt;0\}\)</span>
-La lógica nos dice que este caso si debería ser subvariedad diferencial: la definición de la función es local, y siempre podremos encontrar un entorno que no incluya el 0, que es el punto problemático.
-Comprobamos que efectivamente el rango de <span class="math inline">\(\nabla F\)</span> es máximo <span class="math inline">\(\forall (x,y)\in \real^2\)</span> y por lo tanto <span class="math inline">\(M\)</span> es una subvariedad.
-
-Superficie en <span class="math inline">\(\real^3\)</span> parametrizada: <span class="math inline">\(S = \{\Phi(u,v) = (x(u,v),y(u,v),z(u,v))\}\)</span>.
-A la hora de trabajar con superficies parametrizadas, nos interesaría poder definir una especie de función inversa que nos permita hacer cambios en el plano y llevarlos a la superficie o al reves, pero… ¡tienen dimensiones distintas! La esperanza que nos queda es que la superficie parametrizada tiene dimensión 2, igual que el plano.
-
-<span class="math display">\[\appl{\sigma}{[0,2\pi)}{\real^2}\]</span>
-<span class="math display">\[t \rightarrow \sigma(t) = (cos(t),sen(t))\]</span>
-Inversa: <span class="math inline">\(\Psi(x,y) = t\)</span> ángulo de la representación en polares.
-Vamos a estudiar el problema de la continuidad:
-Tomamos <span class="math inline">\(\{(X_n,Y_n)\}\)</span> con <span class="math inline">\(x^2+y^2 = 1 \tlq (x_n,y_n) \convs (1,0)\)</span>
-Si <span class="math inline">\(\Psi\)</span> es continua, debe ser <span class="math inline">\(\Psi(x_n,y_n) \convs (1,0) = 0\)</span>. En este caso no es continua porque:
-Si tomamos <span class="math display">\[\begin{align*}
+<span class="math display">\[\appl{\sigma}{[0,2\pi)}{\real^2}\]</span> <span class="math display">\[t \rightarrow \sigma(t) = (cos(t),sen(t))\]</span> Inversa: <span class="math inline">\(\Psi(x,y) = t\)</span> ángulo de la representación en polares. Vamos a estudiar el problema de la continuidad: Tomamos <span class="math inline">\(\{(X_n,Y_n)\}\)</span> con <span class="math inline">\(x^2+y^2 = 1 \tlq (x_n,y_n) \convs (1,0)\)</span> Si <span class="math inline">\(\Psi\)</span> es continua, debe ser <span class="math inline">\(\Psi(x_n,y_n) \convs (1,0) = 0\)</span>. En este caso no es continua porque: Si tomamos
+<span class="math display">\[\begin{align*}
 P_n &amp;= \left(cos\left(2\pi - \frac{1}{n}\right), sen\left(2\pi - \frac{1}{n}\right) \right)\\
 P_n &amp;\convs (1,0)\\
 \Psi(P_n) &amp;= 2\pi - \frac{1}{n} \convs 2\pi\neq\Psi(1,0)
-\end{align*}\]</span>
-
-<span class="math display">\[\appl{f}{(0,1)\subset\real}{\real^2}\]</span>
-<span class="math display">\[t \rightarrow f(t) = (t,g(t)), \text{continua, con inversa continua}\]</span>
-Vamos a definir la inversa:
-<span class="math display">\[P\in f(0,1) \implies P(x,g(x)) \text{Para algún } x\in(0,1)\]</span>
-<span class="math inline">\(P = (x,g(x))\)</span>
-<span class="math display">\[\Psi(P) = t \in (0,1) \tlq f(t) = (x,g(x)) \implies t = x\]</span>
-Vamos a estudiar la continuidad:
-<span class="math display">\[\{P_n\} \subset f(0,1), P_n \rightarrow P \in f(0,1)\]</span>
-<span class="math display">\[P_i = (x_i,g(x_i)), \text{ para algún } i \in (0,1)\]</span>
-<span class="math display">\[P_n \convs P_0 \dimplies (x_n,g(x_n)) \rightarrow (x_0,g(x_0)) \implies x_n (= \Psi(P_n)) \rightarrow x_0 (=\Psi(P_0)) \]</span>
-¿La gráfica de una función es homeomorfismo sobre su imagen?
-
-<span class="math display">\[\appl{\sigma_3}{(0,4\pi)}{\real^2}\]</span>
-<span class="math display">\[t \rightarrow \sigma(t) = (cos(t),sen(t))\]</span>
-No es inyectiva <span class="math inline">\(\implies \nexists \Psi\)</span>.
-
-<span class="math display">\[\appl{\sigma_4)}{(0,2\pi)}{\real^2}\]</span>
-<span class="math display">\[t \rightarrow \sigma(t) = (cos(t),sen(t))\]</span>
-La diferencia con el ejemplo 1, es que es cerrado.
-Hay que percatarse de que la tangente no es inyectiva, entonces… la inversa es algo más complicada que <span class="math inline">\(\arctan\)</span>, así que vamos a definirla a trozos siguiendo el esquema de la figura .
+\end{align*}\paragraph{Ejemplo 2}\]</span>
+<span class="math display">\[\appl{f}{(0,1)\subset\real}{\real^2}\]</span> <span class="math display">\[t \rightarrow f(t) = (t,g(t)), \text{continua, con inversa continua}\]</span> Vamos a definir la inversa: <span class="math display">\[P\in f(0,1) \implies P(x,g(x)) \text{Para algún } x\in(0,1)\]</span> <span class="math inline">\(P = (x,g(x))\)</span> <span class="math display">\[\Psi(P) = t \in (0,1) \tlq f(t) = (x,g(x)) \implies t = x\]</span> Vamos a estudiar la continuidad: <span class="math display">\[\{P_n\} \subset f(0,1), P_n \rightarrow P \in f(0,1)\]</span> <span class="math display">\[P_i = (x_i,g(x_i)), \text{ para algún } i \in (0,1)\]</span> <span class="math display">\[P_n \convs P_0 \dimplies (x_n,g(x_n)) \rightarrow (x_0,g(x_0)) \implies x_n (= \Psi(P_n)) \rightarrow x_0 (=\Psi(P_0)) \]</span> ¿La gráfica de una función es homeomorfismo sobre su imagen?  <span class="math display">\[\appl{\sigma_3}{(0,4\pi)}{\real^2}\]</span> <span class="math display">\[t \rightarrow \sigma(t) = (cos(t),sen(t))\]</span> No es inyectiva <span class="math inline">\(\implies \nexists \Psi\)</span>.  <span class="math display">\[\appl{\sigma_4)}{(0,2\pi)}{\real^2}\]</span> <span class="math display">\[t \rightarrow \sigma(t) = (cos(t),sen(t))\]</span> La diferencia con el ejemplo 1, es que es cerrado. Hay que percatarse de que la tangente no es inyectiva, entonces… la inversa es algo más complicada que <span class="math inline">\(\arctan\)</span>, así que vamos a definirla a trozos siguiendo el esquema de la figura .
 
 <span class="math display">\[\Psi(x,y) =
 \begin{cases}
@@ -810,70 +555,31 @@ Hay que percatarse de que la tangente no es inyectiva, entonces… la inversa es
 \arctan\left(\frac{y}{x}\right) + \pi &amp; (x,y) \in 2\\
 \arctan\left(\frac{y}{x}\right)+2\pi&amp; (x,y) \in 3
 \end{cases}
-\]</span>
-Hay que estudiar la continuidad en <span class="math inline">\((0,-1)\)</span> y en <span class="math inline">\((0,1)\)</span>.
+\]</span> Hay que estudiar la continuidad en <span class="math inline">\((0,-1)\)</span> y en <span class="math inline">\((0,1)\)</span>.  Tomamos <span class="math inline">\(\{P_n\} \rightarrow (0,1), P_n \in S_1\)</span> Queremos probar que <span class="math inline">\(\Psi(P_n) \rightarrow \Psi(0,1) = \frac{\pi}{2}\)</span>. Ejercicio para el lector: Sucesiones que se acercan por la derecha o por la izquierda y comprobar que vale lo que tiene que valer. 
 
-Tomamos <span class="math inline">\(\{P_n\} \rightarrow (0,1), P_n \in S_1\)</span>
-Queremos probar que <span class="math inline">\(\Psi(P_n) \rightarrow \Psi(0,1) = \frac{\pi}{2}\)</span>.
-Ejercicio para el lector:
-Sucesiones que se acercan por la derecha o por la izquierda y comprobar que vale lo que tiene que valer.
+La parametrización es <span class="math display">\[\sigma_5 (x(t),y(t)) = \left(\frac{\cos(t)}{\sin^2(t)+1},\frac{\sin(t)\cos(t)}{\sin^2(t)+1}\right), t\in \left(\frac{-\pi}{2},\frac{3\pi}{2}\right)\]</span> Al origen podemos acercarnos de distintas formas:
 
-La parametrización es <span class="math display">\[\sigma_5 (x(t),y(t)) = \left(\frac{\cos(t)}{\sin^2(t)+1},\frac{\sin(t)\cos(t)}{\sin^2(t)+1}\right), t\in \left(\frac{-\pi}{2},\frac{3\pi}{2}\right)\]</span>
-Al origen podemos acercarnos de distintas formas:
-
-Sea <span class="math inline">\(\{P_n\}\subset \sigma_5(t) \rightarrow (0,0)\)</span>.
-Podemos tomar la sucesión <span class="math inline">\(\{P_n\} = \{P_1,P_2,P_3,...\}\)</span> cada uno en una región (1,2,3 ciclicamente).
-<span class="math display">\[\Psi(P_n) \begin{cases}
+Sea <span class="math inline">\(\{P_n\}\subset \sigma_5(t) \rightarrow (0,0)\)</span>. Podemos tomar la sucesión <span class="math inline">\(\{P_n\} = \{P_1,P_2,P_3,...\}\)</span> cada uno en una región (1,2,3 ciclicamente). <span class="math display">\[\Psi(P_n) \begin{cases}
 \in 3 &amp; \text{ si }n \text{ es múltiplo de }3\\
 \in 2 &amp; \text{ si } n\equiv 2\ mod \ 3\\
 \in 1 &amp; \text{ si } n \equiv 1\ mod \ 3
-\end{cases}\]</span>
-Por tanto <span class="math inline">\(\nexists \displaystyle \lim_{n\rightarrow \infty} \Psi(P_n)\)</span>
+\end{cases}\]</span> Por tanto <span class="math inline">\(\nexists \displaystyle \lim_{n\rightarrow \infty} \Psi(P_n)\)</span>
 
-definir “parametrización”.
+definir “parametrización”.  Curva parametrizada en <span class="math inline">\(\real^3\)</span> <span class="math inline">\(\Gamma = \{\sigma(t) = (x(t),y(t),z(t)), t \in (a,b)\}\)</span> Queremos excluir:
 
-Curva parametrizada en <span class="math inline">\(\real^3\)</span>
-<span class="math inline">\(\Gamma = \{\sigma(t) = (x(t),y(t),z(t)), t \in (a,b)\}\)</span>
-Queremos excluir:
-
-Superficies de parametrización en <span class="math inline">\(\real^3\)</span>.
-<span class="math display">\[S = \{\Phi(u,v) = (x(u,v),y(u,v),z(u,v)), (u,v)\in D\}\]</span>
-Queremos evitar:
+Superficies de parametrización en <span class="math inline">\(\real^3\)</span>. <span class="math display">\[S = \{\Phi(u,v) = (x(u,v),y(u,v),z(u,v)), (u,v)\in D\}\]</span> Queremos evitar:
 
 Ya tenemos todo lo necesario para definir parametrización:
 
-<span class="math inline">\(\Phi_{1,2}(x,y) = (x,y,\pm \sqrt{1-x^2-y^2})\)</span>. Esta  nos deja sin definir el ecuador. Para ello tenemos que definir más  
-Estas cartas son expresando x,y en función de las otras 2. En total hacen falta 3 parametrizaciones.
+   <span class="math inline">\(\Phi_{1,2}(x,y) = (x,y,\pm \sqrt{1-x^2-y^2})\)</span>. Esta  nos deja sin definir el ecuador. Para ello tenemos que definir más   Estas cartas son expresando x,y en función de las otras 2. En total hacen falta 3 parametrizaciones.  otra manera de parametrizar, la proyección estereográfica.  El dibujo de la proyección es:  <span class="math display">\[(u,v) \in \real^2 \rightarrow (u,v,0) \rightarrow r\equiv (0,0,R) + t(u,v,-R) = (tu,tv,R(1-t)\]</span> Imponiendo <span class="math inline">\(\underbrace{P}_{r(t_0)} \equiv r\cap S\)</span> tenemos: <span class="math display">\[(t_0u)^2+(t_0v)^2 + R^2(1-t)^2 = R^2 \rightarrow ... \rightarrow t_0 = \frac{2R^2}{u^2+v^2+R^2}\]</span> Conclusión: <span class="math display">\[P = (tu,tv,R(1-t) = \frac{2R^2}{u^2+v^2+R^2}u,\frac{2R^2}{u^2+v^2+R^2}v,\frac{R(u^2+v^2-R^2)}{u^2+v^2+R^2} = \Phi(u,v)\]</span>. Vemos que <span class="math inline">\(\Phi\in C^1, \Phi(\real^2) = S_R-\{(0,0,R)\}\)</span> ¿Es una parametrización? Hay que comprobar
 
-otra manera de parametrizar, la proyección estereográfica.
+En .2, llamaremos  al conjunto definido por la fórmula y el dominio, <span class="math inline">\((\Phi,\omega)\)</span>. El conjunto de todas las cartas locales que definen una subvariedad se llama Atlas.  La proyección estereográfica tiene 2 cartas, la del polo norte (que excluye ese punto) y la del polo sur.  <span class="math inline">\(\ref{eq_1}.1 \dimplies \ref{eq_2}.2\)</span>. Si tenemos una subvariedad dada como conjunto de nivel la podemos parametrizar (y viceversa).
 
-El dibujo de la proyección es:
+Si <span class="math inline">\(M\)</span> es una variedad diferenciable de dimensión <span class="math inline">\(N\)</span> en <span class="math inline">\(\rnk\)</span>, entonces, reordenando las variables puede escribirse  como la gráfica de una función <span class="math inline">\(C^1, \underbrace{M\cap U}_{(*)} = \{(\gx,g(\gx))\}\)</span> <span class="math inline">\((*) \implies\)</span> un trozo de la variedad. 
 
-<span class="math display">\[(u,v) \in \real^2 \rightarrow (u,v,0) \rightarrow r\equiv (0,0,R) + t(u,v,-R) = (tu,tv,R(1-t)\]</span>
-Imponiendo <span class="math inline">\(\underbrace{P}_{r(t_0)} \equiv r\cap S\)</span> tenemos: <span class="math display">\[(t_0u)^2+(t_0v)^2 + R^2(1-t)^2 = R^2 \rightarrow ... \rightarrow t_0 = \frac{2R^2}{u^2+v^2+R^2}\]</span>
-Conclusión: <span class="math display">\[P = (tu,tv,R(1-t) = \frac{2R^2}{u^2+v^2+R^2}u,\frac{2R^2}{u^2+v^2+R^2}v,\frac{R(u^2+v^2-R^2)}{u^2+v^2+R^2} = \Phi(u,v)\]</span>.
-Vemos que <span class="math inline">\(\Phi\in C^1, \Phi(\real^2) = S_R-\{(0,0,R)\}\)</span> ¿Es una parametrización?
-Hay que comprobar
+ Si existe $C^1, rg(D) = n, ()M  y  $ no es homeomorfismo sobre su imagen <span class="math inline">\(\implies\)</span>  no es subvariedad. Pregunta: Verdadero o Falso: ¿Con encontrar una aplicación que no sea homeomorfismo basta para asegurar que M no es subvariedad?  La prueba de este teorema se deja como ejercicio para el lector.
 
-En .2, llamaremos  al conjunto definido por la fórmula y el dominio, <span class="math inline">\((\Phi,\omega)\)</span>. El conjunto de todas las cartas locales que definen una subvariedad se llama Atlas.
-
-La proyección estereográfica tiene 2 cartas, la del polo norte (que excluye ese punto) y la del polo sur.
-
-<span class="math inline">\(\ref{eq_1}.1 \dimplies \ref{eq_2}.2\)</span>. Si tenemos una subvariedad dada como conjunto de nivel la podemos parametrizar (y viceversa).
-
-Si <span class="math inline">\(M\)</span> es una variedad diferenciable de dimensión <span class="math inline">\(N\)</span> en <span class="math inline">\(\rnk\)</span>, entonces, reordenando las variables puede escribirse  como la gráfica de una función <span class="math inline">\(C^1, \underbrace{M\cap U}_{(*)} = \{(\gx,g(\gx))\}\)</span>
-<span class="math inline">\((*) \implies\)</span> un trozo de la variedad.
-
- Si existe $C^1, rg(D) = n, ()M  y  
-$ no es homeomorfismo sobre su imagen <span class="math inline">\(\implies\)</span>  no es subvariedad.
-Pregunta: Verdadero o Falso:
-¿Con encontrar una aplicación que no sea homeomorfismo basta para asegurar que M no es subvariedad?
-
-La prueba de este teorema se deja como ejercicio para el lector.
-
-Sea <span class="math inline">\(M\)</span> subvariedad n-dimensional en <span class="math inline">\(\rnk\)</span>.
-<span class="math inline">\(T_{\gor{a}}M \leadsto\)</span> espacio tangente a M en el punto <span class="math inline">\(\gor{a}\in M\)</span>
-Pero… ¿qué es un hiperplano tangente? El concepto no es tan simple como un plano tangente. El espacio tangente será el conjunto de todos los vectores tangentes a cada una de las curvas contenidas en la superficie. A partir de aquí buscaremos una forma más eficiente de construirlo (porque es imposible calcular todas y cada una de las curvas contenidas en la superficie).
+Sea <span class="math inline">\(M\)</span> subvariedad n-dimensional en <span class="math inline">\(\rnk\)</span>. <span class="math inline">\(T_{\gor{a}}M \leadsto\)</span> espacio tangente a M en el punto <span class="math inline">\(\gor{a}\in M\)</span> Pero… ¿qué es un hiperplano tangente? El concepto no es tan simple como un plano tangente. El espacio tangente será el conjunto de todos los vectores tangentes a cada una de las curvas contenidas en la superficie. A partir de aquí buscaremos una forma más eficiente de construirlo (porque es imposible calcular todas y cada una de las curvas contenidas en la superficie).
 
 Cualquier curva de la variedad la podremos ver como una curva en la proyección (con una parametriazación construida cuidadosamente)
 
@@ -881,45 +587,22 @@ Es decir, si tenemos una parametrización, la diferencial lleva tangentes en tan
 
 
 
-El teorema y el corolario son las 2 caracterizaciones del espacio tangente.
-Pero también podemos definir el espacio tangente con una tercera caracterización:
-
-Como gráfica. Sea <span class="math inline">\(\appl{f}{\real^N}{\real^{K}}\)</span>
-<span class="math display">\[M\equiv \left\{(\gu,f(\gu)),\begin{matrix}
+El teorema y el corolario son las 2 caracterizaciones del espacio tangente. Pero también podemos definir el espacio tangente con una tercera caracterización:  Como gráfica. Sea <span class="math inline">\(\appl{f}{\real^N}{\real^{K}}\)</span> <span class="math display">\[M\equiv \left\{(\gu,f(\gu)),\begin{matrix}
 (\gu,f(\gu))\in \rnk\\
 \gu \in \Omega\subset\real^N\\
-\appl{f}{\real^N}{\real^K}\end{matrix}\right\} \]</span>
-Salvo reordenación de las variables.
-Sea <span class="math inline">\(p=(\ga,f(\ga))\)</span> el punto en el que queremos calcular el hiperplano tangente a <span class="math inline">\(M\)</span>.
-La caracterización será
-<span class="math display">\[T_p(M) = \{(\gu,v)\in\real^N\x\real^{K} \tq v = Df(a) \gu\}\]</span>
-la otra alternativa es definir la subvariedad como <span class="math inline">\(M = \{(\gu)\in\real^k \tq f(\gu) = f(\ga)\)</span>
+\appl{f}{\real^N}{\real^K}\end{matrix}\right\} \]</span> Salvo reordenación de las variables. Sea <span class="math inline">\(p=(\ga,f(\ga))\)</span> el punto en el que queremos calcular el hiperplano tangente a <span class="math inline">\(M\)</span>. La caracterización será <span class="math display">\[T_p(M) = \{(\gu,v)\in\real^N\x\real^{K} \tq v = Df(a) \gu\}\]</span> la otra alternativa es definir la subvariedad como <span class="math inline">\(M = \{(\gu)\in\real^k \tq f(\gu) = f(\ga)\)</span>
 
-$ M = {(x,y) ^2 x<sup>2+y</sup>2 = 1}$.
- Es una subvariedad porque…
-Vamos a calcular <span class="math display">\[T_{(a,b)}M = \ker \{\begin{pmatrix} 2x &amp; 2y \end{pmatrix}\} =\]</span>
-<span class="math display">\[ \{(u,v) \tq \begin{pmatrix}
+$ M = {(x,y) ^2 x<sup>2+y</sup>2 = 1}$.  Es una subvariedad porque… Vamos a calcular <span class="math display">\[T_{(a,b)}M = \ker \{\begin{pmatrix} 2x &amp; 2y \end{pmatrix}\} =\]</span> <span class="math display">\[ \{(u,v) \tq \begin{pmatrix}
 2a &amp; 2b
 \end{pmatrix}\begin{pmatrix}
 u\\v
-\end{pmatrix} = 0\} = ... =  \{(u,v)\in \real^2 \tq \pesc{(a-0,b-0),(a,b)-(u,v)} = 0\]</span>.
-El espacio tangente es el formado por todos los vectores perpendiculares al radio.
-
-<span class="math display">\[M = \{ (x,y,z,t)\in \real^4 \tq x^2+y^2 = 1, z^2+t^2 = 1\}\]</span>
-Vamos a calcular: <span class="math inline">\(T_{(1,0,0,1)}M\)</span>
-…
-Tenemos definida la variedad de forma implícita: <span class="math inline">\(M = \{F = 0\}\)</span> donde <span class="math display">\[F(x,y,z,t) = (x^2+y^2-1,t^2+z^2-1)\]</span>
-<span class="math display">\[DF = \begin{pmatrix}
+\end{pmatrix} = 0\} = ... =  \{(u,v)\in \real^2 \tq \pesc{(a-0,b-0),(a,b)-(u,v)} = 0\]</span>. El espacio tangente es el formado por todos los vectores perpendiculares al radio.  <span class="math display">\[M = \{ (x,y,z,t)\in \real^4 \tq x^2+y^2 = 1, z^2+t^2 = 1\}\]</span> Vamos a calcular: <span class="math inline">\(T_{(1,0,0,1)}M\)</span> … Tenemos definida la variedad de forma implícita: <span class="math inline">\(M = \{F = 0\}\)</span> donde <span class="math display">\[F(x,y,z,t) = (x^2+y^2-1,t^2+z^2-1)\]</span> <span class="math display">\[DF = \begin{pmatrix}
 2x&amp;2y&amp;0&amp;0\\
 0&amp;0&amp;2z&amp;2t
-\end{pmatrix}\]</span>
-En este caso tenemos <span class="math inline">\(rg(DF) = 2, \forall (x,y,z,t)\in \real^4\)</span>. (El único punto que podría dar rango 0 es el origen, que en este caso no pertenece a la subvariedad)
-Vamos con el espacio tangente:
-<span class="math display">\[T_{(1,0,0,1)}M = \ker DF (1,0,0,1) = \ker \begin{pmatrix}
+\end{pmatrix}\]</span> En este caso tenemos <span class="math inline">\(rg(DF) = 2, \forall (x,y,z,t)\in \real^4\)</span>. (El único punto que podría dar rango 0 es el origen, que en este caso no pertenece a la subvariedad) Vamos con el espacio tangente: <span class="math display">\[T_{(1,0,0,1)}M = \ker DF (1,0,0,1) = \ker \begin{pmatrix}
 2&amp;0&amp;0&amp;0\\
 0&amp;0&amp;0&amp;2
-\end{pmatrix} =\]</span>
-<span class="math display">\[ \{ (\alpha_1,\alpha_2,\alpha_3,\alpha_4) \in \real^4 \tq \begin{pmatrix}
+\end{pmatrix} =\]</span> <span class="math display">\[ \{ (\alpha_1,\alpha_2,\alpha_3,\alpha_4) \in \real^4 \tq \begin{pmatrix}
 2&amp;0&amp;0&amp;0\\
 0&amp;0&amp;0&amp;2
 \end{pmatrix} \begin{pmatrix}
@@ -928,9 +611,7 @@ Vamos con el espacio tangente:
 \end{pmatrix} = \begin{pmatrix}
 0 \\
 0
-\end{pmatrix}\} \implies \left\{\begin{array}{cc}2\alpha_1 &amp;= 0\\ 2\alpha_4 &amp; =0\end{array}\right.\]</span>
-Hiperplano tangente:
-<span class="math display">\[
+\end{pmatrix}\} \implies \left\{\begin{array}{cc}2\alpha_1 &amp;= 0\\ 2\alpha_4 &amp; =0\end{array}\right.\]</span> Hiperplano tangente: <span class="math display">\[
 \begin{pmatrix}
 1\\0\\0\\1
 \end{pmatrix}
@@ -941,9 +622,7 @@ Hiperplano tangente:
 \begin{pmatrix}
 0\\0\\1\\0
 \end{pmatrix}, \alpha_2,\alpha_3 \in \real
-\]</span>
-Y el hiperplano normal:
-<span class="math display">\[
+\]</span> Y el hiperplano normal: <span class="math display">\[
 \begin{pmatrix}
 1\\0\\0\\1
 \end{pmatrix}
@@ -955,28 +634,20 @@ Y el hiperplano normal:
 \begin{pmatrix}
 0\\0\\0\\1
 \end{pmatrix}, \lambda,\mu \in \real
-\]</span>
-¿Una posible parametrización de esto?
+\]</span> ¿Una posible parametrización de esto?
 <span class="math display">\[\begin{align*}
 \Phi : D \subset \real^2 \longrightarrow &amp;\real^4\\
 (u,v) \longrightarrow &amp;\Phi(u,v) = (x,y,z,t) = \left(cos(u),sen(u),cos(v),sen(v)\right)\\
 (u,v)\in (-\pi,\pi)\times(0,2\pi)
 \end{align*}\]</span>
-¿¿Por qué <span class="math inline">\((u,v)\in (-\pi,\pi)\times(0,2\pi)\)</span> y no <span class="math inline">\((u,v)\in (0,2\pi)\times(0,2\pi)\)</span>??
-Porque el punto que tenemos <span class="math inline">\((1,0,0,1) \notin \img\)</span>.
-Vamos a calcular la el hiperplano tangente. Como tenemos una parametrización, calcularemos la imagen de la diferencial ()
-<span class="math display">\[T_{(1,0,0,1)}M = \img D\Phi\left(0,\frac{\pi}{2}\right)\]</span>
-<span class="math display">\[D\Phi = \begin{pmatrix}
+¿¿Por qué <span class="math inline">\((u,v)\in (-\pi,\pi)\times(0,2\pi)\)</span> y no <span class="math inline">\((u,v)\in (0,2\pi)\times(0,2\pi)\)</span>?? Porque el punto que tenemos <span class="math inline">\((1,0,0,1) \notin \img\)</span>. Vamos a calcular la el hiperplano tangente. Como tenemos una parametrización, calcularemos la imagen de la diferencial () <span class="math display">\[T_{(1,0,0,1)}M = \img D\Phi\left(0,\frac{\pi}{2}\right)\]</span> <span class="math display">\[D\Phi = \begin{pmatrix}
 -sen(u) &amp; 0\\
 cos(u) &amp; 0\\
 0 &amp; -sen(v)\\
 0&amp;cos(v)
-\end{pmatrix}\]</span>
-<span class="math display">\[D\Phi\left(0,\frac{\pi}{2}\right) = \begin{pmatrix}
+\end{pmatrix}\]</span> <span class="math display">\[D\Phi\left(0,\frac{\pi}{2}\right) = \begin{pmatrix}
 0&amp;0\\1&amp;0\\0&amp;-1\\0&amp;0
-\end{pmatrix}\]</span>
-Entonces el hiperplano tangente es:
-<span class="math display">\[\begin{pmatrix}
+\end{pmatrix}\]</span> Entonces el hiperplano tangente es: <span class="math display">\[\begin{pmatrix}
 1\\0\\0\\1
 \end{pmatrix} + u \begin{pmatrix}
 0\\1\\0\\0
@@ -984,39 +655,16 @@ Entonces el hiperplano tangente es:
 - v \begin{pmatrix}
 0\\0\\1\\0
 \end{pmatrix}
-\]</span>
-Lógico y normal que nos de el mismo hiperplano tangente si estamos trabajando con el mismo objeto (desde una parametrización o desde un conjunto de nivel). ¿Cierto y verdad que sí?
+\]</span> Lógico y normal que nos de el mismo hiperplano tangente si estamos trabajando con el mismo objeto (desde una parametrización o desde un conjunto de nivel). ¿Cierto y verdad que sí?   El  (una especie de flotador) se produce al girar una circunferencia de radio <span class="math inline">\(R_1\)</span> en el plano <span class="math inline">\(XZ\)</span> con el centro sobre el eje <span class="math inline">\(X\)</span> a <span class="math inline">\(R_2\)</span> del origen alrededor del eje <span class="math inline">\(Z\)</span>. <span class="math display">\[ \Phi(\theta, \phi) = ((R_2+R_1\cos\phi)\cos\theta,(R_2+R_1\cos\phi)\sin \theta,R1\sin \phi)\;\; \theta, \phi \in (0, 2\pi) \]</span>  ¿Es <span class="math inline">\(\Phi\)</span> una parametrización?
 
-
-El  (una especie de flotador) se produce al girar una circunferencia de radio <span class="math inline">\(R_1\)</span> en el plano <span class="math inline">\(XZ\)</span> con el centro sobre el eje <span class="math inline">\(X\)</span> a <span class="math inline">\(R_2\)</span> del origen alrededor del eje <span class="math inline">\(Z\)</span>.
-<span class="math display">\[ \Phi(\theta, \phi) = ((R_2+R_1\cos\phi)\cos\theta,(R_2+R_1\cos\phi)\sin \theta,R1\sin \phi)\;\; \theta, \phi \in (0, 2\pi) \]</span>
-
-¿Es <span class="math inline">\(\Phi\)</span> una parametrización?
-
-Vamos con la opción 1:
-<span class="math display">\[\Phi(\alpha,\theta) = (x,y,z)\]</span>
-<span class="math display">\[¿(\alpha,\theta) = \Phi^{-1} (x,y,z)?\]</span>
-<span class="math display">\[z = rsen(\alpha) \implies \alpha = arcsen\left(\frac{z}{r}\right)\]</span>
-<span class="math display">\[\frac{y}{x} = tg(\theta) \implies \theta = arctg \left(\frac{y}{x}\right)\]</span>
-%Revisar
-Esto no es suficiente, porque <span class="math inline">\(\appl{arcsen}{(-1,1)}{\left(\frac{-\pi}{2},\frac{\pi}{2}\right)}\)</span> no toma todos los posibles valores. Lo mismo con la <span class="math inline">\(\appl{arctg}{\real}{\left(\frac{-\pi}{2},\frac{\pi}{2}\right)}\)</span>
-Tenemos que repetir el argumento de () que ya hemos hecho para la <span class="math inline">\(arctg\)</span> vamos a repetirlo para el <span class="math inline">\(arcsen\)</span>.
+Vamos con la opción 1: <span class="math display">\[\Phi(\alpha,\theta) = (x,y,z)\]</span> <span class="math display">\[¿(\alpha,\theta) = \Phi^{-1} (x,y,z)?\]</span> <span class="math display">\[z = rsen(\alpha) \implies \alpha = arcsen\left(\frac{z}{r}\right)\]</span> <span class="math display">\[\frac{y}{x} = tg(\theta) \implies \theta = arctg \left(\frac{y}{x}\right)\]</span> %Revisar Esto no es suficiente, porque <span class="math inline">\(\appl{arcsen}{(-1,1)}{\left(\frac{-\pi}{2},\frac{\pi}{2}\right)}\)</span> no toma todos los posibles valores. Lo mismo con la <span class="math inline">\(\appl{arctg}{\real}{\left(\frac{-\pi}{2},\frac{\pi}{2}\right)}\)</span> Tenemos que repetir el argumento de () que ya hemos hecho para la <span class="math inline">\(arctg\)</span> vamos a repetirlo para el <span class="math inline">\(arcsen\)</span>.
 
 <span class="math display">\[f(x,y,z) =\left\{ \begin{matrix}
 Si &amp; (x,y,z) \in 1 &amp;\implies &amp;\arcsin\left(\frac{z}{r}\right)\\
 Si &amp; (x,y,z) \in 2 &amp;\implies &amp;\displaystyle\frac{\alpha + \arcsin\left(\frac{z}{r}\right)}{2} = \frac{\pi}{2}\\
 Si &amp; (x,y,z) \in 3 &amp;\implies &amp; \alpha = \arcsin\left(\frac{z}{r}\right) + 2\pi
 \end{matrix}\right.
-\]</span>
-Ahora tenemos que estudiar la continuidad des esta función. (Ejercicio para el lector)
-
-En este caso (al tratarse de una diferencial) tendremos que hallar la imagen de <span class="math inline">\(D\Phi\)</span>.
-Ejercicio propuesto: <span class="math inline">\(T_{\left(\frac{\pi}{2},\frac{\pi}{2}\right)}M\)</span>.
-\begin{problem}[4.4]
-Sea <span class="math inline">\(\sigma(t) = \left(\cos t,\sen t,t^2(2\pi - t)^2\right), t \in [0,2\pi]\)</span>.
-
-Siempre hemos hablado de parametrizaciones es espacios abiertos, para asegurar la condición de homeomorfismo en casos como este, en el que los puntos cerca de <span class="math inline">\(0\)</span>, la inversa me los lleva a puntos lejanos si nos acercamos a <span class="math inline">\(0\)</span> por el <span class="math inline">\(0\)</span> o por el <span class="math inline">\(2\pi\)</span>.
-Posibles soluciones
+\]</span> Ahora tenemos que estudiar la continuidad des esta función. (Ejercicio para el lector)  En este caso (al tratarse de una diferencial) tendremos que hallar la imagen de <span class="math inline">\(D\Phi\)</span>. Ejercicio propuesto: <span class="math inline">\(T_{\left(\frac{\pi}{2},\frac{\pi}{2}\right)}M\)</span>. \begin{problem}[4.4] Sea <span class="math inline">\(\sigma(t) = \left(\cos t,\sen t,t^2(2\pi - t)^2\right), t \in [0,2\pi]\)</span>. Siempre hemos hablado de parametrizaciones es espacios abiertos, para asegurar la condición de homeomorfismo en casos como este, en el que los puntos cerca de <span class="math inline">\(0\)</span>, la inversa me los lleva a puntos lejanos si nos acercamos a <span class="math inline">\(0\)</span> por el <span class="math inline">\(0\)</span> o por el <span class="math inline">\(2\pi\)</span>. Posibles soluciones
 
 
 </div>
@@ -1082,7 +730,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

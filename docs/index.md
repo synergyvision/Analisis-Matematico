@@ -4,7 +4,7 @@
 title: "Introducción al análisis funcional y a la teoría de la medida"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2019-02-27"
+date: "2019-04-03"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -511,6 +511,11 @@ En este sistema numérico, las ecuaciones del tipo $ax+b=c$, con $a,b,c \in \mat
 
 <!--chapter:end:103-limiteycontinuidad.Rmd-->
 
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Diferenciación
 
 
@@ -2769,13 +2774,11 @@ L = \begin{pmatrix} \tlps(\gv_1) & \tlps(\gv_2) & ... & \tlps(\gv_k)\\
 \downarrow & \downarrow & \ddots & \downarrow
 \end{pmatrix}\right|\]
 
-Pero... tenemos 2 problemas:
 \begin{itemize}
 \item Necesitamos una manera cómoda con la que construir $\tlps$.
 \item ¿Utilizando otra parametrización llegamos al mismo resultado?
 \end{itemize}
 
-Vamos a reventar 2 pajaros de un tiro.
 
 \[ Area(P_k) = \left( \det \begin{pmatrix}
 \tlps(\gv_1) & \tlps(\gv_2) & ... & \tlps(\gv_k)\\
@@ -2801,7 +2804,7 @@ $Area(P_2) = \left(\det \begin{pmatrix}
 \pesc{\gv,\gu} & \pesc{\gv,\gv}
 \end{pmatrix} \right)^{\frac{1}{2}} = \left(\pesc{\gu,\gu}\pesc{\gv,\gv} - \pesc{\gu,\gv}^2\right)^{\frac{1}{2}} =\left(\md{\gu}\md{\gv} - \md{\gu}\md{\gv}(cos(\theta)^2)\right)^2 = \md{u}\md{v} \sqrt{1-cos^2(\theta)}  =  \md{u}\md{v} sen(\theta) = ||u\times v||$
 
-Bueno, esto cumple lo que la sabíamos de selectividad. El área de un paralelogramo 2 dimensional en $\real^3$ es la raiz cuadrada del módulo del producto vectorial.
+Esto cumple lo que la sabíamos de selectividad. El área de un paralelogramo 2 dimensional en $\real^3$ es la raiz cuadrada del módulo del producto vectorial.
 
 \textbf{Aplicación:} Vamos a aplicar esto para hallar el área de una $k-variedad$ en $\real^N$.
 
@@ -2813,8 +2816,6 @@ Aplicando taylor, en el que cada alargamiento $h$ depende de la dirección.
 \end{itemize}
 
 \textbf{Idea:} $Area(\Phi(Q_k)) = Area(P_k) + err(h)$ donde $Area(P_k) = \left(\det (\pesc{v_i,v_j})\right)^{\frac{1}{2}}, \{v_j\}$ genera $P_k$.
-
-\todo{Me he perdido porque $v_i = \dpa{\Phi}{s_j}(\gs_0)\cdot h_j$}
 
 \[\left(\det\left(\pesc{\dpa{\Phi}{s_i},\dpa{\Phi}{s_j}}h_ih_j\right)\right)^{\frac{1}{2}}\]
 
@@ -3010,7 +3011,7 @@ La matriz fácil de calcular es \[C_{\mathcal{B}\to \mathcal{C}} = \begin{pmatri
 
 Aplicando un giro (de aquí salen $\lambda$...) podemos ver que el si el ángulo entre $\gu,\gv \in (0,\pi) \leadsto +$ pero si el ángulo entre $\gu,\gv \in (\pi,2\pi) \leadsto -$. ¿Y en $\pi$? Entonces los vectores no serían independientes.
 
-\textbf{Idea:} Vamos a dedicarnos a jugar con los vectores de la base aplicandoles una deformación continua para ver que pasa con la discontinuidad de la orientación en $\pi$ a ver que encontramos.
+\textbf{Idea:} Vamos a manipular con los vectores de la base aplicandoles una deformación continua para ver que pasa con la discontinuidad de la orientación en $\pi$ a ver que encontramos.
 
 Sea la deformación $(\alpha(t),\beta(t)), t\in(0,1)$ continua, donde $(\alpha(0),\beta(0)) = (e_1,e_2)$ y $(\alpha(1),\beta(1)) = (e_1,e_2)$
 
@@ -3064,9 +3065,9 @@ Sea
 
 No hay ninguna manera de llevar $e_3$ a $\gw$ sin formar un único plano con los tres vectores.
 
-Aunque podríamos llevar $e_3 \to \gu$ y $e_1 \to \gw$... ¿Entonces?
+Aunque podríamos llevar $e_3 \to \gu$ y $e_1 \to \gw$.
 
-Mal! Porque no estamos manteniendo el orden, tendríamos la base $\mathcal{C}* = \{\gw,\gv,\gu\}\neq\mathcal{C}$.
+Si no se mantiene el orden, tendríamos la base $\mathcal{C}* = \{\gw,\gv,\gu\}\neq\mathcal{C}$.
 
 
 \paragraph{Caracterización práctica}
@@ -3266,7 +3267,7 @@ $\overrightarrow{n} = T_t\x T_{\theta} = ... = \overrightarrow{n}(t,\theta)$
 \overrightarrow{n}(t,\theta) \convs[][\theta\rightarrow 2\pi^-] (R,-\frac{t}{2})
 \end{gather*}
 
-Curioso: esta parametrización que no cubre el segmento con el que se empieza. Esta parametrización tiene una propiedad curiosa, al empezar, el vector normal apunta hacia dentro y al final, apunta hacia fuera. Es imposible cubrirla del todo con una parametrización.
+Nota: esta parametrización que no cubre el segmento con el que se empieza. Esta parametrización tiene una propiedad curiosa, al empezar, el vector normal apunta hacia dentro y al final, apunta hacia fuera. Es imposible cubrirla del todo con una parametrización.
 
 \paragraph{El otro ejemplo} típico de superficie no orientable es la botella de Klein
 
@@ -3366,6 +3367,7 @@ Es decir
 
 Con las cuentas vistas antes del ejemplo comprobamos que $\gv$ apunta hacia el interior de $M$.
 
+Hola mundo
 
 
 
@@ -3439,7 +3441,994 @@ Con las cuentas vistas antes del ejemplo comprobamos que $\gv$ apunta hacia el i
 
 <!--chapter:end:109-funcionesvariasvariables.Rmd-->
 
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 # Integración de formas diferenciales
+
+Una forma diferencial es una  funcion escalar definida en un abierto de $\real^n$
+\[\appl{f}{\Omega\subset\real^N}{\real}\]
+Operaciones habituales:
+\begin{itemize}
+\item Suma: sí
+\item Producto: sí
+\item Composiciones: no (porque no cuadran las dimensiones)
+\end{itemize}
+\paragraph{1-formas}
+\index{Formas!1}
+Sea $\mathcal{C} = \{e_1,e_2,...,e_n\}$ la base canónica en $\real^N$.
+Sea $L$ una aplicación lineal
+\[\appl{L}{\real^N}{\real}\]
+Que recordamos que cumplen:
+\[ L(\gx+\gy) = L(\gx)+L(\gy); L(\lambda\gx) = \lambda L(\gx)\]
+Definimos $\gy\in\real^N \leadsto \gy = \displaystyle\sum_1^n y_i e_i$, con lo que \[L(\gy) = \sum y_i L(e_i)\]
+Entonces \[\left.\begin{array}{cc}
+v_i = L(e_i)\\
+y_i = P_i(\gy)
+\end{array}\right\} \rightarrow L(\gy) = \sum_i v_iP_i(y)\]
+Siendo $P_i$ las proyecciones, una base del espacio dual.
+\textbf{Notación:}
+$P_i \equiv dx_i$.
+$dx_i[\gy] \equiv P_i(\gy) = y_i$
+Entonces, dado un $\gv$ podemos construir
+\[L \equiv \sum_i^N v_idx_i\]
+\[L[\gy] = \sum_i^N v_idx_i[\gy] = \sum_i^N v_iy_i\]
+\begin{defn}[1-forma]
+\[\omega(\gx)= \sum_1^N F_i(\gx) dx_i\]
+\begin{itemize}
+\item Se evalúa en $\gx\in\real$
+\item Actúa sobre $\gy\in\real^N$
+\end{itemize}
+Es decir, \[\omega(\gx)[\gy] = \left(\sum F_i(\gx)dx_i\right)[\gy] = \sum F_i(\gx)dx_i[\gy] = \sum F_i(\gx)y_i\]
+\end{defn}
+Indicaremos con paréntesis el punto en el que estamos evaluando, y con corchetes el punto en el que estamso actuando.
+\textbf{Operaciones:}
+\begin{itemize}
+\item Sumar: sí (lo razonable)
+\item Multiplicar: por una función escalar sí está definida.
+\end{itemize}
+\paragraph{Ejemplo:}
+Supongamos $f$ una función escalar (una 0-forma).
+\[\grad f(\gx) = \left( \dpa{f}{x_i}(\gx)\right)\, i=1,...,N\]
+Nos podemos construir una 1-forma desde el gradiente
+\[\dpa{f}{x_i}(\gx)dx_i \]
+A esta 1-forma en particular la llamaremos $df(\gx)$.
+¿Utilidad? Ya la veremos, pero es una forma de escribir el producto escalar.
+\[\pesc{\grad f(\gx),\gy} = df(\gx)[\gy]\]
+\paragraph{2-formas}
+\index{Formas!2}
+Punto de partida: Aplicaciones \textbf{bilineales alternadas}
+\[\appl{\Phi}{\real^N\x\real^N}{\real}\]
+Que cumplen \begin{itemize}
+\item $\Phi([\gu,\gv]) = - \Phi([\gv,\gu]) \implies \Phi(\gu,\gu)=0$
+\item $ \Phi([\gu+\gv,\gw]) = \Phi ([\gu,\gw]) + \Phi([u,w])$
+\item$\Phi([\lambda \gu,\gv]) = \lambda \Phi([\gu,\gv])$
+\end{itemize}
+Consecuencias:
+\begin{itemize}
+\item $\Phi(\gor{r}, \gor{s}+\gor{t}) = \Phi(\gor{r}+\gor{s}) + \Phi(\gor{r}+\gor{t})$
+\item $\Phi(\gu,\mu\gv) = \mu\Phi(\gu,\gv)$
+\end{itemize}
+\paragraph{Ejemplo} en $\real^3$ para facilitar las cuentas.
+\[\Phi(\gu,\gv) = \Phi(u_1e_1+u_2e_2+u_3e_3,v_1e_1+v_2e_2+v_3e_3)\]
+Aplicando las propiedades anteriores obtenemos:
+\begin{gather*}
+\overbrace{u_1v_1\Phi(e_1,e_1)}^{\equiv 0} + u_1v_2\Phi(e_1,e_2) + u_1v_3+\Phi(e_1,e_3)+\\
+u_2v_1+\Phi(e_2,e_1)+u_2v_2+\Phi(e_2,e_2)+u_2v_3+\Phi(e_2,e_3)+\\
+u_3v_1\Phi(e_3,e_1)+u_3v_2+\Phi(e_3,e_2)+u_3v_3+\Phi(e_3,e_3) = \\
+\underbrace{(u_1v_2-u_2v_1)}_{\left|\begin{matrix}
+u_1&u_2\\v_1&v_2
+\end{matrix}\right|}\overbrace{\Phi(e_1,e_2)}^{C_1}+(u_1v_3-u_3v_1)\Phi(e_1,e_3)+(u_2v_3-u_3v_2)\Phi(e_2,e_3)
+\end{gather*}
+Hemos demostrado que \[\Phi(\gu,\gv) = C_1B_{12}(\gu,\gv) + C_2B_{13}(\gu,\gv) + C_3B_{23}(\gu,\gv)\]
+\subparagraph{Notación:} $B_{ij} = dx_i\y dx_j$
+\[dx\y dx_j [\gu,\gv] = \det \begin{pmatrix}
+u_i&u_j\\v_i&v_j
+\end{pmatrix} = \det \begin{pmatrix}
+dx_i[\gu]&dx_j[\gu]\\dx_[\gv]&dx_j[\gv]
+\end{pmatrix}\]
+\begin{defn}[2-forma]
+\[\beta = \sum_{i,j=1}^N F_i(\gx) dx_i\y dx_j\]
+\begin{itemize}
+\item Se evalúan en puntos $x\in\real^N$
+\item Actúan sobre pares de vectores $[\gu,\gv]\in\real^N\x\real^N$.
+\end{itemize}
+Es decir:
+\[\beta(\gx)[\gu,\gv] = \sum F_{ij}(\gx) dx_i\y dx_j[\gu,\gv] = \sum F_{ij} \det \begin{pmatrix}
+u_i&v_i\\u_j&v_j
+\end{pmatrix}\]
+\emph{Ojo} El cambio del orden (en el determiante)es aposta por la segunda propiedad de las 2 formas
+\end{defn}
+\subsection{Generalización: k-formas}
+\index{k-forma}
+\index{Formas!k}
+Vamos a dar una definición general de una k-forma.
+Elementos básicos:
+\[\dfl{x_{i_1}}{x_{i_k}}[\gu^1,\gu^2,...,\gu^k] = \det\begin{pmatrix}
+u_{i_1}^1 & ... & u_{i_k}^1\\
+\vdots & \ddots & \vdots\\
+u_{i_1}^k & ... & u_{i_k}^k
+\end{pmatrix}\]
+\begin{defn}[K-forma] Una k-forma es una expresión como la que sigue
+\[
+\sum_{i_1,...,i_k=1}^N F_{i_1,...,i_k}(\gx)\dfl{x_{i_1}}{x_{i_k}}
+\]
+Se evalúa en puntos $\gx\in\real^N$ y actúa sobre grupos de $K$ vectores.
+\end{defn}
+\begin{lemma} Si dos índices están repetidos, la diferencial vale 0:
+\[ i_j = i_s \implies \df{x_{i_j},x_{i_s}} = 0 \]
+\end{lemma}
+Esto nos dice que en $\real^N$, teniendo $K$-formas (con $K<N$) tenemos $\comb{N}{K}$ combinaciones distintas.
+\obs Si $K>N$ y $\omega$ es una k-forma, entonces $\omega \equiv 0$
+\paragraph{Ejemplos:} En $\real^3$.
+\begin{itemize}
+\item 0-forma $\leadsto f(x,y,z) = 0$
+\item 1-forma $\leadsto f_1(x,y,z)\df x + f_2(x,y,z)\df y + f_3(x,y,z)\df z$
+\item 2-forma $\leadsto g_1(x,y,z)\df{y,z} + g_2(x,y,z)\df{z,x} + g_3(x,y,z)\df{x,y}$
+\item 3-formas $\leadsto h(x,y,z)\df{x,y,z}$
+\end{itemize}
+\index{Orden!cíclico}
+\emph{Ojo} Al cambio en la 2-forma, que es $dzdx$. Esto es para seguir el \textbf{orden cíclico} (por temas de la orientación). Esto es $x\to y \to z \to x$
+\obs Las \textit{funciones escalares} las podemos interpretar como 0-formas y como 3-formas. Los \textit{campos vectoriales} los podemos interpretar como 1-formas y también como 2-formas.
+\paragraph{Notación}
+Para escribir un conjunto de subíndices $\{i_1,i_2,...,i_k\} \equiv I$
+También acortaremos $\dfl{x_{i_1}}{x_{i_k}} \equiv dx_I$.
+La definición quedaría $\displaystyle \sum_I F_I(\gx)dx_I$
+\subsection{Operaciones}
+Siempre se puede multiplicar por 0-formas y sumar formas del mismo orden. Estas operaciones son triviales porque son operaciones internas.
+Vamos a definir las operaciones externas:
+\subsubsection{Producto exterior}
+\begin{defn}[Producto\IS exterior]
+Sean
+\begin{gather*}
+\omega = \sum_I F_I \df x_I\quad (\text{k-forma}\,\in\real^N) \\
+\beta = \sum_J G_j \df x_J\quad (\text{s-forma}\,\in\real^N)
+\end{gather*}
+Se define el producto exterior de $ω$ y $β$ de la siguiente forma
+\[\omega\y\beta = \sum_{I,J} F_IG_J \df{x_I,x_J} (\text{k+s-forma})\]
+\end{defn}
+\obs Si $K+S>N \implies \omega\y\beta=0$
+Vamos a por un ejemplo de producto exterior en $ℝ^3$. Consideramos las dos siguientes formas diferenciales:
+\begin{gather*}
+\omega = f_1(x,y,z)\df x + f_2(x,y,z)\df y + f_3(x,y,z) \df z \\
+\beta= g_1(x,y,z)\df x + g_2 (x,y,z) \df y + f_3 (x,y,z) \df z
+\end{gather*}
+y calculamos su producto exterior, $\omega\y\beta$
+\begin{multline*}
+\omega\y\beta  = f_1g_1\df{x,x} + f_1g_2\df{x,y} + f_1g_3\df{x,z} + f_2g_1\df{y,x} +\\
++ f_2g_2\df{y,y}+ f_2g_3\df{y,z}  + f_3g_1\df{z,x}+f_3g_2\df{z,y}+f_3g_3\df{z,z}
+\end{multline*}
+Tachamos los que sean 0 ($\df{x,x} = 0$) y tenemos cuidado con el orden cíclico, y nos queda
+\[ (f_2g_3-f_3g_2)\df{y,z} + (f_3g_1-f_1g_3)\df{z,x} + (f_1g_2 - f_2g_1) \df{x,y} \]
+Partiendo de 2 campos vectoriales que eran 1-formas hemos llegado a una 2-forma. Además, si nos fijamos, hemos llegado a la definición de \textbf{producto vectorial} en $ℝ^3$:
+\[ \overrightarrow{F} \x \overrightarrow{G} =
+\left((f_2g_3-f_3g_2),(f_3g_1-f_1g_3),(f_1g_2 - f_2g_1)\right) \]
+\subsubsection{Diferencial exterior}
+El diferencial exterior trata de ampliar el concepto del diferencial (la matriz de derivadas parciales) más allá de las funciones, de tal forma que podamos aplicarlo a formas diferenciales.
+\begin{defn}[Diferencial\IS exterior] Definimos la diferencial exterior de una k-forma como
+\[\dif ω = \dif \left(\sum_I F_i(\gx)\df x_I\right) = \sum_I \underbrace{\df F_I}_{\text{1-forma}} \overbrace{\y}^{\text{Prod. ext}} \underbrace{\df x_I}_{\text{k-forma}} \]
+donde
+\[ \dif f = \sum_i^N \dpa{f}{x_i} \df x_i \]
+La diferencial exterior de una k-forma es una k+1-forma.
+\end{defn}
+Veamos algunos ejemplos, empezando en $ℝ^3$.
+Partimos de un campo vectorial $G = (g_1,g_2,g_3)$ al que asociamos una 2-forma $ω$:
+\[ \omega = g_1 \df{y,z} + g_2 \df{z,x} + g_3 \df{x,y} \]
+Calculamos ahora la diferencial exterior, $\dif\omega$. Para calcularla, recordamos que $\df{x,x} = 0$ y que podemos cambiar el orden del producto exterior si respetamos el orden cíclico ($x,y,z$).
+\begin{align*}
+\dif\omega 	&= 	\df{g_1,y,z} + \df{g_2,z,x} + \df{g_3,x,y} = \\
+			&= 	\left(\dpa{g_1}{x} \df x + \dpa{g_1}{y} \df y + \dpa{g_1}{z}\df z \right)\y \df{y,z}\\ &\qquad
+			+	\left(\dpa{g_2}{x} \df x + \dpa{g_2}{y} \df y + \dpa{g_2}{z}\df z \right)\y \df{z,x}\\ &\qquad
+	 		+	\left(\dpa{g_3}{x} \df x + \dpa{g_3}{y} \df y + \dpa{g_3}{z}\df z \right)\y \df{x,y} = \\
+			&= \dpa{g_1}{x}\df{x,y,z} + \dpa{g_2}{y}\df{y,z,x} + \dpa{g_3}{z}\df{z,x,y} = \\
+			&= \left(\dpa{g_1}{x} + \dpa{g_2}{y} + \dpa{g_3}{z}\right)\df{x,y,z}
+\end{align*}
+Hemos llegado a una 3-forma que además es la forma diferencial asociada a la \textbf{divergencia} de $G$.
+Pasamos a otro ejemplo, donde vamos a calcular la diferencial exterior de una 1-forma $ω=F_1\df x + F_2 \df y + F_3 \df z$. Recordamos que si invertimos el orden del producto exterior pagamos con un cambio de signo, esto es, $\df{x,z} = - \df{z,x}$.
+\begin{align*}
+\dif ω 	&= \dif\left(F_1\df x + F_2\df y+F_3\df z\right) =\\
+		&= \df{F_1,x} + \df{F_2,y} + \df{F_3,z} = \\
+		&= \left(\dpa{F_1}{x}\df x + \dpa{F_1}{x}\df y + \dpa{F_1}{x}\df z \right)\y \df x +
+\left(\dpa{F_2}{x}\df x + \dpa{F_2}{x}\df y + \dpa{F_2}{x}\df z \right)\y \df y + \\ & \qquad \qquad
+		+  \left(\dpa{F_3}{x}\df x + \dpa{F_3}{x}\df y + \dpa{F_3}{x}\df z \right)\y \df z = \\
+		&= \left(\dpa{F_3}{y} - \dpa{F_2}{z} \right)\df{y,z} + \left(\dpa{F_1}{z} - \dpa{F_3}{dx}\right)\df{z,x} +
+\left(\dpa{F_2}{x} - \dpa{F_1}{y}\right) \df{x,y}
+\end{align*}
+Nos ha quedado un campo de la forma:
+\[\left(\left(\dpa{F_3}{y} - \dpa{F_2}{z} \right) ,\left(\dpa{F_1}{z} - \dpa{F_3}{x}\right),\left(\dpa{F_2}{x} - \dpa{F_1}{y}\right)\right)\]
+que coincide con el \textbf{rotacional}.
+\paragraph{Propiedades de la diferencial exterior}
+\subparagraph{Diferencial de la suma} $\dif(\omega + \beta) = \dif\omega + \dif\beta$
+\subparagraph{Diferencial del producto} Siendo $\omega = \sum_I F_I \dif x_I$ una k-forma, $f$ una 0-forma, tenemos que
+\[ f\omega = \sum_I fF_I\dif x_I \]
+y entonces
+\[ \dif (f\omega) = \sum_I \df{(fF_I),x_I} \]
+, donde \[ \dif (fF_I) = \sum_{j=1}^N \dpa{fF_I}{x_j} \df x_j = \sum_{j=1}^N\dpa{f}{x_j} F_I \df x_j + \sum_{j=1}^N\dpa{F_I}{x_j} f \df x_j = F_I \dif f + f \dif F_I \]
+De esta forma, nos queda que
+\begin{align*}
+\dif (fω)	&= \sum_I \left(F_I \dif f + f \dif F_I\right)\y \dif x_I = \\
+			&= \sum_I F_I \df{f,x_I} + \sum_I f \df{F_I,x_I} = \\
+			&= \sum_I \dif f \y F_I \dif x_I + f \dif ω = \\
+			&= \dif f \y \left(\sum_I F_I \dif x_I\right) + f \dif ω = \\
+			&= ω \df{f} + f \dif ω
+\end{align*}
+Hemos llegado a una expresión similar a la de la derivada de un producto de funciones
+\[d(f\omega) = ω \df{f} + f \dif ω \]
+\subparagraph{Diferencial del producto exterior}
+Sean dos k-formas diferenciales $ω$ y $β$:
+\[ \omega =\sum f_i \df x_i ;\; \beta = \sum_j  g_j\df x_j \]
+Calculamos el diferencial de su producto exterior:
+\begin{align*}
+\dif (\omega \y \beta) &= \dif\left(\sum_{i,j=1}^N f_ig_jdx_y\y dx_j\right) =\\
+	&= \sum_{i,j=1}^N \df{(f_ig_j),x_i,x_j} = \\
+	&= \sum_{i,j=1}^N \left(\sum_{k=1}^N \dpa{(f_ig_j)}{x_k} \dif x_k\right)\y \df{x_i,x_j} = \\
+	&= \sum_{i,j,k=1}^N \left(\dpa{f_i}{x_k}g_j + f_i\dpa{g_j}{x_k}\right) \df{x_k,dx_i,dx_j} = \\
+	&= \sum_{i,j,k=1}^N \dpa{f_i}{x_k}g_j \df{x_k,dx_i,dx_j}+ \sum_{i,j,k=1}^N f_i\dpa{g_j}{x_k}\df{x_k,dx_i,dx_j}
+\end{align*}
+Ahora tratamos de encontrar $ω$ y $β$ en ese engendro para volver a una expresión más agradable:
+\begin{align*}
+\dif (\omega \y \beta) &= \sum_{i,j,k=1}^N \dpa{f_i}{x_k}g_j \df{x_k,x_i,x_j}
+	+ \sum_{i,j,k=1}^N f_i\dpa{g_j}{x_k}\df{x_k,dx_i,dx_j} \\
+	&= \sum_{i,j,k=1}^N \dpa{f_i}{x_k}\df{x_k,x_i}\y(g_j\df x_j)
+	+ \sum_{i,j,k=1}^N\dpa{g_j}{x_k}\df{x_k} \y f_i \df{x_i,dx_j} = \\
+	&= \sum_{i} \left(\sum_k \dpa{f_i}{x_k}\df{x_k}\right) \y \dif x_i \y  \left(\sum_j g_j\dif x_j\right) \\ &\qquad
+	+  \sum_{j} \left(\sum_k \dpa{g_j}{x_k}\df{x_k}\right) \y \left(\sum_i f_i\dif x_i\right) \y \dif x_j = \\
+	&= \sum_i \df{f_i,x_i} \y β + \sum_j \df{g_j} \y ω \y \dif x_j = \\
+	&= \left(\sum_i \df{f_i,x_i}\right) \y β - ω \y \left(\sum_j \df{g_j,x_j}\right) = \\
+	&= \dif ω \y β - ω \y \dif β
+\end{align*}
+Entonces, si $\omega,\beta$ son 1-formas tenemos que $\dif(\omega \y \beta) = \dif\omega \y \beta - \omega \y\dif\beta$. Si por el contrario tuviésemos que $\omega$ es una k-forma y $\beta$ una s-forma, repitiendo las cuentas de nuevo llegaríamos a
+\[\dif \omega \y \beta + (-1)^k \omega \y \dif\beta\]
+\subparagraph{Diferencial del diferencial}
+Sea $\omega$ k-forma con coeficientes $C^2$. Entonces,
+\[ \dif (\dif ω) = 0 \]
+\paragraph{Propiedades del diferencial exterior} Resumiendo las propiedades del diferencial:
+\index{Diferencial!propiedades}
+\begin{itemize}
+\item $\dif (ω + β) = \dif ω + \dif β$.
+\item $\dif (fω) = ω \dif f + f \dif ω$.
+\item $\dif (ω \y β) = \dif ω \y β + (-1)^k ω \y \dif β$ siendo $ω$ una k-forma.
+\item $\dif(\dif ω) = 0$.
+\end{itemize}
+\subsubsection{Relación con operaciones en funciones vectoriales}
+Partiendo de un campo en $\real^3$, podemos interpretarlo como una 1-forma o como una 2-forma.
+\begin{itemize}
+\item La diferencial exterior de un campo interpretado como 1-forma es la 2-forma asociada a la \textbf{divergencia}.
+\item La diferencial exterior de un campo interpretado como 2-forma es la 3-forma asociada al \textbf{rotacional}.
+\item El producto exterior de 2 campos interpretados como 2-formas nos da el campo asociado al \textbf{producto vectorial}.
+\item ¿Cómo tengo que interpretar los campos para conseguir un producto escalar?
+\end{itemize}
+\subsubsection{Pull-back}
+Queremos saber cómo llevar k-formas de $\real^N$ a $\real^M$. Partimos de la base de que existe una transformación $\appl{T}{ℝ^N}{ℝ^M}$ tal que $T(s)=x$, y buscamos otra aplicación $\appl{\pb}{\real^M}{\real^N}$.
+En caso de 0-formas, el \emph{pull-back} es lo mismo que la composición. Es decir, dada una función $\appl{f}{ℝ^M}{ℝ}$, $\pb f = f \circ T$.
+Basándonos en esta misma idea sobre las funciones escalares, vamos a tratar de hallar el pullback para las formas diferenciales. Supongamos que tenemos una k-forma $\omega$ en $\real^M$. Queremos construir $T^{\ast}$ en términos de $T$ y $\omega$. Partimos de  $\gor{s} \in \real^N$ (el punto donde se evalúa la k-forma), y $\gv_1,\gv_2,..,\gv_k$ los vectores en $\real^N$ sobre los que actúa $ω$. Entonces
+\[
+(T^{\ast}\omega)(\gor{s}) [\gv_1,\dotsc,\gv_k] = \omega(\underbrace{T(s)}_{\in\real^M}) [\underbrace{DT(s)\gv_j}_{\in\real^M}]
+\]
+Es decir, transformamos el punto en el que se evalúa $ω$, que pasa a ser $T(\gor{s})$ en lugar de $\gor{s}$, y los vectores sobre los que actúa también los "movemos" usando la matriz diferencial.
+Vemos que
+\[\omega(T(s)) [DT(s)\gv]\equiv \sum f_i(T(s))\dif x_i[DT(s)\gv]\]
+\[DT(s) = \begin{pmatrix}
+\dpa{T_1}{s_1}(s) & ... & \dpa{T_1}{s_N}\\
+\vdots & \ddots & \vdots \\
+\dpa{T_M}{s_1} & \dots & \dpa{T_M}{s_N}
+\end{pmatrix} \cdot \begin{pmatrix}
+v_1\\
+\downarrow\\
+v_N
+\end{pmatrix}\]
+¿Que significa $\dif x_i[DT(s)\gv]$? Vamos a ver que pasa con el producto de una de las filas de la matriz.
+\[\df{x_i} [DT(s)\gv] = \dpa{T_i}{s_1}v_1 + ... + \dpa{T_i}{s_N}v_n\]
+Podemos darnos cuenta de que $v_1 = \dif s_1[\gv]$. Con esto tenemos:
+\[\df{x_i} [DT(s)\gv] = \left(\dpa{T_i}{s_1}\dif s_1 + ... + \dpa{T_i}{s_N}\dif s_N \right)[\gv] = \dif T_i [\gv] \]
+y por lo tanto
+\[ (\pb ω)(\gor{s})[\sample[\gor{v}][k]] =  \omega(T(s)) [DT(s)\gv] = \sum f_i (T(s))  \dif T_i [\gv] \]
+\paragraph{Ejemplos}
+\subparagraph{Ej. 1)} Sea  $f(x)\dif x_i$ una 1-forma de la que queremos calcular el \emph{pull-back}
+\[T^{\ast}(f\dif x_i)(s)[v] = f(T(s)) \dif x_1[DT(s)\gv]\]
+Supongamos $f\equiv 1$
+\[T^{\ast}(fdx_i)(s)[v] = \dif x_1[DT(s)\gv] = \dif T_i[\gv]\]
+\textbf{Conclusión: } $T^{\ast}\dif x_i = \dif T_i$.
+\subparagraph{Ej. 2)} Sea $\omega = \sum_i f_i \dif x_i$ una 1-forma de la que queremos calcular el \emph{pull-back}
+\[
+ (T^{\ast} \omega )(s)[\gv]= \sum_i f_i(T(s))\dif x_i [DT(s)\gv] = \sum_i f_i(T(s)) \dif T_i [\gv ] = T^{\ast} (\sum_i f_i \dif x_i ) = \sum_i f_i \circ T \dif T_i
+\]
+\textbf{Conclusión: } $T^{\ast} (\sum_i f_i\dif x_i) = \sum_i (f_i \circ T) \dif T_i$
+\subparagraph{Ej. 3: Pullback del producto exterior} ¿Cómo se comporta con el producto exterior? Vamos a trabajar con $f\equiv 1$.
+\begin{gather*}
+T^{\ast}(\df{x_i,x_j} [\gu,\gv] = \df{x_i,x_j} \left[DT(s)[\gu], DT(s)[\gv]\right] = \\
+= \left|\begin{matrix}
+\dif x_i[DT(s)\gu] & \dif x_j[DT(s)\gu] \\
+\dif x_i[DT(s)\gv] & \dif x_j[DT(s)\gv]
+\end{matrix}\right|
+= \left| \begin{matrix}
+\dif T_i[\gu] & \dif T_j[\gu]\\
+\dif T_i[\gv] & \dif T_j[\gv]
+\end{matrix}\right|
+\stackrel{(1)}{=} \df{T_i,T_j} [\gu,\gv]
+\end{gather*}
+(1): Por las propiedades del producto exterior de 1-formas.
+\textbf{Conclusión: } $T^{\ast} (dx_i \y dx_j) = dT_i \y dT_j$.
+\subparagraph{Ej. 4)} ¿Qué pasa cuando tenemos el producto de 2-formas generadas?
+\[\omega = \sum f_idx_i\,;\,\beta=\sum g_jdx_j\]
+Vamos con el producto exterior.
+\begin{gather*}
+T^{\ast} (\omega \y \beta) (s) [\gu,\gv] = \sum_{i,j} f_i(T(s))g_j(T(s)) \underbrace{\df{x_i,x_j} [DT(s)\gu, DT(s),\gv]}_{\text{Calculado justo arriba}}\\
+= \sum_{i,j} (f_i\circ T) = \dotsb \\
+= \left(\sum (f_i\circ T)\dif T_i\right)\y\left(\sum(g_j \circ T) \dif T_j\right) = T^{\ast}\omega \y T^{\ast}\beta
+\end{gather*}
+\textbf{Conclusión: } $T^{\ast}(\omega \y \beta) = T^{\ast}\omega \y T^{\ast}\beta$.
+Esto es válido para multiíndices $I$, es decir, para $\omega$ k-forma y $\beta$ s-forma.
+\paragraph{Pull-back y diferencial exterior}
+Una vez visto cómo se comporta el \emph{pull-back} respecto del producto exterior vamos a ver como se comporta con respecto de la diferencial exterior.
+\begin{gather*}
+\dif (T^{\ast} \omega) = \dif \left(\sum_i f_i(T(s)) \dif x_i [DT(s)\gv]\right) = \dif\left(\sum (f_i \circ T)(s) \dif T_i[\gv]\right)\\
+= \sum_i \dif(f_i\circ T)\y dT_i
+\end{gather*}
+Vamos a ver qué significa $\dif(f_i\circ T)$:
+\begin{gather*}
+\dif (f_i\circ T) =  \sum_k \dpa{f_i\circ T}{s_k} \dif s_k \\
+\dpa{f_i\circ T}{s_k} = \sum_j \dpa{f_i}{x_j}(T(s))\cdot \dpa{x_j}{s_k}
+\end{gather*}
+Donde $x_j = T_j(s)$. Juntando todo tenemos:
+\[
+\dif (T^{\ast} \omega) = \sum_{i,j,k} \dpa{f_i}{x_j}(T(s)) \dpa{T_j(s)}{s_k} \df{s_k,T_i} = \sum_{i,j} \dpa{f_i}{s_j}(T(s)) \df{T_j,T_i} = T^{\ast}(d(\sum f_i \dif x_i))
+\]
+\textbf{Conclusión: } $\dif (T^{\ast}\omega) = T^{\ast}(\dif \omega)$
+\paragraph{Ejemplo concreto: Cambio a coordenadas polares} El cambio a coordenadas polares $(\rho,\theta)$ se define por la siguiente transformación:
+\[T(\rho,\theta) =\left( T_1(\rho,\theta),T_2(\rho,\theta)\right) = (\rho \cos\theta,\rho \sen\theta)\]
+ Vamos a calcular los pull-backs:
+\begin{gather*}
+ T^{\ast}(\dif x) = \dif T_1 = \dpa{T_1}{ρ}\dif ρ + \dpa{T_1}{θ}\dif θ = \cos θ \dif ρ - ρ \sen θ \dif θ \\
+ T^{\ast}(\dif y) = \dif T_2 = \dpa{T_2}{ρ}\dif ρ + \dpa{T_2}{θ}\dif θ = \sen θ \dif ρ + ρ \cos θ \dif θ
+\end{gather*}
+ Juntando ahora lo que tenemos:
+\begin{align*}
+\pb(\df{x,y}) &= (\pb \dif x) \y (\pb \dif y) = \\
+	&= (\cos θ \dif ρ - ρ \sen θ \dif θ) \y (\sen θ \dif ρ + ρ \cos θ \dif θ) = \\
+	&= ρ \cos^2 θ \df{ρ,θ} - ρ \sen^2 θ \df{θ,ρ} = \\
+	&= \left(ρ \cos^2 θ + ρ \sen^2 θ\right) \df{ρ,θ} = \\
+	&= ρ \df{ρ,θ}
+\end{align*}
+\paragraph{Propiedades fundamentales de la operación}
+\index{Pullback!propiedades}
+\begin{enumerate}
+\item $T^\ast f = f\circ T$, siendo $f$ una 0-forma.
+\item $T^\ast(dω) = d(T^\ast ω)$. En particular $T^\ast (dx_I) = dT_I$.
+\item $T^\ast(ω\y β)=(T^\ast ω) \y (T^\ast β)$.
+\item $T^\ast(fω) = (f\circ T)(T^\ast ω) = (T^\ast f)(T^\ast ω)$
+\item $T^\ast(ω+β)=T^\ast+T^\ast β$.
+\item $(T\circ S)^\ast ω = S^\ast(T^\ast ω)$.
+\end{enumerate}
+\begin{example} Tenemos una aplicación $φ(s,t) = (φ_1(s,t), φ_2(s,t))$. Calculamos su pullback y entonces
+\[ φ^\ast(\dif x) = \dif φ_1 = \dpa{φ_1}{s}\dif s + \dpa{φ_1}{t}\dif t \]
+y de la misma forma
+\[ φ^\ast(\dif y) = \dif φ_2 = \dpa{φ_2}{s}\dif s + \dpa{φ_2}{t}\dif t \]
+\begin{gather*}
+ φ^\ast(dx\y dy) = dφ_1\y dφ_2 =\left( \dpa{φ_1}{s}ds + \dpa{φ_1}{t}dt \right) \y\left( \dpa{φ_2}{s}ds + \dpa{φ_2}{t}dt \right) = \\
+ 0 + \dpa{φ_1}{s}\dpa{φ_2}{t}ds\y dt + \dpa{φ_1}{t}\dpa{φ_2}{s} dt\y ds + 0
+\end{gather*}
+ Los diferenciales están cambiados de orden así que seguimos pagando con un cambio de signo:
+\[ \left(\dpa{φ_1}{s}\dpa{φ_2}{t} - \dpa{φ_1}{t}\dpa{φ_2}{s}\right)ds\y dt= \left|\begin{matrix}
+\dpa{φ_1}{s} & \dpa{φ_1}{t} \\
+\dpa{φ_2}{s} & \dpa{φ_2}{t}
+\end{matrix}\right| =  \det \left(\dpa{φ}{s,t}\right) ds\y dt \]
+\end{example}
+\begin{example}
+ Tenemos $β$, la 2-forma asociada a un campo $\vf=(F_1, F_2, F_3)$:
+\[ β = F_1\df{y,z} + F_2\df{z,x} + F_3 \df{x,y} \]
+ Queremos calcular su pullback mediante una aplicación $\appl{Φ}{ℝ^2}{ℝ^3}$. Entonces
+\[ Φ^\ast β = g(s,t) \df{s,t} \]
+ ¿Quién es $g$? Calculamos el pullback:
+\[ φ^\ast β = F_1\circ Φ\df{Φ_2,Φ_3} + F_2\circ Φ\df{Φ_3,Φ_2} + F_3\circ Φ\df{Φ_1,Φ_2} \]
+Se tiene que
+\[ =\pesc{\vf\circ Φ, \left(\dpa{Φ_1}{s}, \dpa{Φ_2}{s}, \dpa{Φ_3}{s}\right) × \left(\dpa{Φ_1}{t}, \dpa{Φ_2}{t}, \dpa{Φ_3}{t}\right)} \df{s,t} \]
+ Sin embargo, el producto vectorial de esos dos vectores parece el producto vectorial de $T_s × T_x$, el factor que teníamos que poner para integrar un campo en una superficie. Poderosa magia hombre blanco.
+\end{example}
+\begin{example} Tenemos una 1-forma asociada a $\vf$:
+\[ ω = \sum_i F_i\dif x_i \]
+ y una aplicación (curva) $\appl{σ}{ℝ}{ℝ^n}$. Entonces $σ^\ast ω$ es de la forma $g(t)\dif t$.
+ Entonces
+\begin{gather*} (σ^\ast ω)(t)[λ] = \sum_i F_i(σ(t)) \dif x_i[Dσ(t)λ] = \sum_i F_i(σ(t)) \dif x_i[σ_1'(t)λ, \dotsc, σ_N'(t)λ = \\
+ = \sum_i F_i(σ(t)) σ_i'(t) \dif t[λ] = \\
+ = \pesc{\vf \circ σ, σ'} \dif t [λ]
+\end{gather*}
+ Que, oh, sorpresa de nuevo, es lo que aparece cuando integrábamos un campo sobre una curva.
+\end{example}
+ Al final, querremos integrar k-formas en $ℝ^N$ sobre variedades de dimensión $k$.
+\section{Integración de formas diferenciales}
+Vamos a partir de un conjunto Ω abierto de $\real^N$.
+Sea ω una n-forma definida en un entorno de Ω, es decir $\omega = f(\gx) \underbrace{\dfl{x_1}{x_n}}_{\text{Elemento de volumen}}$. Definimos la integral como sigue:
+\begin{defn}[Integral\IS de n-formas en $\real^N$.]
+\[
+\int_Ω\omega = \int f(\gx) \id x_1 \dotsc \id x_N
+\]
+\end{defn}
+Supongamos que tenemos una $\appl{\Phi}{\real^K}{\real^N}$, tal que $\Phi(\gor{s}) = \gx$. Para que lo de la derecha sea una variedad tenemos que $\Phi$ tiene que ser regular, homeomorfismo y rango máximo.
+Supongamos $\omega \in \real^N$, con $\omega$ una x-forma.
+¿Qué pasaría si queremos integrar $T^{\ast}\omega$?
+Si queremos integrar $\pb{\omega}$ en $\real^k, \omega$ tiene que ser una k-forma para poder aplicar la definición.
+\begin{example}
+Variedad 1-dimensional.
+$\appl{\sigma}{\real}{\real^3}$
+Sea $\omega = f_1(x,y,z)\dif x + f_2(x,y,z)\dif y + f_3(x,y,z)\dif z$ la forma diferencial asociada al campo $\vf$.
+Tenemos que $\sigma^{\ast}\omega = \pesc{\overrightarrow{F}\circ \sigma,\sigma'}\dif t$
+La integral quedaría:
+\begin{equation}
+\int_{\sigma(I)} ω = \int_I  \pesc{\overrightarrow{F}\circ \sigma,\sigma'}\dif t \label{eqIntFDifCurva}
+\end{equation}
+Integrar 1-forma sobre la variedad 1-dimensional es integrar el trabajo del campo $\overrightarrow{F}$ a lo largo de $\sigma(I)$.
+\end{example}
+\begin{example}
+Una variedad de dimensión 2 en $\real^3$.
+$\appl{\Phi}{\real^2}{\real^3}$, con $\Phi(s,t) =  (x,y,z)$.
+Sea $\beta$ 2-forma asociada al campo $\vec{G}$.
+\[\beta = G_1(x,y,z) \df{y,z} + G_2(x,y,z) \df{z,x} + G_3(x,y,z) \df{x,y}\]
+El pullback (calculado anteriormente es)
+\[\Phi^{\ast}\beta = \pesc{\overrightarrow{G}\circ\Phi,\Phi_s\x\Phi_t}\df{s,t}\]
+La integral sería:
+\begin{equation}
+\int_{\Phi(D)} ß = \iint\limits_D \pesc{\overrightarrow{G}\circ\Phi,\Phi_s\x\Phi_t}\id{s,t} \label{eqIntFDifSup}
+\end{equation}
+Es decir, integrar una 2-forma sobre $\Phi(D)$ es integrar el \textbf{flujo} del campo $\overrightarrow{G}$ a través de $\Phi(D)$
+\end{example}
+\subsection{Integración de formas diferenciales sobre variedades genéricas}
+Después de haber visto los casos específicos, vamos a ver cómo integrar, de forma genérica, una forma diferencial sobre una variedad diferencial.
+Sea $M$ una variedad de dimensión k en $\real^N$. Supongamos que $(D,\Phi)$ es una carta local, es decir:
+$\appl{\Phi}{D\subset\real^K}{\real^N}, \Phi(D)\subset M$, siendo Φ una parametrización ($\Phi(\gor{t}) = \gx$).
+Sea ω una k-forma definida en $ℝ^N$:
+\[\omega = \sum_I f_I\dif x_I; \quad I=\{i_1,i_2,...,i_k\}\]
+Por definición:
+\begin{equation}
+\int_{\Phi(D)} \omega = \int_D \Phi^{\ast}\omega \label{eqIntFDifVar}
+\end{equation}
+El pull-back nos va a dar una k-forma definida en $\real^k$.
+\[
+\Phi^{\ast}\omega =g(\gor{t})\dfl{t_1}{t_k}
+\]
+Aplicando esto:
+\[
+\int_{\Phi(d) \omega} = \int_D g(\gor{t})\dfl{t_1}{t_k}
+\]
+Vamos a identificar la función $g$ remangándonos y haciendo cuentas:
+\[
+\Phi^{\ast} \omega = \sum_I f_I\circ\Phi \dif \Phi_I =
+\]
+Vamos a fijarnos en $\dif \Phi_I = \df{\Phi_{i_1},...,\Phi_{i_k}}$, que va a actuar sobre k-vectores, es decir:
+\[
+\dif \Phi_I[\gv_1,...,\gv_k] = \dfl{\Phi_{i_1}}{\Phi_{i_k}} [\gv_1,\dotsc,\gv_k]
+= \det \begin{pmatrix}
+\dif \Phi_{i_1}[\gv_1] 	& \cdots & \dif \Phi_{i_1}[\gv_k] \\
+\vdots 					& \ddots & \vdots\\
+\dif \Phi_{i_k}[\gv_1] 	& \cdots & \dif \Phi_{i_k}[\gv_k] \\
+\end{pmatrix}
+\]
+Vamos a desarrollar uno de los elementos de la matriz (escribiendo $\gw$ para generalizar a cualquiera de los vectores sobre los que actúa):
+\[
+\dif \Phi_{i_1}[\gw] = \sum_{j=1}^k \left(\dpa{\Phi_{i_1}}{t_j} \dif t_j\right)[\gw] = \sum_{j=1}^k \dpa{\Phi_{i_1}}{t_j}w_j = \pesc{\grad \Phi_{i_1},\gw}
+\]
+Aplicando esto:
+\begin{gather*}
+\dif \Phi_I[\gv_1,...,\gv_k] =
+\det \begin{pmatrix}
+\pesc{\grad \Phi_{i_1},\gv_1} 	& \cdots & \pesc{\grad \Phi_{i_1},\gv_k}\\
+\vdots 							& \ddots & \vdots\\
+\pesc{\grad \Phi_{i_k},\gv_1} 	& \cdots & \pesc{\grad \Phi_{i_k},\gv_k} \\
+\end{pmatrix} =
+\det \left(\begin{pmatrix}
+\grad \Phi_{i_1} \rightarrow \\
+\cdots \\
+\grad \Phi_{i_k} \rightarrow
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+\gv_1 		& \cdots & \gv_k\\
+\downarrow 	& \cdots & \downarrow
+\end{pmatrix}\right) = \\
+= \det\begin{pmatrix}
+\grad \Phi_{i_1} \longrightarrow \\
+\cdots \\
+\grad \Phi_{i_k} \longrightarrow
+\end{pmatrix}
+\cdot
+\det \begin{pmatrix}
+\gv_1 		& \cdots & \gv_k \\
+\downarrow 	& \cdots & \downarrow
+\end{pmatrix} \stackrel{(1)}{=}
+\det\begin{pmatrix}
+\grad \Phi_{i_1} \longrightarrow \\
+\cdots \\
+\grad \Phi_{i_k} \longrightarrow
+\end{pmatrix} \dfl{t_1}{t_k}[\gv_1,\dotsc,\gv_k]
+\end{gather*}
+(1): Aplicamos que $\dif t_1(\gv)$ es la primera coordenada del vector $\gv$. Un paso intermedio es \[\det \begin{pmatrix}
+\dif t_1(\gv_1) & \cdots & \dif t_1(\gv_k)\\
+\vdots 			& \ddots & \vdots\\
+\dif t_k(\gv_1) & \cdots & \dif t_k(\gv_k)
+\end{pmatrix} \]
+\textbf{Conclusión:}
+\[
+\Phi^{\ast} \omega = \sum_I f_I\circ\Phi \dif \Phi_I =
+\overbrace{\sum_I f_i\circ\Phi
+\det\begin{pmatrix}
+\grad \Phi_{i_1} \longrightarrow \\
+\cdots \\
+\grad \Phi_{i_k} \longrightarrow
+\end{pmatrix}}^{\text{Esta es la g que buscamos}} \dfl{t_1}{t_k}
+\]
+Aplicando a una integral:
+\begin{equation}
+\int_{\Phi(D)} \omega = \int_D \sum_I f_i\circ\Phi
+\det \begin{pmatrix}
+\grad \Phi_{i_1} \longrightarrow \\
+\cdots\\
+\grad \Phi_{i_k} \longrightarrow
+\end{pmatrix}\id{t_1,\dotsb,t_k}
+\label{eqPbIntFDif}
+\end{equation}
+Donde la matriz enorme sería el equivalente al cambio en la medida cuando hacíamos un cambio de coordenadas.
+\section{Teoremas de Green, divergencia y Stokes en términos de formas diferenciales}
+Para entender los teoremas de Green, de divergencia (o Gauss) y Stokes en términos de las formas diferenciales, vamos a empezar con el caso básico: el cubo unidad.
+En $ℝ^2$, el cubo unidad es $\mathcal{Q} = [0,1]\x[0,1]$. Para calcular la integral sobre la frontera, tenemos que integrar sobre cada una de las aristas:
+\[\begin{array}{cc}
+I_{11} =\{(1,y),y\in[0,1]\}&\text{ Orientación: }\, +\\
+I_{21} =\{(x,1),x\in[0,1]\}&\text{ Orientación: }\, -\\
+I_{10} =\{(0,y),y\in[0,1]\}&\text{ Orientación: }\, -\\
+I_{20} =\{(x,0),x\in[0,1]\}&\text{ Orientación: }\, +\\
+\end{array}
+\]
+Para nombrar las aristas usamos la notación $I_{ij}$, donde $i$ es la variable fija ($1=x$,$2=y$) y $j$ el valor que toma la variable fija.
+La orientación está calculada con la regla de la mano izquierda. Me coloco en la frontera mirando hacia la dirección en la que nos movemos. Si la mano izquierda estirada apunta hacia el interior, la orientación es positiva. Si apunta hacia fuera, la orientación es negativa.
+Sea $\omega = f(x,y)\dif x + g(x,y)\dif y$ la forma diferencial que queremos integrar, cuyo diferencial es
+\[\dif \omega= \dpa{f}{y}\df{y,x} + \dpa{g}{x}\df{x,y} = \left(\dpa{g}{x} - \dpa{f}{y}\right) \df{x,y}\]
+Consideramos $\mathcal{C}^+$ como la frontera de $\mathcal{Q}$ orientada positivamente. Vamos a intentar calcular la integral de ω sobre esa frontera.
+\begin{align*}
+\int_{C^+} \omega &= \int_{I_11}\omega\, - \int_{I_20}\omega\, - \int_{I_21}\omega\, + \int_{I_10}\omega = \\
+	&= \int_0^1 g(1,y)\dif y + \int_0^1 f(x,0)\dif x - \int_0^1f(x,1)\dif x - \int_0^1 g(0,y)\dif y = \\
+	&= \int_0^1 \left(g(1,y)-g(0,y)\right) \dif y - \int_0^1 \left( f(x,1)-f(x,0)\right) \dif x = \\
+	&= \int_0^1\int_0^1 \dpa{g}{x}(x,y)\id{x,y} - \int_0^1\int_0^1 \dpa{f}{x}(x,y)\id{y,x} = \\
+	&= \iint\limits_Q\left( \dpa{g}{x} - \dpa{f}{y}\right)\id{x,y} = \\
+	&= \iint\limits_Q \dif \omega
+\end{align*}
+Operando, hemos llegado a que
+\[ \int_{C^{+}} \omega = \iint\limits_Q \dif \omega \]
+Esto escrito en términos de cálculo II es: \[ \int_{C^{+}}(P,Q) = \iint\limits_Q \dpa{Q}{x} - \dpa{P}{y} \], que es el \textbf{teorema de Green}.\index{Teorema!de Green}
+Ahora vamos a hacer algo lo mismo en $\real^3$, sea $Q=[0,1]\x[0,1]\x[0,1]$, trabajando con la normal exterior para las orientaciones. Vamos a distinguir las caras con la notación anterior:
+\[\begin{array}{cc}
+I_{10} = \{(0,y,z), y\in[0,1],z\in[0,1]\} & \text{ Orientación: -} \\
+I_{11} = \{(1,y,z), y\in[0,1],z\in[0,1]\} & \text{ Orientación: +} \\
+I_{20} = \{(x,0,z), x\in[0,1],z\in[0,1]\} & \text{ Orientación: +} \\
+I_{21} = \{(x,1,z), x\in[0,1],z\in[0,1]\} & \text{ Orientación: -} \\
+I_{30} = \{(x,y,0), x\in[0,1],y\in[0,1]\} & \text{ Orientación: -} \\
+I_{31} = \{(x,y,1), x\in[0,1],y\in[0,1]\} & \text{ Orientación: +} \\
+\end{array}
+\]
+Las orientaciones están calculadas (según el primer caso) \[\left.\begin{array}{cc}
+T_y = (0,1,0)\\T_z=(0,0,1)\end{array}\right\}\implies T_y\x T_z = (1,0,0)\] Mirando en el dibujo, identificamos que la cara en la que estamos trabajando (en este caso la de detrás) y comprobamos que apunta hacia dentro del cubo (dirección contraria a la normal exterior), y concluimos orientación negativa.
+Repitiendo el proceso llegamos a la conclusión de: \[
+\begin{array}{cc}
+T_y\x T_z &= (0,0,1)\\
+T_x\x T_z &= (0,-1,0)\\
+T_x\x T_y &= (1,0,0)
+\end{array}\]
+Si la suma de los subíndices es par, la orientación es positiva. Si por el contrario es impar, es negativa. Detrás de esta idea hay un teorema que no vamos a ver. Además hay que tener cuidado con el orden en el que se hacen las cosas y se escriben los vectores.
+Trabajamos con nuestra forma diferencial asociada a un campo $\vf$:
+\[\omega = F_1(x,y,z)\df{y,z}+F_2(x,y,z)\df{y,x}+F_3(x,y,z)\df{x,y}\]
+cuyo diferencial es
+\begin{align*}
+\dif \omega &= \dpa{F_1}{x}\df{x,y,z} + \dpa{F_2}{y}\df{y,x,z} + \dpa{F_3}{z}\df{z,x,y} \\
+	&= \left(\dpa{F_1}{x}+\dpa{F_2}{y} + \dpa{F_3}{z}\right) \df{x,y,z}
+\end{align*}
+Vamos a calcular \[\int_{dQ^+} \omega\] siendo $dQ^+$ la frontera del cubo unidad.
+\[\int_{Q^+} \omega =\underbrace{ -\int_{I_{10}} \omega +  \int_{I_{11}} \omega}_{(1)} + \int_{I_{20}} \omega -  \int_{I_{21}} \omega  -\int_{I_{30}} \omega +  \int_{I_{31}} \omega\]
+Operamos (1) por separado. Aplicando (\ref{eqIntFDifVar}) y la ecuación de la integral de una forma diferencial sobre una superficie (\ref{eqIntFDifSup}) tenemos que
+\begin{gather*}
+ -\int_{I_{10}} \omega +  \int_{I_{11}} \omega = \int_0^1\int_0^1\Phi^{\ast}_{11}\omega - \int_0^1\int_0^1 \Phi^{\ast}_{10} \omega = \\
+ = \int_0^1\int_0^1 \pesc{\overrightarrow{F}\circ \Phi_{11},(1,0,0)}\id{y,z}
+ -\int_0^1\int_0^1 \pesc{\overrightarrow{F}\circ \Phi_{10},(1,0,0)}\id{y,z}= \\
+= \int_0^1\int_0^1 F_1(\Phi_{11}(y,z))-F_1(\Phi_{10}(y,z))dydz = \iiint\limits_Q \dpa{F_1}{x}\id{x,y,z}
+\end{gather*}
+Aplicando las mismas cuentas con las que faltan llegamos al \textbf{teorema de la divergencia} para el cubo.
+\paragraph{Conclusión}
+\[\int_{dQ^+} \omega = \int_{Q}\dif \omega\]
+Las ideas sobre formas diferenciales se traducen en $\real^2$ en el Teorema de Green y en $\real^3$ en el Teorema de la divergencia. ¿Dónde queda el Teorema de Stokes? Después de unos ejemplos de aplicación de los teoremas vamos a verlo.
+\subsection{Aplicaciones de los teoremas de integración}
+\subsubsection{Teorema de Green}
+Sea $\omega$ 1-forma en $\real^2$, y $D$ un conjunto cerrado con frontera orientable. Entonces
+\[
+\int_{\partial  D^+} P\dif x+Q\dif y = \iint_D \dif(P\dif x+Q\dif y) = \int\int_D \dpa{Q}{x} - \dpa{Q}{y}\id{x,y}
+\]
+\obs Podemos elegir $(P,Q)$ de tal modo que $\displaystyle \dpa{Q}{x}-\dpa{Q}{y} = 1$.
+Entonces el área de $D$ sería $\displaystyle\int_{\partial  D^+} (P,Q)d\sigma$. Podemos aplicar esta idea para hallar el área de la hoja folium de Descartes (imagen \ref{lblFolium}), cuya ecuación es
+\[x^3+y^3 = mxy\]
+\easyimgw{imgs/FoliumDescartes.png}{Folium de Descartes}{lblFolium}{0.3}
+Vamos a parametrizarla, siguiendo la indicación: $t = \frac{y}{x}$. Se deja como ejercicio para el lector llegar a la fórmula:
+\begin{gather*}
+x=\frac{mt}{1+t^3}\\
+y= xt = \frac{mt^2}{1+t^3}
+\end{gather*}
+Quedando por definir que valores toman los parámetros. En este caso es $(0,\infty)$. Estos valores parametrizan la región cerrada.
+Podríamos plantearnos para qué valores de $t$ que recorren las ramas que se van a infinito. En $t=-1$, se va a infinito, entonces una de las ramas será $t\in(-1,0)$ y la otra será $t\in(-\infty,-1)$.
+¿Que orientación nos da esta parametrización?
+La idea es ver el vector tangente en el 0. Si es horizontal empezaremos por la rama de abajo. Si es vertical, empezaremos por la rama de arriba
+\[\sigma'(t) = \left(\frac{m(1+t^3)-3mt^3}{(1+t^3)^2},\frac{2mt(1+t^3) - 3mt^4}{(1+t^3)^2}\right)\]
+Podemos comprobar que $\sigma'(t) \convs[][t][0^+] (m,0)$. Además, $\sigma'(t) \convs[][t](0,m)$, quedando una orientación positiva.
+\[
+A(D) = \int_{\partial  D^+} (0,x)d\sigma = \int_0^{+\infty} \pesc{\left(0,\frac{mt}{1+t^3}\right), \left(\ast,\frac{2mt(1+t^3)-3mt^4}{(1+t^3)^2}\right)}dt = ...
+\]
+Wolfram dice que el resultado de la integral es $\frac{m^2}{6}$ y que el área encerrada por el folium de Descartes es también $\frac{m^2}{6}$ lo que nos hace pensar que está bien planteado y bien resuelto el problema.
+\paragraph{Ejercicio para el lector} Hacer lo mismo con la curva $x^4+y^4=4xy$. El área de la hoja contenida en el primer cuadrante.
+%\easyimgw{imgs/FoliumALaCuarta.png}{$x^4+y^4=4xy$}{lblFoliumALaCuarta}{0.3}
+\subsubsection{Teorema de Stokes en $\real^3$}
+El teorema decía: \[
+\int_{\Gamma^+}\overrightarrow{F}d\sigma = \int \int_{S^+} \rot\overrightarrow{F} dS
+\]
+Siendo $S$ la superficie, $\Gamma$ la ¿frontera?, tomando la orientación positiva con la normal exterior.
+\subparagraph{Ejemplo}
+\[
+\left.\begin{array}{cc}
+z=x^2+y^2\\
+z=mx \end{array} \right\} \equiv \Gamma
+\]
+Queremos calcular $\displaystyle \int_{\Gamma}y \dif z$
+Esto es lo mismo que calcular la integral del campo $(0,0,y)$.
+El primer paso es \textbf{parametrizar} $\Gamma$
+Tenemos que la proyección en el plano xy es \[mx=x^2+y^2 \equiv \left(x-\frac{m}{2}\right)^2 + y^2 = \frac{m^2}{4}\]
+Viendo los cuadrados lo lógico es pensar en utilizar polares.
+Llamando $x=rsen(\theta),y=rsen(\theta)$ tenemos:
+\[\sigma(\theta) = \left(mcos^2(\theta),mcos(\theta)sen(\theta),m^2cos^2(\theta)\right)\,\,\,\theta\in\left(\frac{-\pi}{2},\frac{\pi}{2}\right)\]
+Calculamos el vector tangente para ver en que orientación recorre la curva esta parametrización:
+\[\sigma'(\theta) = ()\]
+\[\sigma'(0) = (0,m,0)\]
+Suponemos (porque no me lo dicen, que $m>0$) y nos da la orientación. Como en el enunciado no nos hablan de hacerlo con ninguna orientación, la integral que calculemos será de acuerdo con esta orientación.
+Vamos con la integral:
+\[\int_{\Gamma}(0,0,y) d\sigma =\int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}\pesc{\underbrace{\left(0,0,mcos(\theta)sen(\theta)\right)}_{\overrightarrow{F}(\sigma(\theta))},\ast} d\theta\]
+Como camino alternativo a la fórmula, podemos aplicar el teorema:
+\[ = \int\int_{D^+}  rot(0,0,y)dS\] Siendo el vector normal el que tenga la tercera componente positiva (razonando geométricamente).
+Calculamos el rotacional del campo:$rot\overrightarrow{F} =\left|\begin{matrix}
+i&j&k\\dx&dy&dz\\0&0&y
+\end{matrix}\right| = (1,0,0)$.
+Utilizamos la parametrización: $S = (x,y,mx), x,y\in C$
+\[ = \int\int_D^+ rot(0,0,y)dS = \int \int_C \pesc{(1,0,0) ,T_x\x T_y} dxdy= (1) =\]
+\[ \int \int_C \pesc{(1,0,0),(-m,0,1)} = \int\int -m dxdy = -m \cdot \, Area (C) = -m\frac{m^2}{4}\pi \]
+$(1): T_x = (1,0,m); T_y = (0,1,0) $. Otra cosa aplicada es que el vector normal $(-m,0,1)$ como la tercera componente es positiva, tenemos que esta parametrización induce la orientación positiva.
+\section{Teorema de Stokes}
+Partimos, igual que en la sección anterior, del cubo unidad en $ℝ^n$. Contamos además con la aplicación $\appl{\Phi}{Q}{\Phi(Q)\subset\real^n}$ que "deforma" ese cubo.
+\begin{figure}[hbtp]
+\centering
+\input{tikz/TeoremaStokes-ApplPhi.tex}
+\caption{Esquema para la aplicación de Stokes en un cubo unidad}
+\end{figure}
+ Sea $\omega$ una k-forma en $\real^n$. Queremos calcular la integral de su diferencial en $Φ(Q)$.
+\[
+\int_{\Phi(Q)} \dif \omega = \int_Q \Phi^{\ast}\dif\omega = \int_Q \dif(\Phi^{\ast}\omega) = \int_{∂Q^{+}} \Phi^{\ast}\omega
+\]
+Donde $∂Q^{+}$ es la frontera del cubo $Q$ orientada debidamente. El último paso es aplicar el teorema anterior.
+Sea $\appl{\sigma}{I}{∂Q}$. Entonces, $\appl{\Phi\circ\sigma}{I}{\Gamma}$, siendo $\Gamma$ la frontera de $\Phi(Q)$.
+Aplicando esto a la integral que estamos calculando:
+\[
+\int_{\Phi(dQ^{+})} \omega \equiv \int{\Phi\circ\sigma(I)} = \int_I (\Phi\circ\sigma)^{\ast} \omega = \int_I \sigma^{\ast}\left(\Phi^{\ast}(\omega)\right) = \int_{\sigma(I)} \Phi^{\ast}\omega = \int_{∂Q}\Phi^{\ast}\omega
+\]
+Hemos llegado finalmente a que \[ \int_{∂Q^+} \Phi^{\ast} \omega = \int_{\Phi(∂Q^+)} \omega \]
+Ahora querríamos dar el siguiente paso:
+\[\int_{\Phi(∂Q^+)} \omega = \int_{∂(\Phi^{\ast}(Q))} \omega \]
+Es decir, que la imagen de la frontera sea la frontera de la imagen. Esto no es inmediato: en el cambio a coordenadas polares, por ejemplo, no se cumple a primera vista (ver figura \ref{imgCambioPolaresFrontera}). Cuando el ángulo (θ) se mantiene fijo y $r$ varía (segmentos azules), la imagen de esa parte de la frontera es un radio de la circunferencia, y cuando $r=0$ y variamos el ángulo (segmento verde) la imagen es un punto.
+\begin{figure}[hbtp]
+\centering
+\input{tikz/TeoremaStokes-CambioPolares.tex}
+\caption{La frontera no es la misma en el cambio a polares: las partes verde y azul forman parte de $∂Q$ pero no de $∂(Φ(Q))$.}
+\label{imgCambioPolaresFrontera}
+\end{figure}
+Ahora bien, podemos dividir la región $Q$ en celdas disjuntas, como se puede ver en la figura \ref{imgPolaresDisjuntas}. De esta forma, las fronteras que sean comunes a varias celdas tendrán orientación incompatible y se anularán al integrar. Esto nos resuelve el problema y podemos enunciar el teorema de Stokes para celdas:
+\begin{figure}[hbtp]
+\centering
+\input{tikz/TeoremaStokes-PolaresDisjuntas.tex}
+\caption{Podemos dividir $Q$ en dos celdas disjuntas}
+\label{imgPolaresDisjuntas}
+\end{figure}
+\begin{theorem}[Teorema\IS de Stokes (para celdas)]\label{thmStokesCeldas}
+\[ \int_M \dif \omega = \int_{\partial  M^+}\omega \]
+, si la variedad $M$ se puede descomponer como unión de celdas con interior disjunto.
+\end{theorem}
+\paragraph{Frontera de una superficie}
+Vamos a intentar definir en serio la frontera de objetos en $\real^3$, que es algo que necesitamos tener realmente muy claro.
+\easyimg{imgs/StokesCeldasTipo.png}{ψ nos lleva $P$ a un punto que no está en la frontera de la imagen por ψ de su celda correspondiente (llamada de tipo I). En el caso de $Q$, ψ lo lleva a un punto en la frontera de la imagen de su celda por ψ (de tipo II), por lo tanto sí es un punto de la frontera.}{imgTiposCelda}
+Hace un tiempo, cuando definíamos una subvariedad, demostramos la existencia de un difeomorfismo Ψ que "aplanaba un trozo" de subvariedad. La frontera de una superficie es el conjunto de los puntos (llamados en clase de Tipo 2) que al aplanar nos quedan en la frontera de un objeto de dimensión 2 (ver imagen \ref{imgTiposCelda}).
+\index{Frontera}
+Una vez aclarado el concepto de frontera, pasamos a demostrar el teorema de Stokes.
+\begin{theorem}[Teorema\IS de Stokes]
+Sea $M$ una subvariedad compacta, orientable, con frontera relativa $\partial  M$.
+Entonces
+\[\int_{\partial  M^+}\omega = \int_M \dif \omega \]
+\end{theorem}
+\begin{proof} La demostración ya está vista para celdas en la sección anterior, así que vamos a extender la idea.
+\subparagraph{Paso 1: Compacidad}
+Para todo punto $P\in M$ existe una celda $C_p$ tal que $P \in C_p$. Por lo tanto, está claro que $M\subset \bigcup_{p\in M} C_p$. Tomamos el interior de las celdas, para trabajar con conjuntos abiertos.
+Hemos recubierto con infinitos abiertos la subvariedad, así que por compacidad (\ref{thmCerradoAcotado}) existe un subrecubrimiento \textbf{finito}.
+Sin embargo, no podemos garantizar que las celdas son disjuntas. Si lo fueran, aplicaríamos el teorema a cada celda y listo. Hay que ver qué ocurre cuando las celdas no son disjuntas.
+\subparagraph{Paso 2: Particiones de la unidad}
+Vamos a intentar resolver el problema de los solapamientos. Buscamos una función que valga cero fuera de la celda que consideramos y sea mayor que cero dentro de ella, algo como pueda ser la figura \ref{imgStokesPhi}.
+\begin{wrapfigure}{r}{0.6\textwidth}
+\begin{center}
+\includegraphics[width=0.58\textwidth]{imgs/TeoremaStokes-PartUnidad.png}
+\end{center}
+\caption{La función Φ que buscamos sería algo así.}
+\label{imgStokesPhi}
+\end{wrapfigure}
+Sea $\appl{\Phi}{\real^N}{\real}$. Además,
+\begin{itemize}
+\item $\Phi>0$ en $\mathcal{Q}$
+\item $\Phi = 0$ en $\partial  \mathcal{Q}$
+\item $\Phi = 0$ en $\real^N-\mathcal{Q}$
+\item $\Phi\in C^1$.
+\end{itemize}
+Consideramos $\Phi_i = \Phi\circ\Psi_{p_i}$, siendo $\Psi_{p_i}$ el difeomorfismo que cubre la celda $p_i$, con $i=1,...,k$ y la lleva al cubo unidad ($\mathcal{Q}$).
+Además, nos gustaría que la suma de todas las aplicaciones $Φ_i$ sobre un punto sea 1:
+\[ \sum_i \Phi_{i}(\gx) = 1\;\forall \gx \in M\]
+Aunque parece una cosa imposible, vamos a ver que es algo perfectamente factible:
+\[\tilde{\Phi}(\gx) = \frac{\Phi_i (\gx)}{\sum_{i=1}{k}\Phi_i(\gx)}\]
+Estas $\tilde{\Phi}_i$ satisfacen todas las propiedades que nos interesan.
+\subparagraph{Paso 3: Descomposición del problema}
+Lo que nosotros queremos es calcular $\int_M d\omega$. Tal y como habíamos definido $\tilde{Φ}$ antes, es obvio que sobre la variedad $M$
+\[ \omega=\sum_i^k\tilde{\Phi}_i(x)\omega \]
+Entonces
+\[\dif \omega = \sum_{i=1}^k \dif (\tilde{\Phi}_i,\omega) = \sum_{i=1}^k \left( \dif \tilde{\Phi}_i\y \omega + \tilde{\Phi}_i \dif \omega \right) =  \dif\left(\sum_i \tilde{\Phi}_i\right) \y \omega + \sum \tilde{\Phi}_i \dif \omega\]
+Dado que $\sum_i \tilde{Φ}_i = 1$, $\dif\left(\sum_i \tilde{\Phi}_i\right) = 0$ y por lo tanto
+\[ \dif \omega = \sum \tilde{\Phi}_i \dif \omega \]
+Aplicando esto descomponemos:
+\[\int_M \dif \omega = \sum_{i=1}^k \int_M \tilde{\Phi}_i \dif\omega = \sum_{i=1}^k \int_{C_{p_i}} \tilde{\Phi}_i \dif\omega=\sum_{i=1}^k \int_{C_{p_i}} \dif(\tilde{\Phi}_i\omega)
+\]
+Hemos conseguido definir la integral como una suma finita de integrales sobre celdas en las que sí podemos aplicar el teorema de Stokes (\ref{thmStokesCeldas})
+Entonces tenemos:
+\[\int_M \dif \omega = \sum_{i=1}^k \int_{\partial  C_{P_i}^{+}} \tilde{\Phi}_i\omega\]
+Por como hemos definido $\tilde{\Phi}_i$ tenemos que todas las celdas de tipo 1 valen 0. En cambio en las celdas de tipo 2 (ver \ref{imgTiposCelda} para los tipos de celda), tenemos una parte sobre la que $\tilde{\Phi}_i \neq 0$ (ver figura \ref{imgStokesCeldasIntegral}).
+Esto nos deja: \[\int_M d\omega = \sum_{i=1}^k \int_{\partial  C{P_i}^{+}} \tilde{\Phi}_i\omega = \sum \int_{\partial M^+} \tilde{\Phi}_i \omega = \int_{\partial M^+} \omega\]
+\end{proof}
+\begin{figure}[hbtp]
+\begin{center}
+\input{tikz/TeoremaStokes-CeldasIntegral.tex}
+\end{center}
+\caption{Sólo influyen a la integral los puntos de la frontera de la variedad, los que llevan a celdas de tipo II.}
+\label{imgStokesCeldasIntegral}
+\end{figure}
+\begin{example}
+Sea $M$ una superficie en $\real^3$, un trozo de $x^2+y^2+z^2 = 1$ dentro de $x^2+y^2\leq y$, con $z\geq 0$. Ver figura \ref{imgEsferaCono}. Consideramos la orientación positiva como la de la normal hacia abajo.
+\easyimg{imgs/EsferaCilindro.png}{Intersección de la esfera y el cilindro. La línea azul es la frontera de $M$, y las flechas naranjas indican su orientación positiva.}{imgEsferaCono}
+Calcular las tres integrales
+\[ \int_{\partial M} x \id y;\;\int_{\partial M} y \id z;\; \int_{\partial M} z \id x \]
+\textbf{Previos} Nos damos cuenta de que $x^2+y^2\leq y$ es una circunferencia. Si completamos cuadrados tenemos la siguiente ecuación: \[x^2+\left(y-\frac{1}{2}\right)^2 = \frac{1}{4}\]
+Es decir, una circunferencia de radio $\frac{1}{2}$ centrada en $(0,\frac{1}{2})$.
+\paragraph{Resolución de $\int_{\partial M} x \dif y$}
+\[
+\int_{\partial M^{+}} x\dif y =\int_{\partial M^{+}} (0,x,0) \dif\sigma \stackrel{\mathrm{Stokes} }{=} \iint\limits_M \rot (0,x,0) \dif S = \iint\limits_M (0,0,1) \dif S
+\]
+Para calcular esta integral (que es calcular el flujo) aplicamos la fórmula de siempre. Para ello necesitamos parametrizar la superficie $M$:
+\begin{equation}\label{eqEjStokes}
+\Phi(x,y) = (x,y,\sqrt{1-x^2+y^2}), (x,y)\in D = \{x^2+y^2\leq y\}
+\end{equation}
+Calculamos $T_x\x T_y =\displaystyle \left(\frac{x}{\sqrt{\cdot}},\frac{x}{\sqrt{\cdot}},1\right)$
+\[
+\int \int_M (0,0,1) dS = - \int \int_D \pesc{(0,0,1),(\ast,\ast,1)} \,dx\,dy = -\text{ Area } (D) = -\pi\frac{1}{4}
+\]
+\[ \int_{∂M^+}y\df{z} = \int_{∂M^+}(0,0,y)\df{σ} \stackrel{Stokes}{=} \int\int_{M^+} \rot (0,0,y)\df{S} \]
+En \ref{eqEjStokes} teníamos la parametrización, así que la aplicamos. Teniendo en cuenta la orientación, tenemos que cambiar el signo y nos queda
+\[
+- \iint_D \pesc{(1,0,0),\left(\frac{x}{\sqrt{\ast}}, \frac{y}{\sqrt{\ast}}, 1}\right) \df{x}\df{y}
+= -\iint_D\frac{x}{\sqrt{1-x^2-y^2}} \d{x,y} 
+\]
+Viendo que estamos integrando una función impar en una región simétrica, la integral vale 0.
+\paragraph{Resolución de $\int_{\partial M} z \dif x$}
+Pasamos ahora a calcular la integral de $z$. Tenemos lo mismo que antes:
+\begin{gather*}
+\int_{∂M^+}z\df{x} = \int_{∂M^+}(z,0,0)\df{σ} \stackrel{Stokes}{=} \iint_{M^+} \rot (z,0,0)\df{S} = \iint_{M^+}(0,1,0)\id{S}= \\
+ - \iint_D \pesc{(0,1,0),\left(\frac{x}{\sqrt{\ast}}, \frac{y}{\sqrt{\ast}}, 1\right)}\id{x,y}
+= -\iint_D\frac{y}{\sqrt{1-x^2-y^2}} \id{x,y}
+\end{gather*}
+Vemos que esta integral es muy complicada y nos va a ganar, así que pasamos a tratar de integrar como una curva. Deberemos parametrizar la curva, encontrar la orientación correcta y aplicar la fórmula.
+Empezamos con la parametrización:
+\[ ∂M = \left\{ \begin{matrix}
+x^2+y^2+z^2 = 1 \implies y + z^2 = 1 \implies z = \sqrt{1-y} \\
+x^2 + y^2 = y \implies x = \pm \sqrt{y-y^2}
+\end{matrix}\right. \]
+Por lo tanto, podemos parametrizar en dos trozos
+\begin{align*}
+Γ_1\equiv &(\sqrt{y-y^2}, y, \sqrt{1-y});\;y∈[0,1] \\
+Γ_2\equiv &(-\sqrt{y-y^2}, y, \sqrt{1-y});\;y∈[0,1] \\
+\end{align*}
+\easyimgw{imgs/OrientacionesEsferaCilindro.png}{Orientaciones de $Γ_1$ y $Γ_2$}{imgOrientacionesEsferaCilindro}{0.7}
+Tal y como vemos en la figura \ref{imgOrientacionesEsferaCilindro}, la orientación es negativa en $Γ_1$ y positiva en $Γ_2$. Entonces
+\[ \int_{∂M^+}(z,0,0)\df{σ} = \int_{Γ_1^+}(z,0,0)\dif{σ_1} +  \int_{Γ_2^+}(z,0,0)\dif{σ_2} \]
+Operando con la primera integral:
+\[  \int_{Γ_1^+}(z,0,0)\dif{σ_1} = - \int_0^1\pesc{(\sqrt{1-y},0,0),\left(\frac{1-2y}{2\sqrt{y-y^2}},\ast,\ast\right)}\dif y =
+-\int_0^1\frac{1-2y}{2\sqrt{y}}\dif y = \]
+Separamos en dos sumandos
+\[ = \int_0^1\sqrt{y}\d y - \int_0^1 \frac{1}{2\sqrt y}\dif y = \dotsb \]
+Podríamos tomar otra parametrización alternativa usando coordenadas esféricas. La esfera queda determinada por la parametrización
+\[ \left\{\begin{matrix}
+x &=& \cos θ \sin φ \\
+y &=& \sin θ \sin φ \\
+z &=& \cos φ
+\end{matrix}\right. \]
+Añadiendo la restricción de $x^2+y^2=y$, nos queda que $\sin φ = \sin θ$. Entonces podemos seguir parametrizando
+\[\left. \begin{matrix}
+x = \cos θ \sin θ \\
+y = \sin^2 θ \\
+ z = \sqrt{1-\sin^2 θ} = \abs{\cos θ}
+\end{matrix} \right\} θ∈[0,π]
+\]
+y tenemos que
+\[ σ_1(θ) = (\cos θ \sin θ, \sin^2 θ, \cos θ) \]
+Por otra parte, si pusiésemos los límites de integración en la región D pasaría algo.
+\end{example}
+\section{Campos conservativos}
+\begin{defn}[Campo\IS conservativo] Consideramos $\vf$, un campo en $ℝ^N$. Se dice que $\vf$ es conservativo si y sólo si $∃\appl{V}{ℝ^N}{ℝ}$ tal que $F=\grad V$, donde $V$ es el \textbf{potencial}\index{Potencial} del campo $\vf$.
+\end{defn}
+\begin{theorem} Sea $\vf$ un campo $C^1$ en $ℝ^3$. Entonces $\vf $ es conservativo si y sólo si $\rot \vf = \vec{0}$.
+\end{theorem} \label{consImpRot}
+\begin{proof}
+\paragraph{Implicación a la derecha} Como $F=\grad V$, y $F∈C^1$, entonces $V∈C^2$. Calculamos ahora el rotacional:
+\[ \rot\vf = \left|\begin{matrix}
+\vec{i} & \vec{j} & \vec{k} \\
+\pd{}{x} & \pd{}{y} & \pd{}{z} \\
+F_1 & F_2 & F_3
+\end{matrix}\right| = \left(\dpa{F_3}{y}-\dpa{F_2}{z}, \dpa{F_1}{z}-\dpa{F_3}{x}, \dpa{F_2}{x}-\dpa{F_1}{y} \right) \]
+Sustituyendo con $F=\grad V$ veríamos que sale todo cero.
+\paragraph{Implicación hacia la izquierda}
+Supongamos $Γ$ una curva cerrada, que sea la frontera de una superficie $M$. Entonces
+\[ \int_{M^+}\vf  \stackrel{Stokes}{=} \iint_M\rot \vf\dif S = 0 \]
+Es decir, que la integral de $F$ sobre cualquier curva cerrada va a dar 0. Buscamos ahora un $V$ tal que $\grad V = \vf$.
+Supongamos un punto cualquiera $(x,y,z)$: A ese punto podemos llegar a través de varias rectas paralelas a los ejes. Con esas rectas podríamos construir un camino, y entonces tendríamos que
+\todo[inline]{Poner dibujito aquí}
+\[ \int_{Γ_1}\vf = \int_{Γ_2} \vf = \int_{Γ_3}\vf \]
+ya que cogiendo dos pares $Γ_i$ y cambiando la orientación de uno de ellos construimos una curva cerrada.
+Parametrizamos $Γ_1$:
+\[ Γ_1 \equiv \{ (t,0,0)\,t∈[0,x]\}
+\cup \{ (x,s,0)\,s∈[0,y]\}
+\cup \{ (x,y,r)\,r∈[0,z]\} \]
+Entonces
+\begin{align*}
+\int_{Γ_1}\vf&= \int_0^x\pesc{(F_1(t,0,0),F_2(t,0,0), F_3(t,0,0),(1,0,0)}\dif t \\
+&+\int_0^y\pesc{(F_1(x,s,0),F_2(x,s,0), F_3(x,s,0),(0,1,0)}\dif s \\
+&+\int_0^x\pesc{(F_1(x,y,r),F_2(x,y,r), F_3(x,y,r),(1,0,0)}\dif r \\
+&=\int_0^x F_1(t,0,0)\dif t + \int_0^y F_2(x,s,0)\dif s+ \int_0^z F_3(x,y,r)\dif r 
+\end{align*}
+De la misma forma, tendríamos
+\begin{gather*}
+\int_{Γ_2}\vf = \int_0^y F_2(0,t,0)\dif t + \int_0^z F_3(0,y,s)\dif s+ \int_0^x F_1(x,y,r)\dif r \\ 
+\int_{Γ_3}\vf = \int_0^x F_1(t,0,0)\dif t + \int_0^z F_3(x,0,s)\dif s+ \int_0^y F_1(x,r,z)\dif r \\
+\end{gather*}
+Las tres integrales son iguales, así que podemos derivar con respecto de la que nos venga mejor para construir la función $V$, que es la que buscábamos.
+\end{proof}
+La versión de este teorema vista en clase de prácticas (que es una versión más práctica)
+\begin{theorem}[Campos conservativos]
+$F$ es un campo vectorial $C^1$ en $\real^3$ excepto en un número finito de puntos entonces son equivalentes:
+\begin{itemize}
+\item Existe un potencial
+\item La integral sobre una curva cerrada simple es 0
+\item Las integrales por un camino o por otro para llegar a un punto son iguales
+\item rot $\vf=0$.
+\end{itemize}
+\end{theorem}
+Además, para calcular el potencial se puede utilizar cualquiera de estas 3 fórmulas:
+\begin{gather*}
+\int_{Γ_1}\vf=\int_0^x F_1(t,0,0)\dif t + \int_0^y F_2(x,s,0)\dif s+ \int_0^z F_3(x,y,r)\dif r \\
+\int_{Γ_2}\vf = \int_0^y F_2(0,t,0)\dif t + \int_0^z F_3(0,y,s)\dif s+ \int_0^x F_1(x,y,r)\dif r \\ 
+\int_{Γ_3}\vf = \int_0^x F_1(t,0,0)\dif t + \int_0^z F_3(x,0,s)\dif s+ \int_0^y F_1(x,r,z)\dif r \\
+\end{gather*}
+\subsection{Ejemplos}
+\begin{example} Tenemos un cono de base $D$ y altura $h$, y buscamos integrar el campo $\vf(x,y,z)= (x,y,z)$. $Ω$ es el espacio del cono, y $∂Ω$, su superficie, se divide en la superficie lateral y la base.
+\todo[inline]{Dibujito L1244}
+Si escribimos el teorema de Gauss, tenemos que
+\[ \iiint_Ω \dv \vf \id{x,y,z} = \iint_{∂Ω^+} \vf \dif S \]
+En este caso, tenemos la suerte de que $\dv \vf = 3$, y por lo tanto
+\[ \iiint_Ω \dv \vf \id{x,y,z} = 3 \cdot \mathrm{Volumen}\,(Ω) \]
+Por lo tanto, para hallar el volumen calculamos la integral sobre la superficie y dividimos entre tres.
+La idea geométrica es que en la cara lateral, la componente normal de $\vf$ es 0. Lo vemos fácilmente sabiendo que la recta definida por el vector $(x,y,z)$ y que pasa por el origen (el vértice del cono), tiene exactamente la misma dirección de la generatriz. Entones,\textbf{ la integral sobre la cara lateral es 0} y por lo tanto podemos ignorarla. Nos centramos sólo en la integral de la base:
+\[ \iint_{\mathrm{Base}}\vf \id S \]
+Parametrizar $S$ es sencillo:
+\[ S \equiv \{ (x,y,h)\tq (x,y)∈ D \} \]
+Calculamos su vector normal:
+\[ \left.\begin{matrix}
+T_x = (1,0,0) \\
+T_y = (0,1,0)
+\end{matrix}\right\} T_x × T_y = (0,0,1) \]
+y entonces
+\[ \iint_{\mathrm{Base}}\vf \id S = \iint_D\pesc{(x,y,h),(0,0,1)} \id{x,y} = \iint_D h \id{x,y} = h \cdot \mathrm{Area}\,(D) \]
+Finalmente
+\[ \mathrm{Volumen}\,(Ω) = \frac{h \cdot \mathrm{Area}\,(D)}{3} \]
+\end{example}
+\begin{example}[Cálculo del campo eléctrico o gravitatorio]
+La expresión del campo eléctrico es
+\[ \vf(\vx) = C \frac{\vx}{\norm{\vx}^3} \]
+Calculando las derivadas parciales
+\begin{align*}
+\dpa{F_1}{x}&=\frac{y^2+z^2-2x^2}{(x^2+y^2+z^2)^{\frac{5}{2}}} \\
+\dpa{F_2}{y}&=\frac{x^2+z^2-2y^2}{(x^2+y^2+z^2)^{\frac{5}{2}}} \\
+\dpa{F_3}{z}&=\frac{x^2+y^2-2z^2}{(x^2+y^2+z^2)^{\frac{5}{2}}}
+\end{align*}
+nos queda que
+\[ \dv\vf = 0 \]
+Consideramos ahora una bola de radio $R$ centrada en el origen, es decir, $B_R(0,0,0)$. Integramos sobre su superficie:
+\[ \iint\limits_{∂B_R^+} \vf \id{S} =
+\iint\limits_{B_R} \left(\frac{x}{R^3},\frac{y}{R^3},\frac{z}{R^3} \right) \id S = \frac{1}{R^3} \iint\limits_{B_R} (x,y,z)\id S = \]
+Dado que integrar el vector es integrar su componente escalar, la integral nos queda
+\[ = \frac{1}{R^3} \iint\limits_{B_R} R\id{x,y} = \frac{1}{R^2}\cdot \mathrm{Area\; esfera} = 4π \]
+Ahora bien, si no supiésemos ese argumento geométrico, empezaríamos parametrizando la esfera:
+\[ Φ(θ,φ) =(R\cos θ \sin φ, R\sin θ\sin φ, R\cos φ);\, θ∈[0,2π], φ∈[0,π] \]
+Calculamos los vectores tangentes y el normal:
+\[ \begin{matrix} \\ T_θ = \\ T_φ= \end{matrix}
+\left|
+\begin{matrix}
+\vec{i} 		& \vec{j} 		 & \vec{k} \\
+-R\sin θ \sin φ & R\cos θ \sin φ & 0 \\
+R\cos θ\cos φ 	& R\sin θ \cos φ & -R\sin φ
+\end{matrix}\right|: T_θ×T_φ = -R\sin (R\cos θ, \]
+La normal es interior, así que pagamos con un cambio de signo:
+\begin{gather*} \iint\limits_{x^2+y^2+z^2 = R^2} \left(\frac{x}{R^3},\frac{y}{R^3},\frac{z}{R^3} \right) \id S = \\
+- \int_0^{2π}\int_0^π\pesc{\left(\frac{R\cos θ \sin φ}{R^3},{R\sin θ \sin φ}{R^3},{R\cos φ}{R^3}\right), (,,)} = \dotsb \mathrm{Calculos\; aqui} \end{gather*}
+y al final sale lo mismo que antes pero con cuentas mucho más desagrable.
+¿Por qué el teorema de Gauss no funciona? La divergencia es 0 y la superficie es cerrada. Sin embargo, $\vf$ no es $C^1$ en el origen (no existe en ese punto) así que no podemos aplicarlo.
+Pero, por otra parte, siempre hemos visto que la integral no se ve afectada por lo que ocurra en un punto. ¿Por qué no funciona el teorema de Gauss sólo por lo que pasa en el origen?
+En realidad en el origen la divergencia vale $4π$ por la Delta de Dirac (δ).
+Pero también podemos hacer un apaño. Consideramos un conjunto $Ω$, y una bola $B_ε(0,0,0)$. Entonces
+\[ Ω_ε = Ω - B_ε \]
+de tal forma que $\vf∈C^1$ en $Ω_ε$. Aplicando el teorema de Gauss:
+\[ 0 = \iiint\limits_{Ω_ε}\dv \vf \id{x,y,z} = \iint\limits_{∂Ω_ε^+}\vf \id{S} \]
+La frontera se divide en dos partes: $∂Ω_ε = ∂Ω + ∂B_ε^+$. Entonces
+\[ 0 = \iint\limits_{∂Ω^+}\vf \id S - \iint\limits_{∂B_ε^+}\vf \id S \]
+y por lo tanto, tenemos que
+\[ \iint\limits_{∂Ω^+}\vf \id{S} = 4π\; ∀Ω \tq 0 ∈ Ω \]
+\end{example}
+\begin{theorem} Dado un campo $\vf \in C^1$, se tiene que
+\[ \dv \vf = 0\dimplies \exists \vg\in C^2 \tlq \rot \vg = \vf \]
+\end{theorem}
+\begin{proof}
+Con el lenguaje de las formas diferenciales es muy fácil esta demostración.
+\todo[inline]{reescribir bien}
+$\vf$ es una 1-forma a la que aplicamos la diferencial exterior y obtenemos una 2-forma, que es su rotacional. Entonces, al volver a hacer la diferencial (para hallar la divergencia) estamos aplicando dos veces el diferencial, y por lo tanto su valor es 0.
+Sin formas diferenciales tenemos:
+\[G=(G_1,G_2,G_3)\]
+\[\rot G = \left(\ast_1,\ast_2,\ast_3\right)\]
+\[\dv(\rot G) = \dpa{}{x}(\ast_1) + \dpa{}{y}(\ast_2) + \dpa{}{z}(\ast_3)\]
+Por la igualdad de las derivadas cruzadas (toerema de Euler) al ser $G\in C^2$ se cancela todo.
+$\implies$ Buscamos $\vg$ tal que $(F_1,F_2,F_3) = \rot \vg$.
+Podemos definir el sistema:
+\[\begin{array}{cc}
+\dpa{G_3}{y} - \dpa{G_2}{z} &= F_1\\
+\dpa{G_1}{z} - \dpa{G_3}{x} &= F_2\\
+\dpa{G_2}{x} - \dpa{G_1}{y} &= F_3
+\end{array}\]
+Como tenemos varios grados de libertad, supongamos que $G_3\equiv 0$
+\[\begin{array}{cc}
+ - \dpa{G_2}{z} &= F_1\\
+\dpa{G_1}{z} - &= F_2\\
+\dpa{G_2}{x} - \dpa{G_1}{y} &= F_3
+\end{array} \begin{array}{cc}
+\longrightarrow & G_2 = -\int_0^z F_1(x,y,t)dt+A(x,y)\\
+\longrightarrow & G_1 = \int_0^2 F_2(x,y,t)dt + B(x,y)\\
+\longrightarrow & F_3 = \dpa{}{x} \left\{-\int_0^z F_1(x,y,t)dt + A(x,y)\right\}
+- \dpa{}{y}\left\{\int_0^2 F_2(x,y,t)dt + B(x,y) \right\}
+\end{array}
+\]
+Vamos a ver que ocurre con  $F_3$
+\[-\dpa{}{x}\left(\int_0^z F_1(x,y,t)dt\right) + \dpa{A}{x} - \dpa{}{y}\int_0^z F_2(x,y,t)dt - \dpa{B}{y}\]
+Por la regularidad de $F_1$ podemos meter dentro la derivada (el argumento que está detrás de esto se ve en teoría de la medida, asíque de momento nos fiamos)
+\[-\left(\int_0^z \dpa{}{x}F_1(x,y,t)dt\right) + \dpa{A}{x} - \int_0^z \dpa{}{y}F_2(x,y,t)dt - \dpa{B}{y}\]
+\[-\int_0^z \left(\dpa{F_1}{x} + \dpa{F_2}{y}\right)(x,y,t)dt + \dpa{A}{x} - \dpa{B}{y} \]
+Utilizamos que la $\dv = 0$ que nos dice:
+\[\dpa{F_1}{x} + \dpa{F_2}{y} + \dpa{F_3}{z} = 0\]
+\[ = \int_0^z \dpa{F_3}{z} (x,y,t)dt + \dpa{A}{x} - \dpa{B}{y} = F_3(x,y,z) - F(x,y,z) + \dpa{A}{x} - \dpa{B}{y}\]
+Hemos llegado a \[F_3(x,y,z) =  F_3(x,y,z) - F(x,y,z) + \dpa{A}{x} - \dpa{B}{y}\]
+Quedando entonces definidas $A$ y $B$ así:
+\[\dpa{A}{x} - \dpa{B}{y} = F_3(x,y,0)\]
+Y aquí nuevamente tenemos muchas opciones. Tomamos $B=0$ por tomar algo
+\[A(x,y) = \int_0^x F_3(s,y,0)ds + C(y)\]
+\end{proof}
+
+
+
 
 ## Integración
 
@@ -4879,6 +5868,1388 @@ Idea:
 
 # Teoría de probabilidades
 
+##Conjuntos y funciones $\sigma$-aditivas}
+
+Sea un conjunto $\Omega$, y sea $\mathcal{A}$ una $\sigma$-álgebra
+sobre $\Omega$. Se dice que $\mathcal{A}$ es una $\sigma$-álgebra si
+cumple las siguientes propiedades:
+\begin{enumerate}
+\item $\Omega \in \mathcal{A}$
+\item Si $A \in \mathcal{A} \Rightarrow \overline{A} \in \mathcal{A}$
+\item Si $A_1, A_2, A_3\ldots \in \mathcal{A} \Rightarrow
+\displaystyle \bigcup_{n \in \mathbb{N}}^{\infty} A_n \in \mathcal{A}$
+\end{enumerate}
+Es decir, una $\sigma$-álgebra es una clase de conjuntos cerrada para
+las operaciones complementario y unión numerable. Existen una serie de
+propiedades inmediatas derivadas de las propiedades que definen a la
+$\sigma$-álgebra:\\
+$\emptyset \in \mathcal{A}$\\
+$\mathcal{A}$ es cerrada para la operación intersección numerable.
+\subsection*{Espacio medible}
+Al par ($\Omega$, $\mathcal{A}$) se le llama espacio medible, y a los
+conjuntos que pertenecen a $\mathcal{A}$ se les denomina conjuntos
+medibles.
+\section{Límites en sucesiones de conjuntos}
+\subsection{Límites en sucesiones monótonas}
+Si tomamos la relación de inclusión entre conjuntos ($\subseteq$) como
+una relación de orden, podemos hablar sin ambiguedad de
+sucesiones monótonas. En este sentido, una sucesión creciente de
+conjuntos es una sucesión $\{A_n\}_{n \in \mathbb{N}}$ en la que se
+cumple que $A_i \subseteq A_{i+1}, \forall i \in \mathbb{N}$. De forma
+análoga se puede definir sucesión decreciente de conjuntos.\\
+Existe una forma intuitiva de definir el límite de una
+sucesión monótona de conjuntos. En particular, el límite de una
+sucesión creciente de conjuntos $\{A_n\}_{n \in \mathbb{N} }$ se puede
+definir como
+$$\lim_{n\to\infty} A_n = \bigcup_{k \in \mathbb{N}}^{\infty} A_k$$
+Esta definición aprovecha la relación de orden entre los conjuntos de
+la sucesión para afirmar que si un elemento está en el último
+conjunto de la sucesión, entonces está en todos los anteriores, y por
+tanto en todos, por ello se puede utilizar una intersección
+numerable (que está bien definida) para formalizar el
+concepto.\\
+Con una intuición análoga se define el límite de una sucesión
+decreciente de conjuntos. Si $\{A_n\}_{n\in\mathbb{N}}$ es una
+sucesión decreciente de conjuntos, entonces:
+$$ \lim_{n\to\infty} A_n = \bigcap_{k\in\mathbb{N}}^{\infty} A_k $$
+\subsection{Límites superiores e inferiores}
+No solo se puede hablar de límites en sucesiones monótonas. Para
+definir los límites en sucesiones arbitrarias de conjuntos tenemos que
+recurrir a los conceptos de límite inferior y límite superior. La
+intuición de estos límites superior e inferior pasan por el concepto
+de las colas de la sucesión.\\
+Dada una sucesión de conjuntos $\{A_n\}_{n\in\mathbb{N} }$ podemos
+considerar el conjunto
+$$ B_n = \bigcap_{k=n}^{\infty} A_k $$
+y este conjunto contiene aquellos elementos que están en
+\textbf{todos} los $A_k$ para $k \geq n$. Es fácil probar que la
+sucesión $\{B_n\}_{n\in\mathbb{N}}$ es una sucesión creciente de
+conjuntos, y por tanto se puede obtener el límite $\lim_{n\to\infty}
+B_n$. Informalmente, ese límite es un conjunto que contiene a todos
+los elementos de $A_n$ que están en todos los conjuntos $A_k$ a partir
+de cierto $n\in\mathbb{N}$. Definimos el límite inferior de $A_n$ como
+$$ \liminf A_n = \lim_{n\to\infty} B_n = \bigcup_{n\in\mathbb{N}}
+\bigcap_{k=n}^{\infty} A_n $$
+Análogamente, podríamos definir la sucesión de conjuntos
+$\{C_n\}_{n\in\mathbb{N}}$ como
+$$ C_n = \bigcup_{k=n}^{\infty} A_n $$
+Cada $C_n$ contiene todos los elementos que están presentes en algún
+$A_k$ para $k \geq n$. Es fácil también ver que la sucesión
+$\{C_n\}_{n\in\mathbb{N}}$ es una sucesión decreciente de conjuntos, y
+por tanto su límite también está bien definido. Se puede definir
+entonces el límite superior de $\{A_n\}_{n\in\mathbb{N}}$ como
+$$ \limsup A_n = \lim_{n\to\infty} C_n = \bigcap_{n\in\mathbb{N}}
+\bigcup_{k=n}^{\infty} A_n $$
+Informalmente se puede pensar en este límite superior de $A_n$ como el
+conjunto de los elementos que están en infinitos conjuntos de la
+sucesión.\\
+A partir de estas definiciones, es fácil comprobar que
+$$ \liminf A_n \subseteq \limsup A_n $$
+\subsection{Límite de una sucesión de conjuntos}
+Diremos que una sucesión de conjuntos tiene límite si su límite
+inferior y superior coinciden, y el límite tendrá como valor
+efectivamente el de estos límites. Es decir:
+$$ \lim A_n = \liminf A_n = \limsup A_n $$
+en caso de que límite superior e inferior coincidan.
+\section{Funciones sobre conjuntos}
+Una vez definidos los conceptos sobre conjuntos con los que vamos a
+trabajar, pasamos a definir las funciones sobre conjuntos. Vamos
+entonces a definir lo que es una función de conjunto. Sean los
+espacios medibles ($\Omega$, $\mathcal{A}$) y($\Omega'$,
+$\mathcal{A}'$), definimos la función:
+$$ X: \mathcal{A} \to \mathcal{A}'$$
+$$ A \longrightarrow X(A)$$
+A raíz de esta definición podemos definir también lo que se conoce
+como función inversa. Dada una función $X$, la función inversa de $X$,
+$X^{-1}$, asigna a cada conjunto $A' \in \mathcal{A}'$ el conjunto $A
+\in \mathcal{A}$ tal que $X(A) = A'$. La propiedad básica que cumplen
+las funciones inversas es que preservan las operaciones e inclusiones
+de conjuntos.
+\section{Concepto de $\sigma$-aditividad}
+Sea un conjunto $\Omega$ y una $\sigma$-álgebra $\mathcal{A}$ sobre
+$\Omega$. Definimos la función de conjunto:
+$$\varphi : \mathcal{A} \rightarrow \mathbb{R}$$
+\begin{center}
+$\varphi (A)$ es único\\
+\end{center}
+Se dice que $\varphi$ es aditiva si
+$\varphi(\displaystyle\sum_{1}^{n}A_k)=\displaystyle\sum_1^n\varphi(A_k)$\\
+Se dice que $\varphi$ es $\sigma$-aditiva si
+$\varphi(\displaystyle\sum_1^\infty A_k)=\displaystyle\sum_1^\infty
+\varphi(A_k)$
+\subsubsection{Función subaditiva}
+Sea $\varphi$ definida como antes. Se dice que $\varphi$ es
+\textbf{subaditiva} si $\varphi(A \cup B) \leq \varphi(A) +
+\varphi(B)$
+\begin{lemma}
+Si $\exists B\, : \, \varphi(B)<\infty \Rightarrow \varphi(\emptyset)=0$
+\end{lemma}
+\begin{theorem}
+Si $\varphi$ es $\sigma$-aditiva y
+$\displaystyle\sum\varphi(A_i)<\infty\Rightarrow\displaystyle\sum(\vert
+\varphi(A_i)\vert)<\infty$
+\end{theorem}
+\begin{proof}
+Tomemos las sucesiones: \\
+Si $\varphi(A_n)\geq 0 \Longrightarrow A_n^{+}=A_n$ y $A_n^{-}=\emptyset$\\
+Si $\varphi(A_n)<0 \Longrightarrow A_n^{+}=\emptyset$ y $A_n^{-}=A_n$\\
+Entonces $\varphi(\displaystyle\sum
+A_n^{+})=\displaystyle\sum\varphi(A_n^{+})$ y
+$\varphi(\displaystyle\sum
+A_n^{-})=\displaystyle\sum\varphi(A_n^{-})$, ambas finitas. Sumando
+ambas cantidades obtenemos que $\displaystyle\sum(\vert
+\varphi(A_i)\vert)<\infty$
+\qed
+\end{proof}
+\begin{theorem}
+Si $\varphi$ es $\sigma$-aditiva, $\varphi \geq 0$, entonces:
+$\varphi$ es no decreciente y subaditiva
+\end{theorem}
+\begin{proof}
+Veamos que es no decreciente $(A \subseteq B \Rightarrow \varphi (A)
+\leq \varphi (B))$. Podemos escribir $B = (B \cap A) + (B \cap
+\overline{A}) = A + (B \cap \overline{A})$. Entonces $\varphi (A) \leq
+\varphi (A) + \varphi (B \cap \overline{A}) = \varphi (B)$.\\
+\end{proof}
+\section{Continuidad en funciones sobre conjuntos}
+Una vez introducido el concepto de límite para una sucesión de
+conjuntos, vamos a tratar de definir la continuidad para funciones de
+conjunto. Tendremos tres tipos de continuidad, cada uno relacionado
+con un tipo de sucesiones de conjuntos de las que hemos definido
+anteriormente. En esta sección trabajaremos con una función $\varphi :
+\Omega \to \Omega'$\\
+Diremos que $\varphi$ es continua por abajo si cumple que, dada una
+sucesión creciente de elementos $A_n \uparrow A$, se tiene que
+$$ \lim \varphi (A_n) = \varphi (A) $$
+Por otra parte, diremos que $\varphi$ es continua por arriba si cumple
+que dada una sucesión decreciente de elementos $A_n \downarrow A$, se
+tiene que
+$$ \lim \varphi (A_n) = \varphi (A)$$
+Por último, diremos que una función es continua si lo es por arriba y por abajo.
+\begin{theorem}
+Teorema de continuidad para funciones sobre conjuntos\\
+Sea $\varphi$ una función $\sigma$-aditiva. Entonces, $\varphi$ es
+aditiva y continua. Inversamente, si $\varphi$ es aditiva y, o bien
+continua por abajo, o finita y continua en $\emptyset$, entonces
+$\varphi$ es $\sigma$-aditiva.
+\end{theorem}
+\begin{proof}
+Por un lado, sea $\varphi$ una función $\sigma$-aditiva. Entonces es
+trivialmente aditiva. Ahora, veamos que es continua por abajo y por
+arriba. Sea $A_n \uparrow A$, entonces:
+$$ A = \lim A_n = \bigcup A_n = A_1 + (A_2 - A_1) + (A_3 - A_2) +... $$
+Unión de conjuntos disjuntos. Por tanto:
+$$ \varphi (A) = \varphi (\lim A_n) = \lim_{n \to \infty } \{ \varphi
+(A_1) + \varphi (A_2 - A_1) + ... + \varphi (A_n - A_{n-1}) \} = \lim
+\varphi (A_n) $$
+Veamos la continuidad por arriba. Sea $A_n \downarrow A$, tomamos
+$A_{n_0}$ tal que $\varphi (A_{n_0})$ es finito. Entonces $A_{n_0} -
+A_n \uparrow A_{n_0} - A$, y por el apartado anterior tenemos la
+convergencia desde abajo, por tanto:
+$$ \varphi (A_{n_0}) - \varphi (A) = \varphi (\lim (A_{n_0} - A_n)) =
+\lim \varphi (A_{n_0} - A_n) = \varphi (A_{n_0}) - \lim \varphi (A_n)
+$$
+
+Asi, se deduce que $ \varphi (A) = \lim \varphi (A_n) $.\\
+Inversamente, sea $ \varphi$ una función aditiva. Si $\varphi$ es
+continua por abajo, tenemos
+$$ \varphi \left( \sum_{n}^{\infty} A_n \right) = \varphi \left( \lim
+\sum_{k=1}^n A_k \right) = \lim \varphi \left( \sum_{k=1}^n A_k
+\right) = \lim \sum_{k=1}^n \varphi \left( A_k \right) =
+\sum_{n}^{\infty} \varphi (A_n) $$
+Y por tanto es $\sigma$-aditiva. Si es finita y continua en
+$\emptyset$, entonces se obtiene la $\sigma$-aditividad de:
+$$ \varphi \left( \sum_{n}^{\infty} A_n \right) = \varphi \left(
+\sum_{k=1}^{n} A_k \right) + \varphi \left( \sum_{k=n+1}^{\infty} A_k
+\right) = \sum_{k=1}^{n} \varphi (A_k) + \varphi \left(
+\sum_{k=n+1}^{\infty} A_k \right) $$
+Y tenemos que
+$$ \varphi \left( \sum_{k=n+1}^{\infty} A_k \right) \to \varphi
+(\emptyset) = 0 $$
+\qed
+\end{proof}
+Una vez demostrado este teorema, vamos a ver un teorema que nos
+relaciona las propiedades del supremo e ínfimo de una función
+$\sigma$-aditiva con los conjuntos sobre los que está dicha función
+definida:
+\begin{theorem}
+Teorema del supremo e ínfimo\\
+Sea $\varphi$ una función $\sigma$-aditiva sobre una $\sigma$-álgebra
+$\mathcal{A}$. Entonces, existen $C,D \in \mathcal{A}$ tales que
+$\varphi (C) = \sup \varphi$ y $\varphi (D) = \inf \varphi$
+\end{theorem}
+\begin{proof}
+Probaremos la existencia del conjunto $C$. La del conjunto $D$ es
+análoga. Si $\varphi(A) = \infty$ para algún $A \in \mathcal{A}$,
+entonces podemos establecer $A = C$ y la demostración del teorema es
+trivial. Entonces, supongamos que $\varphi < \infty$ y dado que el
+valor $-\infty$ está excluido, $\varphi$ es finita.\\
+Entonces, existe una sucesión $\{A_n\} \subset \mathcal{A}$ tal que
+$\varphi(A_n) \to \sup \varphi$. Sea $A = \cup A_n $ y para cada $n$,
+consideramos la partición de $A$ en $2^n$ conjuntos $A_{nm}$ de la
+forma $\displaystyle \cap_{k=1}^n A'_k$, donde $A'_k = A_k$ o $A -
+A_k$. Para $n < n'$, cada conjunto $A_{nm}$ es una suma finita de
+conjuntos $A_{n'm'}$. Sea ahora $B_n$ la suma de los conjuntos
+$A_{nm}$ para los cuales $\varphi$ es no negativa. Si no hay ninguno,
+entonces $B_n = \emptyset$. Entonces, tenemos por un lado que $A_n$ es
+la suma de algunos de los $A_{nm}$, y por otro lado, para $n' > n$,
+cada conjunto $A_{n'm'}$ está dentro de $B_n$ o son disjuntos.
+Entonces tenemos
+$$ \varphi(A_n) \leq \varphi(B_n) \leq \varphi (B_n \cup B_{n+1} \cup
+... \cup B_{n'}) $$
+Tomando $n' \to +\infty$, se sigue de la continuidad por debajo que
+$$ \varphi(A_n) \leq \varphi (B_n) \leq \varphi \left(
+\cup_{k=n}^{+\infty} B_k\right) $$
+Haciendo tender ahora $n \to +\infty$ y tomando $\displaystyle C =
+\lim \cup_{k = n}^{+\infty} B_k$ se sigue, por la continuidad por
+arriba, que $\sup \varphi \leq \varphi(C)$. Pero $\varphi(C) \leq \sup
+\varphi$, y por tanto se tiene que $\varphi(C) = \sup \varphi$, como
+queríamos.
+\qed
+\end{proof}
+\chapter{Medidas y probabilidades}
+\section{Concepto de medida, media exterior y probabilidad}
+Una función de conjuntos $\mu^\circ$ es una medida si verifica:
+\begin{itemize}
+\item Es $\sigma$-aditiva, es decir,  $\mu^\circ (\cup A_j) =
+\displaystyle \sum \mu^\circ (A_j)$
+\item Es no decreciente $A\subset B \, \mu^\circ(A)\leq \mu^\circ(B)$
+\item $\mu^\circ(\emptyset)=0$
+\end{itemize}
+A la tupla ($\Omega$, $\mathcal{A}$, $\mu_{\mathcal{A}}$) se le
+denomina espacio de medida.\\
+\textbf{Definición de medida exterior:} Una medida exterior es una
+función de conjuntos positiva y $\sigma$-subaditiva, es decir, no se
+cumple la primera propiedad. La $\sigma$-subaditividad implica que
+$\mu(A \cup B) \leq \mu(A) + \mu(B)$.\\
+Para que una medida exterior fuera una medida tendría que ser
+$\sigma$-aditiva. Es decir, la falla la primera condición. Sí que es
+positiva ya que $\mu^\circ(\emptyset)=0$ y es creciente. Esta medida
+exterior se aplica a cualquier conjunto. Va a haber unos subconjuntos
+en los que la función se comporte como si fuera aditiva.\\
+Una vez definido el concepto de medida, vamos a dar ahora el de
+probabilidad. Una probabilidad $\mathcal{P}$ sobre un espacio medible
+($\Omega$, $\mathcal{A}$) es una medida que además cumple que
+$\mathcal{P}(\Omega)=1$. Por tanto, tiene las siguientes
+propiedades:\\
+$\mathcal{P}(\emptyset)=0$\\
+$\forall A \in \mathcal{A}, 0 \leq \mathcal{P}(A) \leq 1$\\
+Es una función $\sigma$-aditiva\\
+De forma análoga al concepto de espacio de medida, podemos definir
+ahora el de espacio probabilístico. Un espacio probabilístico es una
+tupla formada por un conjunto $\Omega$, una $\sigma$-álgebra sobre ese
+conjunto, $\mathcal{A}$, y una función de probabilidad $\mathcal{P}$.
+\begin{theorem}
+Teorema de sucesión
+\begin{enumerate}
+\item Si $A_n \uparrow A \Rightarrow \mathcal{P} (A_n) \uparrow \mathcal{P}(A)$
+\item $\mathcal{P}(\lim \inf A_n) \leq \lim \inf \mathcal{P}(A_n)$
+\item Si $A_n \downarrow A \Rightarrow \mathcal{P} (A_n) \downarrow
+\mathcal{P}(A)$
+\item $\mathcal{P}(\lim \sup A_n) \geq \lim \sup \mathcal{P}(A_n)$
+\item Si $A_n \rightarrow A \Rightarrow \mathcal{P} (A_n) \rightarrow
+\mathcal{P}(A)$
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Falta! 
+\end{proof}
+\section{Teorema de extensión de Carathéodory}
+Una vez vistas las definiciones anteriores de medida y medida
+exterior, vamos a ver un teorema fundamental, que nos servirá para
+justificar la forma en la que haremos el cálculo de probabilidades a
+posteriori. Veamos dos lemas antes que nos serán necesarios para la
+demostración del teorema principal.\\
+\textbf{Definición:} Un conjunto $A\in S(\Omega)$ es
+$\mu^\circ$-medible si se cumple que $\mu^\circ(D) \geq
+\mu^\circ(AD)+\mu^\circ(A^cD), \forall D \in S(\Omega)$\\
+\textbf{Definición:} Una extensión exterior $\mu^\circ$ de una medida
+$\mu$ se define como:
+$$\mu^\circ (A) = \inf \sum_j (A_j), \quad A \subset \cup A_j,\quad
+recubrimiento $$
+\begin{theorem}
+La extensión exterior $\mu^\circ$ de una medida $\mu$ sobre un álgebra
+es una extensión de $\mu$ a una medida exterior
+\end{theorem}
+\begin{proof}
+Primero, veamos que es una extensión. Esto es trivial, dado que
+$\mu^\circ(A) = \inf \displaystyle \sum \mu(A) = \mu(A)$. Ahora,
+veamos que es una medida exterior.\\
+Veamos que es subaditiva, es decir, $\mu^\circ(\displaystyle \cup_j
+A_j) \leq \sum_j \mu^\circ(A_j)$. Sea entonces, para cada $A_j$, un
+recubrimiento $ \displaystyle \cup_k A_{kj} \supset A_j$. Entonces:
+$$ \sum_k \mu (A_{kj}) \leq \frac{\varepsilon}{2^j} + \mu^\circ (A_j)$$
+$$ \mu^\circ (\cup_j A_j) \leq \sum_{j,k} \mu (A_{kj}) \leq \sum_j
+\Big( \mu^\circ(A_j) + \frac{\varepsilon}{2^j}\Big) \leq \sum_j
+(\mu^\circ(A_j)) + \varepsilon $$
+Claramente es no decreciente, ya que si $A \subseteq B$, todo
+recubrimiento de $B$ lo será también de $A$, y por tanto,
+$\mu^\circ(A) \leq \mu^\circ(B)$\\
+Por último, $\mu^\circ(\emptyset) = \mu(\emptyset) = 0$
+\end{proof}
+\begin{theorem}
+Sea $\mu^\circ$ una medida exterior sobre la $\sigma$-álgebra
+$\mathcal{A}$, y sea $\mathcal{A}^\circ$ la clase de conjuntos
+$\mu^\circ$-medibles:
+\begin{itemize}
+\item $\mathcal{A}^\circ$ es un $\sigma$-algebra
+\item $\mu^\circ$ en $\mathcal{A}^\circ$ es una medida
+\end{itemize}
+\end{theorem}
+\begin{proof}
+Primero, veamos que $\mathcal{A}^\circ$ es un álgebra. Sea $A \in
+\mathcal{A}^\circ$, entonces $A^c \in \mathcal{A}^\circ$ dado que la
+definición de $\mu^\circ$-medibilidad es simétrica. Sean entonces $A,B
+\in \mathcal{A}^\circ$. Entonces:
+$$ \mu^\circ(D) = \mu^\circ(AD) + \mu^\circ(A^cD) = $$
+$$ = \mu^\circ(ABD) + \mu^\circ(AB^cD) + \mu^\circ(A^cBD) +
+\mu^\circ(A^cB^cD) \geq$$
+$$ \geq \mu^\circ(ABD) + \mu^\circ (AB^cD \cup A^cBD \cup A^cB^cD) =$$
+$$ = \mu^\circ(ABD) + \mu^\circ(AB)^cD$$
+Dado entonces que $\mathcal{A}^\circ$ es cerrada bajo la operación
+complementario e intersección finita, lo es para la unión finita, así
+que nos encontramos ante un álgebra. Veamos ahora que $\mu^\circ$ es
+aditiva en $\mathcal{A}^\circ$. Sean $A,B \in \mathcal{A}^\circ$
+disjuntos. Entonces:
+$$\mu^\circ(A+B) = \mu^\circ((A+B)A) + \mu^\circ((A+B)A^c) =
+\mu^\circ(A) + \mu^\circ(B)$$
+Y teniendo que $\mu^\circ(A) \geq \mu^\circ(\emptyset) = 0$,
+$\mu^\circ$ sobre $\mathcal{A}^\circ$ es una función aditiva y
+positiva. Para completar la prueba, veamos que $\mu^\circ$ es
+$\sigma$-aditiva. Sean $A_n \in \mathcal{A}^\circ$, $A = \displaystyle
+\sum A_n$. Tomamos los conjuntos $B_n = \displaystyle \sum_{k=1}^n A_k
+\in \mathcal{A}^\circ$. Tenemos que:
+$$ \mu^\circ(D) \geq \mu^\circ (B_nD) + \mu^\circ (B_n^cD) \geq
+\sum_{k=1}^n\mu^\circ(A_kD) + \mu^\circ(A^cD) $$
+Haciendo $n \to +\infty$
+$$\mu^\circ(D) \geq \sum_{n=1}^{+\infty} \mu^\circ(A_nD) +
+\mu^\circ(A^cD) \geq \mu^\circ(AD) + \mu^\circ(A^cD)$$
+Además queda demostrado que $A \in \mathcal{A}^\circ$, así que tenemos
+que $\mathcal{A}^\circ$ es un $\sigma$-algebra.
+Por último, tomando $D = A$, tenemos que $\mu^\circ(A) \geq
+\displaystyle \sum \mu^\circ(A_n) \Rightarrow \mu^\circ(A) = \sum
+\mu^\circ(A_n) \Rightarrow \mu^\circ$ es una medida.
+\qed
+\end{proof}
+\begin{theorem}
+de extensión de Carathéodory\\
+Dada una medida $\mu$ sobre un álgebra $\mathcal{C}$, existe una
+extensión $\mu^\circ$ sobre la $\sigma$-álgebra minimal sobre
+$\mathcal{C}$ ($\mathcal{A}(\mathcal{C})$). Además, si $\mu$ es
+finita, la extensión es única.
+\end{theorem}
+\begin{proof}
+$\forall A \in \mathcal{C}, \forall D \in \mathcal{C}, \forall
+\varepsilon>0, \exists \{A_j\} \subset \mathcal{C}$ recubrimiento de
+$D$ tal que
+$$\mu^\circ(D) + \varepsilon \geq \sum \mu(A_j) \geq \sum \mu (AA_j) +
+\sum \mu (A^cA_j) \geq \mu^\circ(AD) + \mu^\circ(A^cD) \Rightarrow$$
+$$ \stackrel{\varepsilon \to 0}{\Rightarrow} \mu^\circ(D) \geq
+\mu^\circ(AD) + \mu^\circ(A^cD), A \in \mathcal{A}^\circ \Rightarrow
+\mathcal{C} \subseteq \mathcal{A}^\circ, \mathcal{A}(\mathcal{C})
+\subseteq \mathcal{A}^\circ $$
+Por los dos teoremas que hemos demostrado antes, la restricción
+$\mu^\circ$ sobre $\mathcal{A}(\mathcal{C})$ es una extensión de $\mu$
+a una medida sobre $\mathcal{A}(\mathcal{C})$. Ahora, veamos que es
+única. Para ello, sean $\mu_1, \mu_2$ extensiones de $\mu$. Sea
+entonces el conjunto $\mathcal{M} = \{A: \mu_1(A) = \mu_2(A)\}
+\Rightarrow \mathcal{C} \subset \mathcal{M}$. Tenemos entonces que:
+$$ \Omega \in \mathcal{C} \Rightarrow \Omega \in \mathcal{M}
+\Rightarrow \mu_1(\Omega) = \mu_2(\Omega) = \mu(\Omega) < \infty
+\Rightarrow \mu_1, \mu_2 \: finitos $$
+$$ A \in \mathcal{M} \Rightarrow \mu_1(A^c) = \mu(\Omega) - \mu_1(A) =
+\mu(\Omega) - \mu_2(A) = \mu_2(A^c) \Rightarrow A^c \in \mathcal{M} $$
+$$ A,B \in \mathcal{M} \Rightarrow \mu_1(A+B) = \mu_1(A) + \mu_1(B) =
+\mu_2(A) + \mu_2(B) = \mu_2(A+B) \Rightarrow A+B \in \mathcal{M}$$
+Entonces, de momento $\mathcal{M}$ es un algebra.\\
+Sean ahora $\{A_n\} \subset \mathcal{M}$ monótona, entonces
+$\mu_1(\lim A_n) = \lim \mu_1(A_n) = \lim \mu_2(A_n) = \mu_2(\lim A_n)
+\Rightarrow \mathcal{M}$ cerrada frente al límite de sucesiones
+monótonas $\Rightarrow \mathcal{M} \sigma$-álgebra que contiene a
+$\mathcal{C}$, por tanto, contiene a la $\sigma$-álgebra minimal sobre
+$\mathcal{C}$
+$$ \mathcal{A}(\mathcal{C}) \subseteq \mathcal{M} \Rightarrow \mu_1 =
+\mu_2 \: en \: \mathcal{A}(\mathcal{C})$$
+\end{proof}
+\chapter{Funciones medibles}
+Una vez definidos los conceptos sobre espacios de medida y espacios
+probabilísticos, vamos a aproximarnos al concepto de función medible.
+Para ello, daremos dos definiciones de función medible, para demostrar
+más adelante que estas dos definiciones son equivalentes. Empecemos
+con la definición constructiva de función medible. Dado que nos
+interesa que el codominio sea $\mathbb{R}$, trabajaremos con funciones
+definidas entre un espacio medible ($\Omega$, $\mathcal{A}$) y
+($\mathbb{R}$, $\mathcal{B}$), donde $\mathcal{B}$ representa la
+$\sigma$-álgebra de Borel.\\
+Primero, se define la función puntual $X: \Omega \to \mathbb{R}$, que
+asigna a cada $\omega \in \Omega$ un número $x = X(\omega)$ único.
+Llamaremos a esta función variable aleatoria. Utilizaremos de aquí en
+adelante la siguiente notación:
+\begin{itemize}
+\item $[X]$ = dominio de la variable aleatoria $X$.
+\item $[ X \leq Y] = \{\omega: X(\omega) \leq Y(\omega)\}$
+\item $[ X = x] = \{\omega: X(\omega)= x\}$
+\end{itemize}
+Sea entonces la función $X = \displaystyle \sum_j x_jI_{A_j}$, donde
+$A_j$ son conjuntos medibles y $I_{A_j}$ denota la función indicadora
+de dicho conjunto. Estas funciones se llaman funciones elementales, y
+cuando el número de valores distintos que toma la función $X$ es
+finito, se conocen como funciones simples. Entonces, la definición
+constructiva de función medible es la que sigue:\\
+\textbf{Definición constructiva de función medible:} Una función es
+medible si es límite de una sucesión de funciones simples $\{X_n\}$
+convergentes.\\
+Esta definición que hemos dado es constructiva, y por tanto, nos será
+muy útil para la definición constructiva de las integrales. No
+obstante, para enunciar y demostrar las propiedades de las funciones
+medibles, suele ser más útil la definición descriptiva siguiente:\\
+\textbf{Definición descriptiva de función medible:} Sea una función
+$\varphi : \mathcal{A} \rightarrow \mathcal{B}$. Se dice que $\varphi$
+es medible si $\forall B \in \mathcal{B} \Rightarrow \varphi^{-1}(B)
+\in \mathcal{A}$. Es decir, una función se dice medible si la imagen
+inversa de todo conjunto medible es medible.\\
+No obstante, se puede dar, a raíz de esta, otra definición más económica:\\
+Para la definición anterior, es suficiente con exigir la medibilidad
+de las imágenes inversas de los elementos de una subclase $\alpha$
+para la cual la $\sigma$-álgebra minimal sobre $\alpha$ sea
+$\mathcal{B}$\\
+Veamos ahora que las dos definiciones que hemos dado son equivalentes.
+\begin{theorem} Teorema de medibilidad\\
+Las definiciones constructiva y descriptiva de una función medible son
+equivalentes, y la clase de funciones medibles es cerrada bajo las
+operaciones usuales del análisis.
+\end{theorem}
+\begin{proof}
+Sean $X_n$ funciones medibles en el sentido descriptivo. Entonces
+todos los conjuntos de la forma
+$$[\inf X_n < x] = \cup [X_n < x], [-X_n < x] = [X_n > -x]$$
+son medibles, y por tanto, las funciones
+$$\sup X_n = - \inf (-X_n), \lim \inf (X_n) = sup (\inf_{k \geq n} X_k)$$
+$$ \lim \sup X_n = - \lim \inf (-X_n)$$
+son medibles en el sentido descriptivo. Por un lado, las funciones de
+este tipo son claramente cerradas bajo las operaciones de supremo,
+ínfimo, y límites. Además, toda función simple es medible en el
+sentido descriptivo, ya que todos los conjuntos $[X \leq x] =
+\displaystyle \sum_{x_j \leq x} A_j$ son medibles. Entonces, el límite
+de sucesiones convergentes de funciones simples son medibles, y por
+tanto las funciones medibles en sentido constructivo lo son en sentido
+descriptivo.\\
+Veamos la otra implicación, es decir, que las funciones medibles en
+sentido descriptivo lo son en sentido constructivo. Sea una función
+$X$ medible en sentido descriptivo. Entonces, las funciones
+$$X_n = -nI_{[X < n]} +
+\sum_{-n2^n+1}^{n2^n}\frac{k-1}{2^n}I_{\big[\frac{k-1}{2^n} \leq X <
+\frac{k}{2^n} \big]} + nI_{X \geq n}, n \in \mathbb{N}$$
+son simples. Entonces, dado que
+$$\mid X_n(\omega) - X(\omega)\mid < \frac{1}{2^n} \quad para \quad
+\mid X(\omega)\mid < n$$
+y
+$$X_n(\omega) = \pm n \quad para \quad  X(\omega) = \pm \infty$$
+se tiene entonces que $X_n \to X$ y esto, con lo anterior, prueba la
+equivalencia de las dos definiciones de función medible.\qed
+\end{proof}
+\begin{lemma}
+Sea $X:A\longrightarrow B$\\
+$X$ es medible $\Longleftrightarrow$ $X^{-1}(S)\in A,S \in B$
+\end{lemma}
+\begin{theorem}
+Sea $X:\Omega \longrightarrow \mathbb{R}$, y $g: \mathbb{R}
+\longrightarrow \mathbb{R}$ continua. Entonces,$ g(X)$ es medible
+\end{theorem}
+\begin{proof}
+Si $X$ es elemental, tenemos que $\displaystyle g(X) =
+g\Big(\sum_jx_jI_{A_j}\Big)= \sum_j g(x_j)I_{A_j}$ función elemental,
+y por tanto, medible.\\
+Si $X$ es el límite de funciones elementales:
+$$g(X) = g(\lim X_n) = \lim g(X_n) = \lim \sum_j g(x_j)I_{A_j}$$
+\qed
+\end{proof}
+\begin{theorem}
+Sean $X$ función medible y $g$ función boreliana. Entonces, $g(X)$ es medible.
+\end{theorem}
+\begin{proof}
+$$(gX)^{-1}(B)=X^{-1}(g^{-1}(B))\in \mathcal{A}$$
+\qed
+\end{proof}
+\section{Convergencia en probabilidad y convergencia casi segura}
+Vamos a establecer ahora criterios que nos permitan comparar variables
+aleatorias. Dado un espacio de probabilidad ($\Omega$, $\mathcal{A}$,
+$\mathcal{P}$), se dice que dos variables aleatorias son equivalentes
+si:
+$$ X\mathcal{R}Y \Leftrightarrow \mathcal{P}[X = Y] = 1$$
+Análogamente:
+$$X(\omega) = Y(\omega) \forall \omega \in \Omega \setminus \Lambda,
+\mathcal{P}(\Lambda) = 0$$
+\subsection{Definición de convergencia en probabilidad}
+Si $P[|X_n- X| \geq \varepsilon]\rightarrow 0$, entonces se dice que
+$X_n\stackrel{\mathbb{P}}{\longrightarrow} X$, es decir, $X_n$
+converge en probabilidad a $X$\\
+\begin{lemma}
+$X_n\stackrel{\mathcal{P}}{\longrightarrow} X \wedge
+X_n\stackrel{\mathcal{P}}{\longrightarrow} Y \Longrightarrow
+X\mathcal{R}Y$\\
+\end{lemma}
+\begin{proof}
+$$|X-Y |=|X - X_n - Y + X_n | \leq |X_n - X|+| X_n-Y |$$
+$$P[|X - Y| \geq \varepsilon] \leq P[|X_n - X | \geq
+\frac{\varepsilon}{2} ] + P[| X_n - Y | \geq \frac{\varepsilon}{2}]
+\rightarrow 0$$
+Y por tanto, $X \mathcal{R} Y$
+\qed
+\end{proof}
+\subsection{Definición de convergencia uniforme en u}
+Se dice que una variable aleatoria $X$ converge uniformemente en $u$
+si se cumple que $\mathcal{P}[\mid X_{n+u} - X_n \mid \geq
+\varepsilon] \to 0$
+\begin{lemma}
+La convergencia en probabilidad implica la convergencia uniforme
+\end{lemma}
+\begin{proof}
+$$ \mid X_{n+u} - X_n \mid \leq \mid X_{n+u} - X \mid + \mid X - X_n
+\mid \Rightarrow$$
+$$ \Rightarrow \mathcal{P}[\mid X_{n+u} - X_n \mid \geq \varepsilon]
+\leq \mathcal{P}\Big[\mid X_{n+u} - X \mid \geq
+\frac{\varepsilon}{2}\Big] + \mathcal{P}\Big[\mid X_{n} - X \mid \geq
+\frac{\varepsilon}{2}\Big] \to 0$$
+\end{proof}
+\subsection{Propiedades}
+\begin{enumerate}
+\item $ X_n \stackrel{\mathcal{P}}{\longrightarrow} X \wedge Y_n
+\stackrel{\mathcal{P}}{\longrightarrow} Y \Longrightarrow X_n + Y_n
+\stackrel{\mathcal{P}}{\longrightarrow} X + Y$
+\item $X_n \stackrel{\mathcal{P}}{\longrightarrow} X \Longrightarrow
+KX_n \stackrel{\mathcal{P}}{\longrightarrow} KX$
+\item $X_n \stackrel{\mathcal{P}}{\longrightarrow} K$, entonces ${X_n}^2 \stackrel{\mathcal{P}}{\longrightarrow}
+K^2$.\\
+Para demostrarlo basta notar que: $ {X_n}^2 - K^2 = (X_n + K) (X_n -K)$
+\item $X_n \stackrel{\mathcal{P}}{\longrightarrow} a \wedge Y _n
+\stackrel{\mathcal{P}}{\longrightarrow} b \Longrightarrow X_nY_n
+\stackrel{\mathcal{P}}{\longrightarrow} a \cdot b$\\
+Para demostrarlo tenemos que notar que:
+$$X_n Y_n = \dfrac{(X_n + Y_n)^2-(X_n -
+Y_n)^2}{4}\stackrel{\mathcal{P}}{\longrightarrow}
+\dfrac{(a+b)^2-(a-b)^2}{4}=ab$$
+\item $X_n \stackrel{\mathcal{P}}{\longrightarrow} 1 \Longrightarrow
+\dfrac{1}{X_n} \stackrel{\mathcal{P}}{\longrightarrow} 1$
+\item $X_n \stackrel{\mathcal{P}}{\longrightarrow} a \wedge Y_n
+\stackrel{\mathcal{P}}{\longrightarrow} b \Longrightarrow
+X_nY_n^{-1}\stackrel{\mathcal{P}}{\longrightarrow} ab^{-1}$
+\item $X_n \stackrel{\mathcal{P}}{\longrightarrow} X \wedge
+Y_n\stackrel{\mathcal{P}}{\longrightarrow} Y \Longrightarrow
+X_nY_n\stackrel{\mathcal{P}}{\longrightarrow} XY$\\
+Para demostrarlo basta notar que: $(X_n - X)(Y_n -
+Y)\stackrel{\mathcal{P}}{\longrightarrow} 0$ y luego
+$X_nY_n-XY_n-X_nY+XY\stackrel{\mathcal{P}}{\longrightarrow} 0$ (Por la
+propiedad siguiente)
+\item $X_n\stackrel{\mathcal{P}}{\longrightarrow} X$, entonces
+$YX_n\stackrel{\mathcal{P}}{\longrightarrow} YX$
+\end{enumerate}
+\begin{theorem}
+Si $X_n\stackrel{\mathcal{P}}{\longrightarrow} X$ y $g(\cdot)$ es
+continua, entonces se cumple que:
+$$g(X_n)\stackrel{\mathcal{P}}{\longrightarrow} g(X)$$
+\end{theorem}
+\begin{proof}
+$\mathcal{P}[|X| \geq k] < \frac{\varepsilon}{2} \forall \varepsilon >
+0, \exists k$. Consideramos el compacto $[-k,k], A = [|X| < k], B =
+[|X_n - X| < \delta] \: y \: C = [|g(X_n) - g(X)| < \varepsilon]$.
+Tenemos que ver si $\mathcal{P}(B)\to 1 \Rightarrow \mathcal{P}(C)\to
+1 $:
+$$ AB \subset C \Rightarrow C^c \subset A^c \cup B^c \Rightarrow
+\mathcal{P}(C^c) \leq \mathcal{P}(A^c) + \mathcal{P}(B^c) \leq $$
+$$ \leq \mathcal{P}[|X| \geq k] + \mathcal{P}[|X_n - X| \geq \delta]
+\leq \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon$$
+\end{proof}
+\subsection{Definición de convergencia casi segura}
+Una sucesión de variables aleatorias, ${ X_n }$ , converge con
+probabilidad 1, o de forma casi segura, a una variable aleatoria $X$ (
+que puede degenerar en una constante K) cuando se cumple que:
+$$P(\lim_{n\rightarrow\infty}X_n=X)=1$$
+De esta forma interpretamos que $X_n\stackrel{c.s}{\longrightarrow}X$
+cuando la probabilidad de que en el límite la sucesión de variables
+aleatorias y aquella a la que converge sean iguales es uno
+\begin{theorem}
+$$X_n\stackrel{c.s}{\longrightarrow}X\Longrightarrow
+X_n\stackrel{\mathcal{P}}{\longrightarrow}X$$
+$$X_n\stackrel{\mathcal{P}}{\longrightarrow}X\Longrightarrow \exists
+X_{nk}\,:\, X_{n_k}\stackrel{c.s}{\longrightarrow}_{k\rightarrow\infty}X$$
+\end{theorem}
+\begin{proof}
+$$0=\displaystyle\lim_{n\rightarrow\infty}P\bigcup_{m\geq n}[|X_m -
+X|\geq \epsilon ]\geq\displaystyle\lim_{n\rightarrow\infty}P[|X_n -
+X|\geq \epsilon ]$$
+\qed
+\end{proof}
+\begin{lemma}
+Sea $\mathbb{X}_n$ finita. Entonces se tiene que:
+\\\\
+$\mathbb{X}_n \stackrel{c.s.}{\longrightarrow}\mathbb{X}\Longleftrightarrow
+\mathbb{X}_n$ es de cauchy
+\end{lemma}
+\begin{proof}
+$$\Longrightarrow$$
+$\exists n_0\, : \, \forall n\geq n_0$ se tiene que:
+$$|\mathbb{X}_n(\omega)-\mathbb{X}(\omega)|<\frac{\epsilon}{2}\,
+\omega \in A \, P(A)=1$$
+$$|\mathbb{X}_n(\omega)-\mathbb{X}_m(\omega)|\leq|\mathbb{X}_n(\omega)-\mathbb{X}(\omega)|+|\mathbb{X}_m(\omega)-\mathbb{X}(\omega)|<\epsilon$$
+$$\Longleftarrow$$
+\begin{center}
+${\mathbb{X}_n(\omega)}$ de Cauchy
+\end{center}
+$$\lim\mathbb{X}_n(\omega)=\mathbb{X}(\omega)\, \omega \in A$$
+\qed
+\end{proof}
+\chapter{Esperanza matemática}
+\section{Integral de una función de conjunto}
+Para el cálculo de probabilidades, nos será muy útil el concepto de
+integral sobre funciones de conjunto. Este concepto nos servirá para
+calcular lo que se conoce como la esperanza matemática de una variable
+aleatoria $X$. En esta seccion trabajaremos sobre el espacio de
+probabilidad $(\Omega, \mathcal{A}, \mathcal{P})$. Comenzaremos
+definiendo la integral para las funciones simples, para dar luego una
+definición de integral para funciones no negativas y por último para
+funciones cualesquiera.\\
+Sea entonces $\{A_k\} \in \mathcal{A}$, tal que $\displaystyle \sum_k
+A_k = \Omega$, partición medible del espacio. Sea entonces la función
+simple $X = \displaystyle \sum_{j=1}^m x_jI_{A_j}, x_j \geq 0$. La
+integral de la función $X$ se define como:
+$$\int_{\Omega} X d\mathcal{P} = \sum_{j=1}^m x_j\mathcal{P}_{A_j}$$
+Ahora, para cualquier función no negativa $X$, se define la integral
+de la función como:
+$$\int_{\Omega} X d\mathcal{P} = \lim \int_{\Omega}X_n d \mathcal{P}$$
+Donde $\{X_{n}\} \to X$. Finalmente, la integral en $\Omega$ de una
+función medible $X$ se define como:
+$$\int_{\Omega} X d\mathcal{P} = \int_{\Omega}X^{+} d\mathcal{P} -
+\int_{\Omega} X^{-} d\mathcal{P}$$
+donde $X^{+} = XI_{[X\geq0]}$ y $X^{-} = -XI_{[X<0]}$. Si
+$\displaystyle \int_{\Omega}Xd\mathcal{P}$ es finita, es decir, si los
+dos términos de la diferencia anterior son finitos, entonces se dice
+que $X$ es integrable en $\Omega$. Ahora, una vez definida la
+integral, vamos a ver algunas de sus propiedades. Tenemos primero una
+serie de propiedades relacionadas con la aditividad de la integral.
+Sean $X,Y$ dos funciones medibles, entonces (no se demostrarán las
+propiedades triviales):\\
+$\displaystyle \int (X+Y)d\mathcal{P} = \int Xd\mathcal{P} + \int
+Yd\mathcal{P}$\\
+\begin{proof}
+Sean $X = \displaystyle \sum x_jI_{A_j}$ y $y = \displaystyle \sum
+y_kI_{B_k}$. Entonces $X+Y = \displaystyle \sum_k \sum_j x_j
+I_{A_jB_k} + \sum_k \sum_j y_k I_{A_jB_k} = \sum_k \sum_j (x_k+y_j)
+I_{A_jB_k}$\\
+Si calculamos ahora las integrales:
+$$ \int (X+Y)d\mathcal{P} = \sum_k + \sum_j (x_j + y_k) \mathcal{P}(A_jB_k) =$$
+$$ = \sum_j x_j \mathcal{P}(A_j) + \sum_k y_k \mathcal{P}(B_k) = \int
+Xd\mathcal{P} + \int Yd\mathcal{P}\\$$
+\qed
+\end{proof}
+$\displaystyle \int_{A+B} X d\mathcal{P} = \int_A X d\mathcal{P} +
+\int_B X d \mathcal{P}$\\
+$\displaystyle \int cXd\mathcal{P} = c\int Xd\mathcal{P}$\\
+Veamos ahora algunas propiedades relacionadas con el orden:\\
+$X \geq 0 \rightarrow \displaystyle \int X d\mathcal{P} \geq \int 0 = 0$\\
+$X \geq Y \rightarrow \displaystyle \int X d\mathcal{P} \geq \int Y
+d\mathcal{P}$\\
+$\displaystyle X \stackrel{c.s}{=} Y \rightarrow \int X d\mathcal{P} =
+\int Y d\mathcal{P}$\\
+\section{Esperanza matemática}
+\subsection{Definición general}
+Dado un espacio probabilístico $(\Omega, \mathcal{A}, P)$ y una v.a.
+$X$, se define la esperanza matemática de $X$ como:
+$$E(X)=\int_{\Omega}XdP=\int_{\omega \in \Omega}{X(\omega)dP(\omega)}$$
+\\\\
+La esperanza matemática se define de forma distinta si estamos
+trabajando con una v.a. discreta o continua. En el caso de una v.a.
+discreta, sea $p(x_i)$ su función de probabilidad. Definimos la
+esperanza matemática como:
+$$E(X)=x_1p(X=x_1)+\ldots + x_n p(X=x_n)=\sum_{i=1}^{n}{x_i p(x_i)}$$
+En el caso de una v.a. continua, sea $f(x)$ la función de densidad.
+Definimos la esperanza matemática como:
+$$E(X)=\int_{-\infty}^{+\infty} {xf(x)dx}$$
+\subsection{Teorema de la convergencia monótona}
+Una vez vista la definición de integral y esperanza matemática y
+algunas de sus propiedades, vamos a enunciar y demostrar un teorema de
+convergencia que nos será de mucha utilidad para el estudio de
+variables aleatorias. Veamos su enunciado y demostración:
+\begin{theorem}
+Teorema de la convergencia monótona para funciones medibles no negativas\\
+Sea $\{X_n\} \geq 0$ tal que $X_n \uparrow X$. Entonces, se tiene que
+$\displaystyle \int X_n \uparrow \int X$
+\end{theorem}
+\begin{proof}
+Tomamos las sucesiones $X_{km} \uparrow X_k$. La sucesión $Y_n =
+\displaystyle \max_{k \geq n} X_{kn}$ es una sucesión de funciones
+simples no negativas y no decreciente, y además
+$$X_{kn} \leq Y_n \leq X_n \rightarrow \int X_{kn} \leq \int Y_n \leq \int X_n$$
+Ahora, cuando $n \rightarrow \infty$, tenemos que
+$$X_k \leq lim Y_n \leq X \rightarrow \int X_k \leq \int lim Y_n \leq \int X$$
+Por último, cuando $K \rightarrow \infty$, obtenemos
+$$X \leq lim Y_n \leq X \rightarrow lim \int X_n \leq \int lim Y_n
+\leq lim \int X_n$$
+De donde extraemos que $\lim Y_n = X$ y que $\displaystyle \int X =
+lim \int X_n$
+\qed
+\end{proof}
+\subsection{Teorema de Fatou-Lebesgue}
+Veamos ahora un resultado que nos da información sobre el límite
+superior e inferior de una sucesión de variables aleatorias, en caso
+de que estas estén acotadas por variables aleatorias integrables
+\begin{theorem}
+de Fatou-Lebesgue\\
+Sean $Y$, $Z$ dos funciones integrables (pueden no mantener su signo)
+y $X_n$ una sucesión de variables aleatorias, entonces:
+\begin{enumerate}
+\item Si $Y \leq X_n \, \forall n \Longrightarrow$ $E(\lim \inf X_n)
+\leq \lim \inf E(X_n)$
+\item Si $X_n \leq Z \, \forall n \Longrightarrow E(\lim \sup X_n)\geq
+\lim \sup E(X_n)$
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Si $X_n \geq 0$, tenemos que:
+$$ X_n \geq Y_n = \inf_{k \geq n} X_n \uparrow \lim \inf X_n
+\stackrel{TCM}{=} \lim \inf E(X_n) \geq \lim Y_n = E(\lim \inf X_n)$$
+En otro caso:
+\begin{enumerate}
+\item $X_n - Y \geq 0 \Rightarrow \lim \inf E(X_n) - \lim \inf E(Y)
+\geq E(\lim \inf X_n) - E(\lim \inf Y)$
+\item $Z - X_n \geq 0 \Rightarrow - \lim \inf E(-X_n) \geq - E(\lim
+\inf - X_n) \Rightarrow \lim \sup E(X_n) \leq E(\lim \sup X_n)$
+\end{enumerate}
+\qed
+\end{proof}
+\subsection{Teorema de la convergencia dominada}
+\begin{theorem}
+Sea $X_n$ una sucesión de variables aleatorias t.q.  $X_n
+\stackrel{\mathcal{P}}{\rightarrow} X$ o $X_n
+\stackrel{c.s.}{\rightarrow} X$  . Si $\exists Y \, t.q. \, |X_n |\leq
+Y$. Entonces se tiene que $X$ es integrable y:
+$$\lim\int X_n\, dP=\int X\, dP$$
+\end{theorem}
+\begin{proof}
+Por un lado, si tenemos la convergencia casi segura, $|X_n| \leq Y
+\Rightarrow -Y \leq X_n \leq Y \stackrel{F-L}{\rightarrow}
+\displaystyle \int X_n \to \int X$.
+Por otro, si la convergencia es en probabilidad, nos bastaría con
+probar que si $Y_n \stackrel{\mathcal{P}}{\rightarrow} 0 \Rightarrow
+\displaystyle \int Y_n \stackrel{\mathcal{P}}{\rightarrow} 0$.
+Entonces, se considera $Y = |X_n - X|$ y se culmina la demostración.
+Entonces:
+$$ Y_n \stackrel{\mathcal{P}}{\rightarrow} 0 \Rightarrow \exists
+\{Y_n'\} \subset \{Y_n\} \, t.q. \, \int Y_n' \rightarrow \lim \sup
+\int Y_n$$
+De nuevo, tenemos que $Y_n' \stackrel{\mathcal{P}}{\rightarrow} 0$.
+Tomando anora $\{Y_n''\} \subset \{Y_n'\} \, t.q. \, Y_n''
+\stackrel{c.s.}{\rightarrow} 0 \rightarrow \displaystyle \int Y_n''
+\rightarrow 0 \stackrel{unic.lim.}{\Rightarrow} \lim \sup \int Y_n = 0
+\stackrel{Y_n \geq 0}{\Rightarrow} \int Y_n \rightarrow 0$
+\qed
+\end{proof}
+
+
+\begin{theorem}
+de Fatou-Lebesgue\\
+
+Sean $Y$, $Z$ dos funciones integrables (pueden no mantener su signo)
+y $X_n$ una sucesión de variables aleatorias, entonces:
+\begin{enumerate}
+\item Si $Y \leq X_n \, \forall n \Longrightarrow$ $E(\lim \inf X_n)
+\leq \lim \inf E(X_n)$
+\item Si $X_n \leq Z \, \forall n \Longrightarrow E(\lim \sup X_n)\geq
+\lim \sup E(X_n)$
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Si $X_n \geq 0$, tenemos que:
+$$ X_n \geq Y_n = \inf_{k \geq n} X_n \uparrow \lim \inf X_n
+\stackrel{TCM}{=} \lim \inf E(X_n) \geq \lim Y_n = E(\lim \inf X_n)$$
+En otro caso:
+\begin{enumerate}
+\item $X_n - Y \geq 0 \Rightarrow \lim \inf E(X_n) - \lim \inf E(Y)
+\geq E(\lim \inf X_n) - E(\lim \inf Y)$
+\item $Z - X_n \geq 0 \Rightarrow - \lim \inf E(-X_n) \geq - E(\lim
+\inf - X_n) \Rightarrow \lim \sup E(X_n) \leq E(\lim \sup X_n)$
+\end{enumerate}
+\qed
+\end{proof}
+
+\subsection{Teorema de la convergencia dominada}
+\begin{theorem}
+Sea $X_n$ una sucesión de variables aleatorias t.q.  $X_n
+\stackrel{\mathcal{P}}{\rightarrow} X$ o $X_n
+\stackrel{c.s.}{\rightarrow} X$  . Si $\exists Y \, t.q. \, |X_n |\leq
+Y$. Entonces se tiene que $X$ es integrable y:
+$$\lim\int X_n\, dP=\int X\, dP$$
+\end{theorem}
+
+\begin{proof}
+Por un lado, si tenemos la convergencia casi segura, $|X_n| \leq Y
+\Rightarrow -Y \leq X_n \leq Y \stackrel{F-L}{\rightarrow}
+\displaystyle \int X_n \to \int X$.
+Por otro, si la convergencia es en probabilidad, nos bastaría con
+probar que si $Y_n \stackrel{\mathcal{P}}{\rightarrow} 0 \Rightarrow
+\displaystyle \int Y_n \stackrel{\mathcal{P}}{\rightarrow} 0$.
+Entonces, tomaríamos $Y = |X_n - X|$ y tendríamos la demostración.
+Entonces:
+$$ Y_n \stackrel{\mathcal{P}}{\rightarrow} 0 \Rightarrow \exists
+\{Y_n'\} \subset \{Y_n\} \, t.q. \, \int Y_n' \rightarrow \lim \sup
+\int Y_n$$
+De nuevo, tenemos que $Y_n' \stackrel{\mathcal{P}}{\rightarrow} 0$.
+Tomando anora $\{Y_n''\} \subset \{Y_n'\} \, t.q. \, Y_n''
+\stackrel{c.s.}{\rightarrow} 0 \rightarrow \displaystyle \int Y_n''
+\rightarrow 0 \stackrel{unic.lim.}{\Rightarrow} \lim \sup \int Y_n = 0
+\stackrel{Y_n \geq 0}{\Rightarrow} \int Y_n \rightarrow 0$
+\qed
+\end{proof}
+
+\subsection{Desigualdades}
+
+Vamos a ver algunas desigualdades que nos permitirán
+simplificar el cálculo de carácterísticas asociadas a variables
+aleatorias.\\
+
+\textbf{Definición: Momento r-ésimo}\\
+
+Dado un espacio probabilístico ($\Omega$, $\mathcal{A}$,
+$\mathcal{P}$) y una variable aleatoria $X$, se define el momento
+r-ésimo o de orden r de la variable $X$ a:
+$$ EX^r = \int X^r \, d \mathcal{P} $$
+Dicho momento existe si $E|X|^r < \infty$
+
+\subsubsection{Desigualdad $C_r$}
+\begin{lemma}
+$|a+b|^r\leq C_r |a|^r + C_r |b|^r$ con $C_r=1$ si $r=1$ y $C_r=2^r$ si $r>1$\\
+
+Entonces se tiene $E|X+Y|^r \leq C_r E|X|^r + C_r E|Y|^r$
+\end{lemma}
+
+\subsubsection{Desigualdad de Hölder}
+$E|XY| \leq \left(E|X|^r \right)^{\frac{1}{r}}  \left(E|Y|^s
+\right)^{\frac{1}{s}}$ con $r>s$ ; $ \dfrac{1}{r}+\dfrac{1}{s}=1$
+
+\subsubsection{Caso particular: Desigualdad de Schwarz}
+$E|XY|\leq \left(E|X|^2 \right)^{\frac{1}{2}} \left(E|Y|^2
+\right)^{\frac{1}{2}}$
+
+\subsubsection{Desigualdad de Minkowsky}
+Si $r \geq 1 \Rightarrow (E|X+X'|^r)^{\frac{1}{r}} \leq \left(E|X|^r
+\right)^{\frac{1}{r}} + \left(E|X'|^r \right)^{\frac{1}{r}}$
+
+\subsubsection{Desigualdad básica}
+Sea $X$ una v.a. y sea $g$ una función boreliana. Entonces se tiene:
+
+\begin{description}
+\item[i)] Si $g$ es par y no decreciente en $[0,\infty) \, \forall
+a>0$ , entonces:
+$$\dfrac{Eg(X)-g(a)}{sup\, g(X)}\leq P[|X|\geq a]\leq \dfrac{E g(X)}{g(a)}$$
+\item[ii)] (Desigualdad de Tchevychev) Si $g$ es no decreciente en $\mathbb{R}$,
+$$ P[|X-EX] \geq a] \leq \frac{Var X}{a^2}$$
+\item[iii)] (Desigualdad de Markov) Si $g(X) = |X|^r$
+$$ \frac{EX^r - a^r}{sup X^r} \leq P[|X| \geq a] \leq \frac{EX^r}{a^r} $$
+\end{description}
+
+Vamos a demostrar que en efecto se cumple la desigualdad básica:
+\begin{proof}
+Definimos $A = [|X| \geq A]$
+$$ Eg(A) = \int_A g(X) d\mathcal{P} + \int_{A^c} g(X) d\mathcal{P} $$
+$$ g(a)\mathcal{P}(A) \leq \int_A g(X) \leq \sup g(X)\mathcal{P}(A) $$
+$$ 0 \leq \int_{A^c} g(X) d\mathcal \leq g(a) $$
+$$ g(a)\mathcal{P}(A) \leq Eg(X) \leq \sup g(X)\mathcal{P}(A) + g(a) $$
+\qed
+\end{proof}
+
+\subsubsection{Aplicaciones}
+\begin{enumerate}
+\item Usando la desigualdad básica con $g(X) = X^r$ y $E|X_n - X|^r
+\to 0 \Rightarrow X_n \stackrel{\mathcal{P}}{\rightarrow} X$
+\item ($\Omega$, $\mathcal{A}$, $\mathcal{P}$)
+$\stackrel{\mathcal{P}}{\rightarrow}$ ($\mathbb{R}$, $\mathcal{B}$),
+definimos ahora $\mathcal{P}^X(\mathcal{B}) =
+\mathcal{P}(X^{-1}(\mathcal{B}))$. $\mathcal{P}^X$ es una
+probabilidad, ya que $\mathcal{P}^X(\mathbb{R}) = 1,
+\mathcal{P}^X(\mathcal{B}) \geq 0, \mathcal{P}^X(\sum B_j) = \sum
+\mathcal{P}^X(B_j)$, y $EX = \displaystyle \int_{x \in \mathbb{R}} x d
+\mathcal{P}^X(x)$; $Eg(X) = \displaystyle \int_{y \in \mathbb{R}} g d
+\mathcal{P}^Y(y) = \displaystyle \int_{x \in \mathbb{R}} g(x) d
+\mathcal{P}^X(x)$
+\end{enumerate}
+
+\section{Convergencia en r-medida}
+Se dice que una sucesión de variables aleatorias $X_n$ converge en
+r-medida a $X$ si:
+$$ E|X_n - X|^r \to 0$$
+Lo notamos como $X_n \stackrel{r}{\rightarrow} X$
+
+\begin{lemma}
+Si $X_n \stackrel{r}{\rightarrow} X \Rightarrow E|X_n|^r \rightarrow E|X|^r$
+\end{lemma}
+
+\begin{proof}
+Tenemos dos casos, para $r \leq 1$ y $r \geq 1$\\
+
+Para $r \leq 1$: $|E|X_n|^r - E|X|^r| \leq E|X_n - X|^r \rightarrow 0$\\
+
+Para $r \geq 1$: $|(E|X_n|^r)^{\frac{1}{r}} - (E|X|^r)^{\frac{1}{r}}|
+\leq (E|X_n - X|^r)^{\frac{1}{r}} \rightarrow 0$
+\end{proof}
+
+\section{Función de distribución, distribución inducida y función
+generatriz de momentos}
+\subsection{Función de distribución}
+Función puntual que se define sobre la recta real, no negativa, no
+decreciente, continua por la izquierda y que cumple que $F(-\infty) =
+0, F(+\infty) = 1$\\
+
+\subsection{Distribución inducida}
+Se conoce como distribución inducida por la variable aleatoria $X$ a
+($\mathbb{R}$, $\mathcal{B}$, $\mathcal{P}^X$), donde la medida de
+probabilidad $\mathcal{P}^X$ se define como:
+$$ \mathcal{P}^X(B) = \mathcal{P}(X^{-1}(B)), \, \forall B \in \mathcal{B} $$
+Tenemos entonces que:
+\begin{itemize}
+\item $\mathcal{P}^X(B) \geq 0 \forall B \in \mathcal{B}$
+\item $\displaystyle \mathcal{P}^X(\sum_j B_j) =
+\mathcal{P}(X^{-1}(\sum_jB_j)) = \mathcal{P}(\sum_j X^{-1}(B_j)) =
+\sum_j \mathcal{P}(X^{-1}(B_j)) = \sum_j \mathcal{P}^X(B_j)$
+\item $\displaystyle EX = \int_{\omega \in \Omega} X(\omega) d
+\mathcal{P(\omega)} = \int_{x \in \mathbb{R}} x d\mathcal{P}^X(x)$
+\end{itemize}
+
+\subsection{Función generatriz de momentos}
+Llamamos función generatriz de momentos de la variable aleatoria $X$ a
+la función:
+$$ M_X(t) = E(e^{tX}); \, t \in \mathbb{R} $$
+\subsection{Función característica}
+Dada una variable aleatoria $\mathbb{X}$ continua, definimos su
+función característica como:
+$$\varphi_X(t)=E(e^{itX})=\int_{-\infty}^{\infty}e^{itx}f_{X}(x)=E(cos(tX))+iE(sen(TX))$$
+
+\chapter{Independencia}
+\section{Concepto de independencia}
+\textbf{Definición: }Se dice que los eventos $A_t$ son independientes
+si para todo subconjunto finito $(t_i,\ldots ,t_n)$ se tiene que:
+$$P\bigcap_{k=1}^n A_{tk}=\displaystyle\prod_{k=1}^{n}P\, A_{tk}$$
+De hecho, el concepto de independencia es relativo a la familia de
+clases. Una clase de eventos se dice independiente si sus eventos son
+independientes.
+
+\begin{theorem}
+Se tiene que las subclases de una clase independiente son independientes.
+\end{theorem}
+
+\section{Suma de variables aleatorias independientes}
+\subsubsection{Teorema de Borel}
+\begin{theorem}
+Las funciones de Borel de funciones aleatorias independientes son
+independientes.
+\end{theorem}
+\subsubsection{Teorema de extensión}
+\begin{theorem}
+Los $\sigma$ algebras minimales independientes sobre clases
+independientes cerradas para la intersección finita son independientes
+\end{theorem}
+Esto tiene tres aplicaciones fundamentales:
+\begin{enumerate}
+\item Si los eventos $A_t$ son independientes, también lo son los
+$\sigma$ algebras $(A_t , A_t^c , \emptyset , \Omega)$.
+\item Si la imagen inversa $\mathcal{C}_t$ de las clases de todos los
+intervalos $(-\infty, x_t)$ en los espacios de Borel $R_t$ son
+independientes, también lo son las imágenes inversas $\mathcal{B}_t$
+de los algebras de Borel en $R_t$. Para todo $\mathcal{C}_t$, éste es
+cerrado para la intersección finita y $\mathcal{B}_t$ es el $\sigma$
+algebra minimal sobre $\mathcal{C}_t$
+\item Sean $\mathcal{B}_t$ algebras de eventos y sea $T_s$ un
+subconjunto de $T$. El $\sigma$ algebra $\mathcal{B}_T$ compuesto por
+componentes $\mathcal{B}_t$, con $t\in T_s$, es el $\sigma$ algebra
+minimal sobre la clase $\mathcal{C}$ de todas las intersecciones
+finitas de eventos $A_t$ y contiene a todos sus componentes
+\end{enumerate}
+\subsubsection{Teorema de composición}
+\begin{theorem}
+Los $\sigma$ algebras compuestos son independientes si y solo si sus
+$\sigma$ subalgebras finitamente compuestos son independientes
+\end{theorem}
+\subsection{Familia de variables aleatorias}
+Una familia de variables aleatorias $X_{T_s}=\{ X_t \, , \, t\in T_s
+\}$ induce $\sigma$ algebras $\mathcal{B}(X_{T_s})$ de eventos
+\subsubsection{Teorema de las familias}
+\begin{theorem}
+Las familias de variables aleatorias son independientes si y solo si
+sus subfamilias finitas son mutuamente independientes
+\end{theorem}
+\section{Multiplicación de variables aleatorias independientes}
+\textbf{Definición: } Las variables aleatorias $X_t\, , \, t\in T$ son
+independientes si para cada clase finita $(S_{t_1},\ldots , S_{t_n})$
+de conjuntos de Borel en R:
+$P\bigcap_{k=1}^{n}[X_{t_k}\in S{t_k}]=\displaystyle\prod_{k=1}^n
+P[X_{t_k}\in S_{t_k}]$
+\subsubsection{Lema de la multiplicación}
+\begin{lemma}
+Si $X_1, \ldots , X_n$ son variables aleatorias independientes no
+negativas, entonces
+$E\displaystyle\prod_{k=1}^{n}X_k=\displaystyle\prod_{k=1}^{n} E X_k$
+\end{lemma}
+\begin{proof}
+Basta demostrar el resultado para dos variables, dado que el resto se
+demuestra por inducción. En primer lugar, veamos que se verifica la
+condición para funciones simples.\\
+
+Sean $X = \sum_j x_j I_{A_j}, Y = \sum_k y_k I_{B_k}$ variables
+simples no negativas, donde $A_j = [X = x_j], B_k = [Y = y_k]$.\\
+
+Por ser $X,Y$ independientes, $P(A_jB_k) = P(A_j)P(B_k) \Rightarrow
+E(XY) = \sum_{k,j} P(A_jB_k) = \sum_{j,k} P(A_j)P(B_k) = E(X)E(Y)$\\
+
+Sean ahora $X,Y$ variables aleatorias no negativas independientes. Su
+independencia implica la de
+$$ A_{nj}=[\frac{j-1}{2^n} \leq X < \frac{j}{2^n}],
+B_{nk}=[\frac{k-1}{2^n} \leq Y < \frac{k}{2^n}]$$
+Finalmente, tendremos la independencia de las variables aleatorias simples:
+$$ X_n = \sum_{j=1}^{n2^n} \frac {j-1}{2^n}I_{A_{nj}}, Y_n =
+\sum_{k=1}^{n2^n} \frac {k-1}{2^n}I_{B_{nk}}$$
+Tenemos entonces que:
+$$ 0 \leq X_n \uparrow X, 0 \leq Y_n \uparrow Y \Rightarrow X_nY_n \uparrow XY$$
+$$ E(X_nY_n) = E(X_n)E(Y_n)$$
+De donde se extrae por el teorema de la convergencia dominada que
+$E(XY) = E(X)E(Y)$
+\qed
+\end{proof}
+
+Se conoce como distribución inducida por la variable aleatoria $X$ a
+($\mathbb{R}$, $\mathcal{B}$, $\mathcal{P}^X$), donde la medida de
+probabilidad $\mathcal{P}^X$ se define como:
+$$ \mathcal{P}^X(B) = \mathcal{P}(X^{-1}(B)), \, \forall B \in \mathcal{B} $$
+Tenemos entonces que:
+\begin{itemize}
+\item $\mathcal{P}^X(B) \geq 0 \forall B \in \mathcal{B}$
+\item $\displaystyle \mathcal{P}^X(\sum_j B_j) =
+\mathcal{P}(X^{-1}(\sum_jB_j)) = \mathcal{P}(\sum_j X^{-1}(B_j)) =
+\sum_j \mathcal{P}(X^{-1}(B_j)) = \sum_j \mathcal{P}^X(B_j)$
+\item $\displaystyle EX = \int_{\omega \in \Omega} X(\omega) d
+\mathcal{P(\omega)} = \int_{x \in \mathbb{R}} x d\mathcal{P}^X(x)$
+\end{itemize}
+\subsection{Función generatriz de momentos}
+Llamamos función generatriz de momentos de la variable aleatoria $X$ a
+la función:
+$$ M_X(t) = E(e^{tX}); \, t \in \mathbb{R} $$
+\subsection{Función característica}
+Dada una variable aleatoria $\mathbb{X}$ continua, definimos su
+función característica como:
+$$\varphi_X(t)=E(e^{itX})=\int_{-\infty}^{\infty}e^{itx}f_{X}(x)=E(cos(tX))+iE(sen(TX))$$
+\chapter{Independencia}
+\section{Concepto de independencia}
+\textbf{Definición: }Se dice que los eventos $A_t$ son independientes
+si para todo subconjunto finito $(t_i,\ldots ,t_n)$ se tiene que:
+$$P\bigcap_{k=1}^n A_{tk}=\displaystyle\prod_{k=1}^{n}P\, A_{tk}$$
+De hecho, el concepto de independencia es relativo a la familia de
+clases. Una clase de eventos se dice independiente si sus eventos son
+independientes.
+\begin{theorem}
+Se tiene que las subclases de una clase independiente son independientes.
+\end{theorem}
+\section{Suma de variables aleatorias independientes}
+\subsubsection{Teorema de Borel}
+\begin{theorem}
+Las funciones de Borel de funciones aleatorias independientes son
+independientes.
+\end{theorem}
+\subsubsection{Teorema de extensión}
+\begin{theorem}
+Las $\sigma$-algebras minimales independientes sobre clases
+independientes cerradas para la intersección finita son independientes
+\end{theorem}
+Esto tiene tres aplicaciones fundamentales:
+\begin{enumerate}
+\item Si los eventos $A_t$ son independientes, también lo son los
+$\sigma$ campos $(A_t , A_t^c , \emptyset , \Omega)$.
+\item Si la imagen inversa $\mathcal{C}_t$ de las clases de todos los
+intervalos $(-\infty, x_t)$ en los espacios de Borel $R_t$ son
+independientes, también lo son las imágenes inversas $\mathcal{B}_t$
+de los campos de Borel en $R_t$. Para todo $\mathcal{C}_t$, éste es
+cerrado para la intersección finita y $\mathcal{B}_t$ es el $\sigma$
+campo minimal sobre $\mathcal{C}_t$
+\item Sean $\mathcal{B}_t$ sigma algebras de eventos y sea $T_s$ un
+subconjunto de $T$. La $\sigma$-algebra$\mathcal{B}_T$ compuesto por
+componentes $\mathcal{B}_t$, con $t\in T_s$, es el $\sigma$ campo
+minimal sobre la clase $\mathcal{C}$ de todas las intersecciones
+finitas de eventos $A_t$ y contiene a todos sus componentes
+\end{enumerate}
+\subsubsection{Teorema de composición}
+\begin{theorem}
+Los $\sigma$ sigma algebras compuestos son independientes si y solo si sus
+$\sigma$ sub sigma algebras finitamente compuestos son independientes
+\end{theorem}
+\subsection{Familia de variables aleatorias}
+Una familia de variables aleatorias $X_{T_s}=\{ X_t \, , \, t\in T_s
+\}$ induce $\sigma$ campos $\mathcal{B}(X_{T_s})$ de eventos
+\subsubsection{Teorema de las familias}
+\begin{theorem}
+Las familias de variables aleatorias son independientes si y solo si
+sus subfamilias finitas son mutuamente independientes
+\end{theorem}
+\section{Multiplicación de variables aleatorias independientes}
+\textbf{Definición: } Las variables aleatorias $X_t\, , \, t\in T$ son
+independientes si para cada clase finita $(S_{t_1},\ldots , S_{t_n})$
+de conjuntos de Borel en R:
+$P\bigcap_{k=1}^{n}[X_{t_k}\in S{t_k}]=\displaystyle\prod_{k=1}^n
+P[X_{t_k}\in S_{t_k}]$
+\subsubsection{Lema de la multiplicación}
+\begin{lemma}
+Si $X_1, \ldots , X_n$ son variables aleatorias independientes no
+negativas, entonces
+$E\displaystyle\prod_{k=1}^{n}X_k=\displaystyle\prod_{k=1}^{n} E X_k$
+\end{lemma}
+\begin{proof}
+Basta demostrar el resultado para dos variables, dado que el resto se
+demuestra por inducción. En primer lugar, veamos que se verifica la
+condición para funciones simples.\\
+Sean $X = \sum_j x_j I_{A_j}, Y = \sum_k y_k I_{B_k}$ variables
+simples no negativas, donde $A_j = [X = x_j], B_k = [Y = y_k]$.\\
+Por ser $X,Y$ independientes, $P(A_jB_k) = P(A_j)P(B_k) \Rightarrow
+E(XY) = \sum_{k,j} P(A_jB_k) = \sum_{j,k} P(A_j)P(B_k) = E(X)E(Y)$\\
+Sean ahora $X,Y$ variables aleatorias no negativas independientes. Su
+independencia implica la de
+$$ A_{nj}=[\frac{j-1}{2^n} \leq X < \frac{j}{2^n}],
+B_{nk}=[\frac{k-1}{2^n} \leq Y < \frac{k}{2^n}]$$
+Finalmente, tendremos la independencia de las variables aleatorias simples:
+$$ X_n = \sum_{j=1}^{n2^n} \frac {j-1}{2^n}I_{A_{nj}}, Y_n =
+\sum_{k=1}^{n2^n} \frac {k-1}{2^n}I_{B_{nk}}$$
+Tenemos entonces que:
+$$ 0 \leq X_n \uparrow X, 0 \leq Y_n \uparrow Y \Rightarrow X_nY_n \uparrow XY$$
+$$ E(X_nY_n) = E(X_n)E(Y_n)$$
+De donde se deduce por el teorema de la convergencia dominada que
+$E(XY) = E(X)E(Y)$
+\qed
+\end{proof}
+\subsubsection{Teorema de la multiplicación}
+\begin{theorem}
+Sean $X_1,\ldots X_n$ variables aleatorias independientes. Si dichas
+variables aleatorias son integrables, también lo es su producto y
+además $E\displaystyle\prod_{k=1}^n X_k=\displaystyle\prod_{k=1}^n E
+X_k$
+\\\\
+Reciprocamente, si su producto es integrable y ninguna de ellas degenera
+a $0$, entonces todas ellas son integrables.
+\end{theorem}
+\begin{proof}
+La independencia de $X,Y$ nos da la independencia de $X', Y'$, donde
+$X' \in {X^+, X^-, |X|}; Y' \in {Y^+, Y^-, |Y|}$, por lo que $E(X'Y')
+= E(X')E(Y')$.\\
+Si $X,Y$ son integrables, también lo son $X',Y'$ y por la anterior
+igualdad también lo es $X'Y'$, lo cual nos da $|XY|$, y por tanto $XY$
+integrables con:
+$$ E(XY) = E[(X^+-X^-)(Y^+-Y^-)] = E(X^+)E(Y^+) - E(X^+)E(Y^-) - $$
+$$ - E(X^-)E(Y^+) + E(X^-)E(Y^-) = E(X)E(Y) $$
+\qed
+\end{proof}
+\subsubsection{Teorema de equivalencia}
+\begin{theorem}
+Para cada clase finita de conjuntos de Borel $S_t$ y de puntos $x_t,
+u_y \in \mathbb{R}$, son equivalentes las tres definiciones siguientes
+de independencia de variables aleatorias $X_t$:
+\begin{enumerate}
+\item $P\bigcap_{k=1}^n [X_{tk}\in S_{tk}]=\displaystyle\prod_{k=1}^n
+P[X_{tk}\in S_{tk}]$
+\item $F_{t_1\ldots t_n}(x_{t_1},\ldots
+,x_{t_n})=F_{t_1}(x_{t_1})\ldots F_{t_n}(x_{t_n})$
+\item $f_{t_1\ldots t_n}(u_{t_1},\ldots
+,u_{t_n})=f_{t_1}(u_{t_1})\ldots f_{t_n}(u_{t_n})$
+\end{enumerate}
+\end{theorem}
+\begin{proof}$\,$\\
+$i) \Rightarrow ii)$\\
+Tomamos $S_t = ]-\infty, x_t[$ y aplicamos la definición.\\
+$ii) \Rightarrow i)$\\
+$S_t = ]-\infty, x_t[$, $\mathcal{C}_t = {]-\infty, x_y[, t \in T}$
+son independientes. Por el teorema de extensión, los $\sigma$-campos
+minimales sobre ellos son independientes.\\
+$i) \Rightarrow iii)$\\
+Aplicación directa del teorema de la multiplicación.\\
+$iii) \Rightarrow ii)$\\
+Tenemos que $F_{t_1,...,t_n}([a_{t_1},...,a_{t_n};b_{t_1},...,b_{t_n}])
+= F_{t_1}([a_{t_1},...,a_{t_n};b_{t_1},...,b_{t_n}])$\\$F_{t_2}([a_{t_1},...,a_{t_n};b_{t_1},...,b_{t_n}])...F_{t_n}([a_{t_1},...,a_{t_n};b_{t_1},...,b_{t_n}])$.
+Haciendo $a_t \rightarrow - \infty$, $b \uparrow x_t$ tenemos $ii)$
+\end{proof}
+\subsubsection{Lema de Borel-Cantelli}
+\begin{lemma}
+Lema de Borel-Cantelli
+\\\\
+Sea $(\Omega,\mathcal{A},P) \, , \, A_n \in \mathcal{A}$. Entonces:
+\begin{itemize}
+\item $\displaystyle\sum P(A_n) < \infty \Longrightarrow
+P(\displaystyle \lim_{sup}A_n)=0$
+\item Si $ A_n$ son independientes:
+\begin{itemize}
+\item $\displaystyle\sum P(A_n) < \infty \Longrightarrow
+P(\displaystyle \lim_{sup}A_n)=0$
+\item $\displaystyle\sum P(A_n) = \infty \Longrightarrow
+P(\displaystyle \lim_{sup}A_n)=1$
+\end{itemize}
+\end{itemize}
+\end{lemma}
+
+
+Sean $X_1,\ldots X_n$ variables aleatorias independientes e
+idénticamente distribuidas tales que $P[X_n=1]=p$ y $P[X_n=0]=q=1-p$.
+Entonces se tiene que:
+$$\dfrac{S_n}{n}-p \stackrel{\mathcal{P}}{\longrightarrow}0$$
+El Teorema del Límite Central, que desarrollaremos más adelante, es
+una consecuencia directa del perfeccionamiento de esta ley por parte
+de Moivre y Laplace.
+\\\\
+Además enunciamos también otra ley muy parecida a esta y también muy
+importante que es la \textbf{Ley fuerte de Borel de los grandes
+números}, que constituye una versión de esta pero con la convergencia
+casi segura.
+\subsubsection{Ley fuerte de Borel de los grandes números}
+Si se tienen las hipótesis anteriores, entonces: $\dfrac{S_n}{n}-p
+\stackrel{c.s.}{\longrightarrow}0$
+\begin{theorem}
+Sea f(x) continua en $[0,1] \Rightarrow \exists {P_n(x)}$ tal que
+$\lim P_n (x) = f(x)$ uniformemente $ \forall x \in [0,1]$.
+\end{theorem}
+\begin{proof}
+\end{proof}
+\subsection{Centramiento y truncamiento}
+Diremos que centramos $X$ a $c$ si reemplazamos $X$ por $X-c$. Si $X$
+es integrable, entonces podemos centrarla a su esperanza $EX$ de forma
+que $X$ es reemplazada por $X-EX$. Es decir, diremos que una variable
+aleatoria está centrada a su media si y solo si su media existe y es
+igual a 0.
+\\\\
+Ahora vamos a introducir la varianza matemática. Sea $X$ integrable,
+llamaremos varianza de $X$ al segundo momento de $X-EX$. Dicho momento
+existe pero podría ser $\infty$ y lo denotaremos como $\sigma^2 X$.
+Por consiguiente:
+$$\sigma^2 X=E(X-EX)^2=EX^2-(EX)^2$$
+Se tiene que para todo $c$ finito:
+$$\sigma^2(X-c)=E(X-c-E(X-c))^2=E(X-EX)^2$$
+lo que quiere decir que cuando centramos una variable su varianza no cambia
+
+\\\\
+Se dice que truncamos $X$ a $c>0$ (finita) cuando reemplazamos $X$ por
+$X^c=X$ o $0$ dependiendo de si $|X|<c$ o si $|X|\geq c$ ; se dice
+entonces que $X^c$ es $X$ truncada a $c$. Lo que estamos haciendo en
+realidad es definir una variable truncada, $X^c$ como hemos visto
+anteriormente.
+\\\\
+Tenemos entonces que si $F$ es el diferencial de $X$, entonces existen
+todos los momentos de $X^c$ y son finitos; estos son:
+$$EX^c=\int_{|X|<c}x\, dF\,\,\, , \,\,\, E(X^c)^2=\int_{|X|<c}x^2\, dF
+\,\,\, , \,\,\, \ldots$$
+Siempre podremos seleccionar un $c$ suficientemente grande para hacer
+que $P[X\neq X^c]=P[|X|\geq c]$ sea arbitrariamente pequeño. Además
+nosotros también podemos seleccionar el $c_j$ suficientemente grande
+para conseguir $P\bigcup [X_j\neq X_j^{c_j}]$ arbitrariamente pequeño,
+de tal forma que, dado $\epsilon > 0$, tenemos:
+$$P\bigcup [X_j\neq X_j^{c_j}]\leq \sum P[|X_j|\geq c_j]<\frac{\epsilon}{2^j}$$
+Por consiguiente, dada una familia contable de variables aleatorias,
+podemos hacer corresponder una familia de variables aleatorias que
+difiere de la primera en un evento de probabilidad pequeña. Además, si
+estamos interesados principalmente en propiedades en el límite, no
+necesitamos probabilidades pequeñas arbitrarias.
+
+
+\textbf{Definición de convergencia equivalente: } Se dice que $X_n$ y
+$X_n^{\prime}$ son equivalentes en la convergencia si el conjunto de
+convergencia de ambos es el mismo c.s.
+\begin{lemma}
+Si las series $\sum P[X_n\neq X_n^{\prime}]$ convergen, entonces las
+sucesiones $X_n$ y $X_n^{\prime}$ son cola-equivalentes, y por tanto,
+las series $X_n$ y $X_n^{\prime}$ son equivalentes en la convergencia
+y las series $\dfrac{S_n}{b_n}$ y $\dfrac{S_n^{\prime}}{b_n}$ con
+$b\rightarrow\infty$ convergen al mismo evento y al mismo límite,
+excluyendo el evento nulo.
+\end{lemma}
+\begin{proof}
+\end{proof}
+\textbf{Corolario: } Si las series $\sum P[X_n\neq X_n^{\prime}]$
+convergen, entonces las sucesiones $X_n$ y $X_n^{\prime}$ son
+cola-equivalentes, y por tanto, las series $\sum X_n$ y $\sum
+X_n^{\prime}$ son equivalentes en cuanto a convergencia.\\
+Sean $X_1$ , $X_2$ integrables. Entonces, como el centramiento no
+modifica la varianza, podemos asumir, cuando computamos varianzas, que
+esas variables aleatorias están centradas a la media. Entonces:
+$$\sigma^2 S_n=ES_n^2=\sum_{k=1}^n
+EX_k^2+\sum_{j,k=1}EX_jX_k=\sum_{k=1}^n\sigma^2 X_k$$
+como $X_j$ y $X_k$ son independientes, tenemos que:
+$$EX_jX_k=EX_j\cdot EX_k=0$$
+Con esto en mente podemos enunciar la:
+\textbf{Desigualdad de Bienaymé: }Si las variables aleatorias
+independientes $X_n$ son independientes e integrabless, entonces:
+$$ \sigma^2 S_n=\sum_{k=1}^n \sigma^2 X_k$$
+Con la desigualdad anterior obtenemos la \textbf{desigualdad de
+Bienaymé}:
+$$\frac{\displaystyle\sum_{k=1}^n \sigma^2 X_k-\epsilon
+^2}{sup(S_n-ES_n)^2}\leq P[|S_n-ES_n|\geq \epsilon]\leq
+\frac{\sigma^2(S_n-ES_n)}{\epsilon^2} \leq
+\frac{1}{\epsilon^2}\sum_{k=1}^n\sigma^2 X_k$$
+Esta desigualdad, aplicada a $(S_{n+k}-ES_{n+k})-(S_n-ES_n)$ y
+remplazando $\epsilon$ por $b_n$ y pasando al límite se tiene el
+siguiente corolario:
+\\\\
+\textbf{Corolario: }
+\begin{itemize}
+\item Si las series $\sum\sigma^2 X_n$ convergen, entonces las series
+$\sum (X_n-EX_n)$ convergen en probabilidad.
+\item Si $\dfrac{1}{b_n^2}\displaystyle\sum_{k=1}^n \sigma^2
+X_k\rightarrow 0$, entonces $\dfrac{S_n -
+ES_n}{b_n}\stackrel{\mathcal{P}}{\rightarrow}0$\\
+\end{itemize}
+\begin{proof}
+
+La demostración pasa por notar que:
+$$P[\sum_{k}^{n+h}(X_k - EX_k)\geq\epsilon]\leq
+\dfrac{\displaystyle\sum_{k}^{n+h}\sigma^2
+X_k}{\epsilon^2}\longrightarrow 0$$
+\end{proof}
+Este último corolario es debido a Tchebichev (cuando $b_n=n$). En el
+caso de Bernouilli, donde $b_n=n$, $EX_n=p$ , $\sigma^2 X_n=pq$ se
+reduce a la ley de Bernouilli de los grandes números.
+
+\subsection{Ley débil de los grandes números}
+\subsection{Ley fuerte de los grandes números DE Kolmogorov}
+Sea ${X_n}$ una sucesión de variables aleatorias independientes e
+idénticamente distribuidas con una ley común $\mathcal{L}(X)$.
+Entonces:
+$$E|X|<\infty \Longleftrightarrow \dfrac{S_n}{n}=\dfrac{\sum_{k=1}^n
+X_k}{n}=\dfrac{X_1 \ldots X_n}{n}\stackrel{c.s}{\longrightarrow}EX$$
+
+\chapter{El problema central del límite}
+El problema del límite central en probabilidad es el problema de
+convergencia de leyes de secuencias de sumas de variables aleatorias.
+\section{Preeliminares}
+Consideramos $S_n$ el número de ocurrencias de un determinado evento
+con probabilidad $p$ en $n$ intentos idénticos e independientes. Para
+evitar trivialidades asumimos que $pq\neq 0$, donde $q=1-p$. Si $X_k$
+denota el indicador del evento en el $k$-ésimo intento, entonces
+$S_n=\displaystyle\sum_{k=1}^n X_k$ con $n=1,2,\ldots$ donde los
+sumandos son indicadores independientes e idénticamente distribuidos.
+Este es el caso de Bernouilli; como $EX_k=p$ y $EX_k^2=p$, entonces
+$\sigma^2 X_k=p-p^2=pq$ de donde se sigue que:
+$$ES_n=\sum_{k=1}^nEX_k=np \,\,\, , \,\,\, \sigma^2 S_n=\sum_{k=1}^n
+\sigma^2 X_k=npq$$
+EL primer teorema del límite central publicado en 1713 dice que
+$\dfrac{S_n}{n}\stackrel{\mathcal{P}}{\longrightarrow}p$
+\\\\
+Puliendo este resultado, de Moivre obtuvo el segundo teorema de
+límites, que en la forma integral dada por Laplace, dice que:
+$$P\left[ \frac{S_n -np}{\sqrt{npq}}< x \right]\rightarrow
+\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{1}{2}y^2}dy\, ,\,\,\,
+-\infty\leq x\leq \infty$$
+\\\\
+El tercer teorema del límite central fue obtenido por Poisson, quien
+modificó el caso de Bernouilli asumiendo que la probabilidad $p=p_n$
+depende del número de intentos de tal manera que
+$np_n\rightarrow\lambda>0$. Por consiguiente, escribiendo ahora
+$X_{nk}$ y $S_{nn}$ en lugar de $X_k$ y $S_n$, el caso de Poisson
+corresponde a una serie de sumas $S_{nn}=\displaystyle\sum_{k=1}^n
+X_{nk}$ donde, para cada n, los sumandos $X_{nk}$ son indicadores
+independientes e idénticamente distribuidos con
+$P[X_{nk}=1]=\dfrac{\lambda}{n}+o \left( \dfrac{1}{n}\right)$
+
+
+
 ## Variables aleatorias
 
 ## Independencia
@@ -4953,7 +7324,7 @@ An R Markdown document (`*.Rmd`) is first compiled to Markdown (`*.md`) through 
 
 ```r
 rmarkdown::pandoc_version()
-## [1] '2.5'
+## [1] '1.19.2.4'
 ```
 
 If you find this version too low and there are Pandoc features only in a later version, you can install the later version of Pandoc, and **rmarkdown** will call the newer version instead of its built-in version.

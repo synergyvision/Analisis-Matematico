@@ -6,10 +6,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Capítulo 12 Integración de formas diferenciales | Introducción al análisis funcional y a la teoría de la medida</title>
-  <meta name="description" content="Capítulo 12 Integración de formas diferenciales | Introducción al análisis funcional y a la teoría de la medida>
+  <meta name="description" content="Capítulo 12 Integración de formas diferenciales | Introducción al análisis funcional y a la teoría de la medida">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Capítulo 12 Integración de formas diferenciales | Introducción al análisis funcional y a la teoría de la medida />
+  <meta property="og:title" content="Capítulo 12 Integración de formas diferenciales | Introducción al análisis funcional y a la teoría de la medida" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Analisis-y-Medida/" />
   <meta property="og:image" content="http://synergy.vision/Analisis-y-Medida/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Analisis-y-Medida/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 12 Integración de formas diferenciales | Introducción al análisis funcional y a la teoría de la medida />
+  <meta name="twitter:title" content="Capítulo 12 Integración de formas diferenciales | Introducción al análisis funcional y a la teoría de la medida" />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Analisis-y-Medida/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2019-03-01">
+<meta name="date" content="2019-04-03">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,13 +34,13 @@
   
 <link rel="prev" href="funciones-en-varias-variables.html">
 <link rel="next" href="funciones-especiales.html">
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
 
 
 
@@ -51,6 +51,43 @@
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -148,7 +185,7 @@
 </ul></li>
 <li class="chapter" data-level="11" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html"><i class="fa fa-check"></i><b>11</b> Funciones en varias variables</a><ul>
 <li class="chapter" data-level="11.1" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#transformaciones-lineales-1"><i class="fa fa-check"></i><b>11.1</b> Transformaciones lineales</a></li>
-<li class="chapter" data-level="11.2" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#diferenciacion-1"><i class="fa fa-check"></i><b>11.2</b> Diferenciación</a></li>
+<li class="chapter" data-level="11.2" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#diferenciacion-2"><i class="fa fa-check"></i><b>11.2</b> Diferenciación</a></li>
 <li class="chapter" data-level="11.3" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#el-principio-de-la-contraccion"><i class="fa fa-check"></i><b>11.3</b> El principio de la contracción</a></li>
 <li class="chapter" data-level="11.4" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#el-teorema-de-la-funcion-inversa"><i class="fa fa-check"></i><b>11.4</b> El teorema de la función inversa</a></li>
 <li class="chapter" data-level="11.5" data-path="funciones-en-varias-variables.html"><a href="funciones-en-varias-variables.html#el-teorema-de-la-funcion-implicita"><i class="fa fa-check"></i><b>11.5</b> El teorema de la función implícita</a></li>
@@ -277,13 +314,13 @@
 <li class="chapter" data-level="32.4" data-path="espacios-lp.html"><a href="espacios-lp.html#integrabilidad-uniforme"><i class="fa fa-check"></i><b>32.4</b> Integrabilidad uniforme</a></li>
 <li class="chapter" data-level="32.5" data-path="espacios-lp.html"><a href="espacios-lp.html#funciones-convexas-y-desigualdad-de-jensen"><i class="fa fa-check"></i><b>32.5</b> Funciones convexas y desigualdad de Jensen</a></li>
 </ul></li>
-<li class="chapter" data-level="33" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html"><i class="fa fa-check"></i><b>33</b> Diferenciación</a><ul>
-<li class="chapter" data-level="33.1" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#medidas-con-signo"><i class="fa fa-check"></i><b>33.1</b> Medidas con signo</a></li>
-<li class="chapter" data-level="33.2" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#medidas-complejas"><i class="fa fa-check"></i><b>33.2</b> Medidas complejas</a></li>
-<li class="chapter" data-level="33.3" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#continuidad-absoluta-de-medidas"><i class="fa fa-check"></i><b>33.3</b> Continuidad absoluta de medidas</a></li>
-<li class="chapter" data-level="33.4" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#diferenciacion-de-medidas"><i class="fa fa-check"></i><b>33.4</b> Diferenciación de medidas</a></li>
-<li class="chapter" data-level="33.5" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#funciones-a-variacion-acotada-1"><i class="fa fa-check"></i><b>33.5</b> Funciones a variación acotada</a></li>
-<li class="chapter" data-level="33.6" data-path="diferenciacion-2.html"><a href="diferenciacion-2.html#funciones-absolutamente-continuas"><i class="fa fa-check"></i><b>33.6</b> Funciones absolutamente contínuas</a></li>
+<li class="chapter" data-level="33" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html"><i class="fa fa-check"></i><b>33</b> Diferenciación</a><ul>
+<li class="chapter" data-level="33.1" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#medidas-con-signo"><i class="fa fa-check"></i><b>33.1</b> Medidas con signo</a></li>
+<li class="chapter" data-level="33.2" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#medidas-complejas"><i class="fa fa-check"></i><b>33.2</b> Medidas complejas</a></li>
+<li class="chapter" data-level="33.3" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#continuidad-absoluta-de-medidas"><i class="fa fa-check"></i><b>33.3</b> Continuidad absoluta de medidas</a></li>
+<li class="chapter" data-level="33.4" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#diferenciacion-de-medidas"><i class="fa fa-check"></i><b>33.4</b> Diferenciación de medidas</a></li>
+<li class="chapter" data-level="33.5" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#funciones-a-variacion-acotada-1"><i class="fa fa-check"></i><b>33.5</b> Funciones a variación acotada</a></li>
+<li class="chapter" data-level="33.6" data-path="diferenciacion-3.html"><a href="diferenciacion-3.html#funciones-absolutamente-continuas"><i class="fa fa-check"></i><b>33.6</b> Funciones absolutamente contínuas</a></li>
 </ul></li>
 <li class="chapter" data-level="34" data-path="analisis-de-fourier-en-mathbbrn.html"><a href="analisis-de-fourier-en-mathbbrn.html"><i class="fa fa-check"></i><b>34</b> Análisis de Fourier en <span class="math inline">\(\mathbb{R}^n\)</span></a><ul>
 <li class="chapter" data-level="34.1" data-path="analisis-de-fourier-en-mathbbrn.html"><a href="analisis-de-fourier-en-mathbbrn.html#convolucion-de-funciones"><i class="fa fa-check"></i><b>34.1</b> Convolución de funciones</a></li>
@@ -332,15 +369,16 @@
 <li class="chapter" data-level="40.5" data-path="analisis-en-semigrupos.html"><a href="analisis-en-semigrupos.html#semigrupo-de-operadores"><i class="fa fa-check"></i><b>40.5</b> Semigrupo de operadores</a></li>
 </ul></li>
 <li class="chapter" data-level="41" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html"><i class="fa fa-check"></i><b>41</b> Teoría de probabilidades</a><ul>
-<li class="chapter" data-level="41.1" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#variables-aleatorias"><i class="fa fa-check"></i><b>41.1</b> Variables aleatorias</a></li>
-<li class="chapter" data-level="41.2" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#independencia"><i class="fa fa-check"></i><b>41.2</b> Independencia</a></li>
-<li class="chapter" data-level="41.3" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#esperanza-condicional"><i class="fa fa-check"></i><b>41.3</b> Esperanza condicional</a></li>
-<li class="chapter" data-level="41.4" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#sucesiones-de-variables-aleatorias-independientes"><i class="fa fa-check"></i><b>41.4</b> Sucesiones de variables aleatorias independientes</a></li>
-<li class="chapter" data-level="41.5" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#martingalas-a-tiempo-discreto"><i class="fa fa-check"></i><b>41.5</b> Martingalas a tiempo discreto</a></li>
-<li class="chapter" data-level="41.6" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#procesos-estocasticos"><i class="fa fa-check"></i><b>41.6</b> Procesos estocásticos</a></li>
-<li class="chapter" data-level="41.7" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#movimiento-browniano"><i class="fa fa-check"></i><b>41.7</b> Movimiento browniano</a></li>
-<li class="chapter" data-level="41.8" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#integracion-estocastica"><i class="fa fa-check"></i><b>41.8</b> Integración estocástica</a></li>
-<li class="chapter" data-level="41.9" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#aplicacion-a-las-finanzas"><i class="fa fa-check"></i><b>41.9</b> Aplicación a las finanzas</a></li>
+<li class="chapter" data-level="41.1" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#conjuntos-y-funciones-sigma-aditivas"><i class="fa fa-check"></i><b>41.1</b> Conjuntos y funciones <span class="math inline">\(\sigma\)</span>-aditivas}</a></li>
+<li class="chapter" data-level="41.2" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#variables-aleatorias"><i class="fa fa-check"></i><b>41.2</b> Variables aleatorias</a></li>
+<li class="chapter" data-level="41.3" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#independencia-2"><i class="fa fa-check"></i><b>41.3</b> Independencia</a></li>
+<li class="chapter" data-level="41.4" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#esperanza-condicional"><i class="fa fa-check"></i><b>41.4</b> Esperanza condicional</a></li>
+<li class="chapter" data-level="41.5" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#sucesiones-de-variables-aleatorias-independientes"><i class="fa fa-check"></i><b>41.5</b> Sucesiones de variables aleatorias independientes</a></li>
+<li class="chapter" data-level="41.6" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#martingalas-a-tiempo-discreto"><i class="fa fa-check"></i><b>41.6</b> Martingalas a tiempo discreto</a></li>
+<li class="chapter" data-level="41.7" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#procesos-estocasticos"><i class="fa fa-check"></i><b>41.7</b> Procesos estocásticos</a></li>
+<li class="chapter" data-level="41.8" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#movimiento-browniano"><i class="fa fa-check"></i><b>41.8</b> Movimiento browniano</a></li>
+<li class="chapter" data-level="41.9" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#integracion-estocastica"><i class="fa fa-check"></i><b>41.9</b> Integración estocástica</a></li>
+<li class="chapter" data-level="41.10" data-path="teoria-de-probabilidades.html"><a href="teoria-de-probabilidades.html#aplicacion-a-las-finanzas"><i class="fa fa-check"></i><b>41.10</b> Aplicación a las finanzas</a></li>
 </ul></li>
 <li class="chapter" data-level="42" data-path="apendice.html"><a href="apendice.html"><i class="fa fa-check"></i><b>42</b> Apéndice</a></li>
 <li class="appendix"><span><b>Apéndice</b></span></li>
@@ -372,50 +410,20 @@
             <section class="normal" id="section-">
 <div id="integracion-de-formas-diferenciales" class="section level1">
 <h1><span class="header-section-number">Capítulo 12</span> Integración de formas diferenciales</h1>
-Una forma diferencial es una funcion escalar definida en un abierto de <span class="math inline">\(\real^n\)</span>
-<span class="math display">\[\appl{f}{\Omega\subset\real^N}{\real}\]</span>
-Operaciones habituales:
+Una forma diferencial es una funcion escalar definida en un abierto de <span class="math inline">\(\real^n\)</span> <span class="math display">\[\appl{f}{\Omega\subset\real^N}{\real}\]</span> Operaciones habituales:
 
-
-Sea <span class="math inline">\(\mathcal{C} = \{e_1,e_2,...,e_n\}\)</span> la base canónica en <span class="math inline">\(\real^N\)</span>.
-Sea <span class="math inline">\(L\)</span> una aplicación lineal
-<span class="math display">\[\appl{L}{\real^N}{\real}\]</span>
-Que recordamos que cumplen:
-<span class="math display">\[ L(\gx+\gy) = L(\gx)+L(\gy); L(\lambda\gx) = \lambda L(\gx)\]</span>
-Definimos <span class="math inline">\(\gy\in\real^N \leadsto \gy = \displaystyle\sum_1^n y_i e_i\)</span>, con lo que <span class="math display">\[L(\gy) = \sum y_i L(e_i)\]</span>
-Entonces <span class="math display">\[\left.\begin{array}{cc}
+ Sea <span class="math inline">\(\mathcal{C} = \{e_1,e_2,...,e_n\}\)</span> la base canónica en <span class="math inline">\(\real^N\)</span>. Sea <span class="math inline">\(L\)</span> una aplicación lineal <span class="math display">\[\appl{L}{\real^N}{\real}\]</span> Que recordamos que cumplen: <span class="math display">\[ L(\gx+\gy) = L(\gx)+L(\gy); L(\lambda\gx) = \lambda L(\gx)\]</span> Definimos <span class="math inline">\(\gy\in\real^N \leadsto \gy = \displaystyle\sum_1^n y_i e_i\)</span>, con lo que <span class="math display">\[L(\gy) = \sum y_i L(e_i)\]</span> Entonces <span class="math display">\[\left.\begin{array}{cc}
 v_i = L(e_i)\\
 y_i = P_i(\gy)
-\end{array}\right\} \rightarrow L(\gy) = \sum_i v_iP_i(y)\]</span>
-Siendo <span class="math inline">\(P_i\)</span> las proyecciones, una base del espacio dual.
+\end{array}\right\} \rightarrow L(\gy) = \sum_i v_iP_i(y)\]</span> Siendo <span class="math inline">\(P_i\)</span> las proyecciones, una base del espacio dual.  <span class="math inline">\(P_i \equiv dx_i\)</span>. <span class="math inline">\(dx_i[\gy] \equiv P_i(\gy) = y_i\)</span> Entonces, dado un <span class="math inline">\(\gv\)</span> podemos construir <span class="math display">\[L \equiv \sum_i^N v_idx_i\]</span> <span class="math display">\[L[\gy] = \sum_i^N v_idx_i[\gy] = \sum_i^N v_iy_i\]</span>
 
-<span class="math inline">\(P_i \equiv dx_i\)</span>.
-<span class="math inline">\(dx_i[\gy] \equiv P_i(\gy) = y_i\)</span>
-Entonces, dado un <span class="math inline">\(\gv\)</span> podemos construir
-<span class="math display">\[L \equiv \sum_i^N v_idx_i\]</span>
-<span class="math display">\[L[\gy] = \sum_i^N v_idx_i[\gy] = \sum_i^N v_iy_i\]</span>
+Indicaremos con paréntesis el punto en el que estamos evaluando, y con corchetes el punto en el que estamso actuando. 
 
-Indicaremos con paréntesis el punto en el que estamos evaluando, y con corchetes el punto en el que estamso actuando.
-
-
-Supongamos <span class="math inline">\(f\)</span> una función escalar (una 0-forma).
-<span class="math display">\[\grad f(\gx) = \left( \dpa{f}{x_i}(\gx)\right)\, i=1,...,N\]</span>
-Nos podemos construir una 1-forma desde el gradiente
-<span class="math display">\[\dpa{f}{x_i}(\gx)dx_i \]</span>
-A esta 1-forma en particular la llamaremos <span class="math inline">\(df(\gx)\)</span>.
-¿Utilidad? Ya la veremos, pero es una forma de escribir el producto escalar.
-<span class="math display">\[\pesc{\grad f(\gx),\gy} = df(\gx)[\gy]\]</span>
-
-
-Punto de partida: Aplicaciones 
-<span class="math display">\[\appl{\Phi}{\real^N\x\real^N}{\real}\]</span>
-Que cumplen
+Supongamos <span class="math inline">\(f\)</span> una función escalar (una 0-forma). <span class="math display">\[\grad f(\gx) = \left( \dpa{f}{x_i}(\gx)\right)\, i=1,...,N\]</span> Nos podemos construir una 1-forma desde el gradiente <span class="math display">\[\dpa{f}{x_i}(\gx)dx_i \]</span> A esta 1-forma en particular la llamaremos <span class="math inline">\(df(\gx)\)</span>. ¿Utilidad? Ya la veremos, pero es una forma de escribir el producto escalar. <span class="math display">\[\pesc{\grad f(\gx),\gy} = df(\gx)[\gy]\]</span>   Punto de partida: Aplicaciones  <span class="math display">\[\appl{\Phi}{\real^N\x\real^N}{\real}\]</span> Que cumplen
 
 Consecuencias:
 
-en <span class="math inline">\(\real^3\)</span> para facilitar las cuentas.
-<span class="math display">\[\Phi(\gu,\gv) = \Phi(u_1e_1+u_2e_2+u_3e_3,v_1e_1+v_2e_2+v_3e_3)\]</span>
-Aplicando las propiedades anteriores obtenemos:
+en <span class="math inline">\(\real^3\)</span> para facilitar las cuentas. <span class="math display">\[\Phi(\gu,\gv) = \Phi(u_1e_1+u_2e_2+u_3e_3,v_1e_1+v_2e_2+v_3e_3)\]</span> Aplicando las propiedades anteriores obtenemos:
 <span class="math display">\[\begin{gather*}
 \overbrace{u_1v_1\Phi(e_1,e_1)}^{\equiv 0} + u_1v_2\Phi(e_1,e_2) + u_1v_3+\Phi(e_1,e_3)+\\
 u_2v_1+\Phi(e_2,e_1)+u_2v_2+\Phi(e_2,e_2)+u_2v_3+\Phi(e_2,e_3)+\\
@@ -424,43 +432,23 @@ u_3v_1\Phi(e_3,e_1)+u_3v_2+\Phi(e_3,e_2)+u_3v_3+\Phi(e_3,e_3) = \\
 u_1&amp;u_2\\v_1&amp;v_2
 \end{matrix}\right|}\overbrace{\Phi(e_1,e_2)}^{C_1}+(u_1v_3-u_3v_1)\Phi(e_1,e_3)+(u_2v_3-u_3v_2)\Phi(e_2,e_3)
 \end{gather*}\]</span>
-Hemos demostrado que <span class="math display">\[\Phi(\gu,\gv) = C_1B_{12}(\gu,\gv) + C_2B_{13}(\gu,\gv) + C_3B_{23}(\gu,\gv)\]</span>
-
-<span class="math inline">\(B_{ij} = dx_i\y dx_j\)</span>
-<span class="math display">\[dx\y dx_j [\gu,\gv] = \det \begin{pmatrix}
+Hemos demostrado que <span class="math display">\[\Phi(\gu,\gv) = C_1B_{12}(\gu,\gv) + C_2B_{13}(\gu,\gv) + C_3B_{23}(\gu,\gv)\]</span>  <span class="math inline">\(B_{ij} = dx_i\y dx_j\)</span> <span class="math display">\[dx\y dx_j [\gu,\gv] = \det \begin{pmatrix}
 u_i&amp;u_j\\v_i&amp;v_j
 \end{pmatrix} = \det \begin{pmatrix}
 dx_i[\gu]&amp;dx_j[\gu]\\dx_[\gv]&amp;dx_j[\gv]
 \end{pmatrix}\]</span>
 
-
-
-Vamos a dar una definición general de una k-forma.
-Elementos básicos:
-<span class="math display">\[\dfl{x_{i_1}}{x_{i_k}}[\gu^1,\gu^2,...,\gu^k] = \det\begin{pmatrix}
+  Vamos a dar una definición general de una k-forma. Elementos básicos: <span class="math display">\[\dfl{x_{i_1}}{x_{i_k}}[\gu^1,\gu^2,...,\gu^k] = \det\begin{pmatrix}
 u_{i_1}^1 &amp; ... &amp; u_{i_k}^1\\
 \vdots &amp; \ddots &amp; \vdots\\
 u_{i_1}^k &amp; ... &amp; u_{i_k}^k
 \end{pmatrix}\]</span>
 
-Esto nos dice que en <span class="math inline">\(\real^N\)</span>, teniendo <span class="math inline">\(K\)</span>-formas (con <span class="math inline">\(K&lt;N\)</span>) tenemos <span class="math inline">\(\comb{N}{K}\)</span> combinaciones distintas.
-Si <span class="math inline">\(K&gt;N\)</span> y <span class="math inline">\(\omega\)</span> es una k-forma, entonces <span class="math inline">\(\omega \equiv 0\)</span>
+Esto nos dice que en <span class="math inline">\(\real^N\)</span>, teniendo <span class="math inline">\(K\)</span>-formas (con <span class="math inline">\(K&lt;N\)</span>) tenemos <span class="math inline">\(\comb{N}{K}\)</span> combinaciones distintas. Si <span class="math inline">\(K&gt;N\)</span> y <span class="math inline">\(\omega\)</span> es una k-forma, entonces <span class="math inline">\(\omega \equiv 0\)</span>  En <span class="math inline">\(\real^3\)</span>.
 
-En <span class="math inline">\(\real^3\)</span>.
+  Al cambio en la 2-forma, que es <span class="math inline">\(dzdx\)</span>. Esto es para seguir el  (por temas de la orientación). Esto es <span class="math inline">\(x\to y \to z \to x\)</span> Las  las podemos interpretar como 0-formas y como 3-formas. Los  los podemos interpretar como 1-formas y también como 2-formas.  Para escribir un conjunto de subíndices <span class="math inline">\(\{i_1,i_2,...,i_k\} \equiv I\)</span> También acortaremos <span class="math inline">\(\dfl{x_{i_1}}{x_{i_k}} \equiv dx_I\)</span>. La definición quedaría <span class="math inline">\(\displaystyle \sum_I F_I(\gx)dx_I\)</span>  Siempre se puede multiplicar por 0-formas y sumar formas del mismo orden. Estas operaciones son triviales porque son operaciones internas. Vamos a definir las operaciones externas: 
 
-
- Al cambio en la 2-forma, que es <span class="math inline">\(dzdx\)</span>. Esto es para seguir el  (por temas de la orientación). Esto es <span class="math inline">\(x\to y \to z \to x\)</span>
-Las  las podemos interpretar como 0-formas y como 3-formas. Los  los podemos interpretar como 1-formas y también como 2-formas.
-
-Para escribir un conjunto de subíndices <span class="math inline">\(\{i_1,i_2,...,i_k\} \equiv I\)</span>
-También acortaremos <span class="math inline">\(\dfl{x_{i_1}}{x_{i_k}} \equiv dx_I\)</span>.
-La definición quedaría <span class="math inline">\(\displaystyle \sum_I F_I(\gx)dx_I\)</span>
-
-Siempre se puede multiplicar por 0-formas y sumar formas del mismo orden. Estas operaciones son triviales porque son operaciones internas.
-Vamos a definir las operaciones externas:
-
-Si <span class="math inline">\(K+S&gt;N \implies \omega\y\beta=0\)</span>
-Vamos a por un ejemplo de producto exterior en <span class="math inline">\(ℝ^3\)</span>. Consideramos las dos siguientes formas diferenciales:
+Si <span class="math inline">\(K+S&gt;N \implies \omega\y\beta=0\)</span> Vamos a por un ejemplo de producto exterior en <span class="math inline">\(ℝ^3\)</span>. Consideramos las dos siguientes formas diferenciales:
 <span class="math display">\[\begin{gather*}
 \omega = f_1(x,y,z)\df x + f_2(x,y,z)\df y + f_3(x,y,z) \df z \\
 \beta= g_1(x,y,z)\df x + g_2 (x,y,z) \df y + f_3 (x,y,z) \df z
@@ -470,18 +458,10 @@ y calculamos su producto exterior, <span class="math inline">\(\omega\y\beta\)</
 \omega\y\beta  = f_1g_1\df{x,x} + f_1g_2\df{x,y} + f_1g_3\df{x,z} + f_2g_1\df{y,x} +\\
 + f_2g_2\df{y,y}+ f_2g_3\df{y,z}  + f_3g_1\df{z,x}+f_3g_2\df{z,y}+f_3g_3\df{z,z}
 \end{multline*}\]</span>
-Tachamos los que sean 0 (<span class="math inline">\(\df{x,x} = 0\)</span>) y tenemos cuidado con el orden cíclico, y nos queda
-<span class="math display">\[ (f_2g_3-f_3g_2)\df{y,z} + (f_3g_1-f_1g_3)\df{z,x} + (f_1g_2 - f_2g_1) \df{x,y} \]</span>
-Partiendo de 2 campos vectoriales que eran 1-formas hemos llegado a una 2-forma. Además, si nos fijamos, hemos llegado a la definición de  en <span class="math inline">\(ℝ^3\)</span>:
-<span class="math display">\[ \overrightarrow{F} \x \overrightarrow{G} =
-\left((f_2g_3-f_3g_2),(f_3g_1-f_1g_3),(f_1g_2 - f_2g_1)\right) \]</span>
+Tachamos los que sean 0 (<span class="math inline">\(\df{x,x} = 0\)</span>) y tenemos cuidado con el orden cíclico, y nos queda <span class="math display">\[ (f_2g_3-f_3g_2)\df{y,z} + (f_3g_1-f_1g_3)\df{z,x} + (f_1g_2 - f_2g_1) \df{x,y} \]</span> Partiendo de 2 campos vectoriales que eran 1-formas hemos llegado a una 2-forma. Además, si nos fijamos, hemos llegado a la definición de  en <span class="math inline">\(ℝ^3\)</span>: <span class="math display">\[ \overrightarrow{F} \x \overrightarrow{G} =
+\left((f_2g_3-f_3g_2),(f_3g_1-f_1g_3),(f_1g_2 - f_2g_1)\right) \]</span>  El diferencial exterior trata de ampliar el concepto del diferencial (la matriz de derivadas parciales) más allá de las funciones, de tal forma que podamos aplicarlo a formas diferenciales.
 
-El diferencial exterior trata de ampliar el concepto del diferencial (la matriz de derivadas parciales) más allá de las funciones, de tal forma que podamos aplicarlo a formas diferenciales.
-
-Veamos algunos ejemplos, empezando en <span class="math inline">\(ℝ^3\)</span>.
-Partimos de un campo vectorial <span class="math inline">\(G = (g_1,g_2,g_3)\)</span> al que asociamos una 2-forma <span class="math inline">\(ω\)</span>:
-<span class="math display">\[ \omega = g_1 \df{y,z} + g_2 \df{z,x} + g_3 \df{x,y} \]</span>
-Calculamos ahora la diferencial exterior, <span class="math inline">\(\dif\omega\)</span>. Para calcularla, recordamos que <span class="math inline">\(\df{x,x} = 0\)</span> y que podemos cambiar el orden del producto exterior si respetamos el orden cíclico (<span class="math inline">\(x,y,z\)</span>).
+Veamos algunos ejemplos, empezando en <span class="math inline">\(ℝ^3\)</span>. Partimos de un campo vectorial <span class="math inline">\(G = (g_1,g_2,g_3)\)</span> al que asociamos una 2-forma <span class="math inline">\(ω\)</span>: <span class="math display">\[ \omega = g_1 \df{y,z} + g_2 \df{z,x} + g_3 \df{x,y} \]</span> Calculamos ahora la diferencial exterior, <span class="math inline">\(\dif\omega\)</span>. Para calcularla, recordamos que <span class="math inline">\(\df{x,x} = 0\)</span> y que podemos cambiar el orden del producto exterior si respetamos el orden cíclico (<span class="math inline">\(x,y,z\)</span>).
 <span class="math display">\[\begin{align*}
 \dif\omega  &amp;=  \df{g_1,y,z} + \df{g_2,z,x} + \df{g_3,x,y} = \\
             &amp;=  \left(\dpa{g_1}{x} \df x + \dpa{g_1}{y} \df y + \dpa{g_1}{z}\df z \right)\y \df{y,z}\\ &amp;\qquad
@@ -490,8 +470,7 @@ Calculamos ahora la diferencial exterior, <span class="math inline">\(\dif\omega
             &amp;= \dpa{g_1}{x}\df{x,y,z} + \dpa{g_2}{y}\df{y,z,x} + \dpa{g_3}{z}\df{z,x,y} = \\
             &amp;= \left(\dpa{g_1}{x} + \dpa{g_2}{y} + \dpa{g_3}{z}\right)\df{x,y,z}
 \end{align*}\]</span>
-Hemos llegado a una 3-forma que además es la forma diferencial asociada a la  de <span class="math inline">\(G\)</span>.
-Pasamos a otro ejemplo, donde vamos a calcular la diferencial exterior de una 1-forma <span class="math inline">\(ω=F_1\df x + F_2 \df y + F_3 \df z\)</span>. Recordamos que si invertimos el orden del producto exterior pagamos con un cambio de signo, esto es, <span class="math inline">\(\df{x,z} = - \df{z,x}\)</span>.
+Hemos llegado a una 3-forma que además es la forma diferencial asociada a la  de <span class="math inline">\(G\)</span>. Pasamos a otro ejemplo, donde vamos a calcular la diferencial exterior de una 1-forma <span class="math inline">\(ω=F_1\df x + F_2 \df y + F_3 \df z\)</span>. Recordamos que si invertimos el orden del producto exterior pagamos con un cambio de signo, esto es, <span class="math inline">\(\df{x,z} = - \df{z,x}\)</span>.
 <span class="math display">\[\begin{align*}
 \dif ω  &amp;= \dif\left(F_1\df x + F_2\df y+F_3\df z\right) =\\
         &amp;= \df{F_1,x} + \df{F_2,y} + \df{F_3,z} = \\
@@ -501,18 +480,7 @@ Pasamos a otro ejemplo, donde vamos a calcular la diferencial exterior de una 1-
         &amp;= \left(\dpa{F_3}{y} - \dpa{F_2}{z} \right)\df{y,z} + \left(\dpa{F_1}{z} - \dpa{F_3}{dx}\right)\df{z,x} +
 \left(\dpa{F_2}{x} - \dpa{F_1}{y}\right) \df{x,y}
 \end{align*}\]</span>
-Nos ha quedado un campo de la forma:
-<span class="math display">\[\left(\left(\dpa{F_3}{y} - \dpa{F_2}{z} \right) ,\left(\dpa{F_1}{z} - \dpa{F_3}{x}\right),\left(\dpa{F_2}{x} - \dpa{F_1}{y}\right)\right)\]</span>
-que coincide con el .
-
-<span class="math inline">\(\dif(\omega + \beta) = \dif\omega + \dif\beta\)</span>
-
-Siendo <span class="math inline">\(\omega = \sum_I F_I \dif x_I\)</span> una k-forma, <span class="math inline">\(f\)</span> una 0-forma, tenemos que
-<span class="math display">\[ f\omega = \sum_I fF_I\dif x_I \]</span>
-y entonces
-<span class="math display">\[ \dif (f\omega) = \sum_I \df{(fF_I),x_I} \]</span>
-, donde <span class="math display">\[ \dif (fF_I) = \sum_{j=1}^N \dpa{fF_I}{x_j} \df x_j = \sum_{j=1}^N\dpa{f}{x_j} F_I \df x_j + \sum_{j=1}^N\dpa{F_I}{x_j} f \df x_j = F_I \dif f + f \dif F_I \]</span>
-De esta forma, nos queda que
+Nos ha quedado un campo de la forma: <span class="math display">\[\left(\left(\dpa{F_3}{y} - \dpa{F_2}{z} \right) ,\left(\dpa{F_1}{z} - \dpa{F_3}{x}\right),\left(\dpa{F_2}{x} - \dpa{F_1}{y}\right)\right)\]</span> que coincide con el .   <span class="math inline">\(\dif(\omega + \beta) = \dif\omega + \dif\beta\)</span>  Siendo <span class="math inline">\(\omega = \sum_I F_I \dif x_I\)</span> una k-forma, <span class="math inline">\(f\)</span> una 0-forma, tenemos que <span class="math display">\[ f\omega = \sum_I fF_I\dif x_I \]</span> y entonces <span class="math display">\[ \dif (f\omega) = \sum_I \df{(fF_I),x_I} \]</span> , donde <span class="math display">\[ \dif (fF_I) = \sum_{j=1}^N \dpa{fF_I}{x_j} \df x_j = \sum_{j=1}^N\dpa{f}{x_j} F_I \df x_j + \sum_{j=1}^N\dpa{F_I}{x_j} f \df x_j = F_I \dif f + f \dif F_I \]</span> De esta forma, nos queda que
 <span class="math display">\[\begin{align*}
 \dif (fω)   &amp;= \sum_I \left(F_I \dif f + f \dif F_I\right)\y \dif x_I = \\
             &amp;= \sum_I F_I \df{f,x_I} + \sum_I f \df{F_I,x_I} = \\
@@ -520,12 +488,7 @@ De esta forma, nos queda que
             &amp;= \dif f \y \left(\sum_I F_I \dif x_I\right) + f \dif ω = \\
             &amp;= ω \df{f} + f \dif ω
 \end{align*}\]</span>
-Hemos llegado a una expresión similar a la de la derivada de un producto de funciones
-<span class="math display">\[d(f\omega) = ω \df{f} + f \dif ω \]</span>
-
-Sean dos k-formas diferenciales <span class="math inline">\(ω\)</span> y <span class="math inline">\(β\)</span>:
-<span class="math display">\[ \omega =\sum f_i \df x_i ;\; \beta = \sum_j  g_j\df x_j \]</span>
-Calculamos el diferencial de su producto exterior:
+Hemos llegado a una expresión similar a la de la derivada de un producto de funciones <span class="math display">\[d(f\omega) = ω \df{f} + f \dif ω \]</span>  Sean dos k-formas diferenciales <span class="math inline">\(ω\)</span> y <span class="math inline">\(β\)</span>: <span class="math display">\[ \omega =\sum f_i \df x_i ;\; \beta = \sum_j  g_j\df x_j \]</span> Calculamos el diferencial de su producto exterior:
 <span class="math display">\[\begin{align*}
 \dif (\omega \y \beta) &amp;= \dif\left(\sum_{i,j=1}^N f_ig_jdx_y\y dx_j\right) =\\
     &amp;= \sum_{i,j=1}^N \df{(f_ig_j),x_i,x_j} = \\
@@ -545,27 +508,13 @@ Ahora tratamos de encontrar <span class="math inline">\(ω\)</span> y <span clas
     &amp;= \left(\sum_i \df{f_i,x_i}\right) \y β - ω \y \left(\sum_j \df{g_j,x_j}\right) = \\
     &amp;= \dif ω \y β - ω \y \dif β
 \end{align*}\]</span>
-Entonces, si <span class="math inline">\(\omega,\beta\)</span> son 1-formas tenemos que <span class="math inline">\(\dif(\omega \y \beta) = \dif\omega \y \beta - \omega \y\dif\beta\)</span>. Si por el contrario tuviésemos que <span class="math inline">\(\omega\)</span> es una k-forma y <span class="math inline">\(\beta\)</span> una s-forma, repitiendo las cuentas de nuevo llegaríamos a
-<span class="math display">\[\dif \omega \y \beta + (-1)^k \omega \y \dif\beta\]</span>
-
-Sea <span class="math inline">\(\omega\)</span> k-forma con coeficientes <span class="math inline">\(C^2\)</span>. Entonces,
-<span class="math display">\[ \dif (\dif ω) = 0 \]</span>
-
-Resumiendo las propiedades del diferencial:
-
+Entonces, si <span class="math inline">\(\omega,\beta\)</span> son 1-formas tenemos que <span class="math inline">\(\dif(\omega \y \beta) = \dif\omega \y \beta - \omega \y\dif\beta\)</span>. Si por el contrario tuviésemos que <span class="math inline">\(\omega\)</span> es una k-forma y <span class="math inline">\(\beta\)</span> una s-forma, repitiendo las cuentas de nuevo llegaríamos a <span class="math display">\[\dif \omega \y \beta + (-1)^k \omega \y \dif\beta\]</span>  Sea <span class="math inline">\(\omega\)</span> k-forma con coeficientes <span class="math inline">\(C^2\)</span>. Entonces, <span class="math display">\[ \dif (\dif ω) = 0 \]</span>  Resumiendo las propiedades del diferencial: 
 
 Partiendo de un campo en <span class="math inline">\(\real^3\)</span>, podemos interpretarlo como una 1-forma o como una 2-forma.
 
-Queremos saber cómo llevar k-formas de <span class="math inline">\(\real^N\)</span> a <span class="math inline">\(\real^M\)</span>. Partimos de la base de que existe una transformación <span class="math inline">\(\appl{T}{ℝ^N}{ℝ^M}\)</span> tal que <span class="math inline">\(T(s)=x\)</span>, y buscamos otra aplicación <span class="math inline">\(\appl{\pb}{\real^M}{\real^N}\)</span>.
-En caso de 0-formas, el  es lo mismo que la composición. Es decir, dada una función <span class="math inline">\(\appl{f}{ℝ^M}{ℝ}\)</span>, <span class="math inline">\(\pb f = f \circ T\)</span>.
-Basándonos en esta misma idea sobre las funciones escalares, vamos a tratar de hallar el pullback para las formas diferenciales. Supongamos que tenemos una k-forma <span class="math inline">\(\omega\)</span> en <span class="math inline">\(\real^M\)</span>. Queremos construir <span class="math inline">\(T^{\ast}\)</span> en términos de <span class="math inline">\(T\)</span> y <span class="math inline">\(\omega\)</span>. Partimos de <span class="math inline">\(\gor{s} \in \real^N\)</span> (el punto donde se evalúa la k-forma), y <span class="math inline">\(\gv_1,\gv_2,..,\gv_k\)</span> los vectores en <span class="math inline">\(\real^N\)</span> sobre los que actúa <span class="math inline">\(ω\)</span>. Entonces
-<span class="math display">\[
+Queremos saber cómo llevar k-formas de <span class="math inline">\(\real^N\)</span> a <span class="math inline">\(\real^M\)</span>. Partimos de la base de que existe una transformación <span class="math inline">\(\appl{T}{ℝ^N}{ℝ^M}\)</span> tal que <span class="math inline">\(T(s)=x\)</span>, y buscamos otra aplicación <span class="math inline">\(\appl{\pb}{\real^M}{\real^N}\)</span>. En caso de 0-formas, el  es lo mismo que la composición. Es decir, dada una función <span class="math inline">\(\appl{f}{ℝ^M}{ℝ}\)</span>, <span class="math inline">\(\pb f = f \circ T\)</span>. Basándonos en esta misma idea sobre las funciones escalares, vamos a tratar de hallar el pullback para las formas diferenciales. Supongamos que tenemos una k-forma <span class="math inline">\(\omega\)</span> en <span class="math inline">\(\real^M\)</span>. Queremos construir <span class="math inline">\(T^{\ast}\)</span> en términos de <span class="math inline">\(T\)</span> y <span class="math inline">\(\omega\)</span>. Partimos de <span class="math inline">\(\gor{s} \in \real^N\)</span> (el punto donde se evalúa la k-forma), y <span class="math inline">\(\gv_1,\gv_2,..,\gv_k\)</span> los vectores en <span class="math inline">\(\real^N\)</span> sobre los que actúa <span class="math inline">\(ω\)</span>. Entonces <span class="math display">\[
 (T^{\ast}\omega)(\gor{s}) [\gv_1,\dotsc,\gv_k] = \omega(\underbrace{T(s)}_{\in\real^M}) [\underbrace{DT(s)\gv_j}_{\in\real^M}]
-\]</span>
-Es decir, transformamos el punto en el que se evalúa <span class="math inline">\(ω\)</span>, que pasa a ser <span class="math inline">\(T(\gor{s})\)</span> en lugar de <span class="math inline">\(\gor{s}\)</span>, y los vectores sobre los que actúa también los “movemos” usando la matriz diferencial.
-Vemos que
-<span class="math display">\[\omega(T(s)) [DT(s)\gv]\equiv \sum f_i(T(s))\dif x_i[DT(s)\gv]\]</span>
-<span class="math display">\[DT(s) = \begin{pmatrix}
+\]</span> Es decir, transformamos el punto en el que se evalúa <span class="math inline">\(ω\)</span>, que pasa a ser <span class="math inline">\(T(\gor{s})\)</span> en lugar de <span class="math inline">\(\gor{s}\)</span>, y los vectores sobre los que actúa también los “movemos” usando la matriz diferencial. Vemos que <span class="math display">\[\omega(T(s)) [DT(s)\gv]\equiv \sum f_i(T(s))\dif x_i[DT(s)\gv]\]</span> <span class="math display">\[DT(s) = \begin{pmatrix}
 \dpa{T_1}{s_1}(s) &amp; ... &amp; \dpa{T_1}{s_N}\\
 \vdots &amp; \ddots &amp; \vdots \\
 \dpa{T_M}{s_1} &amp; \dots &amp; \dpa{T_M}{s_N}
@@ -573,27 +522,9 @@ Vemos que
 v_1\\
 \downarrow\\
 v_N
-\end{pmatrix}\]</span>
-¿Que significa <span class="math inline">\(\dif x_i[DT(s)\gv]\)</span>? Vamos a ver que pasa con el producto de una de las filas de la matriz.
-<span class="math display">\[\df{x_i} [DT(s)\gv] = \dpa{T_i}{s_1}v_1 + ... + \dpa{T_i}{s_N}v_n\]</span>
-Podemos darnos cuenta de que <span class="math inline">\(v_1 = \dif s_1[\gv]\)</span>. Con esto tenemos:
-<span class="math display">\[\df{x_i} [DT(s)\gv] = \left(\dpa{T_i}{s_1}\dif s_1 + ... + \dpa{T_i}{s_N}\dif s_N \right)[\gv] = \dif T_i [\gv] \]</span>
-y por lo tanto
-<span class="math display">\[ (\pb ω)(\gor{s})[\sample[\gor{v}][k]] =  \omega(T(s)) [DT(s)\gv] = \sum f_i (T(s))  \dif T_i [\gv] \]</span>
-
-Sea <span class="math inline">\(f(x)\dif x_i\)</span> una 1-forma de la que queremos calcular el 
-<span class="math display">\[T^{\ast}(f\dif x_i)(s)[v] = f(T(s)) \dif x_1[DT(s)\gv]\]</span>
-Supongamos <span class="math inline">\(f\equiv 1\)</span>
-<span class="math display">\[T^{\ast}(fdx_i)(s)[v] = \dif x_1[DT(s)\gv] = \dif T_i[\gv]\]</span>
- <span class="math inline">\(T^{\ast}\dif x_i = \dif T_i\)</span>.
-
-Sea <span class="math inline">\(\omega = \sum_i f_i \dif x_i\)</span> una 1-forma de la que queremos calcular el 
-<span class="math display">\[
+\end{pmatrix}\]</span> ¿Que significa <span class="math inline">\(\dif x_i[DT(s)\gv]\)</span>? Vamos a ver que pasa con el producto de una de las filas de la matriz. <span class="math display">\[\df{x_i} [DT(s)\gv] = \dpa{T_i}{s_1}v_1 + ... + \dpa{T_i}{s_N}v_n\]</span> Podemos darnos cuenta de que <span class="math inline">\(v_1 = \dif s_1[\gv]\)</span>. Con esto tenemos: <span class="math display">\[\df{x_i} [DT(s)\gv] = \left(\dpa{T_i}{s_1}\dif s_1 + ... + \dpa{T_i}{s_N}\dif s_N \right)[\gv] = \dif T_i [\gv] \]</span> y por lo tanto <span class="math display">\[ (\pb ω)(\gor{s})[\sample[\gor{v}][k]] =  \omega(T(s)) [DT(s)\gv] = \sum f_i (T(s))  \dif T_i [\gv] \]</span>   Sea <span class="math inline">\(f(x)\dif x_i\)</span> una 1-forma de la que queremos calcular el  <span class="math display">\[T^{\ast}(f\dif x_i)(s)[v] = f(T(s)) \dif x_1[DT(s)\gv]\]</span> Supongamos <span class="math inline">\(f\equiv 1\)</span> <span class="math display">\[T^{\ast}(fdx_i)(s)[v] = \dif x_1[DT(s)\gv] = \dif T_i[\gv]\]</span>  <span class="math inline">\(T^{\ast}\dif x_i = \dif T_i\)</span>.  Sea <span class="math inline">\(\omega = \sum_i f_i \dif x_i\)</span> una 1-forma de la que queremos calcular el  <span class="math display">\[
  (T^{\ast} \omega )(s)[\gv]= \sum_i f_i(T(s))\dif x_i [DT(s)\gv] = \sum_i f_i(T(s)) \dif T_i [\gv ] = T^{\ast} (\sum_i f_i \dif x_i ) = \sum_i f_i \circ T \dif T_i
-\]</span>
- <span class="math inline">\(T^{\ast} (\sum_i f_i\dif x_i) = \sum_i (f_i \circ T) \dif T_i\)</span>
-
-¿Cómo se comporta con el producto exterior? Vamos a trabajar con <span class="math inline">\(f\equiv 1\)</span>.
+\]</span>  <span class="math inline">\(T^{\ast} (\sum_i f_i\dif x_i) = \sum_i (f_i \circ T) \dif T_i\)</span>  ¿Cómo se comporta con el producto exterior? Vamos a trabajar con <span class="math inline">\(f\equiv 1\)</span>.
 <span class="math display">\[\begin{gather*}
 T^{\ast}(\df{x_i,x_j} [\gu,\gv] = \df{x_i,x_j} \left[DT(s)[\gu], DT(s)[\gv]\right] = \\
 = \left|\begin{matrix}
@@ -606,21 +537,13 @@ T^{\ast}(\df{x_i,x_j} [\gu,\gv] = \df{x_i,x_j} \left[DT(s)[\gu], DT(s)[\gv]\righ
 \end{matrix}\right|
 \stackrel{(1)}{=} \df{T_i,T_j} [\gu,\gv]
 \end{gather*}\]</span>
-(1): Por las propiedades del producto exterior de 1-formas.
- <span class="math inline">\(T^{\ast} (dx_i \y dx_j) = dT_i \y dT_j\)</span>.
-
-¿Qué pasa cuando tenemos el producto de 2-formas generadas?
-<span class="math display">\[\omega = \sum f_idx_i\,;\,\beta=\sum g_jdx_j\]</span>
-Vamos con el producto exterior.
+(1): Por las propiedades del producto exterior de 1-formas.  <span class="math inline">\(T^{\ast} (dx_i \y dx_j) = dT_i \y dT_j\)</span>.  ¿Qué pasa cuando tenemos el producto de 2-formas generadas? <span class="math display">\[\omega = \sum f_idx_i\,;\,\beta=\sum g_jdx_j\]</span> Vamos con el producto exterior.
 <span class="math display">\[\begin{gather*}
 T^{\ast} (\omega \y \beta) (s) [\gu,\gv] = \sum_{i,j} f_i(T(s))g_j(T(s)) \underbrace{\df{x_i,x_j} [DT(s)\gu, DT(s),\gv]}_{\text{Calculado justo arriba}}\\
 = \sum_{i,j} (f_i\circ T) = \dotsb \\
 = \left(\sum (f_i\circ T)\dif T_i\right)\y\left(\sum(g_j \circ T) \dif T_j\right) = T^{\ast}\omega \y T^{\ast}\beta
 \end{gather*}\]</span>
- <span class="math inline">\(T^{\ast}(\omega \y \beta) = T^{\ast}\omega \y T^{\ast}\beta\)</span>.
-Esto es válido para multiíndices <span class="math inline">\(I\)</span>, es decir, para <span class="math inline">\(\omega\)</span> k-forma y <span class="math inline">\(\beta\)</span> s-forma.
-
-Una vez visto cómo se comporta el  respecto del producto exterior vamos a ver como se comporta con respecto de la diferencial exterior.
+ <span class="math inline">\(T^{\ast}(\omega \y \beta) = T^{\ast}\omega \y T^{\ast}\beta\)</span>. Esto es válido para multiíndices <span class="math inline">\(I\)</span>, es decir, para <span class="math inline">\(\omega\)</span> k-forma y <span class="math inline">\(\beta\)</span> s-forma.  Una vez visto cómo se comporta el  respecto del producto exterior vamos a ver como se comporta con respecto de la diferencial exterior.
 <span class="math display">\[\begin{gather*}
 \dif (T^{\ast} \omega) = \dif \left(\sum_i f_i(T(s)) \dif x_i [DT(s)\gv]\right) = \dif\left(\sum (f_i \circ T)(s) \dif T_i[\gv]\right)\\
 = \sum_i \dif(f_i\circ T)\y dT_i
@@ -630,15 +553,9 @@ Vamos a ver qué significa <span class="math inline">\(\dif(f_i\circ T)\)</span>
 \dif (f_i\circ T) =  \sum_k \dpa{f_i\circ T}{s_k} \dif s_k \\
 \dpa{f_i\circ T}{s_k} = \sum_j \dpa{f_i}{x_j}(T(s))\cdot \dpa{x_j}{s_k}
 \end{gather*}\]</span>
-Donde <span class="math inline">\(x_j = T_j(s)\)</span>. Juntando todo tenemos:
-<span class="math display">\[
+Donde <span class="math inline">\(x_j = T_j(s)\)</span>. Juntando todo tenemos: <span class="math display">\[
 \dif (T^{\ast} \omega) = \sum_{i,j,k} \dpa{f_i}{x_j}(T(s)) \dpa{T_j(s)}{s_k} \df{s_k,T_i} = \sum_{i,j} \dpa{f_i}{s_j}(T(s)) \df{T_j,T_i} = T^{\ast}(d(\sum f_i \dif x_i))
-\]</span>
- <span class="math inline">\(\dif (T^{\ast}\omega) = T^{\ast}(\dif \omega)\)</span>
-
-El cambio a coordenadas polares <span class="math inline">\((\rho,\theta)\)</span> se define por la siguiente transformación:
-<span class="math display">\[T(\rho,\theta) =\left( T_1(\rho,\theta),T_2(\rho,\theta)\right) = (\rho \cos\theta,\rho \sen\theta)\]</span>
-Vamos a calcular los pull-backs:
+\]</span>  <span class="math inline">\(\dif (T^{\ast}\omega) = T^{\ast}(\dif \omega)\)</span>  El cambio a coordenadas polares <span class="math inline">\((\rho,\theta)\)</span> se define por la siguiente transformación: <span class="math display">\[T(\rho,\theta) =\left( T_1(\rho,\theta),T_2(\rho,\theta)\right) = (\rho \cos\theta,\rho \sen\theta)\]</span> Vamos a calcular los pull-backs:
 <span class="math display">\[\begin{gather*}
  T^{\ast}(\dif x) = \dif T_1 = \dpa{T_1}{ρ}\dif ρ + \dpa{T_1}{θ}\dif θ = \cos θ \dif ρ - ρ \sen θ \dif θ \\
  T^{\ast}(\dif y) = \dif T_2 = \dpa{T_2}{ρ}\dif ρ + \dpa{T_2}{θ}\dif θ = \sen θ \dif ρ + ρ \cos θ \dif θ
@@ -650,55 +567,33 @@ Juntando ahora lo que tenemos:
     &amp;= ρ \cos^2 θ \df{ρ,θ} - ρ \sen^2 θ \df{θ,ρ} = \\
     &amp;= \left(ρ \cos^2 θ + ρ \sen^2 θ\right) \df{ρ,θ} = \\
     &amp;= ρ \df{ρ,θ}
-\end{align*}\]</span>
+\end{align*}\paragraph{Propiedades fundamentales de la operación}\]</span>
 
 
+Al final, querremos integrar k-formas en <span class="math inline">\(ℝ^N\)</span> sobre variedades de dimensión <span class="math inline">\(k\)</span>.  Vamos a partir de un conjunto Ω abierto de <span class="math inline">\(\real^N\)</span>. Sea ω una n-forma definida en un entorno de Ω, es decir <span class="math inline">\(\omega = f(\gx) \underbrace{\dfl{x_1}{x_n}}_{\text{Elemento de volumen}}\)</span>. Definimos la integral como sigue:
 
-Al final, querremos integrar k-formas en <span class="math inline">\(ℝ^N\)</span> sobre variedades de dimensión <span class="math inline">\(k\)</span>.
+Supongamos que tenemos una <span class="math inline">\(\appl{\Phi}{\real^K}{\real^N}\)</span>, tal que <span class="math inline">\(\Phi(\gor{s}) = \gx\)</span>. Para que lo de la derecha sea una variedad tenemos que <span class="math inline">\(\Phi\)</span> tiene que ser regular, homeomorfismo y rango máximo. Supongamos <span class="math inline">\(\omega \in \real^N\)</span>, con <span class="math inline">\(\omega\)</span> una x-forma. ¿Qué pasaría si queremos integrar <span class="math inline">\(T^{\ast}\omega\)</span>? Si queremos integrar <span class="math inline">\(\pb{\omega}\)</span> en <span class="math inline">\(\real^k, \omega\)</span> tiene que ser una k-forma para poder aplicar la definición.
 
-Vamos a partir de un conjunto Ω abierto de <span class="math inline">\(\real^N\)</span>.
-Sea ω una n-forma definida en un entorno de Ω, es decir <span class="math inline">\(\omega = f(\gx) \underbrace{\dfl{x_1}{x_n}}_{\text{Elemento de volumen}}\)</span>. Definimos la integral como sigue:
-
-Supongamos que tenemos una <span class="math inline">\(\appl{\Phi}{\real^K}{\real^N}\)</span>, tal que <span class="math inline">\(\Phi(\gor{s}) = \gx\)</span>. Para que lo de la derecha sea una variedad tenemos que <span class="math inline">\(\Phi\)</span> tiene que ser regular, homeomorfismo y rango máximo.
-Supongamos <span class="math inline">\(\omega \in \real^N\)</span>, con <span class="math inline">\(\omega\)</span> una x-forma.
-¿Qué pasaría si queremos integrar <span class="math inline">\(T^{\ast}\omega\)</span>?
-Si queremos integrar <span class="math inline">\(\pb{\omega}\)</span> en <span class="math inline">\(\real^k, \omega\)</span> tiene que ser una k-forma para poder aplicar la definición.
-
-Después de haber visto los casos específicos, vamos a ver cómo integrar, de forma genérica, una forma diferencial sobre una variedad diferencial.
-Sea <span class="math inline">\(M\)</span> una variedad de dimensión k en <span class="math inline">\(\real^N\)</span>. Supongamos que <span class="math inline">\((D,\Phi)\)</span> es una carta local, es decir:
-<span class="math inline">\(\appl{\Phi}{D\subset\real^K}{\real^N}, \Phi(D)\subset M\)</span>, siendo Φ una parametrización (<span class="math inline">\(\Phi(\gor{t}) = \gx\)</span>).
-Sea ω una k-forma definida en <span class="math inline">\(ℝ^N\)</span>:
-<span class="math display">\[\omega = \sum_I f_I\dif x_I; \quad I=\{i_1,i_2,...,i_k\}\]</span>
-Por definición:
+Después de haber visto los casos específicos, vamos a ver cómo integrar, de forma genérica, una forma diferencial sobre una variedad diferencial. Sea <span class="math inline">\(M\)</span> una variedad de dimensión k en <span class="math inline">\(\real^N\)</span>. Supongamos que <span class="math inline">\((D,\Phi)\)</span> es una carta local, es decir: <span class="math inline">\(\appl{\Phi}{D\subset\real^K}{\real^N}, \Phi(D)\subset M\)</span>, siendo Φ una parametrización (<span class="math inline">\(\Phi(\gor{t}) = \gx\)</span>). Sea ω una k-forma definida en <span class="math inline">\(ℝ^N\)</span>: <span class="math display">\[\omega = \sum_I f_I\dif x_I; \quad I=\{i_1,i_2,...,i_k\}\]</span> Por definición:
 <span class="math display">\[\begin{equation}
 \int_{\Phi(D)} \omega = \int_D \Phi^{\ast}\omega \label{eqIntFDifVar}
 \end{equation}\]</span>
-El pull-back nos va a dar una k-forma definida en <span class="math inline">\(\real^k\)</span>.
-<span class="math display">\[
+El pull-back nos va a dar una k-forma definida en <span class="math inline">\(\real^k\)</span>. <span class="math display">\[
 \Phi^{\ast}\omega =g(\gor{t})\dfl{t_1}{t_k}
-\]</span>
-Aplicando esto:
-<span class="math display">\[
+\]</span> Aplicando esto: <span class="math display">\[
 \int_{\Phi(d) \omega} = \int_D g(\gor{t})\dfl{t_1}{t_k}
-\]</span>
-Vamos a identificar la función <span class="math inline">\(g\)</span> remangándonos y haciendo cuentas:
-<span class="math display">\[
+\]</span> Vamos a identificar la función <span class="math inline">\(g\)</span> remangándonos y haciendo cuentas: <span class="math display">\[
 \Phi^{\ast} \omega = \sum_I f_I\circ\Phi \dif \Phi_I =
-\]</span>
-Vamos a fijarnos en <span class="math inline">\(\dif \Phi_I = \df{\Phi_{i_1},...,\Phi_{i_k}}\)</span>, que va a actuar sobre k-vectores, es decir:
-<span class="math display">\[
+\]</span> Vamos a fijarnos en <span class="math inline">\(\dif \Phi_I = \df{\Phi_{i_1},...,\Phi_{i_k}}\)</span>, que va a actuar sobre k-vectores, es decir: <span class="math display">\[
 \dif \Phi_I[\gv_1,...,\gv_k] = \dfl{\Phi_{i_1}}{\Phi_{i_k}} [\gv_1,\dotsc,\gv_k]
 = \det \begin{pmatrix}
 \dif \Phi_{i_1}[\gv_1]  &amp; \cdots &amp; \dif \Phi_{i_1}[\gv_k] \\
 \vdots                  &amp; \ddots &amp; \vdots\\
 \dif \Phi_{i_k}[\gv_1]  &amp; \cdots &amp; \dif \Phi_{i_k}[\gv_k] \\
 \end{pmatrix}
-\]</span>
-Vamos a desarrollar uno de los elementos de la matriz (escribiendo <span class="math inline">\(\gw\)</span> para generalizar a cualquiera de los vectores sobre los que actúa):
-<span class="math display">\[
+\]</span> Vamos a desarrollar uno de los elementos de la matriz (escribiendo <span class="math inline">\(\gw\)</span> para generalizar a cualquiera de los vectores sobre los que actúa): <span class="math display">\[
 \dif \Phi_{i_1}[\gw] = \sum_{j=1}^k \left(\dpa{\Phi_{i_1}}{t_j} \dif t_j\right)[\gw] = \sum_{j=1}^k \dpa{\Phi_{i_1}}{t_j}w_j = \pesc{\grad \Phi_{i_1},\gw}
-\]</span>
-Aplicando esto:
+\]</span> Aplicando esto:
 <span class="math display">\[\begin{gather*}
 \dif \Phi_I[\gv_1,...,\gv_k] =
 \det \begin{pmatrix}
@@ -736,9 +631,7 @@ Aplicando esto:
 \dif t_1(\gv_1) &amp; \cdots &amp; \dif t_1(\gv_k)\\
 \vdots          &amp; \ddots &amp; \vdots\\
 \dif t_k(\gv_1) &amp; \cdots &amp; \dif t_k(\gv_k)
-\end{pmatrix} \]</span>
-
-<span class="math display">\[
+\end{pmatrix} \]</span>  <span class="math display">\[
 \Phi^{\ast} \omega = \sum_I f_I\circ\Phi \dif \Phi_I =
 \overbrace{\sum_I f_i\circ\Phi
 \det\begin{pmatrix}
@@ -746,8 +639,7 @@ Aplicando esto:
 \cdots \\
 \grad \Phi_{i_k} \longrightarrow
 \end{pmatrix}}^{\text{Esta es la g que buscamos}} \dfl{t_1}{t_k}
-\]</span>
-Aplicando a una integral:
+\]</span> Aplicando a una integral:
 <span class="math display">\[\begin{equation}
 \int_{\Phi(D)} \omega = \int_D \sum_I f_i\circ\Phi
 \det \begin{pmatrix}
@@ -757,22 +649,13 @@ Aplicando a una integral:
 \end{pmatrix}\id{t_1,\dotsb,t_k}
 \label{eqPbIntFDif}
 \end{equation}\]</span>
-Donde la matriz enorme sería el equivalente al cambio en la medida cuando hacíamos un cambio de coordenadas.
-
-Para entender los teoremas de Green, de divergencia (o Gauss) y Stokes en términos de las formas diferenciales, vamos a empezar con el caso básico: el cubo unidad.
-En <span class="math inline">\(ℝ^2\)</span>, el cubo unidad es <span class="math inline">\(\mathcal{Q} = [0,1]\x[0,1]\)</span>. Para calcular la integral sobre la frontera, tenemos que integrar sobre cada una de las aristas:
-<span class="math display">\[\begin{array}{cc}
+Donde la matriz enorme sería el equivalente al cambio en la medida cuando hacíamos un cambio de coordenadas.  Para entender los teoremas de Green, de divergencia (o Gauss) y Stokes en términos de las formas diferenciales, vamos a empezar con el caso básico: el cubo unidad. En <span class="math inline">\(ℝ^2\)</span>, el cubo unidad es <span class="math inline">\(\mathcal{Q} = [0,1]\x[0,1]\)</span>. Para calcular la integral sobre la frontera, tenemos que integrar sobre cada una de las aristas: <span class="math display">\[\begin{array}{cc}
 I_{11} =\{(1,y),y\in[0,1]\}&amp;\text{ Orientación: }\, +\\
 I_{21} =\{(x,1),x\in[0,1]\}&amp;\text{ Orientación: }\, -\\
 I_{10} =\{(0,y),y\in[0,1]\}&amp;\text{ Orientación: }\, -\\
 I_{20} =\{(x,0),x\in[0,1]\}&amp;\text{ Orientación: }\, +\\
 \end{array}
-\]</span>
-Para nombrar las aristas usamos la notación <span class="math inline">\(I_{ij}\)</span>, donde <span class="math inline">\(i\)</span> es la variable fija (<span class="math inline">\(1=x\)</span>,<span class="math inline">\(2=y\)</span>) y <span class="math inline">\(j\)</span> el valor que toma la variable fija.
-La orientación está calculada con la regla de la mano izquierda. Me coloco en la frontera mirando hacia la dirección en la que nos movemos. Si la mano izquierda estirada apunta hacia el interior, la orientación es positiva. Si apunta hacia fuera, la orientación es negativa.
-Sea <span class="math inline">\(\omega = f(x,y)\dif x + g(x,y)\dif y\)</span> la forma diferencial que queremos integrar, cuyo diferencial es
-<span class="math display">\[\dif \omega= \dpa{f}{y}\df{y,x} + \dpa{g}{x}\df{x,y} = \left(\dpa{g}{x} - \dpa{f}{y}\right) \df{x,y}\]</span>
-Consideramos <span class="math inline">\(\mathcal{C}^+\)</span> como la frontera de <span class="math inline">\(\mathcal{Q}\)</span> orientada positivamente. Vamos a intentar calcular la integral de ω sobre esa frontera.
+\]</span> Para nombrar las aristas usamos la notación <span class="math inline">\(I_{ij}\)</span>, donde <span class="math inline">\(i\)</span> es la variable fija (<span class="math inline">\(1=x\)</span>,<span class="math inline">\(2=y\)</span>) y <span class="math inline">\(j\)</span> el valor que toma la variable fija. La orientación está calculada con la regla de la mano izquierda. Me coloco en la frontera mirando hacia la dirección en la que nos movemos. Si la mano izquierda estirada apunta hacia el interior, la orientación es positiva. Si apunta hacia fuera, la orientación es negativa. Sea <span class="math inline">\(\omega = f(x,y)\dif x + g(x,y)\dif y\)</span> la forma diferencial que queremos integrar, cuyo diferencial es <span class="math display">\[\dif \omega= \dpa{f}{y}\df{y,x} + \dpa{g}{x}\df{x,y} = \left(\dpa{g}{x} - \dpa{f}{y}\right) \df{x,y}\]</span> Consideramos <span class="math inline">\(\mathcal{C}^+\)</span> como la frontera de <span class="math inline">\(\mathcal{Q}\)</span> orientada positivamente. Vamos a intentar calcular la integral de ω sobre esa frontera.
 <span class="math display">\[\begin{align*}
 \int_{C^+} \omega &amp;= \int_{I_11}\omega\, - \int_{I_20}\omega\, - \int_{I_21}\omega\, + \int_{I_10}\omega = \\
     &amp;= \int_0^1 g(1,y)\dif y + \int_0^1 f(x,0)\dif x - \int_0^1f(x,1)\dif x - \int_0^1 g(0,y)\dif y = \\
@@ -781,11 +664,7 @@ Consideramos <span class="math inline">\(\mathcal{C}^+\)</span> como la frontera
     &amp;= \iint\limits_Q\left( \dpa{g}{x} - \dpa{f}{y}\right)\id{x,y} = \\
     &amp;= \iint\limits_Q \dif \omega
 \end{align*}\]</span>
-Operando, hemos llegado a que
-<span class="math display">\[ \int_{C^{+}} \omega = \iint\limits_Q \dif \omega \]</span>
-Esto escrito en términos de cálculo II es: <span class="math display">\[ \int_{C^{+}}(P,Q) = \iint\limits_Q \dpa{Q}{x} - \dpa{P}{y} \]</span>, que es el .
-Ahora vamos a hacer algo lo mismo en <span class="math inline">\(\real^3\)</span>, sea <span class="math inline">\(Q=[0,1]\x[0,1]\x[0,1]\)</span>, trabajando con la normal exterior para las orientaciones. Vamos a distinguir las caras con la notación anterior:
-<span class="math display">\[\begin{array}{cc}
+Operando, hemos llegado a que <span class="math display">\[ \int_{C^{+}} \omega = \iint\limits_Q \dif \omega \]</span> Esto escrito en términos de cálculo II es: <span class="math display">\[ \int_{C^{+}}(P,Q) = \iint\limits_Q \dpa{Q}{x} - \dpa{P}{y} \]</span>, que es el . Ahora vamos a hacer algo lo mismo en <span class="math inline">\(\real^3\)</span>, sea <span class="math inline">\(Q=[0,1]\x[0,1]\x[0,1]\)</span>, trabajando con la normal exterior para las orientaciones. Vamos a distinguir las caras con la notación anterior: <span class="math display">\[\begin{array}{cc}
 I_{10} = \{(0,y,z), y\in[0,1],z\in[0,1]\} &amp; \text{ Orientación: -} \\
 I_{11} = \{(1,y,z), y\in[0,1],z\in[0,1]\} &amp; \text{ Orientación: +} \\
 I_{20} = \{(x,0,z), x\in[0,1],z\in[0,1]\} &amp; \text{ Orientación: +} \\
@@ -793,119 +672,50 @@ I_{21} = \{(x,1,z), x\in[0,1],z\in[0,1]\} &amp; \text{ Orientación: -} \\
 I_{30} = \{(x,y,0), x\in[0,1],y\in[0,1]\} &amp; \text{ Orientación: -} \\
 I_{31} = \{(x,y,1), x\in[0,1],y\in[0,1]\} &amp; \text{ Orientación: +} \\
 \end{array}
-\]</span>
-Las orientaciones están calculadas (según el primer caso) <span class="math display">\[\left.\begin{array}{cc}
-T_y = (0,1,0)\\T_z=(0,0,1)\end{array}\right\}\implies T_y\x T_z = (1,0,0)\]</span> Mirando en el dibujo, identificamos que la cara en la que estamos trabajando (en este caso la de detrás) y comprobamos que apunta hacia dentro del cubo (dirección contraria a la normal exterior), y concluimos orientación negativa.
-Repitiendo el proceso llegamos a la conclusión de: <span class="math display">\[
+\]</span> Las orientaciones están calculadas (según el primer caso) <span class="math display">\[\left.\begin{array}{cc}
+T_y = (0,1,0)\\T_z=(0,0,1)\end{array}\right\}\implies T_y\x T_z = (1,0,0)\]</span> Mirando en el dibujo, identificamos que la cara en la que estamos trabajando (en este caso la de detrás) y comprobamos que apunta hacia dentro del cubo (dirección contraria a la normal exterior), y concluimos orientación negativa. Repitiendo el proceso llegamos a la conclusión de: <span class="math display">\[
 \begin{array}{cc}
 T_y\x T_z &amp;= (0,0,1)\\
 T_x\x T_z &amp;= (0,-1,0)\\
 T_x\x T_y &amp;= (1,0,0)
-\end{array}\]</span>
-Si la suma de los subíndices es par, la orientación es positiva. Si por el contrario es impar, es negativa. Detrás de esta idea hay un teorema que no vamos a ver. Además hay que tener cuidado con el orden en el que se hacen las cosas y se escriben los vectores.
-Trabajamos con nuestra forma diferencial asociada a un campo <span class="math inline">\(\vf\)</span>:
-<span class="math display">\[\omega = F_1(x,y,z)\df{y,z}+F_2(x,y,z)\df{y,x}+F_3(x,y,z)\df{x,y}\]</span>
-cuyo diferencial es
+\end{array}\]</span> Si la suma de los subíndices es par, la orientación es positiva. Si por el contrario es impar, es negativa. Detrás de esta idea hay un teorema que no vamos a ver. Además hay que tener cuidado con el orden en el que se hacen las cosas y se escriben los vectores. Trabajamos con nuestra forma diferencial asociada a un campo <span class="math inline">\(\vf\)</span>: <span class="math display">\[\omega = F_1(x,y,z)\df{y,z}+F_2(x,y,z)\df{y,x}+F_3(x,y,z)\df{x,y}\]</span> cuyo diferencial es
 <span class="math display">\[\begin{align*}
 \dif \omega &amp;= \dpa{F_1}{x}\df{x,y,z} + \dpa{F_2}{y}\df{y,x,z} + \dpa{F_3}{z}\df{z,x,y} \\
     &amp;= \left(\dpa{F_1}{x}+\dpa{F_2}{y} + \dpa{F_3}{z}\right) \df{x,y,z}
 \end{align*}\]</span>
-Vamos a calcular <span class="math display">\[\int_{dQ^+} \omega\]</span> siendo <span class="math inline">\(dQ^+\)</span> la frontera del cubo unidad.
-<span class="math display">\[\int_{Q^+} \omega =\underbrace{ -\int_{I_{10}} \omega +  \int_{I_{11}} \omega}_{(1)} + \int_{I_{20}} \omega -  \int_{I_{21}} \omega  -\int_{I_{30}} \omega +  \int_{I_{31}} \omega\]</span>
-Operamos (1) por separado. Aplicando () y la ecuación de la integral de una forma diferencial sobre una superficie () tenemos que
+Vamos a calcular <span class="math display">\[\int_{dQ^+} \omega\]</span> siendo <span class="math inline">\(dQ^+\)</span> la frontera del cubo unidad. <span class="math display">\[\int_{Q^+} \omega =\underbrace{ -\int_{I_{10}} \omega +  \int_{I_{11}} \omega}_{(1)} + \int_{I_{20}} \omega -  \int_{I_{21}} \omega  -\int_{I_{30}} \omega +  \int_{I_{31}} \omega\]</span> Operamos (1) por separado. Aplicando () y la ecuación de la integral de una forma diferencial sobre una superficie () tenemos que
 <span class="math display">\[\begin{gather*}
  -\int_{I_{10}} \omega +  \int_{I_{11}} \omega = \int_0^1\int_0^1\Phi^{\ast}_{11}\omega - \int_0^1\int_0^1 \Phi^{\ast}_{10} \omega = \\
  = \int_0^1\int_0^1 \pesc{\overrightarrow{F}\circ \Phi_{11},(1,0,0)}\id{y,z}
  -\int_0^1\int_0^1 \pesc{\overrightarrow{F}\circ \Phi_{10},(1,0,0)}\id{y,z}= \\
 = \int_0^1\int_0^1 F_1(\Phi_{11}(y,z))-F_1(\Phi_{10}(y,z))dydz = \iiint\limits_Q \dpa{F_1}{x}\id{x,y,z}
 \end{gather*}\]</span>
-Aplicando las mismas cuentas con las que faltan llegamos al  para el cubo.
-
-<span class="math display">\[\int_{dQ^+} \omega = \int_{Q}\dif \omega\]</span>
-Las ideas sobre formas diferenciales se traducen en <span class="math inline">\(\real^2\)</span> en el Teorema de Green y en <span class="math inline">\(\real^3\)</span> en el Teorema de la divergencia. ¿Dónde queda el Teorema de Stokes? Después de unos ejemplos de aplicación de los teoremas vamos a verlo.
-
-Sea <span class="math inline">\(\omega\)</span> 1-forma en <span class="math inline">\(\real^2\)</span>, y <span class="math inline">\(D\)</span> un conjunto cerrado con frontera orientable. Entonces
-<span class="math display">\[
+Aplicando las mismas cuentas con las que faltan llegamos al  para el cubo.  <span class="math display">\[\int_{dQ^+} \omega = \int_{Q}\dif \omega\]</span> Las ideas sobre formas diferenciales se traducen en <span class="math inline">\(\real^2\)</span> en el Teorema de Green y en <span class="math inline">\(\real^3\)</span> en el Teorema de la divergencia. ¿Dónde queda el Teorema de Stokes? Después de unos ejemplos de aplicación de los teoremas vamos a verlo.   Sea <span class="math inline">\(\omega\)</span> 1-forma en <span class="math inline">\(\real^2\)</span>, y <span class="math inline">\(D\)</span> un conjunto cerrado con frontera orientable. Entonces <span class="math display">\[
 \int_{\partial  D^+} P\dif x+Q\dif y = \iint_D \dif(P\dif x+Q\dif y) = \int\int_D \dpa{Q}{x} - \dpa{Q}{y}\id{x,y}
-\]</span>
-Podemos elegir <span class="math inline">\((P,Q)\)</span> de tal modo que <span class="math inline">\(\displaystyle \dpa{Q}{x}-\dpa{Q}{y} = 1\)</span>.
-Entonces el área de <span class="math inline">\(D\)</span> sería <span class="math inline">\(\displaystyle\int_{\partial D^+} (P,Q)d\sigma\)</span>. Podemos aplicar esta idea para hallar el área de la hoja folium de Descartes (imagen ), cuya ecuación es
-<span class="math display">\[x^3+y^3 = mxy\]</span>
-
-Vamos a parametrizarla, siguiendo la indicación: <span class="math inline">\(t = \frac{y}{x}\)</span>. Se deja como ejercicio para el lector llegar a la fórmula:
+\]</span> Podemos elegir <span class="math inline">\((P,Q)\)</span> de tal modo que <span class="math inline">\(\displaystyle \dpa{Q}{x}-\dpa{Q}{y} = 1\)</span>. Entonces el área de <span class="math inline">\(D\)</span> sería <span class="math inline">\(\displaystyle\int_{\partial D^+} (P,Q)d\sigma\)</span>. Podemos aplicar esta idea para hallar el área de la hoja folium de Descartes (imagen ), cuya ecuación es <span class="math display">\[x^3+y^3 = mxy\]</span>  Vamos a parametrizarla, siguiendo la indicación: <span class="math inline">\(t = \frac{y}{x}\)</span>. Se deja como ejercicio para el lector llegar a la fórmula:
 <span class="math display">\[\begin{gather*}
 x=\frac{mt}{1+t^3}\\
 y= xt = \frac{mt^2}{1+t^3}
 \end{gather*}\]</span>
-Quedando por definir que valores toman los parámetros. En este caso es <span class="math inline">\((0,\infty)\)</span>. Estos valores parametrizan la región cerrada.
-Podríamos plantearnos para qué valores de <span class="math inline">\(t\)</span> que recorren las ramas que se van a infinito. En <span class="math inline">\(t=-1\)</span>, se va a infinito, entonces una de las ramas será <span class="math inline">\(t\in(-1,0)\)</span> y la otra será <span class="math inline">\(t\in(-\infty,-1)\)</span>.
-¿Que orientación nos da esta parametrización?
-La idea es ver el vector tangente en el 0. Si es horizontal empezaremos por la rama de abajo. Si es vertical, empezaremos por la rama de arriba
-<span class="math display">\[\sigma&#39;(t) = \left(\frac{m(1+t^3)-3mt^3}{(1+t^3)^2},\frac{2mt(1+t^3) - 3mt^4}{(1+t^3)^2}\right)\]</span>
-Podemos comprobar que <span class="math inline">\(\sigma&#39;(t) \convs[][t][0^+] (m,0)\)</span>. Además, <span class="math inline">\(\sigma&#39;(t) \convs[][t](0,m)\)</span>, quedando una orientación positiva.
-<span class="math display">\[
+Quedando por definir que valores toman los parámetros. En este caso es <span class="math inline">\((0,\infty)\)</span>. Estos valores parametrizan la región cerrada. Podríamos plantearnos para qué valores de <span class="math inline">\(t\)</span> que recorren las ramas que se van a infinito. En <span class="math inline">\(t=-1\)</span>, se va a infinito, entonces una de las ramas será <span class="math inline">\(t\in(-1,0)\)</span> y la otra será <span class="math inline">\(t\in(-\infty,-1)\)</span>. ¿Que orientación nos da esta parametrización? La idea es ver el vector tangente en el 0. Si es horizontal empezaremos por la rama de abajo. Si es vertical, empezaremos por la rama de arriba <span class="math display">\[\sigma&#39;(t) = \left(\frac{m(1+t^3)-3mt^3}{(1+t^3)^2},\frac{2mt(1+t^3) - 3mt^4}{(1+t^3)^2}\right)\]</span> Podemos comprobar que <span class="math inline">\(\sigma&#39;(t) \convs[][t][0^+] (m,0)\)</span>. Además, <span class="math inline">\(\sigma&#39;(t) \convs[][t](0,m)\)</span>, quedando una orientación positiva. <span class="math display">\[
 A(D) = \int_{\partial  D^+} (0,x)d\sigma = \int_0^{+\infty} \pesc{\left(0,\frac{mt}{1+t^3}\right), \left(\ast,\frac{2mt(1+t^3)-3mt^4}{(1+t^3)^2}\right)}dt = ...
-\]</span>
-Wolfram dice que el resultado de la integral es <span class="math inline">\(\frac{m^2}{6}\)</span> y que el área encerrada por el folium de Descartes es también <span class="math inline">\(\frac{m^2}{6}\)</span> lo que nos hace pensar que está bien planteado y bien resuelto el problema.
-
-Hacer lo mismo con la curva <span class="math inline">\(x^4+y^4=4xy\)</span>. El área de la hoja contenida en el primer cuadrante.
-%
-
-El teorema decía: <span class="math display">\[
+\]</span> Wolfram dice que el resultado de la integral es <span class="math inline">\(\frac{m^2}{6}\)</span> y que el área encerrada por el folium de Descartes es también <span class="math inline">\(\frac{m^2}{6}\)</span> lo que nos hace pensar que está bien planteado y bien resuelto el problema.  Hacer lo mismo con la curva <span class="math inline">\(x^4+y^4=4xy\)</span>. El área de la hoja contenida en el primer cuadrante. %  El teorema decía: <span class="math display">\[
 \int_{\Gamma^+}\overrightarrow{F}d\sigma = \int \int_{S^+} \rot\overrightarrow{F} dS
-\]</span>
-Siendo <span class="math inline">\(S\)</span> la superficie, <span class="math inline">\(\Gamma\)</span> la ¿frontera?, tomando la orientación positiva con la normal exterior.
-
-<span class="math display">\[
+\]</span> Siendo <span class="math inline">\(S\)</span> la superficie, <span class="math inline">\(\Gamma\)</span> la ¿frontera?, tomando la orientación positiva con la normal exterior.  <span class="math display">\[
 \left.\begin{array}{cc}
 z=x^2+y^2\\
 z=mx \end{array} \right\} \equiv \Gamma
-\]</span>
-Queremos calcular <span class="math inline">\(\displaystyle \int_{\Gamma}y \dif z\)</span>
-Esto es lo mismo que calcular la integral del campo <span class="math inline">\((0,0,y)\)</span>.
-El primer paso es  <span class="math inline">\(\Gamma\)</span>
-Tenemos que la proyección en el plano xy es <span class="math display">\[mx=x^2+y^2 \equiv \left(x-\frac{m}{2}\right)^2 + y^2 = \frac{m^2}{4}\]</span>
-Viendo los cuadrados lo lógico es pensar en utilizar polares.
-Llamando <span class="math inline">\(x=rsen(\theta),y=rsen(\theta)\)</span> tenemos:
-<span class="math display">\[\sigma(\theta) = \left(mcos^2(\theta),mcos(\theta)sen(\theta),m^2cos^2(\theta)\right)\,\,\,\theta\in\left(\frac{-\pi}{2},\frac{\pi}{2}\right)\]</span>
-Calculamos el vector tangente para ver en que orientación recorre la curva esta parametrización:
-<span class="math display">\[\sigma&#39;(\theta) = ()\]</span>
-<span class="math display">\[\sigma&#39;(0) = (0,m,0)\]</span>
-Suponemos (porque no me lo dicen, que <span class="math inline">\(m&gt;0\)</span>) y nos da la orientación. Como en el enunciado no nos hablan de hacerlo con ninguna orientación, la integral que calculemos será de acuerdo con esta orientación.
-Vamos con la integral:
-<span class="math display">\[\int_{\Gamma}(0,0,y) d\sigma =\int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}\pesc{\underbrace{\left(0,0,mcos(\theta)sen(\theta)\right)}_{\overrightarrow{F}(\sigma(\theta))},\ast} d\theta\]</span>
-Como camino alternativo a la fórmula, podemos aplicar el teorema:
-<span class="math display">\[ = \int\int_{D^+}  rot(0,0,y)dS\]</span> Siendo el vector normal el que tenga la tercera componente positiva (razonando geométricamente).
-Calculamos el rotacional del campo:<span class="math inline">\(rot\overrightarrow{F} =\left|\begin{matrix} i&amp;j&amp;k\\dx&amp;dy&amp;dz\\0&amp;0&amp;y \end{matrix}\right| = (1,0,0)\)</span>.
-Utilizamos la parametrización: <span class="math inline">\(S = (x,y,mx), x,y\in C\)</span>
-<span class="math display">\[ = \int\int_D^+ rot(0,0,y)dS = \int \int_C \pesc{(1,0,0) ,T_x\x T_y} dxdy= (1) =\]</span>
-<span class="math display">\[ \int \int_C \pesc{(1,0,0),(-m,0,1)} = \int\int -m dxdy = -m \cdot \, Area (C) = -m\frac{m^2}{4}\pi \]</span>
-$(1): T_x = (1,0,m); T_y = (0,1,0) $. Otra cosa aplicada es que el vector normal <span class="math inline">\((-m,0,1)\)</span> como la tercera componente es positiva, tenemos que esta parametrización induce la orientación positiva.
+\]</span> Queremos calcular <span class="math inline">\(\displaystyle \int_{\Gamma}y \dif z\)</span> Esto es lo mismo que calcular la integral del campo <span class="math inline">\((0,0,y)\)</span>. El primer paso es  <span class="math inline">\(\Gamma\)</span> Tenemos que la proyección en el plano xy es <span class="math display">\[mx=x^2+y^2 \equiv \left(x-\frac{m}{2}\right)^2 + y^2 = \frac{m^2}{4}\]</span> Viendo los cuadrados lo lógico es pensar en utilizar polares. Llamando <span class="math inline">\(x=rsen(\theta),y=rsen(\theta)\)</span> tenemos: <span class="math display">\[\sigma(\theta) = \left(mcos^2(\theta),mcos(\theta)sen(\theta),m^2cos^2(\theta)\right)\,\,\,\theta\in\left(\frac{-\pi}{2},\frac{\pi}{2}\right)\]</span> Calculamos el vector tangente para ver en que orientación recorre la curva esta parametrización: <span class="math display">\[\sigma&#39;(\theta) = ()\]</span> <span class="math display">\[\sigma&#39;(0) = (0,m,0)\]</span> Suponemos (porque no me lo dicen, que <span class="math inline">\(m&gt;0\)</span>) y nos da la orientación. Como en el enunciado no nos hablan de hacerlo con ninguna orientación, la integral que calculemos será de acuerdo con esta orientación. Vamos con la integral: <span class="math display">\[\int_{\Gamma}(0,0,y) d\sigma =\int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}\pesc{\underbrace{\left(0,0,mcos(\theta)sen(\theta)\right)}_{\overrightarrow{F}(\sigma(\theta))},\ast} d\theta\]</span> Como camino alternativo a la fórmula, podemos aplicar el teorema: <span class="math display">\[ = \int\int_{D^+}  rot(0,0,y)dS\]</span> Siendo el vector normal el que tenga la tercera componente positiva (razonando geométricamente). Calculamos el rotacional del campo:<span class="math inline">\(rot\overrightarrow{F} =\left|\begin{matrix} i&amp;j&amp;k\\dx&amp;dy&amp;dz\\0&amp;0&amp;y \end{matrix}\right| = (1,0,0)\)</span>. Utilizamos la parametrización: <span class="math inline">\(S = (x,y,mx), x,y\in C\)</span> <span class="math display">\[ = \int\int_D^+ rot(0,0,y)dS = \int \int_C \pesc{(1,0,0) ,T_x\x T_y} dxdy= (1) =\]</span> <span class="math display">\[ \int \int_C \pesc{(1,0,0),(-m,0,1)} = \int\int -m dxdy = -m \cdot \, Area (C) = -m\frac{m^2}{4}\pi \]</span> $(1): T_x = (1,0,m); T_y = (0,1,0) $. Otra cosa aplicada es que el vector normal <span class="math inline">\((-m,0,1)\)</span> como la tercera componente es positiva, tenemos que esta parametrización induce la orientación positiva.  Partimos, igual que en la sección anterior, del cubo unidad en <span class="math inline">\(ℝ^n\)</span>. Contamos además con la aplicación <span class="math inline">\(\appl{\Phi}{Q}{\Phi(Q)\subset\real^n}\)</span> que “deforma” ese cubo.
 
-Partimos, igual que en la sección anterior, del cubo unidad en <span class="math inline">\(ℝ^n\)</span>. Contamos además con la aplicación <span class="math inline">\(\appl{\Phi}{Q}{\Phi(Q)\subset\real^n}\)</span> que “deforma” ese cubo.
-
-Sea <span class="math inline">\(\omega\)</span> una k-forma en <span class="math inline">\(\real^n\)</span>. Queremos calcular la integral de su diferencial en <span class="math inline">\(Φ(Q)\)</span>.
-<span class="math display">\[
+Sea <span class="math inline">\(\omega\)</span> una k-forma en <span class="math inline">\(\real^n\)</span>. Queremos calcular la integral de su diferencial en <span class="math inline">\(Φ(Q)\)</span>. <span class="math display">\[
 \int_{\Phi(Q)} \dif \omega = \int_Q \Phi^{\ast}\dif\omega = \int_Q \dif(\Phi^{\ast}\omega) = \int_{∂Q^{+}} \Phi^{\ast}\omega
-\]</span>
-Donde <span class="math inline">\(∂Q^{+}\)</span> es la frontera del cubo <span class="math inline">\(Q\)</span> orientada debidamente. El último paso es aplicar el teorema anterior.
-Sea <span class="math inline">\(\appl{\sigma}{I}{∂Q}\)</span>. Entonces, <span class="math inline">\(\appl{\Phi\circ\sigma}{I}{\Gamma}\)</span>, siendo <span class="math inline">\(\Gamma\)</span> la frontera de <span class="math inline">\(\Phi(Q)\)</span>.
-Aplicando esto a la integral que estamos calculando:
-<span class="math display">\[
+\]</span> Donde <span class="math inline">\(∂Q^{+}\)</span> es la frontera del cubo <span class="math inline">\(Q\)</span> orientada debidamente. El último paso es aplicar el teorema anterior. Sea <span class="math inline">\(\appl{\sigma}{I}{∂Q}\)</span>. Entonces, <span class="math inline">\(\appl{\Phi\circ\sigma}{I}{\Gamma}\)</span>, siendo <span class="math inline">\(\Gamma\)</span> la frontera de <span class="math inline">\(\Phi(Q)\)</span>. Aplicando esto a la integral que estamos calculando: <span class="math display">\[
 \int_{\Phi(dQ^{+})} \omega \equiv \int{\Phi\circ\sigma(I)} = \int_I (\Phi\circ\sigma)^{\ast} \omega = \int_I \sigma^{\ast}\left(\Phi^{\ast}(\omega)\right) = \int_{\sigma(I)} \Phi^{\ast}\omega = \int_{∂Q}\Phi^{\ast}\omega
-\]</span>
-Hemos llegado finalmente a que <span class="math display">\[ \int_{∂Q^+} \Phi^{\ast} \omega = \int_{\Phi(∂Q^+)} \omega \]</span>
-Ahora querríamos dar el siguiente paso:
-<span class="math display">\[\int_{\Phi(∂Q^+)} \omega = \int_{∂(\Phi^{\ast}(Q))} \omega \]</span>
-Es decir, que la imagen de la frontera sea la frontera de la imagen. Esto no es inmediato: en el cambio a coordenadas polares, por ejemplo, no se cumple a primera vista (ver figura ). Cuando el ángulo (θ) se mantiene fijo y <span class="math inline">\(r\)</span> varía (segmentos azules), la imagen de esa parte de la frontera es un radio de la circunferencia, y cuando <span class="math inline">\(r=0\)</span> y variamos el ángulo (segmento verde) la imagen es un punto.
+\]</span> Hemos llegado finalmente a que <span class="math display">\[ \int_{∂Q^+} \Phi^{\ast} \omega = \int_{\Phi(∂Q^+)} \omega \]</span> Ahora querríamos dar el siguiente paso: <span class="math display">\[\int_{\Phi(∂Q^+)} \omega = \int_{∂(\Phi^{\ast}(Q))} \omega \]</span> Es decir, que la imagen de la frontera sea la frontera de la imagen. Esto no es inmediato: en el cambio a coordenadas polares, por ejemplo, no se cumple a primera vista (ver figura ). Cuando el ángulo (θ) se mantiene fijo y <span class="math inline">\(r\)</span> varía (segmentos azules), la imagen de esa parte de la frontera es un radio de la circunferencia, y cuando <span class="math inline">\(r=0\)</span> y variamos el ángulo (segmento verde) la imagen es un punto.
 
 Ahora bien, podemos dividir la región <span class="math inline">\(Q\)</span> en celdas disjuntas, como se puede ver en la figura . De esta forma, las fronteras que sean comunes a varias celdas tendrán orientación incompatible y se anularán al integrar. Esto nos resuelve el problema y podemos enunciar el teorema de Stokes para celdas:
 
-Vamos a intentar definir en serio la frontera de objetos en <span class="math inline">\(\real^3\)</span>, que es algo que necesitamos tener realmente muy claro.
-
-Hace un tiempo, cuando definíamos una subvariedad, demostramos la existencia de un difeomorfismo Ψ que “aplanaba un trozo” de subvariedad. La frontera de una superficie es el conjunto de los puntos (llamados en clase de Tipo 2) que al aplanar nos quedan en la frontera de un objeto de dimensión 2 (ver imagen ).
-
-Una vez aclarado el concepto de frontera, pasamos a demostrar el teorema de Stokes.
+Vamos a intentar definir en serio la frontera de objetos en <span class="math inline">\(\real^3\)</span>, que es algo que necesitamos tener realmente muy claro.  Hace un tiempo, cuando definíamos una subvariedad, demostramos la existencia de un difeomorfismo Ψ que “aplanaba un trozo” de subvariedad. La frontera de una superficie es el conjunto de los puntos (llamados en clase de Tipo 2) que al aplanar nos quedan en la frontera de un objeto de dimensión 2 (ver imagen ).  Una vez aclarado el concepto de frontera, pasamos a demostrar el teorema de Stokes.
 
 
 
@@ -916,8 +726,111 @@ Además, para calcular el potencial se puede utilizar cualquiera de estas 3 fór
 \int_{Γ_1}\vf=\int_0^x F_1(t,0,0)\dif t + \int_0^y F_2(x,s,0)\dif s+ \int_0^z F_3(x,y,r)\dif r \\
 \int_{Γ_2}\vf = \int_0^y F_2(0,t,0)\dif t + \int_0^z F_3(0,y,s)\dif s+ \int_0^x F_1(x,y,r)\dif r \\ 
 \int_{Γ_3}\vf = \int_0^x F_1(t,0,0)\dif t + \int_0^z F_3(x,0,s)\dif s+ \int_0^y F_1(x,r,z)\dif r \\
-\end{gather*}\]</span>
-
+\end{gather*}\subsection{Ejemplos}\begin{example} Tenemos un cono de base $D$ y altura $h$, y buscamos integrar el campo $\vf(x,y,z)= (x,y,z)$. $Ω$ es el espacio del cono, y $∂Ω$, su superficie, se divide en la superficie lateral y la base.
+\todo[inline]{Dibujito L1244}
+Si escribimos el teorema de Gauss, tenemos que
+\[ \iiint_Ω \dv \vf \id{x,y,z} = \iint_{∂Ω^+} \vf \dif S \]
+En este caso, tenemos la suerte de que $\dv \vf = 3$, y por lo tanto
+\[ \iiint_Ω \dv \vf \id{x,y,z} = 3 \cdot \mathrm{Volumen}\,(Ω) \]
+Por lo tanto, para hallar el volumen calculamos la integral sobre la superficie y dividimos entre tres.
+La idea geométrica es que en la cara lateral, la componente normal de $\vf$ es 0. Lo vemos fácilmente sabiendo que la recta definida por el vector $(x,y,z)$ y que pasa por el origen (el vértice del cono), tiene exactamente la misma dirección de la generatriz. Entones,\textbf{ la integral sobre la cara lateral es 0} y por lo tanto podemos ignorarla. Nos centramos sólo en la integral de la base:
+\[ \iint_{\mathrm{Base}}\vf \id S \]
+Parametrizar $S$ es sencillo:
+\[ S \equiv \{ (x,y,h)\tq (x,y)∈ D \} \]
+Calculamos su vector normal:
+\[ \left.\begin{matrix}
+T_x = (1,0,0) \\
+T_y = (0,1,0)
+\end{matrix}\right\} T_x × T_y = (0,0,1) \]
+y entonces
+\[ \iint_{\mathrm{Base}}\vf \id S = \iint_D\pesc{(x,y,h),(0,0,1)} \id{x,y} = \iint_D h \id{x,y} = h \cdot \mathrm{Area}\,(D) \]
+Finalmente
+\[ \mathrm{Volumen}\,(Ω) = \frac{h \cdot \mathrm{Area}\,(D)}{3} \]
+\end{example}\begin{example}[Cálculo del campo eléctrico o gravitatorio]
+La expresión del campo eléctrico es
+\[ \vf(\vx) = C \frac{\vx}{\norm{\vx}^3} \]
+Calculando las derivadas parciales
+\begin{align*}
+\dpa{F_1}{x}&amp;=\frac{y^2+z^2-2x^2}{(x^2+y^2+z^2)^{\frac{5}{2}}} \\
+\dpa{F_2}{y}&amp;=\frac{x^2+z^2-2y^2}{(x^2+y^2+z^2)^{\frac{5}{2}}} \\
+\dpa{F_3}{z}&amp;=\frac{x^2+y^2-2z^2}{(x^2+y^2+z^2)^{\frac{5}{2}}}
+\end{align*}
+nos queda que
+\[ \dv\vf = 0 \]
+Consideramos ahora una bola de radio $R$ centrada en el origen, es decir, $B_R(0,0,0)$. Integramos sobre su superficie:
+\[ \iint\limits_{∂B_R^+} \vf \id{S} =
+\iint\limits_{B_R} \left(\frac{x}{R^3},\frac{y}{R^3},\frac{z}{R^3} \right) \id S = \frac{1}{R^3} \iint\limits_{B_R} (x,y,z)\id S = \]
+Dado que integrar el vector es integrar su componente escalar, la integral nos queda
+\[ = \frac{1}{R^3} \iint\limits_{B_R} R\id{x,y} = \frac{1}{R^2}\cdot \mathrm{Area\; esfera} = 4π \]
+Ahora bien, si no supiésemos ese argumento geométrico, empezaríamos parametrizando la esfera:
+\[ Φ(θ,φ) =(R\cos θ \sin φ, R\sin θ\sin φ, R\cos φ);\, θ∈[0,2π], φ∈[0,π] \]
+Calculamos los vectores tangentes y el normal:
+\[ \begin{matrix} \\ T_θ = \\ T_φ= \end{matrix}
+\left|
+\begin{matrix}
+\vec{i}         &amp; \vec{j}        &amp; \vec{k} \\
+-R\sin θ \sin φ &amp; R\cos θ \sin φ &amp; 0 \\
+R\cos θ\cos φ   &amp; R\sin θ \cos φ &amp; -R\sin φ
+\end{matrix}\right|: T_θ×T_φ = -R\sin (R\cos θ, \]
+La normal es interior, así que pagamos con un cambio de signo:
+\begin{gather*} \iint\limits_{x^2+y^2+z^2 = R^2} \left(\frac{x}{R^3},\frac{y}{R^3},\frac{z}{R^3} \right) \id S = \\
+- \int_0^{2π}\int_0^π\pesc{\left(\frac{R\cos θ \sin φ}{R^3},{R\sin θ \sin φ}{R^3},{R\cos φ}{R^3}\right), (,,)} = \dotsb \mathrm{Calculos\; aqui} \end{gather*}
+y al final sale lo mismo que antes pero con cuentas mucho más desagrable.
+¿Por qué el teorema de Gauss no funciona? La divergencia es 0 y la superficie es cerrada. Sin embargo, $\vf$ no es $C^1$ en el origen (no existe en ese punto) así que no podemos aplicarlo.
+Pero, por otra parte, siempre hemos visto que la integral no se ve afectada por lo que ocurra en un punto. ¿Por qué no funciona el teorema de Gauss sólo por lo que pasa en el origen?
+En realidad en el origen la divergencia vale $4π$ por la Delta de Dirac (δ).
+Pero también podemos hacer un apaño. Consideramos un conjunto $Ω$, y una bola $B_ε(0,0,0)$. Entonces
+\[ Ω_ε = Ω - B_ε \]
+de tal forma que $\vf∈C^1$ en $Ω_ε$. Aplicando el teorema de Gauss:
+\[ 0 = \iiint\limits_{Ω_ε}\dv \vf \id{x,y,z} = \iint\limits_{∂Ω_ε^+}\vf \id{S} \]
+La frontera se divide en dos partes: $∂Ω_ε = ∂Ω + ∂B_ε^+$. Entonces
+\[ 0 = \iint\limits_{∂Ω^+}\vf \id S - \iint\limits_{∂B_ε^+}\vf \id S \]
+y por lo tanto, tenemos que
+\[ \iint\limits_{∂Ω^+}\vf \id{S} = 4π\; ∀Ω \tq 0 ∈ Ω \]
+\end{example}\begin{theorem} Dado un campo $\vf \in C^1$, se tiene que
+\[ \dv \vf = 0\dimplies \exists \vg\in C^2 \tlq \rot \vg = \vf \]
+\end{theorem}\begin{proof}
+Con el lenguaje de las formas diferenciales es muy fácil esta demostración.
+\todo[inline]{reescribir bien}
+$\vf$ es una 1-forma a la que aplicamos la diferencial exterior y obtenemos una 2-forma, que es su rotacional. Entonces, al volver a hacer la diferencial (para hallar la divergencia) estamos aplicando dos veces el diferencial, y por lo tanto su valor es 0.
+Sin formas diferenciales tenemos:
+\[G=(G_1,G_2,G_3)\]
+\[\rot G = \left(\ast_1,\ast_2,\ast_3\right)\]
+\[\dv(\rot G) = \dpa{}{x}(\ast_1) + \dpa{}{y}(\ast_2) + \dpa{}{z}(\ast_3)\]
+Por la igualdad de las derivadas cruzadas (toerema de Euler) al ser $G\in C^2$ se cancela todo.
+$\implies$ Buscamos $\vg$ tal que $(F_1,F_2,F_3) = \rot \vg$.
+Podemos definir el sistema:
+\[\begin{array}{cc}
+\dpa{G_3}{y} - \dpa{G_2}{z} &amp;= F_1\\
+\dpa{G_1}{z} - \dpa{G_3}{x} &amp;= F_2\\
+\dpa{G_2}{x} - \dpa{G_1}{y} &amp;= F_3
+\end{array}\]
+Como tenemos varios grados de libertad, supongamos que $G_3\equiv 0$
+\[\begin{array}{cc}
+ - \dpa{G_2}{z} &amp;= F_1\\
+\dpa{G_1}{z} - &amp;= F_2\\
+\dpa{G_2}{x} - \dpa{G_1}{y} &amp;= F_3
+\end{array} \begin{array}{cc}
+\longrightarrow &amp; G_2 = -\int_0^z F_1(x,y,t)dt+A(x,y)\\
+\longrightarrow &amp; G_1 = \int_0^2 F_2(x,y,t)dt + B(x,y)\\
+\longrightarrow &amp; F_3 = \dpa{}{x} \left\{-\int_0^z F_1(x,y,t)dt + A(x,y)\right\}
+- \dpa{}{y}\left\{\int_0^2 F_2(x,y,t)dt + B(x,y) \right\}
+\end{array}
+\]
+Vamos a ver que ocurre con  $F_3$
+\[-\dpa{}{x}\left(\int_0^z F_1(x,y,t)dt\right) + \dpa{A}{x} - \dpa{}{y}\int_0^z F_2(x,y,t)dt - \dpa{B}{y}\]
+Por la regularidad de $F_1$ podemos meter dentro la derivada (el argumento que está detrás de esto se ve en teoría de la medida, asíque de momento nos fiamos)
+\[-\left(\int_0^z \dpa{}{x}F_1(x,y,t)dt\right) + \dpa{A}{x} - \int_0^z \dpa{}{y}F_2(x,y,t)dt - \dpa{B}{y}\]
+\[-\int_0^z \left(\dpa{F_1}{x} + \dpa{F_2}{y}\right)(x,y,t)dt + \dpa{A}{x} - \dpa{B}{y} \]
+Utilizamos que la $\dv = 0$ que nos dice:
+\[\dpa{F_1}{x} + \dpa{F_2}{y} + \dpa{F_3}{z} = 0\]
+\[ = \int_0^z \dpa{F_3}{z} (x,y,t)dt + \dpa{A}{x} - \dpa{B}{y} = F_3(x,y,z) - F(x,y,z) + \dpa{A}{x} - \dpa{B}{y}\]
+Hemos llegado a \[F_3(x,y,z) =  F_3(x,y,z) - F(x,y,z) + \dpa{A}{x} - \dpa{B}{y}\]
+Quedando entonces definidas $A$ y $B$ así:
+\[\dpa{A}{x} - \dpa{B}{y} = F_3(x,y,0)\]
+Y aquí nuevamente tenemos muchas opciones. Tomamos $B=0$ por tomar algo
+\[A(x,y) = \int_0^x F_3(s,y,0)ds + C(y)\]
+\end{proof}\]</span>
 <div id="integracion" class="section level2">
 <h2><span class="header-section-number">12.1</span> Integración</h2>
 </div>
@@ -959,13 +872,13 @@ ga('send', 'pageview');
 <a href="funciones-especiales.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -1006,7 +919,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
