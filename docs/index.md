@@ -1,7 +1,7 @@
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 
 --- 
-title: "Introducción al análisis funcional y a la teoría de la medida"
+title: "Análisis, Medida y Probabilidades"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
 date: "2019-04-03"
